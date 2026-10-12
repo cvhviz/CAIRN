@@ -31,6 +31,8 @@ The full L2 touch interface: home dashboard, chats with an on-screen keyboard an
 
 From Cairn 114: the Radios page with LoRa, Wi-Fi and Bluetooth tabs and a full-screen Traffic log with packet details, the Storage page with Files, and the card's `Maps`, `Music`, `Recordings`, `Sounds` and `Pictures` folders (maps in `cairn/maps` move by themselves). USB drive mode isn't on this board.
 
+From Cairn 115: the LoRa / Wi-Fi / Bluetooth tabs are easier to tap (this panel reads taps near the top edge a little high), and after a power cut the clock shows "--:--" until GPS, the app or Wi-Fi sets it.
+
 From Cairn 113 on this board:
 
 - **Better reception:** the V4-R8's receive amplifier was left bypassed before; it now follows the receive-gain setting (on by default).

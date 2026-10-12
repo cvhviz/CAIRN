@@ -70,6 +70,7 @@ The L2 interface, as on the [L2 Pro page](wio-tracker-l2-pro.md#features): the s
 - **Automatic power-off** below 3.3 V on battery, to protect the cell.
 - **MIC** turns the screen off.
 - **Nodes Cards view:** the keys focus one card at a time; left and right move between the two in a row (from Cairn 112).
+- **Clock after a power cut** (from Cairn 115): the clock shows "--:--" until GPS, the app or Wi-Fi sets it, instead of the time the power slider was switched off ([#18](https://github.com/cvhviz/CAIRN/issues/18)).
 - **Radios** (from Cairn 114): LoRa, Wi-Fi and Bluetooth tabs, and a full-screen Traffic log with packet details. The Storage page has Files (from Cairn 114); USB drive mode isn't on the M9, whose USB-C is a serial bridge.
 - **LoRa tab:** the keys land on Advert, and the advert sheet opens with Send focused, so Advert, OK sends a zero-hop advert (from Cairn 113).
 - **Ocean theme** is a few steps darker, so it no longer looks washed out on this screen (from Cairn 113).

@@ -15,7 +15,7 @@ The keypad board adds a 20-key phone-style keypad with backlight, a haptic motor
 
 Cairn runs a native interface on it, built for the large square screen. It works with the official MeshCore apps over Bluetooth.
 
-Its current files are in [Cairn 114](https://github.com/cvhviz/Cairn/releases/tag/cairn-v114): `MeshCore-TDisplaySF32-Cairn114-2026-10-12-install.zip` and `MeshCore-TDisplaySF32-Cairn114-2026-10-12-update.bin`. A board on Cairn 107, 108, 112 or 113 updates over Wi-Fi (with the keyboard board attached). A board on the very first SF32 build (6 Oct) needs the [USB installer](../install/sf32.md#if-your-board-has-the-first-sf32-build) once.
+Its current files are in [Cairn 115](https://github.com/cvhviz/Cairn/releases/tag/cairn-v115): `MeshCore-TDisplaySF32-Cairn115-2026-10-12-install.zip` and `MeshCore-TDisplaySF32-Cairn115-2026-10-12-update.bin`. A board on Cairn 107, 108, 112, 113 or 114 updates over Wi-Fi (with the keyboard board attached). A board on the very first SF32 build (6 Oct) needs the [USB installer](../install/sf32.md#if-your-board-has-the-first-sf32-build) once.
 
 ## Which file
 

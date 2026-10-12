@@ -11,19 +11,18 @@ Builds are numbered: the splash screen shows **BUILD N**, releases are tagged `c
 
 **Download the files from the [latest release](https://github.com/cvhviz/Cairn/releases/latest).** L1 Pro releases from before Cairn (builds 40 to 98) are archived in this repository's releases; the last of them is [build 98](https://github.com/cvhviz/CAIRN/releases/tag/cvhbuild-v98).
 
-## Latest: Cairn 114 (12 Oct 2026)
+## Latest: Cairn 115 (12 Oct 2026)
 
-- **Radios page with tabs:** LoRa (its tab shows the frequency), Wi-Fi and Bluetooth side by side; the scanners moved here from the Network page and show their status in the status bar. On the L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32.
-- **Traffic log:** tap the LoRa tab's traffic card for the last hour's packets (up to 2048) with a stats strip; tap a packet for its details as tiles.
-- **Storage page and Files** (Settings › Hardware › Storage): the card's status, a file manager, Eject, Re-scan and Format in one place.
-- **USB drive** on the T-Deck Plus and the L2 Pro: the microSD card shows up as a disk on your computer, so maps and music copy over without taking the card out.
-- **Card folders:** `Maps`, `Music`, `Recordings`, `Sounds` and `Pictures` at the top of the card. Maps in the old `cairn/maps` folder move by themselves. Music subfolders show two levels deep.
-- **Audio:** on the L2 Pro, music no longer distorts at high volume and matches the alert tones' loudness. The player's volume buttons sit over the spectrum. On the T-Deck Plus the Mic key opens the recorder.
-- **T-Display SF32:** the Radios tabs and Traffic log, a Sensors card (steps, temperature, humidity, pressure) in place of Climate and Steps, no GPS card on Home, and a startup tone that no longer stutters. See its [board page](docs/boards/lilygo-t-display-sf32.md).
-- **Updating:** L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32 update over Wi-Fi in **Settings › System › Firmware update**. The L1 Pro family and the T096 update by copying the new `.uf2` ([UF2 guide](docs/install/nrf52-uf2.md)); they and the compact repeaters are rebuilt as 114 with no changes of their own.
+- **L2 Pro microphone:** the voice recorder works on the L2 Pro.
+- **EQ and visualizer** on the L2 Pro and T-Deck Plus: five bands with Flat, Voice, Bright, Warm and Custom presets shaped over the live spectrum, and Now playing as a full-screen visualizer with the controls a tap away. Player options are cards, and alert tones no longer interrupt music.
+- **Cards everywhere:** every chooser on the touch and key boards (button actions, setting lists, action menus) is a page of cards, and a node's "…" opens Discover path, Reset route, Favorite, Share contact, Admin and Remove as cards.
+- **Packet details** lead with the sender (name, type, distance, key), then the signal and route as large values. Tap a node on the map to see its route.
+- **Clock:** after a power cut the clock shows "--:--" until GPS, the app or Wi-Fi sets it, instead of the time the board was switched off ([#18](https://github.com/cvhviz/CAIRN/issues/18)). Older T-Deck keyboards type again ([#17](https://github.com/cvhviz/CAIRN/issues/17)).
+- **T-Display SF32:** no restart on the second `*` in a message, a faster Nodes tab, and card titles in Title Case. See its [board page](docs/boards/lilygo-t-display-sf32.md).
+- **Updating:** L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32 update over Wi-Fi in **Settings › System › Firmware update**. The L1 Pro family and the T096 update by copying the new `.uf2` ([UF2 guide](docs/install/nrf52-uf2.md)); they and the compact repeaters are rebuilt as 115 with no changes of their own.
 - **Other boards:** the preview boards stay on [Cairn 107 preview](https://github.com/cvhviz/Cairn/releases/tag/cairn-v107-preview).
 
-Cairn 113 added the Wi-Fi and Bluetooth scanners, the music player and voice recorder, the Battery page and the L1 Pro's move up from 107; see its [release notes](https://github.com/cvhviz/Cairn/releases/tag/cairn-v113).
+Cairn 114 added the Radios tabs and Traffic log, the Storage page with Files, USB drive mode and the card folders; see its [release notes](https://github.com/cvhviz/Cairn/releases/tag/cairn-v114).
 
 ## Supported boards
 
@@ -102,14 +101,14 @@ Want another board? [Ask for it](https://github.com/cvhviz/Cairn/issues/new?temp
 | Colour themes                 |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       ✅       |    ✅    | some ⁴  |
 | Wi-Fi and Bluetooth scanners  |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       ✅       |    –     |    –    |
 | Music player                  |    –     |   ✅   |        –        |      –       |    ✅ ⁵     |       ✅       |    –     |    –    |
-| Voice recorder                |    –     |   –    |        –        |      –       |    ✅ ⁵     |       ✅       |    –     |    –    |
+| Voice recorder                |    –     |  ✅ ⁶  |        –        |      –       |    ✅ ⁵     |       ✅       |    –     |    –    |
 | Traffic log, packet details   |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       ✅       |    –     |    –    |
 | File manager                  |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       –        |    –     |    –    |
 | USB drive (microSD)           |    –     |   ✅   |        –        |      –       |     ✅      |       –        |    –     |    –    |
 | IR remote, climate sensors    |    –     |   –    |        –        |      –       |      –      |       ✅       |    –     |    –    |
 | Imperial units, 12-hour clock |    ✅    |   ✅   |       ✅        |      ✅      |     ✅      |       ✅       |    ✅    |   ✅    |
 
-¹ Clock sync and online updates; no app link over Wi-Fi. ² From Cairn 108 on. ³ With the Expansion Kit. ⁴ The colour-screen boards (Wireless Tracker, T1). ⁵ From Cairn 113, tried on a T-Deck Plus.
+¹ Clock sync and online updates; no app link over Wi-Fi. ² From Cairn 108 on. ³ With the Expansion Kit. ⁴ The colour-screen boards (Wireless Tracker, T1). ⁵ From Cairn 113, tried on a T-Deck Plus. ⁶ From Cairn 115.
 
 ## Which file do I need?
 
