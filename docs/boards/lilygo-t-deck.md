@@ -7,7 +7,7 @@ The T-Deck is a handheld with:
 - a Semtech SX1262 LoRa radio
 - a 2.8" 320×240 ST7789 touchscreen (GT911 touch)
 - a QWERTY keyboard (its own ESP32-C3 controller) and a trackball with a centre click
-- a microSD slot, a speaker (message chimes and tones, with a volume setting, from Cairn 109), and on the T-Deck Plus a GPS and a larger battery
+- a microSD slot, a speaker (message chimes and tones, with a volume setting, from Cairn 109; music from Cairn 113), a microphone (voice notes from Cairn 113), and on the T-Deck Plus a GPS and a larger battery
 - native USB on its USB-C port (no USB-serial chip)
 
 Cairn runs the same interface as the [Wio Tracker L2 Pro](wio-tracker-l2-pro.md) on it, by touch or by keys. The trackball moves a ring over what is selected and its click taps it, as a finger would; touching the screen hides the ring. Typing goes straight into chats and text fields. The keyboard has no Back key: Backspace outside a text field goes back, and so does holding the trackball in when nothing is selected. The [L2 manual](../Cairn_Wio_L2_Pro_User_Manual.pdf) describes the screens.
@@ -22,6 +22,19 @@ Cairn runs the same interface as the [Wio Tracker L2 Pro](wio-tracker-l2-pro.md)
 - **GPS (T-Deck Plus, or an add-on GPS):** found at 9600 or 38400 baud by itself; a u-blox receiver goes to standby while GPS is off (from Cairn 111).
 - **Battery saver** (Settings › Hardware › Display › Power, off by default, beta, from Cairn 111): while the screen is dark the chip sleeps between radio packets, with Bluetooth off. Measured for Cairn 112: about 43 mA with the screen off instead of about 82 mA, so about 54 h of standby on a full charge instead of about 28 h. It slept 98–99 % of a 14-hour run and still received every packet.
 - **Nodes Cards view by keys:** the trackball and arrow keys focus one card at a time; left and right move between the two in a row (from Cairn 112).
+- **Enter finishes the text field** (from Cairn 113): Send in a chat, Done, OK or Save elsewhere. The trackball click still selects what is highlighted.
+- **Radio tab by keys** (from Cairn 113): it lands on Advert, and the advert sheet opens with Send focused, so Advert, then a click, sends a zero-hop advert.
+
+## Music and voice notes
+
+From Cairn 113, tried on a T-Deck Plus. On the T-Deck an **Audio** card takes the GPS card's place on Home (the GPS tab still shows the satellites) and opens a Player and a Recorder.
+
+- **Player:** put MP3 or WAV files in a `Music` folder on the microSD card. Now playing has a live spectrum, a seek bar, previous / -10 s / play-pause / +10 s / next, volume, repeat and shuffle. Music keeps playing with the screen dark unless you set "Pause at screen off"; a message alert pauses it and it carries on after the tone. Hold a file to delete it. MP3 (CBR or VBR) and WAV (8, 16 or 24-bit), 8 to 48 kHz; stereo plays as mono.
+- **Recorder:** voice notes to a `Recordings` folder as WAV at 16 or 8 kHz, with mic gain, a time limit, voice start and marks. Files are named by date and time once the clock is set. A recording keeps going with the screen dark and is kept safe if the power or the card goes. The microphone is only on while you record or the Record view is open, and the status bar shows MIC or REC whenever it is.
+- The card shares its bus with the radio and the screen, so very large files (CD-quality WAV) are refused with "Too fast for this card: use MP3".
+- The folders match the T-Display SF32's, so a card moves between them.
+
+The T-Deck also has the Wi-Fi and Bluetooth scanners and the redesigned Battery page from Cairn 113; see the [L2 Pro page](wio-tracker-l2-pro.md#features). On USB the Battery page says the cell can't be read instead of claiming Full.
 
 ## Screens
 
@@ -48,4 +61,5 @@ The same files run on the T-Deck and the T-Deck Plus. Write the `-full.bin` or t
 - **GPS (T-Deck Plus) hasn't been checked on hardware yet.**
 - **Battery percentage** hasn't been calibrated on the T-Deck yet. Screen-off standby has been measured (see Battery saver above); battery life in use hasn't.
 - **Hibernate:** waking with the trackball click hasn't been confirmed.
+- **Audio:** battery draw while playing or recording, hour-long recordings during radio traffic, and a card pulled mid-recording haven't been tried yet.
 - **The full automated on-device test suite** hasn't been run on it yet. Please [report](https://github.com/cvhviz/Cairn/issues/new?template=bug_report.yml) anything that looks wrong.

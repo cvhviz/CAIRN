@@ -28,9 +28,12 @@ Install, update and recovery all use the same file: double-tap **Reset** and cop
 
 - Works with the official MeshCore apps over Bluetooth (PIN on the screen).
 - Cairn splash with the build number and build stamp.
-- Page tabs along the bottom or down the side (Settings > Page tabs).
-- Settings grouped to match the touch builds.
-- GPS with distances in miles, 12-hour clock.
+- Page tabs along the bottom or down the side (Settings > Page tabs). With the side rail, up and down step between pages and left and right switch the page's own view.
+- Settings in six categories: Radio, Connect, Location, Display, Sound and System (from Cairn 113). System › About shows the build, MeshCore version, node name and key prefix.
+- Messages sent from the phone app appear on the L1 as yours, and a delivered direct message shows a ✓ (from Cairn 113). With CairnOS, messages sent on the L1 also appear in the app. This needs a CairnOS version with sent-message sync (TestFlight).
+- GPS: position, a compass and a GPS data view with satellites, HDOP, the grid square and the fix age (from Cairn 113). A click of the joystick steps through them. Eco mode, also from the app.
+- **Path hash** (1 to 3 bytes per hop) and **Units** (imperial or metric) in Settings (from Cairn 113). 12-hour clock.
+- A thin line under the title flashes when the radio sends or receives (OLED builds, from Cairn 113).
 - Room server image with the CLI over USB serial.
 
 ## Known issues

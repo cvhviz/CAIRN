@@ -27,7 +27,14 @@ Write the `-full.bin` or the `-update.bin`, never both. If the device last updat
 
 ## Features
 
-The full L2 touch interface: home dashboard, chats with an on-screen keyboard and colour emoji, nodes, repeater scan and admin, radio with spectrum and band scan, GPS with the offline microSD map and pinch to zoom, quick panel, Wi-Fi with online updates. See the [L2 Pro page](wio-tracker-l2-pro.md#features) for the list.
+The full L2 touch interface: home dashboard, chats with an on-screen keyboard and colour emoji, nodes, repeater scan and admin, radio with spectrum and band scan, GPS with the offline microSD map and pinch to zoom, quick panel, Wi-Fi with online updates, and the Wi-Fi and Bluetooth scanners and the redesigned Battery page (from Cairn 113). See the [L2 Pro page](wio-tracker-l2-pro.md#features) for the list. It has no audio hardware beyond the piezo, so the music player isn't on this board.
+
+From Cairn 113 on this board:
+
+- **Better reception:** the V4-R8's receive amplifier was left bypassed before; it now follows the receive-gain setting (on by default).
+- **Steadier touch:** glitches no longer turn into phantom taps or split a drag, and the touch controller recovers by itself after a wake or a run of bad readings.
+- **The whole screen is tappable,** edge to edge, including the bottom rows and the right edge.
+- **Ocean theme** is a few steps darker, so it no longer looks washed out on this screen.
 
 ## Known issues
 

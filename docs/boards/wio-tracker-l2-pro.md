@@ -30,20 +30,22 @@ Write the `-full.bin` or the `-update.bin`, never both. If the device last updat
 
 ## Features
 
-- **Side icon rail**: Home, Chats, Nodes, Radio, GPS and Settings, with unread and new-advert badges. A status bar shows the page title (in its tab's colour), a 12-hour clock, Bluetooth, GPS and battery. Notices take the status bar over for a moment (from Cairn 112); tap one with a chevron to open what it is about.
-- **Home dashboard**: a large clock with sunrise/sunset, temperature and channel-busy readouts, plus live cards for battery, chats, nodes, GPS, radio and network.
+- **Side icon rail**: Home, Chats, Nodes, Radio, GPS and Settings, with unread and new-advert badges. The GPS icon is green while the GPS is on and red while it is off (from Cairn 113). A status bar shows the page title (in its tab's colour), a 12-hour clock, Bluetooth, GPS and battery. Notices take the status bar over for a moment (from Cairn 112); tap one with a chevron to open what it is about.
+- **Home dashboard**: a large clock with sunrise/sunset, temperature and channel-busy readouts, plus live cards for battery, chats, nodes, Audio (from Cairn 113, in the GPS card's place; the GPS tab still shows the satellites), radio and network. A tap on the big clock opens the quick panel.
 - **Chats**: channels, direct messages and rooms in one list, message bubbles, a full on-screen keyboard with emoji, quick replies and a byte counter.
 - **Colour emoji**: 229 Noto emoji drawn inline in messages, previews and node names.
 - **Nodes**: recent adverts and saved contacts as a list or cards, with hops, last heard, distance, the short ID and position. Companions show a walkie-talkie and repeaters a mast, as in CairnOS. Node detail shows heard, distance, bearing, path, position and the last ping, with ping, chat and map; tap the short key for a **QR code** the MeshCore apps scan to add the contact (from Cairn 111).
 - **Repeater tools**: a repeater scan (who hears you, whom you hear) and remote admin for repeaters and room servers.
 - **Radio**: frequency and settings, Now/Floor/Peak/Margin meters, a live signal graph and the last packets heard, each in its own card, with a large Advert button.
 - **Spectrum and band scan**: your channel over 10 s to 1 h, and a sweep of the whole band with a waterfall.
-- **Quick panel**: Wi-Fi, Bluetooth, GPS and sound toggles, lock, flashlight, advert, brightness and volume, and Radio, Theme and Settings buttons (from Cairn 112).
+- **Wi-Fi and Bluetooth scanners** (Home › Network, from Cairn 113): **Wi-Fi scan** shows the 2.4 GHz networks around you as arcs by channel and signal, with a bar per channel for how crowded it is; **BT scan** shows the Bluetooth devices in range as bars over a radar, MeshCore nodes named. Each has a list with details. The Bluetooth radar opens full screen, and **Find** helps you walk towards a device (Closer, Farther, Steady, with an optional tone). Scans start only when you tap Start and stop when you leave the page.
+- **Quick panel**: Wi-Fi, Bluetooth, GPS and sound toggles, lock, flashlight, advert, brightness and volume, and Radio, Theme and Settings buttons (from Cairn 112). Wi-Fi, Bluetooth and GPS ask before they switch on or off (from Cairn 113).
 - **GPS**: position in ft/mph with a course compass, an on/off switch, Off / On / Eco modes (Eco shows when the next fix is due), and an **offline map** from microSD tiles with pinch to zoom. Tap the status or any card for **GPS data**: satellites, HDOP, grid square, GPS time and the NMEA stream (from Cairn 111).
 - **Settings**: six tiles (Radio, Connect, Hardware, Location, Appearance, System), each with three lines of what it holds. Every page under them is tiles too (from Cairn 112): two across, each with an icon, its name and its value; a tap flips a switch on its tile, and other values open a small sheet. Appearance, Display, Sound, Buttons, Wake & lock and Clock apply as you change them; Radio, Bluetooth, the PIN, Wi-Fi, Join channel and Profile are drafts with Cancel and Save (from Cairn 111). Destructive actions need a hold (the tile says how long) plus a confirmation. **Settings › Radio** shows TX power and every LoRa setting (preset, frequency, bandwidth, spreading factor, coding rate), each editable, with a typed frequency for a custom radio, and the **path hash** size (1–3 bytes per hop, from Cairn 111).
 - **Themes** (Settings › Appearance › Theme, from Cairn 111): Dark, Neon, Light, Sunlight, Night, Ocean, Cartoon, Red Radar and Green Radar, previewed live.
 - **Screensaver** (Settings › Appearance › Screensaver, from Cairn 112): Beacon, Ambient, Night clock or Auto, in place of a screen that never times out (Screen timeout Never, or Stay on USB). It runs on USB power by default, starts after 1–30 minutes without a touch, and on battery hands over to a real screen-off after a time you choose.
-- **Battery**: the charge and a since-when line ("On battery since Wed · 16h"), time left, rate, today's range and the screen-on share, and a graph over 1 h to 7 days.
+- **Battery** (redesigned in Cairn 113): the percent, the voltage and a status line ("On battery · 9h 40m left"), six cells (time left or to full, rate, time in this state, today's low and high, the last full charge, the screen-on share), and a graph over 1 h to 7 days in % or volts with markers for plug-in, unplug, full, warnings and restarts. Tap the graph for a readout. The week's history comes back after a restart, once the clock is set.
+- **Music player** (from Cairn 113): put MP3 or WAV files in a `Music` folder on the microSD card and play them from the Audio card, with a live spectrum, seek, volume, repeat and shuffle. Music keeps playing with the screen dark; a message alert pauses it and it carries on after the tone.
 - **Sound**: volume and a choice of alert tone per event.
 - **Wake & lock**: tap to wake, auto-lock, and a pocket-safe lock screen.
 - **Clock**: 12h / 24h / analog, US time zones or a custom offset, and internet time over Wi-Fi; *Always take internet time* skips the question when the clock is off by over an hour (from Cairn 111).
@@ -69,6 +71,7 @@ Screens use fictional sample data.
 ## Known issues
 
 - Battery figures with the screen off are estimates; they haven't been measured yet.
+- **No voice recorder.** The recorder is off on the L2 Pro: the microphone gives only silence on our unit, and Seeed lists it as reserved. It stays off until we know more.
 - The offline map needs a **FAT32** card (8–32 GB SDHC recommended). exFAT cards aren't read.
 - Check each build's release notes for anything new.
 

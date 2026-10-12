@@ -61,15 +61,17 @@ Write the `-full.bin` or the `-update.bin`, never both. Coming from Elecrow's fi
 
 ## Features
 
-The L2 interface, as on the [L2 Pro page](wio-tracker-l2-pro.md#features): the sidebar, the Home dashboard, chats with colour emoji, nodes, repeater scan and remote admin, the quick panel, GPS with Off / On / Eco, settings as tiles (from Cairn 112) that apply at once, except radio, connection and security changes (from Cairn 111), themes, the screensaver, notices in the status bar, sent-message sync with CairnOS, the lock screen and Wi-Fi with the MeshCore app over Wi-Fi. On the M9 also:
+The L2 interface, as on the [L2 Pro page](wio-tracker-l2-pro.md#features): the sidebar, the Home dashboard, chats with colour emoji, nodes, repeater scan and remote admin, the quick panel, GPS with Off / On / Eco, settings as tiles (from Cairn 112) that apply at once, except radio, connection and security changes (from Cairn 111), themes, the screensaver, notices in the status bar, sent-message sync with CairnOS, the lock screen, Wi-Fi with the MeshCore app over Wi-Fi, and the Wi-Fi and Bluetooth scanners with the full-screen Bluetooth radar and Find (from Cairn 113; the d-pad moves between the radar's dots). Wi-Fi, Bluetooth and GPS ask before they switch on or off (from Cairn 113). On the M9 also:
 
 - **Spectrum and Band scan on the LR1110.**
-- **Battery page:** the charge, the voltage and a line with the state and since when ("On battery since Wed · 16h 18m"), four cells (time left or to full, rate, today's low and high, the screen-on share or the Battery saver mode), and a graph over 1 hour, 6 hours, 24 hours or 7 days in % or volts, with markers for plug-in, unplug, full and restarts. OK on the graph puts a cursor at now; left and right move it. The week's history comes back after a restart, once the clock is set.
+- **Battery page** (redesigned in Cairn 113): the percent, the voltage and a status line ("On battery · 9h 40m left"), six cells (time left or to full, rate, time in this state, today's low and high, the last full charge, and the screen-on share, or the mode while Battery saver is on), and a graph over 1 hour, 6 hours, 24 hours or 7 days in % or volts, with markers for plug-in, unplug, full, warnings, restarts and Battery saver changes. OK on the graph puts a cursor at now; left and right move it. The week's history comes back after a restart, once the clock is set.
 - **Keyboard light** (Settings › Hardware › Display, under Brightness, and the quick panel's keyboard slider): the level the keys light at, or Off. The keyboard controller lights the keys at a key press for 10 s; they stay dark while the screen is dark or locked, and go dark 2 s before the screen times out (from Cairn 112).
 - **Battery saver** (Settings › Hardware › Display › Power, off by default, beta): while the screen is dark it turns Bluetooth off and lets the chip sleep between radio packets. A key still wakes the screen. Turning Bluetooth back on restarts the device.
 - **Automatic power-off** below 3.3 V on battery, to protect the cell.
 - **MIC** turns the screen off.
 - **Nodes Cards view:** the keys focus one card at a time; left and right move between the two in a row (from Cairn 112).
+- **Radio tab:** the keys land on Advert, and the advert sheet opens with Send focused, so Advert, OK sends a zero-hop advert (from Cairn 113).
+- **Ocean theme** is a few steps darker, so it no longer looks washed out on this screen (from Cairn 113).
 - **microSD:** the card mounts (a 16 GB card was tested); Settings › Hardware › Storage sees it.
 
 ## Known issues

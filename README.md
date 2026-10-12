@@ -11,20 +11,21 @@ Builds are numbered: the splash screen shows **BUILD N**, releases are tagged `c
 
 **Download the files from the [latest release](https://github.com/cvhviz/Cairn/releases/latest).** L1 Pro releases from before Cairn (builds 40 to 98) are archived in this repository's releases; the last of them is [build 98](https://github.com/cvhviz/CAIRN/releases/tag/cvhbuild-v98).
 
-## Latest: Cairn 112 (9 Oct 2026)
+## Latest: Cairn 113 (11 Oct 2026)
 
-- **Settings as tiles:** every Settings page now uses tiles like the Settings root: two across, each with an icon, its name and its value. A tap flips a switch on its tile; other values open a small sheet.
-- **Screensaver** (Settings › Appearance › Screensaver): Beacon, Ambient, Night clock or Auto, for a screen set never to time out.
-- **Notices in the status bar:** a new message or a saved setting tints the status bar for a moment instead of covering the page. When a notice leads somewhere, a tap on it opens it.
-- **Updater mode** (was "update mode"): send an update over Wi-Fi from a browser; with the next CairnOS update, the app can start one over Bluetooth once you tap Allow on the board.
-- **Sent messages sync:** messages sent from a phone app appear in the board's chats, and messages sent on the board appear in CairnOS.
-- **Quick panel:** Radio · Theme · Settings buttons along the bottom.
-- **M9 and T-Deck:** the keys reach each card in the Nodes Cards view, and the keyboard light goes dark sooner on battery. The T-Deck's Battery saver roughly doubles screen-off standby (about 54 h instead of 28 h).
-- **T-Display SF32** (from 108): a mini spectrum in the Home header, Settings as cards, the nine themes, larger text and colour emoji, sent-message sync, Wake on motion, and a power switch that turns the docked board off on battery. See its [board page](docs/boards/lilygo-t-display-sf32.md).
-- **Updating:** L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32 update over Wi-Fi in **Settings › System › Firmware update**. The T096 companion and the compact repeaters are rebuilt as Cairn 112 with no functional changes.
-- **Other boards:** the L1 Pro and the preview boards stay on [Cairn 107](https://github.com/cvhviz/Cairn/releases/tag/cairn-v107).
+- **Wi-Fi and Bluetooth scanners** (Home › Network): a live plot and a list of the networks or Bluetooth devices around you, a full-screen Bluetooth radar, and **Find** to walk towards a device. On the L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32.
+- **Music player** on the T-Deck Plus and the L2 Pro: MP3 and WAV from the microSD card, with a live spectrum, repeat and shuffle. **Voice recorder** on the T-Deck Plus; it is off on the L2 Pro for now. On these two boards an Audio card takes the GPS card's place on Home.
+- **Battery page:** time left, the rate, today's range and a graph over 1 hour to 7 days with plug-in, unplug and full markers. The week's history comes back after a restart.
+- **Asks before switching:** Wi-Fi, Bluetooth and GPS ask before they turn on or off from the board, so a stray touch can't drop the app.
+- **GPS icon** in the sidebar: green while the GPS is on, red while it is off. A darker Ocean theme on the M9, T-Deck and Heltec V4 touch.
+- **Heltec V4 touch:** better reception (the V4-R8's receive amplifier is now on), steadier touch, and the whole screen is tappable.
+- **T-Display SF32:** the scanners on its Network page, and Home's mini spectrum as one full-height graph. See its [board page](docs/boards/lilygo-t-display-sf32.md).
+- **Wio Tracker L1 Pro** (from 107): messages sent from the phone show on the L1, a GPS data view, Path hash and Units settings, a TX/RX line, Settings in six categories and a side-rail fix. See its [board page](docs/boards/wio-tracker-l1-pro.md).
+- **T096 and compact repeaters:** the T096's Settings list is regrouped; the repeaters take up to 32 clients and accept admin commands from the v1.18 MeshCore apps.
+- **Updating:** L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32 update over Wi-Fi in **Settings › System › Firmware update**. The L1 Pro family and the T096 update by copying the new `.uf2` ([UF2 guide](docs/install/nrf52-uf2.md)).
+- **Other boards:** the preview boards stay on [Cairn 107 preview](https://github.com/cvhviz/Cairn/releases/tag/cairn-v107-preview).
 
-Cairn 111 added nine themes, a QR code for sharing contacts, GPS data and the path hash setting; see its [release notes](https://github.com/cvhviz/Cairn/releases/tag/cairn-v111).
+Cairn 112 added Settings as tiles, a screensaver, notices in the status bar, Updater mode and sent-message sync; see its [release notes](https://github.com/cvhviz/Cairn/releases/tag/cairn-v112).
 
 ## Supported boards
 
@@ -101,10 +102,13 @@ Want another board? [Ask for it](https://github.com/cvhviz/Cairn/issues/new?temp
 | Contact QR code               |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       –        |    –     |    –    |
 | Room server image             |    ✅    |   –    |        –        |      –       |      –      |       –        |    –     |    –    |
 | Colour themes                 |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       ✅       |    ✅    | some ⁴  |
-| Music, voice, IR, sensors     |    –     |   –    |        –        |      –       |      –      |       ✅       |    –     |    –    |
+| Wi-Fi and Bluetooth scanners  |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       ✅       |    –     |    –    |
+| Music player                  |    –     |   ✅   |        –        |      –       |    ✅ ⁵     |       ✅       |    –     |    –    |
+| Voice recorder                |    –     |   –    |        –        |      –       |    ✅ ⁵     |       ✅       |    –     |    –    |
+| IR remote, climate sensors    |    –     |   –    |        –        |      –       |      –      |       ✅       |    –     |    –    |
 | Imperial units, 12-hour clock |    ✅    |   ✅   |       ✅        |      ✅      |     ✅      |       ✅       |    ✅    |   ✅    |
 
-¹ Clock sync and online updates; no app link over Wi-Fi. ² From Cairn 108 on. ³ With the Expansion Kit. ⁴ The colour-screen boards (Wireless Tracker, T1).
+¹ Clock sync and online updates; no app link over Wi-Fi. ² From Cairn 108 on. ³ With the Expansion Kit. ⁴ The colour-screen boards (Wireless Tracker, T1). ⁵ From Cairn 113, tried on a T-Deck Plus.
 
 ## Which file do I need?
 

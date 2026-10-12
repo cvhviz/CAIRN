@@ -28,7 +28,8 @@ Install, update and recovery all use the same file: double-tap **RST** and copy 
 - Spectrum page with a scrolling RSSI history and NF / NOW / PK readouts.
 - Radio page: the frequency in MHz with the TX power, SF / BW / CR in the theme's accent, and the noise floor (from Cairn 111).
 - GPS page: fix, satellites and HDOP, position, altitude and the Maidenhead grid square (from Cairn 111).
-- Settings: Theme, Screen, Keep on USB, GPS, Bluetooth, Reboot, Hibernate.
+- Settings: one list in groups: Theme, Screen, Keep on USB, then Bluetooth, then GPS, then a line before Reboot and Hibernate, with Back last (regrouped in Cairn 113).
+- Recent shows nodes whose clock isn't set yet (a freshly flashed T096 repeater, for example), labelled "unset" (from Cairn 113).
 - Cairn splash in your theme's colours, with the build number.
 - Feet and °F, 12-hour clock.
 
