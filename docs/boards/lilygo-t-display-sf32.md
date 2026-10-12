@@ -15,7 +15,7 @@ The keypad board adds a 20-key phone-style keypad with backlight, a haptic motor
 
 Cairn runs a native interface on it, built for the large square screen. It works with the official MeshCore apps over Bluetooth.
 
-Its current files are in [Cairn 113](https://github.com/cvhviz/Cairn/releases/tag/cairn-v113): `MeshCore-TDisplaySF32-Cairn113-2026-10-11-install.zip` and `MeshCore-TDisplaySF32-Cairn113-2026-10-11-update.bin`. A board on Cairn 107, 108 or 112 updates over Wi-Fi (with the keyboard board attached). A board on the very first SF32 build (6 Oct) needs the [USB installer](../install/sf32.md#if-your-board-has-the-first-sf32-build) once.
+Its current files are in [Cairn 114](https://github.com/cvhviz/Cairn/releases/tag/cairn-v114): `MeshCore-TDisplaySF32-Cairn114-2026-10-12-install.zip` and `MeshCore-TDisplaySF32-Cairn114-2026-10-12-update.bin`. A board on Cairn 107, 108, 112 or 113 updates over Wi-Fi (with the keyboard board attached). A board on the very first SF32 build (6 Oct) needs the [USB installer](../install/sf32.md#if-your-board-has-the-first-sf32-build) once.
 
 ## Which file
 
@@ -29,16 +29,16 @@ Its current files are in [Cairn 113](https://github.com/cvhviz/Cairn/releases/ta
 
 - **Home dashboard of cards:**
   - a header with a big clock and either a **mini spectrum** (one full-height graph of your channel that zooms to what the band is doing and colours each level by how often the channel sat there, from Cairn 113; tap it to open Spectrum) or **Date & info**. Switch in Settings › Home, or long-press the header;
-  - battery, chats, nodes, GPS, radio (frequency, SF / BW and noise floor) and network;
-  - board cards: climate, step counter, IR remote, Audio (Player and Recorder) and Tools.
+  - battery, chats, nodes, radio (frequency, SF / BW and noise floor) and network (the GPS card left Home in Cairn 114: the sidebar shows the GPS);
+  - board cards: Sensors (steps as its main value, with temperature, humidity and pressure; one card from Cairn 114), IR remote, Audio (Player and Recorder) and Tools.
   - Scroll down for more cards.
-- **Sidebar tabs:** Home, Chats, Nodes, Radio, GPS and Settings, with coloured icons. The GPS icon is green while the GPS is on and red while it is off, paused for Wi-Fi, or the keyboard is unpowered (from Cairn 113).
+- **Sidebar tabs:** Home, Chats, Nodes, Radios, GPS and Settings, with coloured icons. The GPS icon is green while the GPS is on and red while it is off, paused for Wi-Fi, or the keyboard is unpowered (from Cairn 113).
 - **Settings as cards:** Settings and every sub-page use dashboard-style cards (icon badge, title, big value, detail line), including System and Firmware update.
 - **Themes:** the nine colour themes from the L2 Pro, plus red and Night modes. Text is a size larger throughout, and chats show colour emoji.
 - **Chats:** channels and direct messages, typed on the keypad (multi-tap) or on the touchscreen. Messages sent from a phone app appear in the board's chats, and messages sent on the board appear in CairnOS (with the next CairnOS update).
 - **Nodes:** list and cards views, ping, repeater scan and remote admin.
 - **Node pages:** selecting a companion, repeater, room server or sensor opens a page of cards for it: signal, route, battery, last ping and, once logged in, its status, neighbours, readings and clock. The bar at the bottom follows the session: Message or Log in, Ping, then More, Admin or Refresh. The full admin console is one step further.
-- **Radio:** a live spectrum strip, with a full-screen spectrum and band scan.
+- **Radios** (tabs from Cairn 114): **1 LoRa**, **2 Wi-Fi** and **3 BLE**, by touch or keys 1, 2 and 3. LoRa has a live spectrum strip, a full-screen spectrum and band scan, and **Traffic**: the last hour's packets with a stats strip, each opening its details as tiles.
 - **GPS:** position, satellites and a compass. Tap the compass for a full-screen view with all the GPS details.
 - **Sensors:** temperature, humidity and pressure (keypad board), and a step counter.
 - **IR remote:** large buttons, with brand and device chosen in its settings.
@@ -46,7 +46,7 @@ Its current files are in [Cairn 113](https://github.com/cvhviz/Cairn/releases/ta
 - **Charging:** the battery charges on USB. Cairn sets up the battery charger at boot and checks it every few seconds. The Battery page shows the charge state and, if the battery has a temperature sensor, whether it is too cold or too hot to charge.
 - **Low battery:** on battery, below 3.55 V for a minute, a 30-second countdown starts, then the board powers off to protect the cell. Any key or USB cancels it. To wake it, plug in USB or hold D for 2 seconds.
 - **Wi-Fi:** the keyboard's ESP32-C6 joins your network (Settings › Network). While Wi-Fi is on, the GPS is paused: the two share one connection.
-- **Wi-Fi and Bluetooth scanners** (from Cairn 113): **Wi-Fi scan** and **BT scan** at the top of the Network page, with the Wi-Fi and Bluetooth cards under them. Each has a Start button, a live plot and a list. The Bluetooth radar opens full screen, and **Find** helps you walk towards a device, using the GPS course or the motion sensor for a heading. Wi-Fi scan needs the keyboard board.
+- **Wi-Fi and Bluetooth scanners** (from Cairn 113; the Radios page's Wi-Fi and BLE tabs from Cairn 114): each has a Start button, a live plot and a list, and the scan status shows in the status bar. Keys: 4 Active, 5 Passive, 6 Plot / List, 7 Start. The Bluetooth radar opens full screen, and **Find** helps you walk towards a device, using the GPS course or the motion sensor for a heading. Wi-Fi scan needs the keyboard board.
 - **Internet time:** on Wi-Fi the clock is set from the internet. In Settings › Time & location, Internet time is Off, Ask (the default) or **Always**. Ask corrects small differences silently and asks before a change of more than an hour ("Set clock from internet?": Not now, Set, Always). Always sets it without asking. A GPS fix still comes first.
 - **Clock after a power loss:** the board saves the time to its flash every 15 minutes and before a restart or power-off. After a power loss it comes back with the last known time, shown as "Last known", until the GPS, the internet or the app sets it.
 - **Wi-Fi updates:** Settings › System › Firmware update checks this repository's latest release, downloads the board's `-update.bin`, and checks its size, SHA-256 and board marker before it offers to install. The new build goes into a spare slot and runs on trial; it is kept only after it has run for a minute, otherwise the board goes back to the build it had. It needs USB with the battery switched on, or 30 % battery.

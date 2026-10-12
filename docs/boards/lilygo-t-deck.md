@@ -23,18 +23,19 @@ Cairn runs the same interface as the [Wio Tracker L2 Pro](wio-tracker-l2-pro.md)
 - **Battery saver** (Settings › Hardware › Display › Power, off by default, beta, from Cairn 111): while the screen is dark the chip sleeps between radio packets, with Bluetooth off. Measured for Cairn 112: about 43 mA with the screen off instead of about 82 mA, so about 54 h of standby on a full charge instead of about 28 h. It slept 98–99 % of a 14-hour run and still received every packet.
 - **Nodes Cards view by keys:** the trackball and arrow keys focus one card at a time; left and right move between the two in a row (from Cairn 112).
 - **Enter finishes the text field** (from Cairn 113): Send in a chat, Done, OK or Save elsewhere. The trackball click still selects what is highlighted.
-- **Radio tab by keys** (from Cairn 113): it lands on Advert, and the advert sheet opens with Send focused, so Advert, then a click, sends a zero-hop advert.
+- **Radios by keys:** 1, 2 and 3 pick the LoRa, Wi-Fi and Bluetooth tabs (from Cairn 114). The LoRa tab lands on Advert (from Cairn 113), and the advert sheet opens with Send focused, so Advert, then a click, sends a zero-hop advert.
 
 ## Music and voice notes
 
 From Cairn 113, tried on a T-Deck Plus. On the T-Deck an **Audio** card takes the GPS card's place on Home (the GPS tab still shows the satellites) and opens a Player and a Recorder.
 
-- **Player:** put MP3 or WAV files in a `Music` folder on the microSD card. Now playing has a live spectrum, a seek bar, previous / -10 s / play-pause / +10 s / next, volume, repeat and shuffle. Music keeps playing with the screen dark unless you set "Pause at screen off"; a message alert pauses it and it carries on after the tone. Hold a file to delete it. MP3 (CBR or VBR) and WAV (8, 16 or 24-bit), 8 to 48 kHz; stereo plays as mono.
+- **Player:** put MP3 or WAV files in a `Music` folder on the microSD card. Now playing has a live spectrum with volume buttons over it, a seek bar and previous / -10 s / play-pause / +10 s / next; repeat and shuffle are in its options. Subfolders in `Music` show two levels deep (from Cairn 114). Music keeps playing with the screen dark unless you set "Pause at screen off"; a message alert pauses it and it carries on after the tone. Hold a file to delete it. MP3 (CBR or VBR) and WAV (8, 16 or 24-bit), 8 to 48 kHz; stereo plays as mono.
+- **Mic key** (from Cairn 114): opens the Recorder; on the Recorder it starts and stops a recording.
 - **Recorder:** voice notes to a `Recordings` folder as WAV at 16 or 8 kHz, with mic gain, a time limit, voice start and marks. Files are named by date and time once the clock is set. A recording keeps going with the screen dark and is kept safe if the power or the card goes. The microphone is only on while you record or the Record view is open, and the status bar shows MIC or REC whenever it is.
 - The card shares its bus with the radio and the screen, so very large files (CD-quality WAV) are refused with "Too fast for this card: use MP3".
 - The folders match the T-Display SF32's, so a card moves between them.
 
-The T-Deck also has the Wi-Fi and Bluetooth scanners and the redesigned Battery page from Cairn 113; see the [L2 Pro page](wio-tracker-l2-pro.md#features). On USB the Battery page says the cell can't be read instead of claiming Full.
+The T-Deck also has the Wi-Fi and Bluetooth scanners and the redesigned Battery page from Cairn 113, and from Cairn 114 the Radios tabs with Traffic, the Storage page with Files, and **USB drive** mode (the microSD card as a disk on your computer, about 0.5 MB/s); see the [L2 Pro page](wio-tracker-l2-pro.md#features). On USB the Battery page says the cell can't be read instead of claiming Full.
 
 ## Screens
 
@@ -54,7 +55,7 @@ The same files run on the T-Deck and the T-Deck Plus. Write the `-full.bin` or t
 
 **Download mode.** esptool and the web flasher can usually restart the T-Deck into download mode over USB by themselves. If they can't connect, switch the T-Deck off, hold the trackball in (it is the BOOT button), switch it on, then release it and connect again.
 
-**Coming from another firmware.** Cairn keeps its identity, contacts and settings in the T-Deck's internal flash. Firmwares that keep them on the microSD card (Wadamesh does, in a `meshcomod` folder) don't carry over by themselves: Cairn starts with a new identity. Your files stay on the card. Cairn reads offline maps from the card's `cairn/maps` folder; [tools/maptiles.py](../../tools/maptiles.py) makes them.
+**Coming from another firmware.** Cairn keeps its identity, contacts and settings in the T-Deck's internal flash. Firmwares that keep them on the microSD card (Wadamesh does, in a `meshcomod` folder) don't carry over by themselves: Cairn starts with a new identity. Your files stay on the card. Cairn reads offline maps from the card's `Maps` folder (`cairn/maps` before Cairn 114; it moves by itself); [tools/maptiles.py](../../tools/maptiles.py) makes them.
 
 ## Known issues
 

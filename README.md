@@ -11,21 +11,19 @@ Builds are numbered: the splash screen shows **BUILD N**, releases are tagged `c
 
 **Download the files from the [latest release](https://github.com/cvhviz/Cairn/releases/latest).** L1 Pro releases from before Cairn (builds 40 to 98) are archived in this repository's releases; the last of them is [build 98](https://github.com/cvhviz/CAIRN/releases/tag/cvhbuild-v98).
 
-## Latest: Cairn 113 (11 Oct 2026)
+## Latest: Cairn 114 (12 Oct 2026)
 
-- **Wi-Fi and Bluetooth scanners** (Home › Network): a live plot and a list of the networks or Bluetooth devices around you, a full-screen Bluetooth radar, and **Find** to walk towards a device. On the L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32.
-- **Music player** on the T-Deck Plus and the L2 Pro: MP3 and WAV from the microSD card, with a live spectrum, repeat and shuffle. **Voice recorder** on the T-Deck Plus; it is off on the L2 Pro for now. On these two boards an Audio card takes the GPS card's place on Home.
-- **Battery page:** time left, the rate, today's range and a graph over 1 hour to 7 days with plug-in, unplug and full markers. The week's history comes back after a restart.
-- **Asks before switching:** Wi-Fi, Bluetooth and GPS ask before they turn on or off from the board, so a stray touch can't drop the app.
-- **GPS icon** in the sidebar: green while the GPS is on, red while it is off. A darker Ocean theme on the M9, T-Deck and Heltec V4 touch.
-- **Heltec V4 touch:** better reception (the V4-R8's receive amplifier is now on), steadier touch, and the whole screen is tappable.
-- **T-Display SF32:** the scanners on its Network page, and Home's mini spectrum as one full-height graph. See its [board page](docs/boards/lilygo-t-display-sf32.md).
-- **Wio Tracker L1 Pro** (from 107): messages sent from the phone show on the L1, a GPS data view, Path hash and Units settings, a TX/RX line, Settings in six categories and a side-rail fix. See its [board page](docs/boards/wio-tracker-l1-pro.md).
-- **T096 and compact repeaters:** the T096's Settings list is regrouped; the repeaters take up to 32 clients and accept admin commands from the v1.18 MeshCore apps.
-- **Updating:** L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32 update over Wi-Fi in **Settings › System › Firmware update**. The L1 Pro family and the T096 update by copying the new `.uf2` ([UF2 guide](docs/install/nrf52-uf2.md)).
+- **Radios page with tabs:** LoRa (its tab shows the frequency), Wi-Fi and Bluetooth side by side; the scanners moved here from the Network page and show their status in the status bar. On the L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32.
+- **Traffic log:** tap the LoRa tab's traffic card for the last hour's packets (up to 2048) with a stats strip; tap a packet for its details as tiles.
+- **Storage page and Files** (Settings › Hardware › Storage): the card's status, a file manager, Eject, Re-scan and Format in one place.
+- **USB drive** on the T-Deck Plus and the L2 Pro: the microSD card shows up as a disk on your computer, so maps and music copy over without taking the card out.
+- **Card folders:** `Maps`, `Music`, `Recordings`, `Sounds` and `Pictures` at the top of the card. Maps in the old `cairn/maps` folder move by themselves. Music subfolders show two levels deep.
+- **Audio:** on the L2 Pro, music no longer distorts at high volume and matches the alert tones' loudness. The player's volume buttons sit over the spectrum. On the T-Deck Plus the Mic key opens the recorder.
+- **T-Display SF32:** the Radios tabs and Traffic log, a Sensors card (steps, temperature, humidity, pressure) in place of Climate and Steps, no GPS card on Home, and a startup tone that no longer stutters. See its [board page](docs/boards/lilygo-t-display-sf32.md).
+- **Updating:** L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32 update over Wi-Fi in **Settings › System › Firmware update**. The L1 Pro family and the T096 update by copying the new `.uf2` ([UF2 guide](docs/install/nrf52-uf2.md)); they and the compact repeaters are rebuilt as 114 with no changes of their own.
 - **Other boards:** the preview boards stay on [Cairn 107 preview](https://github.com/cvhviz/Cairn/releases/tag/cairn-v107-preview).
 
-Cairn 112 added Settings as tiles, a screensaver, notices in the status bar, Updater mode and sent-message sync; see its [release notes](https://github.com/cvhviz/Cairn/releases/tag/cairn-v112).
+Cairn 113 added the Wi-Fi and Bluetooth scanners, the music player and voice recorder, the Battery page and the L1 Pro's move up from 107; see its [release notes](https://github.com/cvhviz/Cairn/releases/tag/cairn-v113).
 
 ## Supported boards
 
@@ -105,6 +103,9 @@ Want another board? [Ask for it](https://github.com/cvhviz/Cairn/issues/new?temp
 | Wi-Fi and Bluetooth scanners  |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       ✅       |    –     |    –    |
 | Music player                  |    –     |   ✅   |        –        |      –       |    ✅ ⁵     |       ✅       |    –     |    –    |
 | Voice recorder                |    –     |   –    |        –        |      –       |    ✅ ⁵     |       ✅       |    –     |    –    |
+| Traffic log, packet details   |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       ✅       |    –     |    –    |
+| File manager                  |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       –        |    –     |    –    |
+| USB drive (microSD)           |    –     |   ✅   |        –        |      –       |     ✅      |       –        |    –     |    –    |
 | IR remote, climate sensors    |    –     |   –    |        –        |      –       |      –      |       ✅       |    –     |    –    |
 | Imperial units, 12-hour clock |    ✅    |   ✅   |       ✅        |      ✅      |     ✅      |       ✅       |    ✅    |   ✅    |
 
