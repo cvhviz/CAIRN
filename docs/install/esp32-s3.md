@@ -73,10 +73,10 @@ The [compact repeater](../boards/compact-repeater.md) images for the Heltec V2, 
 ## Over Wi-Fi (L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck)
 
 - **Online:** Settings › System › Firmware update › **Check for updates**. The device also checks this repository once a day while on Wi-Fi and shows a notice when a newer build is out. It downloads the board's `-update.bin` over HTTPS, checks its size, SHA-256 and board marker, and installs only after you confirm.
-- **Updater mode:** tap the **Updater mode** tile on the same page (called update mode before Cairn 112). The board shows its address and a password. Open that address in a browser, type the password, and upload the `-update.bin`.
+- **Wi-Fi transfer:** tap the **Wi-Fi transfer** tile on the same page (called Updater mode before Cairn 116, and update mode before Cairn 112). The board shows its address and a password. Open that address in a browser, type the password, and upload the `-update.bin`.
 
-  Bluetooth is off while Updater mode runs, and the board restarts into the new build when it's done.
-- **From CairnOS** (Cairn 112, with the next CairnOS update): the app can ask the board over Bluetooth to start Updater mode. The board asks **Allow app update?** first; after you tap Allow it turns Bluetooth off and the app sends the update over Wi-Fi. The board must be on Wi-Fi.
+  Bluetooth is off while Wi-Fi transfer runs, and the board restarts into the new build when it's done.
+- **From CairnOS** (Cairn 112, with the next CairnOS update): the app can ask the board over Bluetooth to start Wi-Fi transfer. The board asks **Allow app update?** first; after you tap Allow it turns Bluetooth off and the app sends the update over Wi-Fi. The board must be on Wi-Fi.
 
 ## First boot
 

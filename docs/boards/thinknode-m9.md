@@ -29,7 +29,7 @@ Captured on an M9 running Cairn 108 (the focus ring shows which item the keys ar
 | You want to… | File | How |
 |---|---|---|
 | install Cairn for the first time | `MeshCore-ThinkNodeM9-CairnN-<date>-full.bin` | full erase, then write at `0x0` ([steps](../install/esp32-s3.md)). **Erases everything**: if it runs MeshCore, export your key and contacts in the app first. |
-| update | `MeshCore-ThinkNodeM9-CairnN-<date>-update.bin` | USB at `0x10000`, or over Wi-Fi: Settings › System › Firmware update (from Cairn 107) fetches it from the latest release, or a browser upload in Updater mode (from Cairn 112). |
+| update | `MeshCore-ThinkNodeM9-CairnN-<date>-update.bin` | USB at `0x10000`, or over Wi-Fi: Settings › System › Firmware update (from Cairn 107) fetches it from the latest release, or a browser upload in Wi-Fi transfer (from Cairn 112). |
 | recover a device that won't boot | `MeshCore-ThinkNodeM9-CairnN-<date>-full.bin` | full erase, then write at `0x0` |
 
 Write the `-full.bin` or the `-update.bin`, never both. Coming from Elecrow's firmware, Meshtastic or stock MeshCore, use the `-full.bin`.

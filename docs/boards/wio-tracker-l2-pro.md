@@ -14,7 +14,7 @@ Wio-S3 module (ESP32-S3, 16 MB flash, 8 MB PSRAM), SX1262 LoRa (TCXO 3.0 V), 3.2
 | You want to… | File | How |
 |---|---|---|
 | install Cairn for the first time | `MeshCore-WioL2Pro-CairnN-<date>-full.bin` | full erase, then write at `0x0`. **Erases everything**: export your key and contacts in the app first. |
-| update | `MeshCore-WioL2Pro-CairnN-<date>-update.bin` | online (Settings › System › Firmware update), a browser upload in Updater mode, or USB at `0x10000` |
+| update | `MeshCore-WioL2Pro-CairnN-<date>-update.bin` | online (Settings › System › Firmware update), a browser upload in Wi-Fi transfer, or USB at `0x10000` |
 | recover a device that won't boot | `MeshCore-WioL2Pro-CairnN-<date>-full.bin` | full erase, then write at `0x0` |
 
 Write the `-full.bin` or the `-update.bin`, never both. If the device last updated over Wi-Fi, run `esptool --chip esp32s3 erase-region 0xe000 0x2000` before a USB write of the `-update.bin` ([why](../install/esp32-s3.md#if-the-device-last-updated-over-wi-fi)).
@@ -46,6 +46,7 @@ Write the `-full.bin` or the `-update.bin`, never both. If the device last updat
 - **Screensaver** (Settings › Appearance › Screensaver, from Cairn 112): Beacon, Ambient, Night clock or Auto, in place of a screen that never times out (Screen timeout Never, or Stay on USB). It runs on USB power by default, starts after 1–30 minutes without a touch, and on battery hands over to a real screen-off after a time you choose.
 - **Battery** (redesigned in Cairn 113): the percent, the voltage and a status line ("On battery · 9h 40m left"), six cells (time left or to full, rate, time in this state, today's low and high, the last full charge, the screen-on share), and a graph over 1 h to 7 days in % or volts with markers for plug-in, unplug, full, warnings and restarts. Tap the graph for a readout. The week's history comes back after a restart, once the clock is set.
 - **Music player** (from Cairn 113): put MP3 or WAV files in a `Music` folder on the microSD card and play them from the Audio card, with a live spectrum, seek and volume buttons over the spectrum; repeat and shuffle are in its options. Subfolders in `Music` show two levels deep (from Cairn 114). From Cairn 114 music and the alert tones play at matching loudness, and loud tracks no longer clip. Music keeps playing with the screen dark. From Cairn 115: a five-band **EQ** (Flat, Voice, Bright, Warm, Custom) shaped over the live spectrum, Now playing as a full-screen visualizer (tap for the controls), Player options as cards, and alert tones no longer interrupt music (Options › Alerts turns them back on).
+- **Add music over Wi-Fi** (from Cairn 116): Settings › Storage › **Wi-Fi transfer**, then open the address it shows in a browser on your network and drop MP3 or WAV files in; they go into `Music`, or a folder you name inside it.
 - **Voice recorder** (from Cairn 115): voice notes to the card's `Recordings` folder as WAV, from the Audio card's Recorder.
 - **Storage** (Settings › Hardware › Storage, from Cairn 114): the card's status, **Files** (browse the card, delete files and folders), Eject, Re-scan and Format on one page.
 - **USB drive** (Storage › USB drive, from Cairn 114): the microSD card shows up as a disk on your computer (about 0.7 MB/s). Eject it on the computer, then tap Done and the board restarts.
@@ -53,7 +54,7 @@ Write the `-full.bin` or the `-update.bin`, never both. If the device last updat
 - **Sound**: volume and a choice of alert tone per event.
 - **Wake & lock**: tap to wake, auto-lock, and a pocket-safe lock screen.
 - **Clock**: 12h / 24h / analog, US time zones or a custom offset, and internet time over Wi-Fi; *Always take internet time* skips the question when the clock is off by over an hour (from Cairn 111).
-- **Wi-Fi**: on-device setup, clock sync, the MeshCore app over Wi-Fi, **online updates** from this repository's releases (checked once a day; nothing installs without your confirmation), and **Updater mode** for an update sent from a browser (from Cairn 112; CairnOS can start one with its next update, after you tap Allow on the board).
+- **Wi-Fi**: on-device setup, clock sync, the MeshCore app over Wi-Fi, **online updates** from this repository's releases (checked once a day; nothing installs without your confirmation), and **Wi-Fi transfer** (named Updater mode before Cairn 116) for an update sent from a browser (from Cairn 112; CairnOS can start one with its next update, after you tap Allow on the board).
 - **Sent-message sync** (from Cairn 112): messages a phone app sends appear in the board's chats, with the delivered tick when the ACK arrives; messages sent on the board appear in CairnOS, or wait until it next syncs.
 
 ## Screens

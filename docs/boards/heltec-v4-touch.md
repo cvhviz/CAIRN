@@ -11,7 +11,7 @@ The Heltec V4 with Heltec's Expansion Kit V2: ESP32-S3 (16 MB flash, 8 MB octal 
 | You want to… | File | How |
 |---|---|---|
 | install Cairn for the first time | `MeshCore-HeltecV4Touch-CairnN-<date>-full.bin` | full erase, then write at `0x0`. **Erases everything**: export your key and contacts in the app first. |
-| update | `MeshCore-HeltecV4Touch-CairnN-<date>-update.bin` | online (Settings › System › Firmware update), a browser upload in Updater mode, or USB at `0x10000` |
+| update | `MeshCore-HeltecV4Touch-CairnN-<date>-update.bin` | online (Settings › System › Firmware update), a browser upload in Wi-Fi transfer, or USB at `0x10000` |
 | recover a device that won't boot | `MeshCore-HeltecV4Touch-CairnN-<date>-full.bin` | full erase, then write at `0x0` |
 
 Write the `-full.bin` or the `-update.bin`, never both. If the device last updated over Wi-Fi, run `esptool --chip esp32s3 erase-region 0xe000 0x2000` before a USB write of the `-update.bin` ([why](../install/esp32-s3.md#if-the-device-last-updated-over-wi-fi)).
@@ -30,6 +30,13 @@ Write the `-full.bin` or the `-update.bin`, never both. If the device last updat
 The full L2 touch interface: home dashboard, chats with an on-screen keyboard and colour emoji, nodes, repeater scan and admin, radio with spectrum and band scan, GPS with the offline microSD map and pinch to zoom, quick panel, Wi-Fi with online updates, and the Wi-Fi and Bluetooth scanners and the redesigned Battery page (from Cairn 113). See the [L2 Pro page](wio-tracker-l2-pro.md#features) for the list. It has no audio hardware beyond the piezo, so the music player isn't on this board.
 
 From Cairn 114: the Radios page with LoRa, Wi-Fi and Bluetooth tabs and a full-screen Traffic log with packet details, the Storage page with Files, and the card's `Maps`, `Music`, `Recordings`, `Sounds` and `Pictures` folders (maps in `cairn/maps` move by themselves). USB drive mode isn't on this board.
+
+From Cairn 116 (tested extensively, on the bench and in the field):
+
+- **No more touch stalls:** the touch controller could report a finger that never lifted, or a "ghost" second touch near the top-right corner, so taps did nothing until the screen was switched off and on. Cairn follows the real finger, ignores short-lived ghosts and resets the controller itself when either shows up, and also on leaving the screensaver.
+- **Taps land where your finger does,** not on the row below.
+- **Battery saver** (Settings › Display), the **FEM LNA** and **Boosted RX** switches (Settings › Radio › Receive), low-battery shutdown, and the white LED flashing with each packet sent.
+- **TX power at the antenna:** the Radio pages show what leaves the antenna (up to 28 dBm), and the setting stops at 18, where the amplifier is already at full output.
 
 From Cairn 115: the LoRa / Wi-Fi / Bluetooth tabs are easier to tap (this panel reads taps near the top edge a little high), and after a power cut the clock shows "--:--" until GPS, the app or Wi-Fi sets it.
 

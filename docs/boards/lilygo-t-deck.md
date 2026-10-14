@@ -30,6 +30,7 @@ Cairn runs the same interface as the [Wio Tracker L2 Pro](wio-tracker-l2-pro.md)
 From Cairn 113, tried on a T-Deck Plus. On the T-Deck an **Audio** card takes the GPS card's place on Home (the GPS tab still shows the satellites) and opens a Player and a Recorder.
 
 - **Player:** put MP3 or WAV files in a `Music` folder on the microSD card. Now playing has a live spectrum with volume buttons over it, a seek bar and previous / -10 s / play-pause / +10 s / next; repeat and shuffle are in its options. Subfolders in `Music` show two levels deep (from Cairn 114). Music keeps playing with the screen dark unless you set "Pause at screen off". From Cairn 115: a five-band **EQ**, Now playing as a full-screen visualizer, Player options as cards, and alert tones no longer interrupt music (Options › Alerts turns them back on). Hold a file to delete it. MP3 (CBR or VBR) and WAV (8, 16 or 24-bit), 8 to 48 kHz; stereo plays as mono.
+- **Add music over Wi-Fi** (from Cairn 116): Settings › Storage › **Wi-Fi transfer**, then open the address it shows in a browser on your network and drop MP3 or WAV files in; they go into `Music`, or a folder you name inside it.
 - **Mic key** (from Cairn 114): opens the Recorder; on the Recorder it starts and stops a recording.
 - **Older keyboards** (from Cairn 115): a keyboard whose firmware ignores the raw key mode the Mic key needs types normally again ([#17](https://github.com/cvhviz/CAIRN/issues/17)).
 - **Recorder:** voice notes to a `Recordings` folder as WAV at 16 or 8 kHz, with mic gain, a time limit, voice start and marks. Files are named by date and time once the clock is set. A recording keeps going with the screen dark and is kept safe if the power or the card goes. The microphone is only on while you record or the Record view is open, and the status bar shows MIC or REC whenever it is.
@@ -49,7 +50,7 @@ Home on a T-Deck running Cairn 108, with the trackball's focus ring on the Batte
 | You want to… | File | How |
 |---|---|---|
 | install Cairn for the first time | `MeshCore-TDeckPlus-CairnN-<date>-full.bin` | write at `0x0` ([steps](../install/esp32-s3.md)). If it runs MeshCore, export your key and contacts in the app first. |
-| update | `MeshCore-TDeckPlus-CairnN-<date>-update.bin` | USB at `0x10000`, or over Wi-Fi: Settings › System › Firmware update fetches it from the latest release (from Cairn 108 on), or a browser upload in Updater mode |
+| update | `MeshCore-TDeckPlus-CairnN-<date>-update.bin` | USB at `0x10000`, or over Wi-Fi: Settings › System › Firmware update fetches it from the latest release (from Cairn 108 on), or a browser upload in Wi-Fi transfer |
 | recover a device that won't boot | `MeshCore-TDeckPlus-CairnN-<date>-full.bin` | write at `0x0` |
 
 The same files run on the T-Deck and the T-Deck Plus. Write the `-full.bin` or the `-update.bin`, never both.

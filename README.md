@@ -11,18 +11,18 @@ Builds are numbered: the splash screen shows **BUILD N**, releases are tagged `c
 
 **Download the files from the [latest release](https://github.com/cvhviz/Cairn/releases/latest).** L1 Pro releases from before Cairn (builds 40 to 98) are archived in this repository's releases; the last of them is [build 98](https://github.com/cvhviz/CAIRN/releases/tag/cvhbuild-v98).
 
-## Latest: Cairn 115 (12 Oct 2026)
+## Latest: Cairn 116 (14 Oct 2026)
 
-- **L2 Pro microphone:** the voice recorder works on the L2 Pro.
-- **EQ and visualizer** on the L2 Pro and T-Deck Plus: five bands with Flat, Voice, Bright, Warm and Custom presets shaped over the live spectrum, and Now playing as a full-screen visualizer with the controls a tap away. Player options are cards, and alert tones no longer interrupt music.
-- **Cards everywhere:** every chooser on the touch and key boards (button actions, setting lists, action menus) is a page of cards, and a node's "…" opens Discover path, Reset route, Favorite, Share contact, Admin and Remove as cards.
-- **Packet details** lead with the sender (name, type, distance, key), then the signal and route as large values. Tap a node on the map to see its route.
-- **Clock:** after a power cut the clock shows "--:--" until GPS, the app or Wi-Fi sets it, instead of the time the board was switched off ([#18](https://github.com/cvhviz/CAIRN/issues/18)). Older T-Deck keyboards type again ([#17](https://github.com/cvhviz/CAIRN/issues/17)).
-- **T-Display SF32:** no restart on the second `*` in a message, a faster Nodes tab, and card titles in Title Case. See its [board page](docs/boards/lilygo-t-display-sf32.md).
-- **Updating:** L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32 update over Wi-Fi in **Settings › System › Firmware update**. The L1 Pro family and the T096 update by copying the new `.uf2` ([UF2 guide](docs/install/nrf52-uf2.md)); they and the compact repeaters are rebuilt as 115 with no changes of their own.
+- **Heltec V4 touch, reliable touch:** no more phantom or ghost touches stalling the screen until it is switched off and on, and taps land where your finger does, not on the row below. Tested extensively, on the bench and in the field. Battery saver, receive-gain switches and TX power shown at the antenna come to this board too.
+- **Chats:** reply to a message ([#10](https://github.com/cvhviz/CAIRN/issues/10)), delete a chat or a message, and edit your quick replies, on every touch board. The keyboard's Send button sits beside the message field, away from Delete.
+- **Screenshots and pictures:** a Screenshot button action and the quick panel's Capture save the screen to the card; tap a picture in Files to view it.
+- **Wi-Fi transfer** (was Updater mode): on the L2 Pro and T-Deck, add music to the card from any browser on your network.
+- **Radios tab:** the scanner controls are at the bottom and the tabs are taller.
+- **Wio L1 Pro family:** the joystick can leave the Settings page again ([#20](https://github.com/cvhviz/CAIRN/issues/20)). **T-Deck:** older keyboards no longer type several characters a press ([#17](https://github.com/cvhviz/CAIRN/issues/17)). **T096:** TX power is shown at the antenna.
+- **Updating:** L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32 update over Wi-Fi in **Settings › System › Firmware update**. The L1 Pro family and the T096 update by copying the new `.uf2` ([UF2 guide](docs/install/nrf52-uf2.md)); the T-Display SF32 and the compact repeaters are rebuilt as 116 with no changes of their own.
 - **Other boards:** the preview boards stay on [Cairn 107 preview](https://github.com/cvhviz/Cairn/releases/tag/cairn-v107-preview).
 
-Cairn 114 added the Radios tabs and Traffic log, the Storage page with Files, USB drive mode and the card folders; see its [release notes](https://github.com/cvhviz/Cairn/releases/tag/cairn-v114).
+Cairn 115 added the L2 Pro microphone, the EQ and visualizer, cards for every chooser, the redesigned packet details and the clock fix after a power cut; see its [release notes](https://github.com/cvhviz/Cairn/releases/tag/cairn-v115).
 
 ## Supported boards
 
