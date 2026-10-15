@@ -10,7 +10,7 @@ The T-Deck is a handheld with:
 - a microSD slot, a speaker (message chimes and tones, with a volume setting, from Cairn 109; music from Cairn 113), a microphone (voice notes from Cairn 113), and on the T-Deck Plus a GPS and a larger battery
 - native USB on its USB-C port (no USB-serial chip)
 
-Cairn runs the same interface as the [Wio Tracker L2 Pro](wio-tracker-l2-pro.md) on it, by touch or by keys. The trackball moves a ring over what is selected and its click taps it, as a finger would; touching the screen hides the ring. Typing goes straight into chats and text fields. The keyboard has no Back key: Backspace outside a text field goes back, and so does holding the trackball in when nothing is selected. The [L2 manual](../Cairn_Wio_L2_Pro_User_Manual.pdf) describes the screens.
+Cairn runs the same interface as the [Wio Tracker L2 Pro](wio-tracker-l2-pro.md) on it, by touch or by keys. The trackball moves a ring over what is selected and its click taps it, as a finger would; touching the screen hides the ring. Typing goes straight into chats and text fields. The keyboard has no Back key: Backspace outside a text field goes back, and so does holding the trackball in when nothing is selected. The [Cairn manual](../Cairn_Firmware_Manual_Dark.pdf) describes the screens and the T-Deck's keys.
 
 **Beta** means it is tested on hardware but new to Cairn. On a T-Deck it has run with the screen, touch, keyboard, trackball, LoRa radio, an offline map from microSD, and an identity and contacts carried over from another firmware. Cairn's full automated on-device test suite hasn't been run on it yet, and some features are untried; see [Known issues](#known-issues).
 

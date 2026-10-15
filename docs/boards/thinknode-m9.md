@@ -11,7 +11,7 @@ The ThinkNode M9 is a handheld with:
 - a piezo buzzer, a power slider and a RESET button
 - a WCH USB-serial chip on its USB-C port
 
-Cairn runs the same interface as the [Wio Tracker L2 Pro](wio-tracker-l2-pro.md) on it, driven by the keys: a ring shows what is selected, the d-pad moves it and OK taps it, exactly as a finger would. Typing goes straight into chats. The [L2 manual](../Cairn_Wio_L2_Pro_User_Manual.pdf) describes the screens.
+Cairn runs the same interface as the [Wio Tracker L2 Pro](wio-tracker-l2-pro.md) on it, driven by the keys: a ring shows what is selected, the d-pad moves it and OK taps it, exactly as a finger would. Typing goes straight into chats. The [Cairn manual](../Cairn_Firmware_Manual_Dark.pdf) describes the screens and the M9's keys.
 
 **Beta** means it is tested on hardware but new to Cairn. It passes Cairn's full on-device test suite (13 of 13): boot, the Home cards, Settings, the quick panel, the lock screen, Radio, Spectrum and Band scan, the GPS map, a walk over every page and sheet by keys, and quick key runs. Some features haven't been tried on the M9 yet; they are listed under [Known issues](#known-issues).
 

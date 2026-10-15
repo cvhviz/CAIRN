@@ -6,7 +6,7 @@
 
 Wio-S3 module (ESP32-S3, 16 MB flash, 8 MB PSRAM), SX1262 LoRa (TCXO 3.0 V), 3.2" 320×240 NV3031B LCD with GT911 touch, L76K GPS, ES8311 speaker and microSD.
 
-- [Brochure (PDF)](../Cairn_Wio_L2_Pro_Brochure.pdf) · [User manual (PDF)](../Cairn_Wio_L2_Pro_User_Manual.pdf) · [Screens](#screens)
+- [Brochure (PDF)](../Cairn_Wio_L2_Pro_Brochure.pdf) · [User manual (PDF)](../Cairn_Firmware_Manual_Dark.pdf) · [Previous L2 manual (PDF)](../Cairn_Wio_L2_Pro_User_Manual.pdf) · [Screens](#screens)
 - Offline-map tool: [tools/maptiles.py](../../tools/maptiles.py) ([guide](../../tools/MAPTILES.md))
 
 ## Which file

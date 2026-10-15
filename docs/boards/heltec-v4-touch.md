@@ -2,7 +2,7 @@
 
 ✅ Tested on hardware · ESP32-S3 · [install with esptool or the web flasher](../install/esp32-s3.md) · updates over Wi-Fi
 
-The Heltec V4 with Heltec's Expansion Kit V2: ESP32-S3 (16 MB flash, 8 MB octal PSRAM), SX1262 with front end, 2.8" ST7789 touchscreen, L76K GPS, piezo and microSD. It runs the same touch interface as the [Wio Tracker L2 Pro](wio-tracker-l2-pro.md); the [L2 manual](../Cairn_Wio_L2_Pro_User_Manual.pdf) applies to it too.
+The Heltec V4 with Heltec's Expansion Kit V2: ESP32-S3 (16 MB flash, 8 MB octal PSRAM), SX1262 with front end, 2.8" ST7789 touchscreen, L76K GPS, piezo and microSD. It runs the same touch interface as the [Wio Tracker L2 Pro](wio-tracker-l2-pro.md); the [Cairn manual](../Cairn_Firmware_Manual_Dark.pdf) covers it.
 
 **This build needs a V4-R8** (`esptool chip-id` reports *Embedded PSRAM 8MB*) **fitted in the Expansion Kit V2**. The image is built for the R8's 8 MB octal PSRAM (16 MB QIO flash, KCT8103L front end). A standard Heltec V4 reports *2MB* PSRAM (quad SPI) and has a different front end; on it this image's octal PSRAM setup fails and the board boot-loops. A standard V4 needs the `HeltecV4` [preview build](preview-boards.md); a V4-R8 with only the OLED needs the `HeltecV4R8` preview build. See [troubleshooting](../install/esp32-s3.md#troubleshooting).
 
