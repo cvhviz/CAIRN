@@ -407,7 +407,6 @@ dl.gloss dt:last-of-type,dl.gloss dd:last-of-type{border-bottom:0}
     </div>
     <div class="hero-shots">
       <figure class="shot"><div class="bezel"><img src="img/home-m9.png" alt="Home on the ThinkNode M9: a large clock, then Battery, Chats, Nodes, GPS, LoRa and Network cards" width="320" height="240"></div><figcaption><span class="dev">M9</span>Home, with the key focus ring on the Battery card.</figcaption></figure>
-      <figure class="shot"><div class="bezel"><img src="img/chat-delivered-m9.png" alt="A direct message thread with two ticks on each delivered message" width="320" height="240" loading="lazy"></div><figcaption>Delivered, two ticks.</figcaption></figure>
       <figure class="shot"><div class="bezel"><img src="img/quick-panel-m9.png" alt="The quick panel: eight tiles, brightness and key light sliders, LoRa, SD and Capture" width="320" height="240" loading="lazy"></div><figcaption>The quick panel.</figcaption></figure>
     </div>
   </div>
@@ -884,8 +883,7 @@ esptool --chip esp32s3 -b 921600 write-flash 0x10000 MeshCore-&lt;Board&gt;-Cair
       </ul>
       <p class="small muted">The list doesn't re-sort while your finger is on it. Channel names always start with <span class="ui">#</span>; rooms show as <span class="ui">@Name</span>.</p>
     </div>
-    <figure class="shot"><div class="bezel"><img src="img/chats-list-m9.png" alt="Chats list with New message focused, #Public and L2 Pro conversations" width="320" height="240" loading="lazy"></div><figcaption><span class="dev">M9</span>The list, ring on <span class="ui">New message</span>.</figcaption></figure>
-  </div>
+    </div>
 
   <h3 id="new-message">Starting a conversation</h3>
   <div class="split">
@@ -896,8 +894,7 @@ esptool --chip esp32s3 -b 921600 write-flash 0x10000 MeshCore-&lt;Board&gt;-Cair
       </div>
       <p>The picker lists <span class="ui">CHANNELS · N</span>, then <span class="ui">CONTACTS · N</span> with each contact's route and when it was last heard (<span class="ui">direct · 5d</span>). Rooms you are logged in to appear as <span class="ui">@Room</span>. Repeaters are never listed: use <span class="ui">Admin</span> on their node page. Pick a row and the thread opens ready to type.</p>
     </div>
-    <figure class="shot"><div class="bezel"><img src="img/compose-picker-m9.png" alt="New message picker with a Search field, one channel and sixteen contacts" width="320" height="240" loading="lazy"></div><figcaption><span class="dev">M9</span>Opened with <kbd>@</kbd>.</figcaption></figure>
-  </div>
+    </div>
 
   <h3 id="thread">Reading a thread</h3>
   <p>The title shows the name and message count (<span class="ui">#Public · 111 msgs</span>). Your bubbles sit on the right, others' on the left with the sender's name on channels. Date dividers (<span class="ui">Today</span>, <span class="ui">Yesterday</span>, <span class="ui">Sun Oct 11</span>) appear once the clock is set. Each bubble ends with a meta line: hops and time for incoming (<span class="ui">0 hops · 9:29 AM</span>), time and delivery for yours.</p>
@@ -955,9 +952,6 @@ esptool --chip esp32s3 -b 921600 write-flash 0x10000 MeshCore-&lt;Board&gt;-Cair
   <h3 id="delivery">Delivery, heard and resend <span class="tag new">118</span></h3>
   <p>A direct message you send from the device shows how it is doing on its bubble:</p>
   <div class="shots">
-    <figure class="shot"><div class="bezel"><img src="img/chat-sending-m9.png" alt="117 test 2 with the meta line 1:09 PM sending… and one tick" width="320" height="240" loading="lazy"></div><figcaption><span class="dev">M9</span><span class="ui">sending…</span> One tick: it left this device.</figcaption></figure>
-    <figure class="shot"><div class="bezel"><img src="img/chat-delivered-m9.png" alt="Bubbles with two ticks" width="320" height="240" loading="lazy"></div><figcaption><span class="dev">M9</span>Two ticks: the other side confirmed it.</figcaption></figure>
-    <figure class="shot"><div class="bezel"><img src="img/chat-auto-retry-m9.png" alt="117 test 3, 1:22 PM, heard 4, flood 2/3" width="320" height="240" loading="lazy"></div><figcaption><span class="dev">M9</span>Auto retry at work: <span class="ui">heard 4 · flood 2/3</span>.</figcaption></figure>
     <figure class="shot"><div class="bezel"><img src="img/chat-not-delivered-m9.png" alt="117 test 3 in red: heard 6, not delivered, with a red exclamation mark" width="320" height="240" loading="lazy"></div><figcaption><span class="dev">M9</span><span class="ui">not delivered</span> and a red <span class="ui">!</span>.</figcaption></figure>
   </div>
   <ul>
@@ -991,8 +985,7 @@ esptool --chip esp32s3 -b 921600 write-flash 0x10000 MeshCore-&lt;Board&gt;-Cair
       </ul>
       <p><span class="ui">Delete chat…</span> removes every message of the conversation from this device. Deleting a channel's chat keeps you in the channel.</p>
     </div>
-    <figure class="shot"><div class="bezel"><img src="img/chat-more-channel-m9.png" alt="#Public chat card page: Channel (Key and slot, leave), All read… (Nothing unread), Delete chat… (Erase 107 messages)" width="320" height="240" loading="lazy"></div><figcaption><span class="dev">M9</span>A channel's <span class="ui">⋯</span> page.</figcaption></figure>
-  </div>
+    </div>
   <aside class="call tip"><span class="lbl">Tip</span><p>When direct messages to one contact keep failing, the stored path is usually stale: <span class="ui">⋯</span> › <span class="ui">Reset path</span>, then send again.</p></aside>
 
   <h3 id="unread">Unread and new-message alerts</h3>
@@ -1098,8 +1091,7 @@ esptool --chip esp32s3 -b 921600 write-flash 0x10000 MeshCore-&lt;Board&gt;-Cair
         <li><b>The short key</b> opens a QR code the MeshCore apps can scan to add the contact, with the full key under it.</li>
       </ul>
     </div>
-    <figure class="shot"><div class="bezel"><img src="img/node-detail-tdeck.png" alt="Node detail of FL-YAGI-RP-4B44F, a Repeater: heard clock fast, distance no fix here, path unknown flood, position, and Ping, Admin, Map and more buttons" width="320" height="240" loading="lazy"></div><figcaption><span class="dev">T-Deck · 113</span>A repeater's detail page.</figcaption></figure>
-  </div>
+    </div>
   <div class="cards">
     <div class="card"><div class="top"><span class="ic"><svg><use href="#i-search"/></svg></span><b>Find path</b></div><small>Flood a request; store the route the answer took</small></div>
     <div class="card"><div class="top"><span class="ic"><svg><use href="#i-repeat"/></svg></span><b>Reset route</b></div><small>The next message floods and learns a new route</small></div>
@@ -1109,22 +1101,15 @@ esptool --chip esp32s3 -b 921600 write-flash 0x10000 MeshCore-&lt;Board&gt;-Cair
     <div class="card danger"><div class="top"><span class="ic" style="--c:var(--red)"><svg><use href="#i-trash"/></svg></span><b>Remove contact…</b></div><small>Hold 1.5 s, then confirm</small></div>
   </div>
   <p class="small muted">Above: the node's <span class="ui">⋯</span> page. Removing a contact keeps its messages in Chats; its next advert may add it back, depending on your auto-add setting in the app.</p>
-  <figure class="shot" style="max-width:380px"><div class="bezel"><img src="img/contact-qr-tdeck.png" alt="Public key sheet with a QR code and the full key" width="320" height="240" loading="lazy"></div><figcaption><span class="dev">T-Deck · 113</span>Your own key's QR sheet, from Settings › System › About.</figcaption></figure>
-
   <h3 id="repeater-scan">Repeater scan</h3>
   <div class="split">
     <div>
       <p>Finds the repeaters in direct radio range and shows how well each direction works. Start it by pulling down on Nodes (keys: <kbd>↑</kbd> past the top), or with the <span class="ui">Scan repeaters</span> button action, then <span class="ui">Scan for repeaters</span>. It listens for 15 to 45 seconds.</p>
       <p>Each row shows the repeater, a <span class="ui">Contact</span>, <span class="ui">Heard</span> or <span class="ui">New</span> chip, and signal both ways: <span class="ui">THEY HEAR YOU</span> and <span class="ui">YOU HEAR THEM</span>. Tap one you haven't saved for <span class="ui">Add as contact</span> or <span class="ui">Add and log in…</span>. A 30-second cooldown follows each scan.</p>
     </div>
-    <figure class="shot"><div class="bezel"><img src="img/repeater-scan-tdeck.png" alt="Repeater scan listening, 3 answered, with they-hear-you and you-hear-them signal for three repeaters" width="320" height="240" loading="lazy"></div><figcaption><span class="dev">T-Deck · 113</span><span class="ui">Scanning… 15s</span>.</figcaption></figure>
-  </div>
+    </div>
 
   <h3 id="admin">Repeater and room admin</h3>
-  <div class="shots two">
-    <figure class="shot"><div class="bezel"><img src="img/admin-login-tdeck.png" alt="Admin login: Password (Blank = guest / saved access), Remember password, Log in" width="320" height="240" loading="lazy"></div><figcaption><span class="dev">T-Deck · 113</span>Log in. Blank is guest access.</figcaption></figure>
-    <figure class="shot"><div class="bezel"><img src="img/admin-reboot-tdeck.png" alt="Reboot repeater? dialog with No and Reboot" width="320" height="240" loading="lazy"></div><figcaption><span class="dev">T-Deck · 113</span>Actions › Hold to reboot asks once more.</figcaption></figure>
-  </div>
   <ol class="steps">
     <li>Open a saved repeater's detail page and tap <span class="ui">Admin</span> (a room: <span class="ui">Log in…</span>). The device clock must be set.</li>
     <li>Type the password (up to 15 characters) or leave it blank for guest access. <span class="ui">Remember password</span> saves it on this device, unencrypted.</li>
@@ -1191,17 +1176,11 @@ esptool --chip esp32s3 -b 921600 write-flash 0x10000 MeshCore-&lt;Board&gt;-Cair
   <h3 id="wifi-scan">Wi-Fi scan</h3>
   <div class="shots two">
     <figure class="shot"><div class="bezel"><img src="img/wifi-scan-l2.png" alt="Wi-Fi scan plot: networks as arcs across channels 1 to 14 with a bar per channel" width="320" height="240" loading="lazy"></div><figcaption><span class="dev">L2 Pro · 113</span>Plot. From 116 the controls sit at the bottom.</figcaption></figure>
-    <figure class="shot"><div class="bezel"><img src="img/wifi-list-l2.png" alt="Wi-Fi scan list with networks, channel, security and Saved tags" width="320" height="240" loading="lazy"></div><figcaption><span class="dev">L2 Pro · 113</span>List, strongest first.</figcaption></figure>
-  </div>
+    </div>
   <p>Shows the 2.4 GHz band, channels 1 to 14: one arc per network at its signal strength, the four strongest named, your own network's channel highlighted, and a bar per channel for how crowded it is. Tap the plot or a bar for a readout. The list names every network, hidden ones too, with channel, security and a <span class="ui">Connected</span> or <span class="ui">Saved</span> tag; tap one for <span class="ui">Details</span>, <span class="ui">Show on plot</span> or <span class="ui">Join…</span>.</p>
   <p><span class="ui">Active</span> asks for names (probe requests); <span class="ui">Passive</span> only listens. A scan starts only when you tap <span class="ui">Start</span>, and stops when you leave the page, the screen goes dark or after 3 minutes without a touch. Nothing is sent on the mesh and LoRa keeps working. The status bar shows <span class="ui">Scanning</span> and the count.</p>
 
   <h3 id="bt-scan">Bluetooth scan, radar and Find</h3>
-  <div class="shots">
-    <figure class="shot"><div class="bezel"><img src="img/bt-scan-tdeck.png" alt="BT scan: bars per device over a half radar, MeshCore nodes named" width="320" height="240" loading="lazy"></div><figcaption><span class="dev">T-Deck · 113</span>Bars over a half radar.</figcaption></figure>
-    <figure class="shot"><div class="bezel"><img src="img/bt-radar-tdeck.png" alt="Full-screen radar with dots and MeshCore node names" width="320" height="240" loading="lazy"></div><figcaption><span class="dev">T-Deck · 113</span>Full-screen radar: distance only.</figcaption></figure>
-    <figure class="shot"><div class="bezel"><img src="img/bt-find-tdeck.png" alt="Find: -82 dBm, Steady, with a trend graph and a Tone button" width="320" height="240" loading="lazy"></div><figcaption><span class="dev">T-Deck · 113</span>Find: walk until it says Closer.</figcaption></figure>
-  </div>
   <p>Shows the Bluetooth LE devices in range as bars over a half radar with -60, -80 and -100 dBm rings; MeshCore nodes are named in the accent colour. Tap the radar for a full-screen view: it shows distance only, never direction. Pick a device and <span class="ui">Find</span> shows its signal in big figures, one word for the last 10 s (<span class="ui">Closer</span>, <span class="ui">Farther</span>, <span class="ui">Steady</span> or <span class="ui">Lost</span>) and the last minute as a line; the optional <span class="ui">Tone</span> ticks faster as the signal climbs. BT scan works with Bluetooth off and while the app is connected.</p>
   <aside class="call tip"><span class="lbl">Tip</span><p>On the full-screen radar the d-pad or trackball jumps to the nearest dot in the direction you press. On the T-Deck, keys <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> pick the LoRa, Wi-Fi and Bluetooth tabs, and <kbd>#</kbd> switches Plot and List.</p></aside>
 </section>
@@ -1326,11 +1305,6 @@ python3 tools/maptiles.py verify /Volumes/CAIRN/Maps/okc-topo</code></pre></li>
     <div class="ch-num">14 / Wi-Fi, the app and files</div>
     <h2>Link a phone. Move files.</h2>
     <p class="ch-lead">Cairn works with the official MeshCore apps over Bluetooth, and on the four touch and key boards over Wi-Fi too. The card holds maps, music, recordings, sounds, pictures and screenshots.</p>
-  </div>
-
-  <div class="shots two">
-    <figure class="shot"><div class="bezel"><img src="img/settings-bluetooth-m9.png" alt="Bluetooth page: Bluetooth Off, App, PIN 123456 fixed kept across boots, Auto PIN, Change PIN" width="320" height="240" loading="lazy"></div><figcaption><span class="dev">M9</span><span class="path"><b>Settings › Connect › Bluetooth</b></span>.</figcaption></figure>
-    <figure class="shot"><div class="bezel"><img src="img/settings-wifi-m9.png" alt="Wi-Fi page: Wi-Fi Off, Network BigBadWolf, Net time, App link On Port 5000 asks first, Trusted 1 phone, Saved 1 network" width="320" height="240" loading="lazy"></div><figcaption><span class="dev">M9</span><span class="path"><b>Settings › Connect › Wi-Fi</b></span>.</figcaption></figure>
   </div>
 
   <h3 id="bluetooth">Bluetooth and the phone app</h3>
@@ -1482,8 +1456,7 @@ python3 tools/maptiles.py verify /Volumes/CAIRN/Maps/okc-topo</code></pre></li>
 
   <div class="shots two">
     <figure class="shot"><div class="bezel"><img src="img/keys-bubble-focus-m9.png" alt="#Public thread with the focus ring outlining a message bubble" width="320" height="240" loading="lazy"></div><figcaption><span class="dev">M9</span>The ring outlines a message's bubble. <kbd>Hold OK</kbd> opens its card page.</figcaption></figure>
-    <figure class="shot"><div class="bezel"><img src="img/keys-more-focus-m9.png" alt="#Public thread with the focus ring on the ⋯ button at the top right" width="320" height="240" loading="lazy"></div><figcaption><span class="dev">M9</span>The ring on <span class="ui">⋯</span>, one <kbd>→</kbd> from the message field.</figcaption></figure>
-  </div>
+    </div>
 
   <h3 id="key-maps">The keys</h3>
   <div class="tw"><table>
