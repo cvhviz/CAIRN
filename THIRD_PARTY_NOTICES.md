@@ -23,4 +23,11 @@ The LilyGO T-Display SF32 build and its installer also include:
 | [sftool](https://github.com/OpenSiFli/sftool), © OpenSiFli | The flashing tool bundled, unchanged, in the SF32 `-install.zip` | Apache 2.0 | [sftool-LICENSE.txt](licenses/sftool-LICENSE.txt) |
 | [pyserial](https://github.com/pyserial/pyserial) 3.5, © Chris Liechti | Serial-port access for the installer's helper, bundled unchanged in the SF32 `-install.zip` | BSD 3-Clause | [pyserial-LICENSE.txt](licenses/pyserial-LICENSE.txt) |
 
+The [Cairn firmware manual](docs/Cairn_Firmware_Manual_Dark) (its web version and PDF) also includes:
+
+| Work | Used for | Licence | Text |
+|---|---|---|---|
+| [Inter and Inter Tight](https://github.com/rsms/inter), © The Inter Project Authors | Body and heading typefaces, bundled in `docs/Cairn_Firmware_Manual_Dark/fonts/` and embedded in the PDF | SIL Open Font License 1.1 | [Inter-OFL.txt](licenses/Inter-OFL.txt) |
+| [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono), © The JetBrains Mono Project Authors | Labels and key names, bundled and embedded the same way | SIL Open Font License 1.1 | [JetBrainsMono-OFL.txt](licenses/JetBrainsMono-OFL.txt) |
+
 Other libraries (RadioLib, the Arduino ESP32 core, ESP-IDF and the audio driver) are linked unmodified under their own permissive licences; see each project's repository.
