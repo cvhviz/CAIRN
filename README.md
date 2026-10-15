@@ -11,18 +11,18 @@ Builds are numbered: the splash screen shows **BUILD N**, releases are tagged `c
 
 **Download the files from the [latest release](https://github.com/cvhviz/Cairn/releases/latest).** L1 Pro releases from before Cairn (builds 40 to 98) are archived in this repository's releases; the last of them is [build 98](https://github.com/cvhviz/CAIRN/releases/tag/cvhbuild-v98).
 
-## Latest: Cairn 116 (14 Oct 2026)
+## Latest: Cairn 118 (15 Oct 2026)
 
-- **Heltec V4 touch, reliable touch:** no more phantom or ghost touches stalling the screen until it is switched off and on, and taps land where your finger does, not on the row below. Tested extensively, on the bench and in the field. Battery saver, receive-gain switches and TX power shown at the antenna come to this board too.
-- **Chats:** reply to a message ([#10](https://github.com/cvhviz/CAIRN/issues/10)), delete a chat or a message, and edit your quick replies, on every touch board. The keyboard's Send button sits beside the message field, away from Delete.
-- **Screenshots and pictures:** a Screenshot button action and the quick panel's Capture save the screen to the card; tap a picture in Files to view it.
-- **Wi-Fi transfer** (was Updater mode): on the L2 Pro and T-Deck, add music to the card from any browser on your network.
-- **Radios tab:** the scanner controls are at the bottom and the tabs are taller.
-- **Wio L1 Pro family:** the joystick can leave the Settings page again ([#20](https://github.com/cvhviz/CAIRN/issues/20)). **T-Deck:** older keyboards no longer type several characters a press ([#17](https://github.com/cvhviz/CAIRN/issues/17)). **T096:** TX power is shown at the antenna.
-- **Updating:** L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32 update over Wi-Fi in **Settings › System › Firmware update**. The L1 Pro family and the T096 update by copying the new `.uf2` ([UF2 guide](docs/install/nrf52-uf2.md)); the T-Display SF32 and the compact repeaters are rebuilt as 116 with no changes of their own.
+- **MeshCore 1.18.0 on every board:** upstream's fixes (a guard against malformed packets, scope code 0 read as unscoped, properly spaced ACKs through repeaters) and its new features, joined with Cairn's: device commands from the app set the device's own clock, Wi-Fi and power-off.
+- **Scope (region) for messages typed on the device** ([#23](https://github.com/cvhviz/CAIRN/issues/23), [#19](https://github.com/cvhviz/CAIRN/issues/19)): Settings › Radio › Scope sets the default, and each channel can have its own.
+- **Chats** ([#19](https://github.com/cvhviz/CAIRN/issues/19)): "not delivered" and Resend for direct messages, optional Auto retry (3 path + 2 flood, spread over about 2½ minutes), Reset path / Find path in the chat, Copy and Paste, and Resend for channel messages.
+- **Your own alert sounds** ([#13](https://github.com/cvhviz/CAIRN/issues/13)): MP3 or WAV files from `/Sounds` on the card (L2 Pro, T-Deck).
+- **ThinkNode M9 and T-Deck:** a tall text box instead of the on-screen keyboard ([#21](https://github.com/cvhviz/CAIRN/issues/21)), and a chat's ⋯ menu one key away. **T-Deck Plus:** GPS (and the clock it sets) works from boot ([#24](https://github.com/cvhviz/CAIRN/issues/24)). **Wio L1 family:** a Discover list in Nodes and a charging icon.
+- **New manual:** [Cairn firmware manual (PDF)](docs/Cairn_Firmware_Manual_Dark.pdf), every board.
+- **Updating:** L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32 update over Wi-Fi in **Settings › System › Firmware update**. The L1 Pro family and the T096 update by copying the new `.uf2` ([UF2 guide](docs/install/nrf52-uf2.md)).
 - **Other boards:** the preview boards stay on [Cairn 107 preview](https://github.com/cvhviz/Cairn/releases/tag/cairn-v107-preview).
 
-Cairn 115 added the L2 Pro microphone, the EQ and visualizer, cards for every chooser, the redesigned packet details and the clock fix after a power cut; see its [release notes](https://github.com/cvhviz/Cairn/releases/tag/cairn-v115).
+Cairn 116 made the Heltec V4 touch kit dependable and added replies, delete and screenshots; see its [release notes](https://github.com/cvhviz/Cairn/releases/tag/cairn-v116).
 
 ## Supported boards
 
@@ -128,7 +128,7 @@ Install guides: [nRF52840 (UF2)](docs/install/nrf52-uf2.md) · [ESP32 (esptool o
 
 ## Manual, brochure and screens
 
-- [Cairn firmware manual (PDF)](docs/Cairn_Firmware_Manual_Dark.pdf): every board, screen and setting, with the touch, key (M9, T-Deck) and OLED-board ways to do each task, a shortcuts and gestures cheat sheet, troubleshooting and a glossary. Written for Cairn 118, the next release: features tagged **118** arrive with it. A web version with search is in [docs/Cairn_Firmware_Manual_Dark](docs/Cairn_Firmware_Manual_Dark) (download the folder and open `index.html`).
+- [Cairn firmware manual (PDF)](docs/Cairn_Firmware_Manual_Dark.pdf): every board, screen and setting, with the touch, key (M9, T-Deck) and OLED-board ways to do each task, a shortcuts and gestures cheat sheet, troubleshooting and a glossary. Written for Cairn 118. A web version with search is in [docs/Cairn_Firmware_Manual_Dark](docs/Cairn_Firmware_Manual_Dark) (download the folder and open `index.html`).
 - [Cairn brochure (PDF)](docs/Cairn_Wio_L2_Pro_Brochure.pdf): the firmware, the board and the 3D-printed case, in nine pages.
 - [Previous manual (PDF)](docs/Cairn_Wio_L2_Pro_User_Manual.pdf): the October 2026 Wio Tracker L2 Pro edition. The offline-map tool it mentions is [tools/maptiles.py](tools/maptiles.py) ([how to use it](tools/MAPTILES.md)).
 - The touch features are listed on the [L2 Pro board page](docs/boards/wio-tracker-l2-pro.md). The Heltec V4 touch, ThinkNode M9 and T-Deck run the same interface.
