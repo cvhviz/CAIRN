@@ -7,7 +7,7 @@
 Wio-S3 module (ESP32-S3, 16 MB flash, 8 MB PSRAM), SX1262 LoRa (TCXO 3.0 V), 3.2" 320×240 NV3031B LCD with GT911 touch, L76K GPS, ES8311 speaker and microSD.
 
 - [Brochure (PDF)](../Cairn_Wio_L2_Pro_Brochure.pdf) · [User manual (PDF)](../Cairn_Firmware_Manual_Dark.pdf) · [Previous L2 manual (PDF)](../Cairn_Wio_L2_Pro_User_Manual.pdf) · [Screens](#screens)
-- Offline-map tool: [tools/maptiles.py](../../tools/maptiles.py) ([guide](../../tools/MAPTILES.md))
+- Offline maps: download them on the device (from Cairn 119, below), or build them on a computer with [tools/maptiles.py](../../tools/maptiles.py) ([guide](../../tools/MAPTILES.md))
 
 ## Which file
 
@@ -23,7 +23,7 @@ Write the `-full.bin` or the `-update.bin`, never both. If the device last updat
 
 | Button | Does |
 |---|---|
-| WAKE (side) | click: turn the screen off, or wake it; double-press: unlock; hold: lock |
+| WAKE (side) | click: turn the screen off, or wake it; double-press: unlock (from Cairn 119 straight from a dark screen; a slower second press within about a second of the lock screen lighting works too); hold: lock |
 | User (also the Boot button, GPIO0) | click: quick panel; double-press: new message (unlocks instead when the device is locked); hold: back; triple-press: mute. The first press on a dark screen only wakes it. It is the button that wakes the board from hibernate. Click, double and hold can be reassigned in Settings. |
 | User + Reset | hold **User (Boot)**, tap **Reset**, release: download mode for esptool |
 | Reset | restart |
@@ -31,7 +31,7 @@ Write the `-full.bin` or the `-update.bin`, never both. If the device last updat
 ## Features
 
 - **Side icon rail**: Home, Chats, Nodes, Radios, GPS and Settings, with unread and new-advert badges. The GPS icon is green while the GPS is on and red while it is off (from Cairn 113). A status bar shows the page title (in its tab's colour), a 12-hour clock, Bluetooth, GPS and battery. Notices take the status bar over for a moment (from Cairn 112); tap one with a chevron to open what it is about.
-- **Home dashboard**: a large clock with sunrise/sunset, temperature and channel-busy readouts, plus live cards for battery, chats, nodes, Audio (from Cairn 113, in the GPS card's place; the GPS tab still shows the satellites), radio and network. A tap on the big clock opens the quick panel.
+- **Home dashboard**: a large clock with sunrise/sunset, temperature and channel-busy readouts, plus live cards for battery, chats, nodes, Audio (from Cairn 113, in the GPS card's place; the GPS tab's GPS data still shows the satellites), radio and network. A tap on the big clock opens the quick panel.
 - **Chats**: channels, direct messages and rooms in one list, message bubbles, a full on-screen keyboard with emoji, quick replies and a byte counter.
 - **Colour emoji**: 229 Noto emoji drawn inline in messages, previews and node names.
 - **Nodes**: recent adverts and saved contacts as a list or cards, with hops, last heard, distance, the short ID and position. Companions show a walkie-talkie and repeaters a mast, as in CairnOS. Node detail shows heard, distance, bearing, path, position and the last ping, with ping, chat and map; tap the short key for a **QR code** the MeshCore apps scan to add the contact (from Cairn 111).
@@ -40,7 +40,7 @@ Write the `-full.bin` or the `-update.bin`, never both. If the device last updat
 - **Spectrum and band scan**: your channel over 10 s to 1 h, and a sweep of the whole band with a waterfall.
 - **Wi-Fi and Bluetooth scanners** (from Cairn 113; the Radios page's Wi-Fi and Bluetooth tabs from Cairn 114): **Wi-Fi scan** shows the 2.4 GHz networks around you as arcs by channel and signal, with a bar per channel for how crowded it is; **BT scan** shows the Bluetooth devices in range as bars over a radar, MeshCore nodes named. Each has a list with details. The Bluetooth radar opens full screen, and **Find** helps you walk towards a device (Closer, Farther, Steady, with an optional tone). Scans start only when you tap Start and stop when you leave the page. The scan status (Scanning, N found) shows in the status bar.
 - **Quick panel**: Wi-Fi, Bluetooth, GPS and sound toggles, lock, flashlight, advert, brightness and volume, and Radio, Theme and Settings buttons (from Cairn 112). Wi-Fi, Bluetooth and GPS ask before they switch on or off (from Cairn 113).
-- **GPS**: position in ft/mph with a course compass, an on/off switch, Off / On / Eco modes (Eco shows when the next fix is due), and an **offline map** from microSD tiles with pinch to zoom. Tap the status or any card for **GPS data**: satellites, HDOP, grid square, GPS time and the NMEA stream (from Cairn 111).
+- **GPS** (the tab is the map from Cairn 119): the tab opens on the **full-screen Map**, with pinch to zoom. A tap on the map hides or shows its controls, and the status bar and tab rail go with them; the menu, zoom, recenter and **Fit neighbours** run down the right edge. The **compass** button in the top-left corner (green with a fix, amber while searching) opens **GPS data**: position in ft/mph, course, satellites, HDOP, grid square, GPS time and the NMEA stream; its MODE and RECEIVER cells open the GPS settings (on/off, and Off / On / Eco modes; Eco shows when the next fix is due). Where no map covers the view, a dot grid with a range circle and a "No map here" chip show instead.
 - **Settings**: six tiles (Radio, Connect, Hardware, Location, Appearance, System), each with three lines of what it holds. Every page under them is tiles too (from Cairn 112): two across, each with an icon, its name and its value; a tap flips a switch on its tile, and other values open a small sheet. Appearance, Display, Sound, Buttons, Wake & lock and Clock apply as you change them; Radio, Bluetooth, the PIN, Wi-Fi, Join channel and Profile are drafts with Cancel and Save (from Cairn 111). Destructive actions need a hold (the tile says how long) plus a confirmation. **Settings › Radio** shows TX power and every LoRa setting (preset, frequency, bandwidth, spreading factor, coding rate), each editable, with a typed frequency for a custom radio, and the **path hash** size (1–3 bytes per hop, from Cairn 111).
 - **Themes** (Settings › Appearance › Theme, from Cairn 111): Dark, Neon, Light, Sunlight, Night, Ocean, Cartoon, Red Radar and Green Radar, previewed live.
 - **Screensaver** (Settings › Appearance › Screensaver, from Cairn 112): Beacon, Ambient, Night clock or Auto, in place of a screen that never times out (Screen timeout Never, or Stay on USB). It runs on USB power by default, starts after 1–30 minutes without a touch, and on battery hands over to a real screen-off after a time you choose.
@@ -56,6 +56,9 @@ Write the `-full.bin` or the `-update.bin`, never both. If the device last updat
 - **Clock**: 12h / 24h / analog, US time zones or a custom offset, and internet time over Wi-Fi; *Always take internet time* skips the question when the clock is off by over an hour (from Cairn 111).
 - **Wi-Fi**: on-device setup, clock sync, the MeshCore app over Wi-Fi, **online updates** from this repository's releases (checked once a day; nothing installs without your confirmation), and **Wi-Fi transfer** (named Updater mode before Cairn 116) for an update sent from a browser (from Cairn 112; CairnOS can start one with its next update, after you tap Allow on the board).
 - **Sent-message sync** (from Cairn 112): messages a phone app sends appear in the board's chats, with the delivered tick when the ACK arrives; messages sent on the board appear in CairnOS, or wait until it next syncs.
+- **Maps** (from Cairn 119): worldwide vector maps from OpenFreeMap, drawn on the device in Light, Dark or a red Night style. Long-press the Map › **Download area…** saves what's on screen to the card over Wi-Fi, in the background, with Pause and Resume (even after a restart); the details card says when the card already has the area. The **online map** (Settings › Location › Map) fills what the card doesn't cover, with no card needed, and keeps a cache of what you've seen on the card (Settings › Hardware › Storage › **Map cache**). **Traffic lines** draw each frame the radio hears along its path; **Labels** turns the name plates off.
+- **CairnOS** (from Cairn 119, with CairnOS build 12 or later): the app's Spectrum page shows this radio's Channel view, and the chats the radio kept while no app was connected go over to the app. Messages waiting for the app survive a reset.
+- **From Cairn 119** also: posting to a room you just logged in to works (no more "Recipient gone"); "…" on a node heard since the last restart offers **Add contact** when "manually add contacts" is on; **Mute** a channel (Settings › Radio › Channels › a channel, or long-press it in Chats); **Remote commands** to another companion (a contact's Node actions); a **Photos** screensaver from the card's `/Photos`; text files open in Files.
 
 ## Screens
 

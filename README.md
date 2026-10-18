@@ -11,18 +11,18 @@ Builds are numbered: the splash screen shows **BUILD N**, releases are tagged `c
 
 **Download the files from the [latest release](https://github.com/cvhviz/Cairn/releases/latest).** L1 Pro releases from before Cairn (builds 40 to 98) are archived in this repository's releases; the last of them is [build 98](https://github.com/cvhviz/CAIRN/releases/tag/cvhbuild-v98).
 
-## Latest: Cairn 118 (15 Oct 2026)
+## Latest: Cairn 119 (17 Oct 2026)
 
-- **MeshCore 1.18.0 on every board:** upstream's fixes (a guard against malformed packets, scope code 0 read as unscoped, properly spaced ACKs through repeaters) and its new features, joined with Cairn's: device commands from the app set the device's own clock, Wi-Fi and power-off.
-- **Scope (region) for messages typed on the device** ([#23](https://github.com/cvhviz/CAIRN/issues/23), [#19](https://github.com/cvhviz/CAIRN/issues/19)): Settings › Radio › Scope sets the default, and each channel can have its own.
-- **Chats** ([#19](https://github.com/cvhviz/CAIRN/issues/19)): "not delivered" and Resend for direct messages, optional Auto retry (3 path + 2 flood, spread over about 2½ minutes), Reset path / Find path in the chat, Copy and Paste, and Resend for channel messages.
-- **Your own alert sounds** ([#13](https://github.com/cvhviz/CAIRN/issues/13)): MP3 or WAV files from `/Sounds` on the card (L2 Pro, T-Deck).
-- **ThinkNode M9 and T-Deck:** a tall text box instead of the on-screen keyboard ([#21](https://github.com/cvhviz/CAIRN/issues/21)), and a chat's ⋯ menu one key away. **T-Deck Plus:** GPS (and the clock it sets) works from boot ([#24](https://github.com/cvhviz/CAIRN/issues/24)). **Wio L1 family:** a Discover list in Nodes and a charging icon.
-- **New manual:** [Cairn firmware manual (PDF)](docs/Cairn_Firmware_Manual_Dark.pdf), every board.
+- **Spectrum and chat history in CairnOS:** with a Cairn touch radio (L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck), the app's Spectrum page shows the radio's own Channel view, and the chats the radio kept while no app was connected go over to the app (CairnOS TestFlight build 12 or later).
+- **Maps downloaded on the device:** long-press the Map › Download area saves what's on screen to the card over Wi-Fi; the **online map** works with no card; worldwide vector maps in Light, Dark or a red Night style. Map downloads no longer stop with "Low memory" (L2 Pro) or "Card write failed" (M9, T-Deck), and an area already on the card isn't downloaded again.
+- **The GPS tab is the map,** full screen, with **traffic lines**: each frame the radio hears runs along its path. The compass in its corner opens GPS data.
+- **Rooms:** posting to a room you just logged in to no longer says "Recipient gone".
+- **Unlock in two presses** from a dark screen (L2 Pro, Heltec V4 touch). **ThinkNode M9:** holding OK is a long press, DEL deletes in Files, and keys on the Map start on the compass. **Heltec V4 touch:** portrait mode (Quick panel › Rotate) and a faster microSD card.
+- **Also:** add a node you've only heard as a contact, mute a channel, remote commands to another companion, a Photos screensaver, and messages waiting for the app now survive a reset.
 - **Updating:** L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32 update over Wi-Fi in **Settings › System › Firmware update**. The L1 Pro family and the T096 update by copying the new `.uf2` ([UF2 guide](docs/install/nrf52-uf2.md)).
 - **Other boards:** the preview boards stay on [Cairn 107 preview](https://github.com/cvhviz/Cairn/releases/tag/cairn-v107-preview).
 
-Cairn 116 made the Heltec V4 touch kit dependable and added replies, delete and screenshots; see its [release notes](https://github.com/cvhviz/Cairn/releases/tag/cairn-v116).
+Cairn 118 moved every board onto MeshCore 1.18.0 and added scopes for messages typed on the device, resend and auto retry, and your own alert sounds; see its [release notes](https://github.com/cvhviz/Cairn/releases/tag/cairn-v118).
 
 ## Supported boards
 
@@ -75,10 +75,6 @@ The standard MeshCore repeater with a minimal Cairn screen: Status, Spectrum and
 |---|---|---|
 | ![Repeater Status](docs/screens/repeater/t096-status.png)<br>T096 repeater · Status | ![Repeater Spectrum](docs/screens/repeater/t096-spectrum.png)<br>T096 repeater · Spectrum | ![Repeater Settings](docs/screens/repeater/t096-settings.png)<br>T096 repeater · Settings |
 
-### Coming soon
-
-- **Map downloads on the device**, straight over Wi-Fi, so you won't need a computer to prepare the offline map card. Until then, [tools/maptiles.py](tools/maptiles.py) builds the card on a computer.
-
 Want another board? [Ask for it](https://github.com/cvhviz/Cairn/issues/new?template=board_request.yml).
 
 ## Features
@@ -92,7 +88,8 @@ Want another board? [Ask for it](https://github.com/cvhviz/Cairn/issues/new?temp
 | Online updates                |    –     |   ✅   |       ✅        |      ✅      |    ✅ ²     |       ✅       |    –     |    –    |
 | GPS                           |    ✅    |   ✅   |      ✅ ³       |      ✅      |    Plus     |       ✅       |    ✅    |  some   |
 | microSD card                  |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       ✅       |    –     |    –    |
-| Offline map                   |    –     |   ✅   |       ✅        |   untried    |     ✅      |     coming     |    –     |    –    |
+| Offline map                   |    –     |   ✅   |       ✅        |      ✅      |     ✅      |     coming     |    –     |    –    |
+| Map downloads, online map     |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       –        |    –     |    –    |
 | Spectrum and band scan        |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       ✅       | spectrum |    –    |
 | Repeater scan and admin       |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       ✅       |    –     |    –    |
 | USB-serial companion          |    –     |   –    |        –        |      –       |      –      |       –        |    ✅    |   ✅    |
@@ -103,6 +100,7 @@ Want another board? [Ask for it](https://github.com/cvhviz/Cairn/issues/new?temp
 | Music player                  |    –     |   ✅   |        –        |      –       |    ✅ ⁵     |       ✅       |    –     |    –    |
 | Voice recorder                |    –     |  ✅ ⁶  |        –        |      –       |    ✅ ⁵     |       ✅       |    –     |    –    |
 | Traffic log, packet details   |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       ✅       |    –     |    –    |
+| Spectrum, history to CairnOS  |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       –        |    –     |    –    |
 | File manager                  |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       –        |    –     |    –    |
 | USB drive (microSD)           |    –     |   ✅   |        –        |      –       |     ✅      |       –        |    –     |    –    |
 | IR remote, climate sensors    |    –     |   –    |        –        |      –       |      –      |       ✅       |    –     |    –    |
@@ -128,7 +126,7 @@ Install guides: [nRF52840 (UF2)](docs/install/nrf52-uf2.md) · [ESP32 (esptool o
 
 ## Manual, brochure and screens
 
-- [Cairn firmware manual (PDF)](docs/Cairn_Firmware_Manual_Dark.pdf): every board, screen and setting, with the touch, key (M9, T-Deck) and OLED-board ways to do each task, a shortcuts and gestures cheat sheet, troubleshooting and a glossary. Written for Cairn 118. A web version with search is in [docs/Cairn_Firmware_Manual_Dark](docs/Cairn_Firmware_Manual_Dark) (download the folder and open `index.html`).
+- [Cairn firmware manual (PDF)](docs/Cairn_Firmware_Manual_Dark.pdf): every board, screen and setting, with the touch, key (M9, T-Deck) and OLED-board ways to do each task, a shortcuts and gestures cheat sheet, troubleshooting and a glossary. Written for Cairn 118; the [Cairn 119 release notes](https://github.com/cvhviz/Cairn/releases/tag/cairn-v119) cover what changed since (the GPS tab now opens on the map). A web version with search is in [docs/Cairn_Firmware_Manual_Dark](docs/Cairn_Firmware_Manual_Dark) (download the folder and open `index.html`).
 - [Cairn brochure (PDF)](docs/Cairn_Wio_L2_Pro_Brochure.pdf): the firmware, the board and the 3D-printed case, in nine pages.
 - [Previous manual (PDF)](docs/Cairn_Wio_L2_Pro_User_Manual.pdf): the October 2026 Wio Tracker L2 Pro edition. The offline-map tool it mentions is [tools/maptiles.py](tools/maptiles.py) ([how to use it](tools/MAPTILES.md)).
 - The touch features are listed on the [L2 Pro board page](docs/boards/wio-tracker-l2-pro.md). The Heltec V4 touch, ThinkNode M9 and T-Deck run the same interface.

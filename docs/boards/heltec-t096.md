@@ -31,6 +31,7 @@ Install, update and recovery all use the same file: double-tap **RST** and copy 
 - Settings: one list in groups: Theme, Screen, Keep on USB, then Bluetooth, then GPS, then a line before Reboot and Hibernate, with Back last (regrouped in Cairn 113).
 - Recent shows nodes whose clock isn't set yet (a freshly flashed T096 repeater, for example), labelled "unset" (from Cairn 113).
 - TX power is shown at the antenna: the T096 has an amplifier, so a setting of 22 was really about 28 dBm. The setting stops at 18, where the amplifier is already at full output (from Cairn 116).
+- Messages waiting for the phone app survive a reset, a flat battery or a reflash (from Cairn 119; before, only a commanded restart or power-off kept them).
 - Cairn splash in your theme's colours, with the build number.
 - Feet and °F, 12-hour clock.
 

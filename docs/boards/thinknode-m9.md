@@ -41,16 +41,16 @@ Write the `-full.bin` or the `-update.bin`, never both. Coming from Elecrow's fi
 | Key | Press | Hold |
 |---|---|---|
 | d-pad arrows | move the selection; in a list, step through the rows; on a value, left / right change it | — |
-| OK (d-pad centre) | tap what is selected; in a text field, send; on a slider or stepper, adjust mode (then up / down change it too, **up means more**); locked, twice unlocks | long press of what is selected (message details, hold-to-confirm buttons); locked: unlock |
+| OK (d-pad centre) | tap what is selected; in a text field, send; on a slider or stepper, adjust mode (then up / down change it too, **up means more**); locked, twice unlocks | long press of what is selected (a Files row's menu, message details, hold-to-confirm buttons; 700 ms from Cairn 119); locked: unlock |
 | BACK | leave adjust or pan mode, close a menu, go back (unsaved edits ask first), then Home | — |
 | HOME | close what is open and go Home | — |
 | MSG | Chats | — |
 | @ | new message | — |
 | ADV | the Send advert menu | GPS on / off |
-| MAP | the GPS map; on the map, pan mode (arrows pan, OK taps the centre) | — |
+| MAP | the GPS map; on the map, pan mode (arrows pan, OK taps the centre; the map's controls hide until it ends, from Cairn 119) | — |
 | CTRL | the quick panel (again: close it) | — |
 | MIC | turn the screen off | — |
-| DEL | backspace in a text field | delete the word before the cursor |
+| DEL | backspace in a text field; on a Files row, asks to delete the file or folder (from Cairn 119) | delete the word before the cursor |
 | letters | type in a text field; in a conversation, start a reply; in the new-message picker, search; `+` / `-` zoom the map | — |
 
 - Any key wakes a dark screen, and only wakes it.
@@ -75,11 +75,12 @@ The L2 interface, as on the [L2 Pro page](wio-tracker-l2-pro.md#features): the s
 - **LoRa tab:** the keys land on Advert, and the advert sheet opens with Send focused, so Advert, OK sends a zero-hop advert (from Cairn 113).
 - **Ocean theme** is a few steps darker, so it no longer looks washed out on this screen (from Cairn 113).
 - **microSD:** the card mounts (a 16 GB card was tested); Settings › Hardware › Storage sees it.
+- **Maps** (from Cairn 119): the GPS tab opens on the full-screen Map, and the keys start on its compass (GPS data). Download an area to the card over Wi-Fi (the Map's menu › **Download area…**), or use the online map with no card, as on the [L2 Pro](wio-tracker-l2-pro.md#features). Downloads no longer stop with "Card write failed": a write the card refuses for a moment is tried again, and a 1,731-tile (44 MB) download finished on an M9 with no card error.
+- **From Cairn 119** also: posting to a room you just logged in to works (no more "Recipient gone"); the CairnOS app (build 12 or later) shows this radio's Spectrum Channel view and receives its chat history.
 
 ## Known issues
 
 - **Battery saver hasn't run on the device yet.** Its savings are estimates from datasheets; treat it as an experiment.
-- **The offline map from microSD hasn't been tried on the M9 yet.** The card itself mounts.
 - **Online updates work:** an M9 updated itself over Wi-Fi from GitHub (107 to 108). A new build starts on trial and goes back to the old one by itself if it fails to start.
 - **Unplugging USB:** whether the status bar switches from the plug to the battery when you unplug hasn't been confirmed yet.
 - **Hibernate:** a key may not wake the board. The power slider (off, then on) or RESET always does.

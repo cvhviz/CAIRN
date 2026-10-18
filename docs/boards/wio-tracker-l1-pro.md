@@ -35,6 +35,7 @@ Install, update and recovery all use the same file: double-tap **Reset** and cop
 - **Path hash** (1 to 3 bytes per hop) and **Units** (imperial or metric) in Settings (from Cairn 113). 12-hour clock.
 - A thin line under the title flashes when the radio sends or receives (OLED builds, from Cairn 113).
 - On the Settings page, the joystick's Left and Right change pages (fixed in Cairn 116; before, only a reboot got you out: [#20](https://github.com/cvhviz/CAIRN/issues/20)).
+- From Cairn 119: posting to a room you just logged in to works (no more "Recipient gone"), and messages waiting for the phone app survive a reset, a flat battery or a reflash.
 - Room server image with the CLI over USB serial.
 
 ## Known issues

@@ -20,7 +20,7 @@ Write the `-full.bin` or the `-update.bin`, never both. If the device last updat
 
 | Button | Does |
 |---|---|
-| IO (Expansion Kit) | the WAKE button. Click: turn the screen off, or wake it; double-press: unlock; hold (1 s): lock. It can't wake the board from hibernate. |
+| IO (Expansion Kit) | the WAKE button. Click: turn the screen off, or wake it; double-press: unlock (straight from a dark screen from Cairn 119); hold (1 s): lock. It can't wake the board from hibernate. |
 | PRG (USER) | click: quick panel; double-press: new message (unlocks instead when the device is locked); hold: back; triple-press: mute. The first press on a dark screen only wakes it. It is the only button that wakes the board from hibernate. Click, double and hold can be reassigned in Settings. |
 | PRG + RST | hold **PRG**, tap **RST**, release **PRG**: download mode for esptool. **Don't hold IO while pressing RST**: IO is GPIO46, a strap pin, and PRG + IO held together at reset is an invalid strap combination. |
 | RST | restart |
@@ -30,6 +30,14 @@ Write the `-full.bin` or the `-update.bin`, never both. If the device last updat
 The full L2 touch interface: home dashboard, chats with an on-screen keyboard and colour emoji, nodes, repeater scan and admin, radio with spectrum and band scan, GPS with the offline microSD map and pinch to zoom, quick panel, Wi-Fi with online updates, and the Wi-Fi and Bluetooth scanners and the redesigned Battery page (from Cairn 113). See the [L2 Pro page](wio-tracker-l2-pro.md#features) for the list. It has no audio hardware beyond the piezo, so the music player isn't on this board.
 
 From Cairn 114: the Radios page with LoRa, Wi-Fi and Bluetooth tabs and a full-screen Traffic log with packet details, the Storage page with Files, and the card's `Maps`, `Music`, `Recordings`, `Sounds` and `Pictures` folders (maps in `cairn/maps` move by themselves). USB drive mode isn't on this board.
+
+From Cairn 119:
+
+- **Portrait mode:** the Quick panel's Advert tile is **Rotate** on this board. It turns the screen between landscape and 240×320 portrait at once, no restart, with the six tabs as a bar along the bottom. The touch (and a saved touch calibration) turns with it, and the choice is kept across restarts.
+- **Faster microSD:** the card runs at 20 MHz (was 4 MHz), so maps and files read about 3.5× faster. A card that fails at 20 MHz drops back to 4 MHz until it is removed.
+- **Unlock in two presses:** a double-press of IO unlocks straight from a dark screen (it took three before).
+- **Maps:** download an area to the card over Wi-Fi, the online map, vector maps, and the GPS tab opening on the map, as on the [L2 Pro](wio-tracker-l2-pro.md#features). Leaving the Map while a tile was still being read no longer crashes the board.
+- **CairnOS** (build 12 or later): the app's Spectrum page shows this radio's Channel view, and its chat history goes over to the app.
 
 From Cairn 116 (tested extensively, on the bench and in the field):
 

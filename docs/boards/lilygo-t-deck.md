@@ -25,9 +25,17 @@ Cairn runs the same interface as the [Wio Tracker L2 Pro](wio-tracker-l2-pro.md)
 - **Enter finishes the text field** (from Cairn 113): Send in a chat, Done, OK or Save elsewhere. The trackball click still selects what is highlighted.
 - **Radios by keys:** 1, 2 and 3 pick the LoRa, Wi-Fi and Bluetooth tabs (from Cairn 114). The LoRa tab lands on Advert (from Cairn 113), and the advert sheet opens with Send focused, so Advert, then a click, sends a zero-hop advert.
 
+## From Cairn 119
+
+- **Maps:** the GPS tab opens on the full-screen Map, and the trackball and keys start on its compass (GPS data). Download an area to the card over Wi-Fi (long-press the Map › **Download area…**), or use the online map with no card, as on the [L2 Pro](wio-tracker-l2-pro.md#features). Downloads no longer stop with "Card write failed": a write the card refuses for a moment is tried again.
+- **Rooms:** posting to a room you just logged in to works (no more "Recipient gone").
+- **Add a heard node:** with "manually add contacts" on, "…" on a node heard since the last restart offers **Add contact**.
+- **CairnOS** (build 12 or later): the app's Spectrum page shows this radio's Channel view, and its chat history goes over to the app.
+- In Files, Backspace still goes up a folder.
+
 ## Music and voice notes
 
-From Cairn 113, tried on a T-Deck Plus. On the T-Deck an **Audio** card takes the GPS card's place on Home (the GPS tab still shows the satellites) and opens a Player and a Recorder.
+From Cairn 113, tried on a T-Deck Plus. On the T-Deck an **Audio** card takes the GPS card's place on Home (the GPS tab's GPS data still shows the satellites) and opens a Player and a Recorder.
 
 - **Player:** put MP3 or WAV files in a `Music` folder on the microSD card. Now playing has a live spectrum with volume buttons over it, a seek bar and previous / -10 s / play-pause / +10 s / next; repeat and shuffle are in its options. Subfolders in `Music` show two levels deep (from Cairn 114). Music keeps playing with the screen dark unless you set "Pause at screen off". From Cairn 115: a five-band **EQ**, Now playing as a full-screen visualizer, Player options as cards, and alert tones no longer interrupt music (Options › Alerts turns them back on). Hold a file to delete it. MP3 (CBR or VBR) and WAV (8, 16 or 24-bit), 8 to 48 kHz; stereo plays as mono.
 - **Add music over Wi-Fi** (from Cairn 116): Settings › Storage › **Wi-Fi transfer**, then open the address it shows in a browser on your network and drop MP3 or WAV files in; they go into `Music`, or a folder you name inside it.
@@ -57,11 +65,11 @@ The same files run on the T-Deck and the T-Deck Plus. Write the `-full.bin` or t
 
 **Download mode.** esptool and the web flasher can usually restart the T-Deck into download mode over USB by themselves. If they can't connect, switch the T-Deck off, hold the trackball in (it is the BOOT button), switch it on, then release it and connect again.
 
-**Coming from another firmware.** Cairn keeps its identity, contacts and settings in the T-Deck's internal flash. Firmwares that keep them on the microSD card (Wadamesh does, in a `meshcomod` folder) don't carry over by themselves: Cairn starts with a new identity. Your files stay on the card. Cairn reads offline maps from the card's `Maps` folder (`cairn/maps` before Cairn 114; it moves by itself); [tools/maptiles.py](../../tools/maptiles.py) makes them.
+**Coming from another firmware.** Cairn keeps its identity, contacts and settings in the T-Deck's internal flash. Firmwares that keep them on the microSD card (Wadamesh does, in a `meshcomod` folder) don't carry over by themselves: Cairn starts with a new identity. Your files stay on the card. Cairn reads offline maps from the card's `Maps` folder (`cairn/maps` before Cairn 114; it moves by itself); you can download them on the device (from Cairn 119), or make them on a computer with [tools/maptiles.py](../../tools/maptiles.py).
 
 ## Known issues
 
-- **GPS (T-Deck Plus) hasn't been checked on hardware yet.**
+- **GPS (T-Deck Plus):** checked on a unit with a u-blox GPS (from Cairn 118); a unit with the Quectel L76K hasn't been tried yet.
 - **Battery percentage** hasn't been calibrated on the T-Deck yet. Screen-off standby has been measured (see Battery saver above); battery life in use hasn't.
 - **Hibernate:** waking with the trackball click hasn't been confirmed.
 - **Audio:** battery draw while playing or recording, hour-long recordings during radio traffic, and a card pulled mid-recording haven't been tried yet.
