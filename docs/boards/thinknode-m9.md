@@ -77,6 +77,7 @@ The L2 interface, as on the [L2 Pro page](wio-tracker-l2-pro.md#features): the s
 - **microSD:** the card mounts (a 16 GB card was tested); Settings › Hardware › Storage sees it.
 - **Maps** (from Cairn 119): the GPS tab opens on the full-screen Map, and the keys start on its compass (GPS data). Download an area to the card over Wi-Fi (the Map's menu › **Download area…**), or use the online map with no card, as on the [L2 Pro](wio-tracker-l2-pro.md#features). Downloads no longer stop with "Card write failed": a write the card refuses for a moment is tried again, and a 1,731-tile (44 MB) download finished on an M9 with no card error.
 - **From Cairn 119** also: posting to a room you just logged in to works (no more "Recipient gone"); the CairnOS app (build 12 or later) shows this radio's Spectrum Channel view and receives its chat history.
+- **From Cairn 120:** telemetry from your contacts and the Share telemetry setting (Settings › GNSS › Telemetry), Settings renamed LoRa, Network and GNSS with color-coded lines and the LoRa settings on one screen, room posts with their poster and time, streets past a big downloaded area, fuller traffic lines, about 55-65 KB more free memory, and Battery saver sleeping with Wi-Fi on away from your networks.
 
 ## Known issues
 

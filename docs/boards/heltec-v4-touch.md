@@ -31,6 +31,8 @@ The full L2 touch interface: home dashboard, chats with an on-screen keyboard an
 
 From Cairn 114: the Radios page with LoRa, Wi-Fi and Bluetooth tabs and a full-screen Traffic log with packet details, the Storage page with Files, and the card's `Maps`, `Music`, `Recordings`, `Sounds` and `Pictures` folders (maps in `cairn/maps` move by themselves). USB drive mode isn't on this board.
 
+From Cairn 120: telemetry from your contacts and the Share telemetry setting, the renamed and color-coded Settings (LoRa, Network, GNSS) with the LoRa settings on one screen, room posts with their poster and time, streets past a big downloaded area, fuller traffic lines and more free memory, as on the [L2 Pro](wio-tracker-l2-pro.md#features). **Portrait:** the Settings cards fill the screen and a long line wraps instead of being cut; turning the screen keeps the page you're on (a repeater login, a chat or a scan carry on).
+
 From Cairn 119:
 
 - **Portrait mode:** the Quick panel's Advert tile is **Rotate** on this board. It turns the screen between landscape and 240×320 portrait at once, no restart, with the six tabs as a bar along the bottom. The touch (and a saved touch calibration) turns with it, and the choice is kept across restarts.
@@ -43,7 +45,7 @@ From Cairn 116 (tested extensively, on the bench and in the field):
 
 - **No more touch stalls:** the touch controller could report a finger that never lifted, or a "ghost" second touch near the top-right corner, so taps did nothing until the screen was switched off and on. Cairn follows the real finger, ignores short-lived ghosts and resets the controller itself when either shows up, and also on leaving the screensaver.
 - **Taps land where your finger does,** not on the row below.
-- **Battery saver** (Settings › Display), the **FEM LNA** and **Boosted RX** switches (Settings › Radio › Receive), low-battery shutdown, and the white LED flashing with each packet sent.
+- **Battery saver** (Settings › Display), the **FEM LNA** and **Boosted RX** switches (Settings › LoRa › Receive), low-battery shutdown, and the white LED flashing with each packet sent.
 - **TX power at the antenna:** the Radio pages show what leaves the antenna (up to 28 dBm), and the setting stops at 18, where the amplifier is already at full output.
 
 From Cairn 115: the LoRa / Wi-Fi / Bluetooth tabs are easier to tap (this panel reads taps near the top edge a little high), and after a power cut the clock shows "--:--" until GPS, the app or Wi-Fi sets it.

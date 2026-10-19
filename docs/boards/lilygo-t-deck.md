@@ -25,6 +25,14 @@ Cairn runs the same interface as the [Wio Tracker L2 Pro](wio-tracker-l2-pro.md)
 - **Enter finishes the text field** (from Cairn 113): Send in a chat, Done, OK or Save elsewhere. The trackball click still selects what is highlighted.
 - **Radios by keys:** 1, 2 and 3 pick the LoRa, Wi-Fi and Bluetooth tabs (from Cairn 114). The LoRa tab lands on Advert (from Cairn 113), and the advert sheet opens with Send focused, so Advert, then a click, sends a zero-hop advert.
 
+## From Cairn 120
+
+- **Telemetry:** a contact's node page shows its battery and opens its telemetry; Settings › GNSS › Telemetry chooses who may read yours (off by default).
+- **Settings** renamed LoRa, Network and GNSS, color-coded, with the LoRa radio settings on one screen.
+- **Rooms:** each post shows who wrote it and when.
+- **Maps:** streets where a big downloaded area stops short of them (online map on), the satellite count in the status bar, and fuller traffic lines.
+- About 55-65 KB more free memory beside Bluetooth and Wi-Fi, and Battery saver sleeps with Wi-Fi on away from your networks.
+
 ## From Cairn 119
 
 - **Maps:** the GPS tab opens on the full-screen Map, and the trackball and keys start on its compass (GPS data). Download an area to the card over Wi-Fi (long-press the Map › **Download area…**), or use the online map with no card, as on the [L2 Pro](wio-tracker-l2-pro.md#features). Downloads no longer stop with "Card write failed": a write the card refuses for a moment is tried again.

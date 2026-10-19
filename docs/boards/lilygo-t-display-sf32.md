@@ -15,7 +15,9 @@ The keypad board adds a 20-key phone-style keypad with backlight, a haptic motor
 
 Cairn runs a native interface on it, built for the large square screen. It works with the official MeshCore apps over Bluetooth.
 
-Its current files are in [Cairn 119](https://github.com/cvhviz/Cairn/releases/tag/cairn-v119): `MeshCore-TDisplaySF32-Cairn119-2026-10-17-install.zip` and `MeshCore-TDisplaySF32-Cairn119-2026-10-17-update.bin`. A board on Cairn 107 or later updates over Wi-Fi (with the keyboard board attached). A board on the very first SF32 build (6 Oct) needs the [USB installer](../install/sf32.md#if-your-board-has-the-first-sf32-build) once.
+Its current files are in [Cairn 120](https://github.com/cvhviz/Cairn/releases/tag/cairn-v120): `MeshCore-TDisplaySF32-Cairn120-2026-10-19-install.zip` and `MeshCore-TDisplaySF32-Cairn120-2026-10-19-update.bin`. A board on Cairn 107 or later updates over Wi-Fi (with the keyboard board attached). A board on the very first SF32 build (6 Oct) needs the [USB installer](../install/sf32.md#if-your-board-has-the-first-sf32-build) once.
+
+From Cairn 120: the offline map (with vector map sets), the online map and map downloads on the device; a Files manager; the L2 Pro's chat features (reply, message details, copy and paste, resend, mute, auto retry, delete a chat or a message); telemetry from your contacts and a setting for sharing yours; Home and Settings laid out as on the other devices; screens about a third faster, and no slowdown with the USB cable in; one battery icon with the level inside; and the side switch turns a docked board off again (press A to start it).
 
 From Cairn 119: posting to a room you just logged in to works (no more "Recipient gone"), and messages waiting for the phone app survive a reset, a flat battery or a reflash.
 
@@ -31,8 +33,9 @@ From Cairn 119: posting to a room you just logged in to works (no more "Recipien
 
 - **Home dashboard of cards:**
   - a header with a big clock and either a **mini spectrum** (one full-height graph of your channel that zooms to what the band is doing and colours each level by how often the channel sat there, from Cairn 113; tap it to open Spectrum) or **Date & info**. Switch in Settings › Home, or long-press the header;
-  - battery, chats, nodes, radio (frequency, SF / BW and noise floor) and network (the GPS card left Home in Cairn 114: the sidebar shows the GPS);
-  - board cards: Sensors (steps as its main value, with temperature, humidity and pressure; one card from Cairn 114), IR remote, Audio (Player and Recorder) and Tools.
+  - from Cairn 120 the header stays put and only the cards scroll under it, two rows at a time; under the clock, today's sunrise and sunset;
+  - BATTERY, CHATS, NODES, GPS, LORA and NETWORK, in the same order and capital titles as the other devices (from Cairn 120);
+  - board cards: Audio (Player and Recorder), Sensors (temperature, humidity and pressure with today's steps) and IR remote, then **Files** (the card's free space) beside Tools (from Cairn 120).
   - Scroll down for more cards.
 - **Sidebar tabs:** Home, Chats, Nodes, Radios, GPS and Settings, with coloured icons. The GPS icon is green while the GPS is on and red while it is off, paused for Wi-Fi, or the keyboard is unpowered (from Cairn 113).
 - **Settings as cards:** Settings and every sub-page use dashboard-style cards (icon badge, title, big value, detail line), including System and Firmware update.
@@ -41,7 +44,8 @@ From Cairn 119: posting to a room you just logged in to works (no more "Recipien
 - **Nodes:** list and cards views, ping, repeater scan and remote admin.
 - **Node pages:** selecting a companion, repeater, room server or sensor opens a page of cards for it: signal, route, battery, last ping and, once logged in, its status, neighbours, readings and clock. The bar at the bottom follows the session: Message or Log in, Ping, then More, Admin or Refresh. The full admin console is one step further.
 - **Radios** (tabs from Cairn 114): **1 LoRa**, **2 Wi-Fi** and **3 BLE**, by touch or keys 1, 2 and 3. LoRa has a live spectrum strip, a full-screen spectrum and band scan, and **Traffic**: the last hour's packets with a stats strip, each opening its details as tiles.
-- **GPS:** position, satellites and a compass. Tap the compass for a full-screen view with all the GPS details.
+- **Map** (the GPS tab, from Cairn 120): map sets from the microSD card (made on a computer, downloaded by an L2 Pro, or downloaded on this board over Wi-Fi: Map › [...] › Download), vector maps in Light, Dark or red Night, the **online map** with Wi-Fi, your nodes, and traffic lines. The compass button opens the GPS data grid.
+- **Files** (Settings › Storage › Files, or Home's Files card, from Cairn 120): browse the microSD card, play a song or recording, see a file's details, or delete it (folders delete in the background).
 - **Sensors:** temperature, humidity and pressure (keypad board), and a step counter.
 - **IR remote:** large buttons, with brand and device chosen in its settings.
 - **Audio (Player and Recorder):** one card for two apps that play music from the microSD card and record from the microphone, with a live audio spectrum. Recordings are saved to the card.
@@ -65,7 +69,7 @@ The side power switch picks which battery feeds the board:
 | **OFF** | no battery: the board runs only from USB | the keyboard's battery |
 
 - **Install and update with the switch ON**, with the core off the keyboard. With the switch OFF and no keyboard, a USB install fails: the board restarts every 20 to 40 seconds once the flash tool takes over.
-- **Docked and on battery, the switch turns the unit off** (from Cairn 112). Slide it OFF and a "Switched off" card counts down 5 seconds; any key cancels. Then the board saves everything and turns off. Slide it back ON and it starts within about 5 seconds (up to about 20 seconds on a board that was updated over Wi-Fi), or press A.
+- **Docked and on battery, the switch turns the unit off** (from Cairn 112; reliable from Cairn 120, also when the switch restarts the board as it moves). Slide it OFF and a "Switched off" card counts down 5 seconds; any key, or sliding it back ON, cancels. Then the board saves everything and turns off. **Press A** to start it again (from Cairn 120; it no longer starts by itself when the switch goes back ON).
 - **With USB plugged in, the switch does nothing** to a docked board: it keeps running from USB.
 - You can also turn it off by holding A for 3 seconds and choosing Hibernate. A wakes it.
 - The Battery page and the battery icon show whichever battery the switch connects. Cairn can't tell which one that is.
