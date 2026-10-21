@@ -146,6 +146,14 @@ The same interface on the [ThinkNode M9](docs/boards/thinknode-m9.md), driven by
 | ![M9 Battery](docs/screens/m9/battery.png)<br>M9 · Battery | ![M9 Spectrum](docs/screens/m9/spectrum.png)<br>M9 · Spectrum | ![M9 Quick panel](docs/screens/m9/quick-panel.png)<br>M9 · Quick panel |
 | ![M9 Settings](docs/screens/m9/settings.png)<br>M9 · Settings | ![T-Deck Home](docs/screens/tdeck/home.png)<br>T-Deck · Home | |
 
+### LilyGO T-Display SF32
+
+The native square interface on the [T-Display SF32](docs/boards/lilygo-t-display-sf32.md), driven by its keypad and touchscreen. Captured on the board, with mesh names blurred. The Settings screen is the one-screen layout coming in the next build. More on the [board page](docs/boards/lilygo-t-display-sf32.md#screens).
+
+| | | |
+|---|---|---|
+| ![SF32 Home](docs/screens/sf32/home.png)<br>SF32 · Home | ![SF32 Spectrum](docs/screens/sf32/spectrum.png)<br>SF32 · Spectrum | ![SF32 Settings](docs/screens/sf32/settings.png)<br>SF32 · Settings |
+
 ### Heltec T096
 
 The themed one-button interface on the [T096](docs/boards/heltec-t096.md)'s 0.96" screen, rendered by the firmware's own drawing code in a desktop simulator with fictional sample data. More, including all five themes, on the [board page](docs/boards/heltec-t096.md#screens).

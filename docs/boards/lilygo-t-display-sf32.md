@@ -1,5 +1,7 @@
 # LilyGO T-Display SF32 (with the keypad board)
 
+[![Cairn on the LilyGO T-Display SF32](../promo/05_cairn_sf32_cover.jpg)](../promo/05_cairn_sf32_cover.jpg)
+
 ✅ Tested on hardware · SiFli SF32LB52 · [install with one double-click](../install/sf32.md) · updates over Wi-Fi
 
 LilyGO's T-Display SF32 has:
@@ -20,6 +22,18 @@ Its current files are in [Cairn 120](https://github.com/cvhviz/Cairn/releases/ta
 From Cairn 120: the offline map (with vector map sets), the online map and map downloads on the device; a Files manager; the L2 Pro's chat features (reply, message details, copy and paste, resend, mute, auto retry, delete a chat or a message); telemetry from your contacts and a setting for sharing yours; Home and Settings laid out as on the other devices; screens about a third faster, and no slowdown with the USB cable in; one battery icon with the level inside; and the side switch turns a docked board off again (press A to start it).
 
 From Cairn 119: posting to a room you just logged in to works (no more "Recipient gone"), and messages waiting for the phone app survive a reset, a flat battery or a reflash.
+
+## Screens
+
+Captured on the board (the focus ring shows which item the keys are on). Mesh names and the pairing PIN are blurred. The four Settings screens show the one-screen Settings layout coming in the next build; Cairn 120 has the earlier layout.
+
+| | | |
+|---|---|---|
+| ![Home](../screens/sf32/home.png)<br>Home | ![Radios](../screens/sf32/radios.png)<br>Radios · LoRa | ![Spectrum](../screens/sf32/spectrum.png)<br>Spectrum |
+| ![Sensors](../screens/sf32/sensors.png)<br>Sensors | ![Settings](../screens/sf32/settings.png)<br>Settings | ![Settings, LoRa radio](../screens/sf32/settings-radio.png)<br>Settings › LoRa › Radio |
+| ![Settings, Theme](../screens/sf32/settings-theme.png)<br>Settings › Theme | ![Settings, Tones](../screens/sf32/settings-tones.png)<br>Settings › Tones | |
+
+A wide cover for sharing: [06_cairn_sf32_wide.jpg](../promo/06_cairn_sf32_wide.jpg).
 
 ## Which file
 
