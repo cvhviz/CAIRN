@@ -17,7 +17,9 @@ The keypad board adds a 20-key phone-style keypad with backlight, a haptic motor
 
 Cairn runs a native interface on it, built for the large square screen. It works with the official MeshCore apps over Bluetooth.
 
-Its current files are in [Cairn 120](https://github.com/cvhviz/Cairn/releases/tag/cairn-v120): `MeshCore-TDisplaySF32-Cairn120-2026-10-19-install.zip` and `MeshCore-TDisplaySF32-Cairn120-2026-10-19-update.bin`. A board on Cairn 107 or later updates over Wi-Fi (with the keyboard board attached). A board on the very first SF32 build (6 Oct) needs the [USB installer](../install/sf32.md#if-your-board-has-the-first-sf32-build) once.
+Its current files are in [Cairn 121](https://github.com/cvhviz/Cairn/releases/tag/cairn-v121): `MeshCore-TDisplaySF32-Cairn121-2026-10-21-install.zip` and `MeshCore-TDisplaySF32-Cairn121-2026-10-21-update.bin`. A board on Cairn 107 or later updates over Wi-Fi (with the keyboard board attached). A board on the very first SF32 build (6 Oct) needs the [USB installer](../install/sf32.md#if-your-board-has-the-first-sf32-build) once.
+
+From Cairn 121: every Settings page fits on one screen. No setting is gone; some moved, and short settings became small tiles, three across. Radio, Tones, Buttons, Keyboard, Storage, Clear & reset, Theme, Home, IR setup, Bluetooth, Clock and Clock & time zone no longer scroll. New pages: **Networks** (Wi-Fi › Networks: the networks in range and Join other), **Telemetry** (its own card under GNSS), **Map set** (Map settings › Map set) and **Restart** (System › Restart: Restart, and Hibernate as a 1.5 s hold; holding A for 3 s still opens the power menu). Channels join with Public, Hashtag and Private key tiles, and each channel opens its own page with Open chat, **Mute** and **Leave**. Battery moved to Hardware, Theme shows the nine themes as tiles in their own colors, Sound has a Sound switch beside Volume, and About shows the node's public key on the first screen.
 
 From Cairn 120: the offline map (with vector map sets), the online map and map downloads on the device; a Files manager; the L2 Pro's chat features (reply, message details, copy and paste, resend, mute, auto retry, delete a chat or a message); telemetry from your contacts and a setting for sharing yours; Home and Settings laid out as on the other devices; screens about a third faster, and no slowdown with the USB cable in; one battery icon with the level inside; and the side switch turns a docked board off again (press A to start it).
 
@@ -25,7 +27,7 @@ From Cairn 119: posting to a room you just logged in to works (no more "Recipien
 
 ## Screens
 
-Captured on the board (the focus ring shows which item the keys are on). Mesh names and the pairing PIN are blurred. The four Settings screens show the one-screen Settings layout coming in the next build; Cairn 120 has the earlier layout.
+Captured on the board (the focus ring shows which item the keys are on). Mesh names and the pairing PIN are blurred. The four Settings screens show the one-screen Settings layout from Cairn 121.
 
 | | | |
 |---|---|---|
@@ -85,7 +87,7 @@ The side power switch picks which battery feeds the board:
 - **Install and update with the switch ON**, with the core off the keyboard. With the switch OFF and no keyboard, a USB install fails: the board restarts every 20 to 40 seconds once the flash tool takes over.
 - **Docked and on battery, the switch turns the unit off** (from Cairn 112; reliable from Cairn 120, also when the switch restarts the board as it moves). Slide it OFF and a "Switched off" card counts down 5 seconds; any key, or sliding it back ON, cancels. Then the board saves everything and turns off. **Press A** to start it again (from Cairn 120; it no longer starts by itself when the switch goes back ON).
 - **With USB plugged in, the switch does nothing** to a docked board: it keeps running from USB.
-- You can also turn it off by holding A for 3 seconds and choosing Hibernate. A wakes it.
+- You can also turn it off by holding A for 3 seconds and choosing Hibernate, or with a 1.5 s hold on Hibernate in Settings › System › Restart (from Cairn 121). A wakes it.
 - The Battery page and the battery icon show whichever battery the switch connects. Cairn can't tell which one that is.
 - On the core alone (not docked), moving the switch while running on battery restarts the board or cuts it: the power breaks as the switch moves.
 - On USB with a flat battery, Cairn shows the USB symbol instead of a percentage and won't start a Wi-Fi update.
@@ -113,7 +115,6 @@ The side buttons can be changed in Settings › Controls. Without the keypad boa
 - **No USB-serial companion.** The board's only USB port is the CH343 console, so connect the MeshCore apps over Bluetooth.
 - **Wi-Fi after re-docking.** After the core is taken off the keyboard and docked again, Wi-Fi may not come back by itself. Restart the board (hold A for 3 seconds, Restart) and it reconnects. Wi-Fi updates from GitHub work: 107 to 108 was tested end to end.
 - **The Windows installer hasn't been run on a Windows PC yet.** Please [report](https://github.com/cvhviz/Cairn/issues/new?template=bug_report.yml) how it goes.
-- **No offline map yet.** It's coming in a later release.
 - **The IR transmitter hasn't been checked against a TV yet.** Its codes follow the public IR databases.
 - **Battery life with the screen off hasn't been measured yet.**
 - **Waking on a received LoRa message hasn't been confirmed on hardware yet.**

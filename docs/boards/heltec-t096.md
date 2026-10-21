@@ -19,6 +19,7 @@ Install, update and recovery all use the same file: double-tap **RST** and copy 
 |---|---|
 | the button, short press | next page |
 | the button, hold | the page's action (for example, send an advert on the Spectrum page); Reboot and Hibernate arm on the first hold and act on a second |
+| the button, triple-click | back to the messages page from any page or the message preview (from Cairn 121) |
 | the button, hold during the first 8 s after boot | open the rescue console |
 | RST | restart; **double-tap** for the UF2 drive |
 
@@ -32,6 +33,16 @@ Install, update and recovery all use the same file: double-tap **RST** and copy 
 - Recent shows nodes whose clock isn't set yet (a freshly flashed T096 repeater, for example), labelled "unset" (from Cairn 113).
 - TX power is shown at the antenna: the T096 has an amplifier, so a setting of 22 was really about 28 dBm. The setting stops at 18, where the amplifier is already at full output (from Cairn 116).
 - Messages waiting for the phone app survive a reset, a flat battery or a reflash (from Cairn 119; before, only a commanded restart or power-off kept them).
+- **From Cairn 121** (files `MeshCore-HeltecT096-Cairn121-2026-10-21-ble.uf2` and `-usb.uf2`):
+  - **More from the one button:** a hold on the messages page sends an advert, or brings the message preview back while it still holds messages (the hint at the bottom says which). A triple-click goes back to the messages page from any page or the preview.
+  - **New in Settings:** Share pos (whether adverts carry your position), Flood advert (a confirming hold, like Reboot), LNA and Boost RX (the receive switches; the Radio page shows both), Msg wake (Off keeps the screen dark when a message arrives), Brightness (100, 60, 30 and 10 %) and GPS Eco (Settings › GPS and a hold on the GPS page step Off, On and Eco: a fix every 10 minutes, off in between; BLE build only).
+  - **Message preview:** who and where ("@Cedar Base" or "#Hiking"), the route ("direct" or "2 hops"), the text wrapped in up to four lines. A click goes to the next message, a hold clears them all, a double-click goes back with the messages kept.
+  - **Recent** shows all 16 heard nodes, four at a time (a hold steps on; the title says "Recent 5-8/11"), with hop counts. The **Radio** page shows the last packet heard: age, RSSI and SNR.
+  - **Low-battery power-off:** under 3.35 V for about 30 s on battery, it saves and powers off instead of browning out (`set lowbatt` changes the level, `set lowbatt 0` turns it off). After Hibernate, a press of the button turns it back on.
+  - **Storage low** shows on the messages page when the contacts can't be saved safely; contacts, settings and channels are now written to a copy first.
+  - **A quicker screen with less drain while dark:** only the changed lines are sent, on the faster SPI bus, and the BLE build advertises once a second after its first 30 s.
+  - **Fixed:** hop counts read "2 hops", not "(66)"; "Queued: 3" in place of "MSG: 3"; "Bluetooth off" in place of a pairing PIN; the battery icon follows a Li-ion curve and no longer dips with each send.
+  - **Not yet checked on a device:** Brightness (needs a meter), GPS Eco, the low-battery power-off and the button wake from Hibernate, Storage low, the battery icon against a meter, and the drain with the screen dark.
 - Cairn splash in your theme's colours, with the build number.
 - Feet and °F, 12-hour clock.
 

@@ -11,18 +11,18 @@ Builds are numbered: the splash screen shows **BUILD N**, releases are tagged `c
 
 **Download the files from the [latest release](https://github.com/cvhviz/Cairn/releases/latest).** L1 Pro releases from before Cairn (builds 40 to 98) are archived in this repository's releases; the last of them is [build 98](https://github.com/cvhviz/CAIRN/releases/tag/cvhbuild-v98).
 
-## Latest: Cairn 120 (19 Oct 2026)
+## Latest: Cairn 121 (21 Oct 2026)
 
-- **T-Display SF32 catches up with the L2 Pro:** the offline map with vector map sets, the **online map**, **map downloads on the device** over Wi-Fi, a **Files** manager (Settings › Storage › Files), and the L2 Pro's chat features (reply, message details, copy and paste, resend, mute a channel, auto retry, delete a chat or a message). Home and Settings now look like the other devices' (capital titles, the clock header stays put with sunrise and sunset under it, a Files card), screens redraw about a third faster and no longer slow down with the USB cable in, the status bar has one battery icon with the level inside, and the side switch now turns the board off while it sits on the keyboard.
-- **Telemetry:** ask a contact for its battery, temperature, position and sensors from its node page, and choose who may read yours (Settings › GNSS › Telemetry: Off, Trusted contacts or Anyone; off until you change it). L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32.
-- **Settings reorganized** (L2 Pro, Heltec V4 touch, M9, T-Deck): LoRa, Network and GNSS (were Radio, Connect and Location), color-coded summaries, the LoRa radio settings on one screen, and readings shown as readings rather than buttons.
-- **Maps:** streets show where a big downloaded area (a whole state) stops short of them, when the online map is on; the satellite count moved to the status bar; traffic lines now draw everything the radio sends and the replies it gets, only as far as the route can really be placed.
-- **Rooms:** each post shows who wrote it and when it was posted.
-- **More free memory** next to Bluetooth and Wi-Fi (55-65 KB on the ESP32 touch boards), so "Not enough memory" comes far less often; Battery saver, repeater Sync clock and Heltec portrait fixes; swipe down from the top for the Quick panel.
+- **T-Display SF32 Settings fit on one screen per page:** short settings became small tiles, with new **Networks** (the Wi-Fi networks in range and Join other), **Telemetry**, **Map set** and **Restart** pages, and each channel opens its own page with Open chat, **Mute** and **Leave**.
+- **Settings that fit on one screen** (L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck): Storage, Map, Screensaver, Display, Wake & lock, Sound, Theme, Quick replies, a channel's page, Restart, Wi-Fi and Scope, and a shorter About. No setting is gone; some moved.
+- **T096: more from the one button:** a hold on the messages page sends an advert, a triple-click goes back to the messages page, and Settings gains Share pos, Flood advert, LNA, Boost RX, Msg wake, Brightness and GPS Eco. The message preview says who and where, and Recent shows all 16 heard nodes. Brightness, GPS Eco, the low-battery power-off and the lower drain with the screen dark are not yet checked on a device.
+- **Heltec V4 Expansion Kit V1: a first build, not yet tested on a device** ([board page](docs/boards/heltec-v4-kit-v1.md)). The Kit V2's touch interface on the plain V4 in the V1 kit, without the map. Testers wanted.
+- **L2 Pro Battery saver** (Settings › System, or the Battery page), off until you turn it on. Not yet measured on the L2 Pro.
+- **Safer saves on every board:** contacts, settings and channels are written to a copy first, so a reset or a flat battery partway through no longer loses them. Also fixed: a crash during map downloads (L2 Pro, T-Deck, Heltec V4 touch, M9).
 - **Updating:** L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32 update over Wi-Fi in **Settings › System › Firmware update**. The L1 Pro family and the T096 update by copying the new `.uf2` ([UF2 guide](docs/install/nrf52-uf2.md)).
 - **Other boards:** the preview boards stay on [Cairn 107 preview](https://github.com/cvhviz/Cairn/releases/tag/cairn-v107-preview).
 
-Cairn 119 brought maps downloaded on the device, the GPS tab as the map, and Spectrum and chat history in CairnOS; see its [release notes](https://github.com/cvhviz/Cairn/releases/tag/cairn-v119).
+Cairn 120 brought the T-Display SF32 maps and Files, telemetry from your contacts, and the LoRa, Network and GNSS Settings; see its [release notes](https://github.com/cvhviz/Cairn/releases/tag/cairn-v120).
 
 ## Supported boards
 
@@ -44,11 +44,12 @@ The L1 Pro takes the SH1106 OLED, the 2.42" SSD1309 "DV1" OLED or the e-ink disp
 | ------------------------------------------------------------- | ------------------------------------- | ------- | ----------------------------------------- |
 | [Seeed Wio Tracker L2 Pro](docs/boards/wio-tracker-l2-pro.md) | 3.2" touchscreen                      | ✅      | [esptool / web](docs/install/esp32-s3.md) |
 | [Heltec V4 + Expansion Kit](docs/boards/heltec-v4-touch.md)   | 2.8" touchscreen                      | ✅      | [esptool / web](docs/install/esp32-s3.md) |
+| [Heltec V4 + Expansion Kit V1](docs/boards/heltec-v4-kit-v1.md) | 2.8" touchscreen, no map            | 🧪      | [esptool / web](docs/install/esp32-s3.md) |
 | [Elecrow ThinkNode M9](docs/boards/thinknode-m9.md)           | 2.4" screen, keyboard, d-pad          | ✅ beta | [esptool / web](docs/install/esp32-s3.md) |
 | [LilyGO T-Deck / T-Deck Plus](docs/boards/lilygo-t-deck.md)   | 2.8" touchscreen, keyboard, trackball | ✅ beta | [esptool / web](docs/install/esp32-s3.md) |
 | [Preview boards](docs/boards/preview-boards.md)               | OLED or colour TFT, one button        | 🧪      | [esptool / web](docs/install/esp32-s3.md) |
 
-The L2 Pro, Heltec V4, ThinkNode M9 and T-Deck run the same Cairn interface; the M9 drives it by keys and the T-Deck by touch or keys.
+The L2 Pro, Heltec V4, ThinkNode M9 and T-Deck run the same Cairn interface; the M9 drives it by keys and the T-Deck by touch or keys. The Heltec V4 + Expansion Kit page is for the V4-R8 in the Kit V2; the plain V4 in the Kit V1 has its own untested preview build (from Cairn 121).
 
 ESP32 preview boards: Heltec V4 / V4-R8 / V3 (OLED), Heltec Wireless Tracker (V1, V2), LilyGO T-Beam Supreme and T-Beam 1W, T3S3, Station G2 / G3 (USB build only), XIAO ESP32-S3, ThinkNode M2, Meshnology W12, Ebyte EoRa-S3; and on the original ESP32, Heltec V2, LilyGO T-Beam (SX1262 / SX1276, Bluetooth build only), T-LoRa V2.1-1.6 and MeshAdventurer. The original-ESP32 boards install the same way; the [ESP32 guide](docs/install/esp32-s3.md#original-esp32-boards) has the one difference.
 
@@ -88,8 +89,8 @@ Want another board? [Ask for it](https://github.com/cvhviz/Cairn/issues/new?temp
 | Online updates                |    –     |   ✅   |       ✅        |      ✅      |    ✅ ²     |       ✅       |    –     |    –    |
 | GPS                           |    ✅    |   ✅   |      ✅ ³       |      ✅      |    Plus     |       ✅       |    ✅    |  some   |
 | microSD card                  |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       ✅       |    –     |    –    |
-| Offline map                   |    –     |   ✅   |       ✅        |      ✅      |     ✅      |     coming     |    –     |    –    |
-| Map downloads, online map     |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       –        |    –     |    –    |
+| Offline map                   |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       ✅       |    –     |    –    |
+| Map downloads, online map     |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       ✅       |    –     |    –    |
 | Spectrum and band scan        |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       ✅       | spectrum |    –    |
 | Repeater scan and admin       |    –     |   ✅   |       ✅        |      ✅      |     ✅      |       ✅       |    –     |    –    |
 | USB-serial companion          |    –     |   –    |        –        |      –       |      –      |       –        |    ✅    |   ✅    |
@@ -126,7 +127,7 @@ Install guides: [nRF52840 (UF2)](docs/install/nrf52-uf2.md) · [ESP32 (esptool o
 
 ## Manual, brochure and screens
 
-- [Cairn firmware manual (PDF)](docs/Cairn_Firmware_Manual_Dark.pdf): every board, screen and setting, with the touch, key (M9, T-Deck) and OLED-board ways to do each task, a shortcuts and gestures cheat sheet, troubleshooting and a glossary. Written for Cairn 118; the [Cairn 119](https://github.com/cvhviz/Cairn/releases/tag/cairn-v119) and [Cairn 120](https://github.com/cvhviz/Cairn/releases/tag/cairn-v120) release notes cover what changed since (the GPS tab opens on the map, Settings' LoRa, Network and GNSS names). A web version with search is in [docs/Cairn_Firmware_Manual_Dark](docs/Cairn_Firmware_Manual_Dark) (download the folder and open `index.html`).
+- [Cairn firmware manual (PDF)](docs/Cairn_Firmware_Manual_Dark.pdf): every board, screen and setting, with the touch, key (M9, T-Deck) and OLED-board ways to do each task, a shortcuts and gestures cheat sheet, troubleshooting and a glossary. Written for Cairn 118; the [Cairn 119](https://github.com/cvhviz/Cairn/releases/tag/cairn-v119), [Cairn 120](https://github.com/cvhviz/Cairn/releases/tag/cairn-v120) and [Cairn 121](https://github.com/cvhviz/Cairn/releases/tag/cairn-v121) release notes cover what changed since (the GPS tab opens on the map, Settings' LoRa, Network and GNSS names, Settings pages that fit on one screen). A web version with search is in [docs/Cairn_Firmware_Manual_Dark](docs/Cairn_Firmware_Manual_Dark) (download the folder and open `index.html`).
 - [Cairn brochure (PDF)](docs/Cairn_Wio_L2_Pro_Brochure.pdf): the firmware, the board and the 3D-printed case, in nine pages.
 - [Previous manual (PDF)](docs/Cairn_Wio_L2_Pro_User_Manual.pdf): the October 2026 Wio Tracker L2 Pro edition. The offline-map tool it mentions is [tools/maptiles.py](tools/maptiles.py) ([how to use it](tools/MAPTILES.md)).
 - The touch features are listed on the [L2 Pro board page](docs/boards/wio-tracker-l2-pro.md). The Heltec V4 touch, ThinkNode M9 and T-Deck run the same interface.
@@ -148,7 +149,7 @@ The same interface on the [ThinkNode M9](docs/boards/thinknode-m9.md), driven by
 
 ### LilyGO T-Display SF32
 
-The native square interface on the [T-Display SF32](docs/boards/lilygo-t-display-sf32.md), driven by its keypad and touchscreen. Captured on the board, with mesh names blurred. The Settings screen is the one-screen layout coming in the next build. More on the [board page](docs/boards/lilygo-t-display-sf32.md#screens).
+The native square interface on the [T-Display SF32](docs/boards/lilygo-t-display-sf32.md), driven by its keypad and touchscreen. Captured on the board, with mesh names blurred. The Settings screen is the one-screen layout from Cairn 121. More on the [board page](docs/boards/lilygo-t-display-sf32.md#screens).
 
 | | | |
 |---|---|---|
@@ -169,7 +170,7 @@ The themed one-button interface on the [T096](docs/boards/heltec-t096.md)'s 0.96
 
 ## Publishing a release (for the online updater)
 
-The L2, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32 builds read `https://api.github.com/repos/cvhviz/Cairn/releases/latest`. For a build to be offered:
+The L2, Heltec V4 touch (Kit V2 and Kit V1), ThinkNode M9, T-Deck and T-Display SF32 builds read `https://api.github.com/repos/cvhviz/Cairn/releases/latest`. For a build to be offered:
 
 - Tag it `cairn-vN`, where N is the build number shown on the splash (it must be higher than the device's own). Publish it as a normal release, not a draft or prerelease.
 - Attach each board's `-update.bin` under its exact name, with nothing between the date and `-update.bin`. The SF32 also accepts a `.sha256` file next to its update.
@@ -181,6 +182,7 @@ The L2, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32 builds read `ht
 | --------------- | ----------------------------------------------------- |
 | L2 Pro          | `MeshCore-WioL2Pro-CairnN-YYYY-MM-DD-update.bin`      |
 | Heltec V4 touch | `MeshCore-HeltecV4Touch-CairnN-YYYY-MM-DD-update.bin` |
+| Heltec V4 Kit V1 (untested preview) | `MeshCore-HeltecV4KitV1-CairnN-YYYY-MM-DD-update.bin` (Cairn 121: `MeshCore-HeltecV4KitV1-Cairn121-2026-10-21-update.bin`) |
 | ThinkNode M9    | `MeshCore-ThinkNodeM9-CairnN-YYYY-MM-DD-update.bin`   |
 | T-Deck          | `MeshCore-TDeckPlus-CairnN-YYYY-MM-DD-update.bin`     |
 | T-Display SF32  | `MeshCore-TDisplaySF32-CairnN-YYYY-MM-DD-update.bin`  |

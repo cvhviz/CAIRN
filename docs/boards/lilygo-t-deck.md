@@ -25,6 +25,14 @@ Cairn runs the same interface as the [Wio Tracker L2 Pro](wio-tracker-l2-pro.md)
 - **Enter finishes the text field** (from Cairn 113): Send in a chat, Done, OK or Save elsewhere. The trackball click still selects what is highlighted.
 - **Radios by keys:** 1, 2 and 3 pick the LoRa, Wi-Fi and Bluetooth tabs (from Cairn 114). The LoRa tab lands on Advert (from Cairn 113), and the advert sheet opens with Send focused, so Advert, then a click, sends a zero-hop advert.
 
+## From Cairn 121
+
+Files: `MeshCore-TDeckPlus-Cairn121-2026-10-21-full.bin` and `-update.bin`.
+
+- **Settings that fit on one screen:** Storage (small tiles for USB drive, Files, Transfer, Eject, Re-scan and Format), Map (six tiles: Map set, Online map, Labels, Traffic lines, Map cache and Storage; Map cache moved here from Storage), Screensaver (when it runs moved to a new **Saver options** card under Appearance), Display, Wake & lock (Msg wake moved here), Sound, Theme (the nine themes as tiles in their own colors), Quick replies, Wi-Fi and Scope. A channel's page shows its key on the channel tile, with **Mute** beside **Leave** (still a 1.5 s hold). Hibernate is a 1.5 s hold on System › Restart, beside Restart, whose tile shows the last restart. About is shorter, with the public key on the first screen. No setting is gone; some moved.
+- **Keys:** the key-navigation ring now reaches every tile on these pages without scrolling, and holding Enter on Format runs its hold.
+- Also: a crash during map downloads is fixed (closing a download's connection could close the map file on the card); contacts, settings and channels are written to a copy first, so a save cut short no longer loses them; a save that fails says "Not saved: storage full"; and a message arriving while you type no longer throws the draft away.
+
 ## From Cairn 120
 
 - **Telemetry:** a contact's node page shows its battery and opens its telemetry; Settings › GNSS › Telemetry chooses who may read yours (off by default).
