@@ -34,9 +34,18 @@ One button. **Click** moves to the next page; **hold** acts.
 | **Spectrum** | the channel's signal over the last ~16 seconds, with the noise floor, the latest and the peak level | send an advert |
 | **Settings** | Repeat (on/off), TX power, Send advert, Power save, Reboot | change or run the selected row |
 
-On Settings a click steps down the rows, and a click past the last row returns to Status. Reboot asks for a second hold within 5 seconds. Settings are applied through the repeater's own CLI, so they are saved exactly as `set repeat` or `set tx` would save them over serial or remote admin. TX power steps through 1, 5, 9, 13, 17 and 22 dBm of radio-chip output; boards with a front-end amplifier (T096, V4) add its gain on top.
+On Settings a click steps down the rows, and a click past the last row returns to Status. Reboot asks for a second hold within 5 seconds. Settings are applied through the repeater's own CLI, so they are saved exactly as `set repeat` or `set tx` would save them over serial or remote admin. TX power steps through 1, 5, 9, 13, 17 and 22 dBm of radio-chip output, ending at the board's cap (from Cairn 122: T096 1, 5, 9, 13, 16; Heltec V4, V4-R8 and Wireless Tracker V2 stop at 18). Boards with a front-end amplifier show the power at the antenna (the T096 since Cairn 116; the V4, V4-R8 and Tracker V2 from Cairn 122).
 
 The screen turns off after 30 seconds (2 minutes on Spectrum); the first press only wakes it.
+
+## From Cairn 122
+
+Files: `MeshCore-HeltecT096-Cairn122-2026-10-25-repeater.uf2`, `MeshCore-HeltecT114-Cairn122-2026-10-25-repeater.uf2`, and `MeshCore-<Board>-Cairn122-2026-10-25-repeater-full.bin` / `-repeater-update.bin` for the ESP32 boards.
+
+- **Scan replies are spaced out:** a repeater answers a "Scan repeaters" after a random wait that grows with the neighbours it heard in the last 30 minutes, up to 14 s, so fewer replies should collide in a busy area. Cairn devices listen at least 15 s; the Cairn app listens 6 to 15 s depending on the preset, and keeps listening (up to 15 s) while replies are still arriving. Its reply budget is a burst of 4, then one every 30 s, and a scan for other node types no longer uses it up. A scanner that stops sooner, including the app's on a fast preset after a lull, may miss late replies.
+- **TX power:** caps where the amplifier saturates (T096 16, was 18; Heltec V4, V4-R8 and Tracker V2 18, were 22). A saved setting above the cap is lowered at boot, which leaves the output where it was. `set tx` answers `Error: range -9..N` outside its range instead of saving it, and `get cairn.cfg` reports the limits (`txm=`, `txa=`).
+- **A radio change no longer leaves the repeater deaf** (`tempradio`, or a change from remote admin) until it next sends.
+- **Not yet checked on a device:** nothing new in 122 has run on hardware yet; it builds and passes the firmware's automated tests.
 
 ## Power save
 

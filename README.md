@@ -11,18 +11,21 @@ Builds are numbered: the splash screen shows **BUILD N**, releases are tagged `c
 
 **Download the files from the [latest release](https://github.com/cvhviz/Cairn/releases/latest).** L1 Pro releases from before Cairn (builds 40 to 98) are archived in this repository's releases; the last of them is [build 98](https://github.com/cvhviz/CAIRN/releases/tag/cvhbuild-v98).
 
-## Latest: Cairn 121 (21 Oct 2026)
+## Latest: Cairn 122 (25 Oct 2026)
 
-- **T-Display SF32 Settings fit on one screen per page:** short settings became small tiles, with new **Networks** (the Wi-Fi networks in range and Join other), **Telemetry**, **Map set** and **Restart** pages, and each channel opens its own page with Open chat, **Mute** and **Leave**.
-- **Settings that fit on one screen** (L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck): Storage, Map, Screensaver, Display, Wake & lock, Sound, Theme, Quick replies, a channel's page, Restart, Wi-Fi and Scope, and a shorter About. No setting is gone; some moved.
-- **T096: more from the one button:** a hold on the messages page sends an advert, a triple-click goes back to the messages page, and Settings gains Share pos, Flood advert, LNA, Boost RX, Msg wake, Brightness and GPS Eco. The message preview says who and where, and Recent shows all 16 heard nodes. Brightness, GPS Eco, the low-battery power-off and the lower drain with the screen dark are not yet checked on a device.
-- **Heltec V4 Expansion Kit V1: a first build, not yet tested on a device** ([board page](docs/boards/heltec-v4-kit-v1.md)). The Kit V2's touch interface on the plain V4 in the V1 kit, without the map. Testers wanted.
-- **L2 Pro Battery saver** (Settings › System, or the Battery page), off until you turn it on. Not yet measured on the L2 Pro.
-- **Safer saves on every board:** contacts, settings and channels are written to a copy first, so a reset or a flat battery partway through no longer loses them. Also fixed: a crash during map downloads (L2 Pro, T-Deck, Heltec V4 touch, M9).
-- **Updating:** L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32 update over Wi-Fi in **Settings › System › Firmware update**. The L1 Pro family and the T096 update by copying the new `.uf2` ([UF2 guide](docs/install/nrf52-uf2.md)).
+- **What the app missed, it gets back** (every companion: the L1 Pro family, T096, L2 Pro, Heltec V4 kits, ThinkNode M9, T-Deck and T-Display SF32; needs CairnOS build 18 or later): the radio keeps a numbered journal of the packets it hears, so the app catches up after a dropped link as far back as the journal reaches (a few dozen to about 100 packets on the L1 Pro family and T096), and a message stays queued on the radio until the app has stored it. Anything the radio had to drop is counted in the app ("Messages Lost on the Radio") instead of vanishing. The official MeshCore apps get the same frames as before.
+- **Every radio preset the app offers, on the device** (L2 Pro, Heltec V4 kits, ThinkNode M9, T-Deck, T-Display SF32): all 28 of the app's presets, grouped by region with yours first. The Radio page's summary card shows the path hash next to the TX power.
+- **A locate button on the map** (L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck): it centres the map on your position and follows it; a second tap on the GPS tab does the same. With the GPS off, the map, distances and Home use the position set from the app.
+- **A radio change no longer leaves the node deaf** (every board): a preset or frequency change while the radio was listening could leave it hearing nothing until it next sent.
+- **The Wi-Fi app link** (L2 Pro, Heltec V4 kits, ThinkNode M9, T-Deck): a phone set to "Always allow" can change the radio settings over Wi-Fi. Command-line text over Wi-Fi is now limited like the other commands, so the app's Reboot, Power off, Set PIN and Wi-Fi commands work over Bluetooth only.
+- **TX power:** the caps sit where the amplifier saturates (T096 16; Heltec V4, V4 Kit V1, V4-R8 and Tracker V2 18), every screen shows the power at the antenna, and `set tx` refuses a value out of range. A saved setting above the new cap is lowered at boot, which leaves the output where it was.
+- **Repeaters space out their replies to a repeater scan,** so fewer should collide in a busy area.
+- **T-Deck under an SD-card launcher:** the online update no longer crashes it ([#28](https://github.com/cvhviz/CAIRN/issues/28)); it says to update from the launcher instead. A T-Deck on Cairn 121 or earlier still runs the old updater, so install `MeshCore-TDeckPlus-Cairn122-2026-10-25-update.bin` from the card once ([T-Deck page](docs/boards/lilygo-t-deck.md#from-cairn-122)).
+- **Not yet checked on a device:** nothing new in 122 has run on hardware yet. Every board builds and the firmware's automated tests pass, but RX sync, queue sync, the radio-change fix, radio settings over Wi-Fi and the Wi-Fi command-line limits, the locate button, the device preset picker, the new TX caps and antenna readings (not checked against a meter), the spaced-out scan replies and the launcher refusal on a T-Deck are all untried on hardware. Reports are welcome.
+- **Updating:** L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32 update over Wi-Fi in **Settings › System › Firmware update**. The L1 Pro family and the T096 update by copying the new `.uf2` ([UF2 guide](docs/install/nrf52-uf2.md)). Going back to Cairn 121 afterwards loses the messages waiting on the radio for the app.
 - **Other boards:** the preview boards stay on [Cairn 107 preview](https://github.com/cvhviz/Cairn/releases/tag/cairn-v107-preview).
 
-Cairn 120 brought the T-Display SF32 maps and Files, telemetry from your contacts, and the LoRa, Network and GNSS Settings; see its [release notes](https://github.com/cvhviz/Cairn/releases/tag/cairn-v120).
+Cairn 121 brought Settings pages that fit on one screen, more from the T096's one button, the first Heltec V4 Expansion Kit V1 build and safer saves; see its [release notes](https://github.com/cvhviz/Cairn/releases/tag/cairn-v121).
 
 ## Supported boards
 
@@ -127,7 +130,7 @@ Install guides: [nRF52840 (UF2)](docs/install/nrf52-uf2.md) · [ESP32 (esptool o
 
 ## Manual, brochure and screens
 
-- [Cairn firmware manual (PDF)](docs/Cairn_Firmware_Manual_Dark.pdf): every board, screen and setting, with the touch, key (M9, T-Deck) and OLED-board ways to do each task, a shortcuts and gestures cheat sheet, troubleshooting and a glossary. Written for Cairn 118; the [Cairn 119](https://github.com/cvhviz/Cairn/releases/tag/cairn-v119), [Cairn 120](https://github.com/cvhviz/Cairn/releases/tag/cairn-v120) and [Cairn 121](https://github.com/cvhviz/Cairn/releases/tag/cairn-v121) release notes cover what changed since (the GPS tab opens on the map, Settings' LoRa, Network and GNSS names, Settings pages that fit on one screen). A web version with search is in [docs/Cairn_Firmware_Manual_Dark](docs/Cairn_Firmware_Manual_Dark) (download the folder and open `index.html`).
+- [Cairn firmware manual (PDF)](docs/Cairn_Firmware_Manual_Dark.pdf): every board, screen and setting, with the touch, key (M9, T-Deck) and OLED-board ways to do each task, a shortcuts and gestures cheat sheet, troubleshooting and a glossary. Written for Cairn 118; the [Cairn 119](https://github.com/cvhviz/Cairn/releases/tag/cairn-v119), [Cairn 120](https://github.com/cvhviz/Cairn/releases/tag/cairn-v120), [Cairn 121](https://github.com/cvhviz/Cairn/releases/tag/cairn-v121) and [Cairn 122](https://github.com/cvhviz/Cairn/releases/tag/cairn-v122) release notes cover what changed since (the GPS tab opens on the map, Settings' LoRa, Network and GNSS names, Settings pages that fit on one screen, the full preset list and the map's locate button). A web version with search is in [docs/Cairn_Firmware_Manual_Dark](docs/Cairn_Firmware_Manual_Dark) (download the folder and open `index.html`).
 - [Cairn brochure (PDF)](docs/Cairn_Wio_L2_Pro_Brochure.pdf): the firmware, the board and the 3D-printed case, in nine pages.
 - [Previous manual (PDF)](docs/Cairn_Wio_L2_Pro_User_Manual.pdf): the October 2026 Wio Tracker L2 Pro edition. The offline-map tool it mentions is [tools/maptiles.py](tools/maptiles.py) ([how to use it](tools/MAPTILES.md)).
 - The touch features are listed on the [L2 Pro board page](docs/boards/wio-tracker-l2-pro.md). The Heltec V4 touch, ThinkNode M9 and T-Deck run the same interface.
@@ -182,7 +185,7 @@ The L2, Heltec V4 touch (Kit V2 and Kit V1), ThinkNode M9, T-Deck and T-Display 
 | --------------- | ----------------------------------------------------- |
 | L2 Pro          | `MeshCore-WioL2Pro-CairnN-YYYY-MM-DD-update.bin`      |
 | Heltec V4 touch | `MeshCore-HeltecV4Touch-CairnN-YYYY-MM-DD-update.bin` |
-| Heltec V4 Kit V1 (untested preview) | `MeshCore-HeltecV4KitV1-CairnN-YYYY-MM-DD-update.bin` (Cairn 121: `MeshCore-HeltecV4KitV1-Cairn121-2026-10-21-update.bin`) |
+| Heltec V4 Kit V1 (untested preview) | `MeshCore-HeltecV4KitV1-CairnN-YYYY-MM-DD-update.bin` (Cairn 122: `MeshCore-HeltecV4KitV1-Cairn122-2026-10-25-update.bin`) |
 | ThinkNode M9    | `MeshCore-ThinkNodeM9-CairnN-YYYY-MM-DD-update.bin`   |
 | T-Deck          | `MeshCore-TDeckPlus-CairnN-YYYY-MM-DD-update.bin`     |
 | T-Display SF32  | `MeshCore-TDisplaySF32-CairnN-YYYY-MM-DD-update.bin`  |

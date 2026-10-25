@@ -78,6 +78,15 @@ The [compact repeater](../boards/compact-repeater.md) images for the Heltec V2, 
   Bluetooth is off while Wi-Fi transfer runs, and the board restarts into the new build when it's done.
 - **From CairnOS** (Cairn 112, with the next CairnOS update): the app can ask the board over Bluetooth to start Wi-Fi transfer. The board asks **Allow app update?** first; after you tap Allow it turns Bluetooth off and the app sends the update over Wi-Fi. The board must be on Wi-Fi.
 
+### T-Deck started from an SD-card launcher
+
+A T-Deck that starts Cairn from a launcher on the SD card (bmorcelli Launcher, for example) can't use Cairn's online update: the launcher's partition layout has no spare slot Cairn can safely write to. From Cairn 122 the Firmware update page says "Started by a launcher: update from its SD card" and refuses cleanly. On Cairn 121 and earlier the online update crashes and restarts the device instead ([#28](https://github.com/cvhviz/CAIRN/issues/28)), or on newer launchers may write over another installed app, so don't use it there. Two ways out:
+
+- **Keep the launcher:** copy the new `-update.bin` to the card and install it from the launcher.
+- **Switch to Cairn's own layout:** erase the flash and write the `-full.bin` at `0x0` over USB (Option 1 or 2 above). This removes the launcher and its apps, and from then on Wi-Fi updates work. Export your key and contacts first.
+
+If the T-Deck still shows the old build after a USB install, check the `-full.bin` went to `0x0` (not `0x10000`) after a full erase.
+
 ## First boot
 
 The first boot after a full erase sits on "Loading..." for a while as it formats storage and creates the node's identity. Leave it alone; it then shows the home screen. Pair from the MeshCore app with the PIN shown on the screen.

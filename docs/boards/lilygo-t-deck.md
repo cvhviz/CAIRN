@@ -25,6 +25,19 @@ Cairn runs the same interface as the [Wio Tracker L2 Pro](wio-tracker-l2-pro.md)
 - **Enter finishes the text field** (from Cairn 113): Send in a chat, Done, OK or Save elsewhere. The trackball click still selects what is highlighted.
 - **Radios by keys:** 1, 2 and 3 pick the LoRa, Wi-Fi and Bluetooth tabs (from Cairn 114). The LoRa tab lands on Advert (from Cairn 113), and the advert sheet opens with Send focused, so Advert, then a click, sends a zero-hop advert.
 
+## From Cairn 122
+
+Files: `MeshCore-TDeckPlus-Cairn122-2026-10-25-full.bin` and `-update.bin`.
+
+- **Started from an SD-card launcher:** the online update no longer crashes the T-Deck ([#28](https://github.com/cvhviz/CAIRN/issues/28)). Under a launcher, Settings › System › Firmware update says "Started by a launcher: update from its SD card" and greys out Install; browser and Cairn Updater uploads are refused the same way, with no restart. About and the Firmware update page name the launcher's slot ("app1 · launcher"). **A T-Deck on Cairn 121 or earlier under a launcher still runs the old updater: don't use its online update.** Copy `MeshCore-TDeckPlus-Cairn122-2026-10-25-update.bin` to the card and install it from the launcher once. To get Wi-Fi updates instead, flash the `-full.bin` at `0x0` over USB once ([steps](../install/esp32-s3.md#t-deck-started-from-an-sd-card-launcher)); this removes the launcher.
+- **RX sync and queue sync** (with CairnOS build 18 or later): the app catches up on what the radio heard during a dropped link, as far back as its journal reaches, and a message stays queued on the radio until the app has stored it; anything the radio had to drop is counted in the app. The official MeshCore apps get the same frames as before. Going back to Cairn 121 loses the messages waiting on the radio.
+- **Every radio preset the app offers** on the Radio page's preset picker: all 28, with their frequency and area, grouped by region with the one the device is in first; a preset with a path hash sets it too, and the device remembers which preset you picked. The Radio page's summary card shows the path hash next to the TX power.
+- **A locate button on the map:** a crosshair under the zoom and fit buttons centres the map on your position and follows it ("No position yet" when there is none); a second tap on the GPS tab does the same.
+- **The position set from the app shows on the device:** with the GPS off, the map, distances and bearings, GPS data and Home's GPS card use it (GPS data labels it "(SAVED)" or "(LAST)").
+- **Radio settings over Wi-Fi:** a phone on the Trusted devices list ("Always allow") can apply a preset, a radio change or Repeat Mode over Wi-Fi, live; a phone allowed once is still refused. Command-line text over Wi-Fi is now limited like the other commands, so the app's Reboot, Power off, Set PIN and Wi-Fi commands work over Bluetooth only.
+- Also: a radio change no longer leaves the node deaf until it next sends, and a failed online install says why ("Update failed · <why>", shown again after the restart).
+- **Not yet checked on a device:** nothing new in 122 has run on hardware yet; it builds and passes the firmware's automated tests. That includes the launcher refusal, which hasn't been tried under a launcher.
+
 ## From Cairn 121
 
 Files: `MeshCore-TDeckPlus-Cairn121-2026-10-21-full.bin` and `-update.bin`.
