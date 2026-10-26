@@ -161,6 +161,10 @@ The themed one-button interface on the [T096](docs/boards/heltec-t096.md)'s 0.96
 | ![T096 Home](docs/screens/t096/home.png)<br>T096 · Home | ![T096 Spectrum](docs/screens/t096/spectrum.png)<br>T096 · Spectrum | ![T096 Recent](docs/screens/t096/recent.png)<br>T096 · Recent |
 | ![T096 Night theme](docs/screens/t096/theme-night.png)<br>T096 · Night theme | ![T096 Soft theme](docs/screens/t096/theme-soft.png)<br>T096 · Soft theme | ![T096 Radio](docs/screens/t096/radio.png)<br>T096 · Radio |
 
+## Experimental builds
+
+One-off test builds, such as a new board before it has been on the bench, are published as GitHub pre-releases tagged `experimental-<board>-<N>`. They may not work, they never update online, and the online updater never offers them. Current: **SenseCAP MeshPager X2** (Cairn 124 test). What they are, how to flash one and how to send a log: [Experimental builds](docs/experimental.md) · [all experimental releases](https://github.com/cvhviz/Cairn/releases?q=experimental&expanded=true).
+
 ## Reporting a problem
 
 [Open an issue](https://github.com/cvhviz/Cairn/issues/new/choose) and pick **Bug report**. The form asks for the board, the build number from the splash screen, how you installed it, and what happened. A serial log helps a lot. Reports on 🧪 preview boards are especially useful, including "it works".
@@ -170,6 +174,7 @@ The themed one-button interface on the [T096](docs/boards/heltec-t096.md)'s 0.96
 The L2, Heltec V4 touch (Kit V2 and Kit V1), ThinkNode M9, T-Deck and T-Display SF32 builds read `https://api.github.com/repos/cvhviz/Cairn/releases/latest`. For a build to be offered:
 
 - Tag it `cairn-vN`, where N is the build number shown on the splash (it must be higher than the device's own). Publish it as a normal release, not a draft or prerelease.
+- [Experimental builds](docs/experimental.md) are the opposite: always a pre-release, never marked latest, so no device is offered one.
 - Attach each board's `-update.bin` under its exact name, with nothing between the date and `-update.bin`. The SF32 also accepts a `.sha256` file next to its update.
 - GitHub records each file's SHA-256, which the device checks, along with the size and the board's OTA marker inside the image.
 - No other asset may start with one of these board prefixes and end in `-update.bin`. Preview boards use their own board names.
