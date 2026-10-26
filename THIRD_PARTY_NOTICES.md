@@ -23,6 +23,12 @@ The LilyGO T-Display SF32 build and its installer also include:
 | [sftool](https://github.com/OpenSiFli/sftool), © OpenSiFli | The flashing tool bundled, unchanged, in the SF32 `-install.zip` | Apache 2.0 | [sftool-LICENSE.txt](licenses/sftool-LICENSE.txt) |
 | [pyserial](https://github.com/pyserial/pyserial) 3.5, © Chris Liechti | Serial-port access for the installer's helper, bundled unchanged in the SF32 `-install.zip` | BSD 3-Clause | [pyserial-LICENSE.txt](licenses/pyserial-LICENSE.txt) |
 
+The SenseCAP MeshPager X2 build (experimental) also includes:
+
+| Work | Used for | Licence | Text |
+|---|---|---|---|
+| [BMM350 SensorAPI](https://github.com/boschsensortec/BMM350_SensorAPI) v1.10.0, © 2024 Bosch Sensortec GmbH | The compass (BMM350 magnetometer driver), unmodified | BSD 3-Clause | [BMM350-SensorAPI-LICENSE.txt](licenses/BMM350-SensorAPI-LICENSE.txt) |
+
 The [Cairn firmware manual](docs/Cairn_Firmware_Manual_Dark) (its web version and PDF) also includes:
 
 | Work | Used for | Licence | Text |
