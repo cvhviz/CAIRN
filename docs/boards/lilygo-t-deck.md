@@ -25,6 +25,12 @@ Cairn runs the same interface as the [Wio Tracker L2 Pro](wio-tracker-l2-pro.md)
 - **Enter finishes the text field** (from Cairn 113): Send in a chat, Done, OK or Save elsewhere. The trackball click still selects what is highlighted.
 - **Radios by keys:** 1, 2 and 3 pick the LoRa, Wi-Fi and Bluetooth tabs (from Cairn 114). The LoRa tab lands on Advert (from Cairn 113), and the advert sheet opens with Send focused, so Advert, then a click, sends a zero-hop advert.
 
+## From Cairn 123
+
+Files: `MeshCore-TDeckPlus-Cairn123-2026-10-25-full.bin` and `-update.bin`.
+
+- No more **"Watchdog (stall)" restarts from a full node list**: with the list at or near its 350-node limit, saving it to flash could take long enough that the watchdog restarted the device. The save now checks in with the watchdog as it goes. Not yet checked on a device.
+
 ## From Cairn 122
 
 Files: `MeshCore-TDeckPlus-Cairn122-2026-10-25-full.bin` and `-update.bin`.

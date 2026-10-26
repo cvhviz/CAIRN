@@ -11,21 +11,15 @@ Builds are numbered: the splash screen shows **BUILD N**, releases are tagged `c
 
 **Download the files from the [latest release](https://github.com/cvhviz/Cairn/releases/latest).** L1 Pro releases from before Cairn (builds 40 to 98) are archived in this repository's releases; the last of them is [build 98](https://github.com/cvhviz/CAIRN/releases/tag/cvhbuild-v98).
 
-## Latest: Cairn 122 (25 Oct 2026)
+## Latest: Cairn 123 (25 Oct 2026)
 
-- **What the app missed, it gets back** (every companion: the L1 Pro family, T096, L2 Pro, Heltec V4 kits, ThinkNode M9, T-Deck and T-Display SF32; needs CairnOS build 18 or later): the radio keeps a numbered journal of the packets it hears, so the app catches up after a dropped link as far back as the journal reaches (a few dozen to about 100 packets on the L1 Pro family and T096), and a message stays queued on the radio until the app has stored it. Anything the radio had to drop is counted in the app ("Messages Lost on the Radio") instead of vanishing. The official MeshCore apps get the same frames as before.
-- **Every radio preset the app offers, on the device** (L2 Pro, Heltec V4 kits, ThinkNode M9, T-Deck, T-Display SF32): all 28 of the app's presets, grouped by region with yours first. The Radio page's summary card shows the path hash next to the TX power.
-- **A locate button on the map** (L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck): it centres the map on your position and follows it; a second tap on the GPS tab does the same. With the GPS off, the map, distances and Home use the position set from the app.
-- **A radio change no longer leaves the node deaf** (every board): a preset or frequency change while the radio was listening could leave it hearing nothing until it next sent.
-- **The Wi-Fi app link** (L2 Pro, Heltec V4 kits, ThinkNode M9, T-Deck): a phone set to "Always allow" can change the radio settings over Wi-Fi. Command-line text over Wi-Fi is now limited like the other commands, so the app's Reboot, Power off, Set PIN and Wi-Fi commands work over Bluetooth only.
-- **TX power:** the caps sit where the amplifier saturates (T096 16; Heltec V4, V4 Kit V1, V4-R8 and Tracker V2 18), every screen shows the power at the antenna, and `set tx` refuses a value out of range. A saved setting above the new cap is lowered at boot, which leaves the output where it was.
-- **Repeaters space out their replies to a repeater scan,** so fewer should collide in a busy area.
-- **T-Deck under an SD-card launcher:** the online update no longer crashes it ([#28](https://github.com/cvhviz/CAIRN/issues/28)); it says to update from the launcher instead. A T-Deck on Cairn 121 or earlier still runs the old updater, so install `MeshCore-TDeckPlus-Cairn122-2026-10-25-update.bin` from the card once ([T-Deck page](docs/boards/lilygo-t-deck.md#from-cairn-122)).
-- **Not yet checked on a device:** nothing new in 122 has run on hardware yet. Every board builds and the firmware's automated tests pass, but RX sync, queue sync, the radio-change fix, radio settings over Wi-Fi and the Wi-Fi command-line limits, the locate button, the device preset picker, the new TX caps and antenna readings (not checked against a meter), the spaced-out scan replies and the launcher refusal on a T-Deck are all untried on hardware. Reports are welcome.
-- **Updating:** L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32 update over Wi-Fi in **Settings › System › Firmware update**. The L1 Pro family and the T096 update by copying the new `.uf2` ([UF2 guide](docs/install/nrf52-uf2.md)). Going back to Cairn 121 afterwards loses the messages waiting on the radio for the app.
+- **No more "Watchdog (stall)" restarts from a full node list** (L2 Pro, Heltec V4 touch, Heltec V4 Kit V1, ThinkNode M9, T-Deck, T-Display SF32): with the node list at or near its 350-node limit, saving it to flash could take long enough that the device's watchdog took it for a hang and restarted it. The save now checks in with the watchdog as it goes. Until you update, removing nodes (in the app: Settings › Nodes › Remove Nodes) avoids it too.
+- **Every other board** is rebuilt from the same tree: a node is now saved in one write instead of twelve, to the same file as before.
+- **Not yet checked on a device:** the fix hasn't run on hardware yet. Every board builds and the firmware's automated tests pass.
+- **Updating:** L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck and T-Display SF32 update over Wi-Fi in **Settings › System › Firmware update**. The L1 Pro family and the T096 update by copying the new `.uf2` ([UF2 guide](docs/install/nrf52-uf2.md)). Going back to Cairn 122 is safe; going back to 121 or earlier loses the messages waiting on the radio for the app.
 - **Other boards:** the preview boards stay on [Cairn 107 preview](https://github.com/cvhviz/Cairn/releases/tag/cairn-v107-preview).
 
-Cairn 121 brought Settings pages that fit on one screen, more from the T096's one button, the first Heltec V4 Expansion Kit V1 build and safer saves; see its [release notes](https://github.com/cvhviz/Cairn/releases/tag/cairn-v121).
+Cairn 122 brought RX sync and queue sync with the app, every app radio preset on the device, a locate button on the map, the fix for a node going deaf after a radio change, and repeaters spacing out their scan replies; see its [release notes](https://github.com/cvhviz/Cairn/releases/tag/cairn-v122).
 
 ## Supported boards
 
@@ -185,7 +179,7 @@ The L2, Heltec V4 touch (Kit V2 and Kit V1), ThinkNode M9, T-Deck and T-Display 
 | --------------- | ----------------------------------------------------- |
 | L2 Pro          | `MeshCore-WioL2Pro-CairnN-YYYY-MM-DD-update.bin`      |
 | Heltec V4 touch | `MeshCore-HeltecV4Touch-CairnN-YYYY-MM-DD-update.bin` |
-| Heltec V4 Kit V1 (untested preview) | `MeshCore-HeltecV4KitV1-CairnN-YYYY-MM-DD-update.bin` (Cairn 122: `MeshCore-HeltecV4KitV1-Cairn122-2026-10-25-update.bin`) |
+| Heltec V4 Kit V1 (untested preview) | `MeshCore-HeltecV4KitV1-CairnN-YYYY-MM-DD-update.bin` (Cairn 123: `MeshCore-HeltecV4KitV1-Cairn123-2026-10-25-update.bin`) |
 | ThinkNode M9    | `MeshCore-ThinkNodeM9-CairnN-YYYY-MM-DD-update.bin`   |
 | T-Deck          | `MeshCore-TDeckPlus-CairnN-YYYY-MM-DD-update.bin`     |
 | T-Display SF32  | `MeshCore-TDisplaySF32-CairnN-YYYY-MM-DD-update.bin`  |

@@ -16,7 +16,7 @@ The plain Heltec V4 (ESP32-S3, 16 MB flash, 2 MB quad PSRAM; SX1262 with a GC110
 | update | `MeshCore-HeltecV4KitV1-CairnN-<date>-update.bin` | online (Settings › System › Firmware update), a browser upload in Wi-Fi transfer, or USB at `0x10000` |
 | recover a device that won't boot | `MeshCore-HeltecV4KitV1-CairnN-<date>-full.bin` | full erase, then write at `0x0` |
 
-Its current files are in [Cairn 122](https://github.com/cvhviz/Cairn/releases/tag/cairn-v122): `MeshCore-HeltecV4KitV1-Cairn122-2026-10-25-full.bin` and `MeshCore-HeltecV4KitV1-Cairn122-2026-10-25-update.bin` (the first build was in Cairn 121). Write the `-full.bin` or the `-update.bin`, never both. Download mode: hold **PRG**, tap **RST**, release **PRG**.
+Its current files are in [Cairn 123](https://github.com/cvhviz/Cairn/releases/tag/cairn-v123): `MeshCore-HeltecV4KitV1-Cairn123-2026-10-25-full.bin` and `MeshCore-HeltecV4KitV1-Cairn123-2026-10-25-update.bin` (the first build was in Cairn 121). Write the `-full.bin` or the `-update.bin`, never both. Download mode: hold **PRG**, tap **RST**, release **PRG**.
 
 ## Buttons
 
@@ -34,6 +34,10 @@ PRG is the only button this build uses. Heltec's datasheet shows a second case b
 - **TX power** stops at 18 (was 22), and from Cairn 122 the screens show the power at the antenna, from the GC1109 or KCT8103L curve picked at boot.
 - **FEM LNA:** on a V4.3 (KCT8103L) the tile works; on a V4.2 (GC1109, no LNA switch) it reads "Not on this radio". Boosted RX stays on both.
 - The Spectrum page, chats, nodes, repeater admin, Wi-Fi with online updates, the Wi-Fi and Bluetooth scanners, the Battery page, Battery saver and portrait mode (the Quick panel's Rotate) are as on the [Kit V2 build](heltec-v4-touch.md#features).
+
+## From Cairn 123
+
+- No more **"Watchdog (stall)" restarts from a full node list**: with the list at or near its 350-node limit, saving it to flash could take long enough that the watchdog restarted the device. The save now checks in with the watchdog as it goes. Not yet checked on a device.
 
 ## From Cairn 122
 
