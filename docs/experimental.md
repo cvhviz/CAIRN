@@ -17,7 +17,7 @@ Compared with 🧪 **preview** boards (built from the same tree in every normal 
 
 | Board | Build | Date | What it is for |
 |---|---|---|---|
-| SenseCAP MeshPager X2 (Seeed) | [Cairn 124 test](https://github.com/cvhviz/Cairn/releases/tag/experimental-meshpager-x2-124) | 26 Oct 2026 | First bring-up, made from Seeed's block diagram without the board in hand: screen, d-pad, OK, Back, power latch, LoRa, Bluetooth, GPS, microSD |
+| SenseCAP MeshPager X2 (Seeed) | [Cairn 124 test 5](https://github.com/cvhviz/Cairn/releases/tag/experimental-meshpager-x2-124-5) | 26 Oct 2026 | Bring-up, test 5: power off (firmware or board?), Band scan, air pressure, USB drive, charging status, Lift to wake on the motion interrupt. Earlier tests: [all X2 builds](https://github.com/cvhviz/Cairn/releases?q=meshpager-x2) |
 
 ## Sending a log
 
