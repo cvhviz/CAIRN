@@ -15,16 +15,9 @@ Cairn runs the same interface as the [Wio Tracker L2 Pro](wio-tracker-l2-pro.md)
 
 **Beta** means it is tested on hardware but new to Cairn. It passes Cairn's full on-device test suite (13 of 13): boot, the Home cards, Settings, the quick panel, the lock screen, Radio, Spectrum and Band scan, the GPS map, a walk over every page and sheet by keys, and quick key runs. Some features haven't been tried on the M9 yet; they are listed under [Known issues](#known-issues).
 
-## Screens
-
-Captured on an M9 running Cairn 108 (the focus ring shows which item the keys are on).
-
-| | |
-|---|---|
-| ![Battery](../screens/m9/battery.png)<br>Battery | ![Spectrum](../screens/m9/spectrum.png)<br>Spectrum |
-| ![Quick panel](../screens/m9/quick-panel.png)<br>Quick panel | ![Settings](../screens/m9/settings.png)<br>Settings |
-
 ## Which file
+
+Download from the [latest release](https://github.com/cvhviz/CAIRN/releases/latest) · [every board's files](../downloads.md)
 
 | You want to… | File | How |
 |---|---|---|
@@ -35,6 +28,15 @@ Captured on an M9 running Cairn 108 (the focus ring shows which item the keys ar
 Write the `-full.bin` or the `-update.bin`, never both. Coming from Elecrow's firmware, Meshtastic or stock MeshCore, use the `-full.bin`.
 
 **Download mode is automatic.** The M9's USB-serial chip lets esptool and the web flasher restart it into download mode, so there is no Boot button to hold. If they can't connect, unplug and replug the USB cable, try another cable, and close anything else using the port (the MeshCore web app, a serial monitor). On Windows, if no COM port appears, install WCH's CH340 driver.
+
+## Screens
+
+Captured on an M9 running Cairn 108 (the focus ring shows which item the keys are on).
+
+| | |
+|---|---|
+| ![Battery](../screens/m9/battery.png)<br>Battery | ![Spectrum](../screens/m9/spectrum.png)<br>Spectrum |
+| ![Quick panel](../screens/m9/quick-panel.png)<br>Quick panel | ![Settings](../screens/m9/settings.png)<br>Settings |
 
 ## Keys
 
@@ -94,4 +96,4 @@ The L2 interface, as on the [L2 Pro page](wio-tracker-l2-pro.md#features): the s
 - The motion sensor and compass chip aren't used; the GPS page's compass follows your course.
 - A V1.1 board (keyboard controller at I2C 0x6D) should work, but only V1.0 has been tried.
 
-Problems? [Report a bug](https://github.com/cvhviz/Cairn/issues/new?template=bug_report.yml). Please include the build number from the splash screen.
+Problems? [Report a bug](https://github.com/cvhviz/CAIRN/issues/new?template=bug_report.yml). Please include the build number from the splash screen.

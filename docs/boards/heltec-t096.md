@@ -6,6 +6,8 @@ nRF52840, SX1262 LoRa, 0.96" 160×80 ST7735 colour TFT, one button and GPS. Cair
 
 ## Which file
 
+Download from the [latest release](https://github.com/cvhviz/CAIRN/releases/latest) · [every board's files](../downloads.md)
+
 | You want… | File |
 |---|---|
 | the companion over Bluetooth (phone app): **the main build** | `MeshCore-HeltecT096-CairnN-<date>-ble.uf2` |
@@ -15,24 +17,30 @@ Install, update and recovery all use the same file: double-tap **RST** and copy 
 
 ## Buttons
 
+One button, two gestures (from Cairn 124): a **click** moves on, a **hold** opens or does.
+
 | Button | Does |
 |---|---|
-| the button, short press | next page |
-| the button, hold | the page's action (for example, send an advert on the Spectrum page); Reboot and Hibernate arm on the first hold and act on a second |
-| the button, triple-click | back to the messages page from any page or the message preview (from Cairn 121) |
-| the button, hold during the first 8 s after boot | open the rescue console |
+| click | the next page (messages → Nodes → Spectrum → GPS → Menu → messages), or the next row in the Menu. A click lands at once. |
+| hold | the messages page: read your messages (when there are any). Nodes: the next four nodes. Menu: open it, or do the row the cursor is on. Spectrum and GPS ignore a hold, so a stray one never sends or switches anything. |
+| hold during the first 8 s after boot | open the rescue console |
 | RST | restart; **double-tap** for the UF2 drive |
+
+**The Menu:** Send advert · Flood advert · Bluetooth · GPS · Settings › · Reboot · Power off · Back. Flood advert, Reboot and Power off ask first: hold once, then hold again ("hold=yes"). **Settings ›** holds the rest: Theme, Screen, Brightness, Keep on USB, Msg wake, Share pos, LNA, Boost RX, and its own Back.
+
+**Messages:** a click shows the next one, and a click past the last goes back to the messages page; a hold clears them all.
 
 ## Features
 
 - Themes: Dark, Color, Night, Soft and Stock (Settings > Theme).
-- Spectrum page with a scrolling RSSI history and NF / NOW / PK readouts.
-- Radio page: the frequency in MHz with the TX power, SF / BW / CR in the theme's accent, and the noise floor (from Cairn 111).
+- Spectrum page with a scrolling RSSI history and NF / NOW / PK readouts, and the channel (frequency, SF, BW) under it (from Cairn 124; before, a Radio page of its own).
 - GPS page: fix, satellites and HDOP, position, altitude and the Maidenhead grid square (from Cairn 111).
-- Settings: one list in groups: Theme, Screen, Keep on USB, then Bluetooth, then GPS, then a line before Reboot and Hibernate, with Back last (regrouped in Cairn 113).
-- Recent shows nodes whose clock isn't set yet (a freshly flashed T096 repeater, for example), labelled "unset" (from Cairn 113).
+- Nodes (called Recent before Cairn 124) shows nodes whose clock isn't set yet (a freshly flashed T096 repeater, for example), labelled "unset" (from Cairn 113).
 - TX power is shown at the antenna: the T096 has an amplifier, so a setting of 22 was really about 28 dBm. The setting stops at 16, where the amplifier is already at full output (from Cairn 122; 18 from Cairn 116).
 - Messages waiting for the phone app survive a reset, a flat battery or a reflash (from Cairn 119; before, only a commanded restart or power-off kept them).
+- **From Cairn 124** (files `MeshCore-HeltecT096-Cairn124-2026-10-29-ble.uf2` and `-usb.uf2`):
+  - **Simpler navigation:** click and hold only, no double- or triple-click to learn, and a click no longer waits to see whether a second one follows. Five pages instead of seven: the Radio page's line moved under the Spectrum, and Settings became the **Menu**, with everyday actions on top and the rest under **Settings ›**. The advert moved from the messages page's and the Spectrum's hold into the Menu, and GPS on / off from the GPS page's hold. Hibernate is called **Power off**.
+  - Tested on a T096.
 - **From Cairn 122** (files `MeshCore-HeltecT096-Cairn122-2026-10-25-ble.uf2` and `-usb.uf2`):
   - **RX sync and queue sync** (with CairnOS build 18 or later): the app catches up on what the radio heard during a dropped link, as far back as its 4 KB journal reaches (a few dozen to about 100 packets), and a message stays queued on the radio until the app has stored it; anything the radio had to drop is counted in the app. The official MeshCore apps get the same frames as before. Going back to Cairn 121 loses the messages waiting for the app.
   - **No longer deaf after a preset change from the app:** a radio change while listening left the receiver on the old settings until the T096 next sent. The radio is now set and re-armed in one pass, and the stuck-receiver check also switches the front end back to receive.
@@ -57,9 +65,10 @@ The companion build with the default Color theme. These were rendered by the fir
 
 | | | |
 |---|---|---|
-| ![Splash: Cairn mark, build and version](../screens/t096/splash.png)<br>Splash | ![Home: unread count and Bluetooth PIN](../screens/t096/home.png)<br>Home | ![Message preview](../screens/t096/message.png)<br>Message |
-| ![Recently heard nodes](../screens/t096/recent.png)<br>Recent | ![Spectrum: RSSI history with NF, NOW and PK](../screens/t096/spectrum.png)<br>Spectrum | ![Radio settings and noise floor](../screens/t096/radio.png)<br>Radio |
-| ![GPS fix, satellites, position and altitude](../screens/t096/gps.png)<br>GPS | ![Settings list](../screens/t096/settings.png)<br>Settings | ![Reboot armed, waiting for a second hold](../screens/t096/settings-reboot.png)<br>Settings · Reboot armed |
+| ![Splash: Cairn mark, build and version](../screens/t096/splash.png)<br>Splash | ![Home: queued messages and Bluetooth PIN](../screens/t096/home.png)<br>Home | ![Message preview](../screens/t096/message.png)<br>Message |
+| ![Nodes heard recently, with hops and age](../screens/t096/nodes.png)<br>Nodes | ![Spectrum: RSSI history with NF, NOW and PK, the channel below](../screens/t096/spectrum.png)<br>Spectrum | ![GPS fix, satellites, position and altitude](../screens/t096/gps.png)<br>GPS |
+| ![The Menu page: hold to open](../screens/t096/menu.png)<br>Menu | ![The Menu open, the cursor on Send advert](../screens/t096/menu-open.png)<br>Menu · open | ![Settings: Theme, Screen, Brightness, Keep on USB](../screens/t096/settings.png)<br>Settings › |
+| ![Reboot asking for a second hold](../screens/t096/menu-reboot.png)<br>Menu · Reboot asking | | |
 
 ### Themes
 
@@ -73,4 +82,4 @@ The companion build with the default Color theme. These were rendered by the fir
 - The USB build has no Bluetooth and no GPS page by design.
 - Check each build's release notes for anything new.
 
-Problems? [Report a bug](https://github.com/cvhviz/Cairn/issues/new?template=bug_report.yml).
+Problems? [Report a bug](https://github.com/cvhviz/CAIRN/issues/new?template=bug_report.yml).

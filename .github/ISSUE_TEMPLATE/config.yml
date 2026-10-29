@@ -4,5 +4,5 @@ contact_links:
     url: https://github.com/meshcore-dev/MeshCore/issues
     about: Problems that also happen on stock MeshCore, or in the MeshCore apps, belong upstream.
   - name: Install guides
-    url: https://github.com/cvhviz/Cairn#which-file-do-i-need
+    url: https://github.com/cvhviz/CAIRN#which-file-do-i-need
     about: Which file to flash, and how, for each board.

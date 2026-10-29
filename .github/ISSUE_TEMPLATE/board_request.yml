@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Check the [supported boards](https://github.com/cvhviz/Cairn#supported-boards) first: many boards already have a 🧪 preview build that needs someone to test it.
+        Check the [supported boards](https://github.com/cvhviz/CAIRN#supported-boards) first: many boards already have a 🧪 preview build that needs someone to test it.
   - type: input
     id: board
     attributes:

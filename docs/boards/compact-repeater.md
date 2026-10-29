@@ -1,19 +1,23 @@
 # Compact repeater
 
+✅ Beta on the Heltec T096, 🧪 preview on the other boards · nRF52840 and ESP32 · [install](#install) · no Wi-Fi updates
+
 A repeater image for small one-button boards with a screen. It is the standard MeshCore repeater (the same mesh behaviour, CLI and remote admin) with a minimal Cairn screen and a power save that turns the screen and the TX LED off.
 
 | Board | Screen | Status | File |
 |---|---|---|---|
 | Heltec Mesh Node T096 | 0.96" colour TFT | ✅ beta | `MeshCore-HeltecT096-CairnN-<date>-repeater.uf2` |
 | Heltec T114 | 1.14" TFT | 🧪 | `MeshCore-HeltecT114-CairnN-<date>-repeater.uf2` |
-| Heltec WiFi LoRa 32 V2 | 0.96" OLED | 🧪 | `MeshCore-HeltecV2-CairnN-<date>-repeater-full.bin` / `-update.bin` |
-| Heltec WiFi LoRa 32 V3 | 0.96" OLED | 🧪 | `MeshCore-HeltecV3-CairnN-<date>-repeater-full.bin` / `-update.bin` |
-| Heltec WiFi LoRa 32 V4 | 0.96" OLED | 🧪 | `MeshCore-HeltecV4-CairnN-<date>-repeater-full.bin` / `-update.bin` |
-| Heltec V4-R8 | 0.96" OLED | 🧪 | `MeshCore-HeltecV4R8-CairnN-<date>-repeater-full.bin` / `-update.bin` |
-| Heltec Wireless Tracker | 0.96" colour TFT | 🧪 | `MeshCore-HeltecTracker-CairnN-<date>-repeater-full.bin` / `-update.bin` |
-| Heltec Wireless Tracker V2 | 0.96" colour TFT | 🧪 | `MeshCore-HeltecTrackerV2-CairnN-<date>-repeater-full.bin` / `-update.bin` |
+| Heltec WiFi LoRa 32 V2 | 0.96" OLED | 🧪 | `MeshCore-HeltecV2-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` |
+| Heltec WiFi LoRa 32 V3 | 0.96" OLED | 🧪 | `MeshCore-HeltecV3-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` |
+| Heltec WiFi LoRa 32 V4 | 0.96" OLED | 🧪 | `MeshCore-HeltecV4-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` |
+| Heltec V4-R8 | 0.96" OLED | 🧪 | `MeshCore-HeltecV4R8-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` |
+| Heltec Wireless Tracker | 0.96" colour TFT | 🧪 | `MeshCore-HeltecTracker-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` |
+| Heltec Wireless Tracker V2 | 0.96" colour TFT | 🧪 | `MeshCore-HeltecTrackerV2-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` |
 
 ✅ beta: run on hardware. 🧪: built from the same code, not yet tried on that board. Reports are welcome.
+
+Download from the [latest release](https://github.com/cvhviz/CAIRN/releases/latest) · [every board's files](../downloads.md)
 
 ## Screens
 
@@ -54,10 +58,6 @@ Hold **Power save** in Settings. The screen and the TX LED turn off, and the set
 ## Turning off
 
 Hold the button on **Status**. The screen says *Keep holding to turn off*; after about 3 seconds it says *Release to turn off*, and letting go turns the repeater off (screen, radio and LEDs). Letting go earlier cancels. Press the button to turn it back on: it boots as a normal repeater with its settings.
-
-## Screenshots
-
-A compact repeater built with `-D UI_SERIAL_SHOT` (a screenshot build, not the release images from Cairn 111 on) answers `shot` on its serial console with the screen as text rows; [`tools/repeater_shot.py`](../../tools/repeater_shot.py) turns that into a PNG (`--before "ui click"` steps to the next page first).
 
 ## Install
 

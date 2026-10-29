@@ -11,6 +11,8 @@ Wio-S3 module (ESP32-S3, 16 MB flash, 8 MB PSRAM), SX1262 LoRa (TCXO 3.0 V), 3.2
 
 ## Which file
 
+Download from the [latest release](https://github.com/cvhviz/CAIRN/releases/latest) · [every board's files](../downloads.md)
+
 | You want to… | File | How |
 |---|---|---|
 | install Cairn for the first time | `MeshCore-WioL2Pro-CairnN-<date>-full.bin` | full erase, then write at `0x0`. **Erases everything**: export your key and contacts in the app first. |
@@ -87,4 +89,4 @@ Screens use fictional sample data.
 - The offline map needs a **FAT32** card (8–32 GB SDHC recommended). exFAT cards aren't read.
 - Check each build's release notes for anything new.
 
-Problems? [Report a bug](https://github.com/cvhviz/Cairn/issues/new?template=bug_report.yml).
+Problems? [Report a bug](https://github.com/cvhviz/CAIRN/issues/new?template=bug_report.yml).

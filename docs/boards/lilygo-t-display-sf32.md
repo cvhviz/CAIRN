@@ -1,8 +1,8 @@
 # LilyGO T-Display SF32 (with the keypad board)
 
-[![Cairn on the LilyGO T-Display SF32](../promo/05_cairn_sf32_cover.jpg)](../promo/05_cairn_sf32_cover.jpg)
-
 ✅ Tested on hardware · SiFli SF32LB52 · [install with one double-click](../install/sf32.md) · updates over Wi-Fi
+
+[![Cairn on the LilyGO T-Display SF32](../promo/05_cairn_sf32_cover.jpg)](../promo/05_cairn_sf32_cover.jpg)
 
 LilyGO's T-Display SF32 has:
 - a SiFli SF32LB52 (Cortex-M33)
@@ -17,7 +17,7 @@ The keypad board adds a 20-key phone-style keypad with backlight, a haptic motor
 
 Cairn runs a native interface on it, built for the large square screen. It works with the official MeshCore apps over Bluetooth.
 
-Its current files are in [Cairn 123](https://github.com/cvhviz/Cairn/releases/tag/cairn-v123): `MeshCore-TDisplaySF32-Cairn123-2026-10-25-install.zip` and `MeshCore-TDisplaySF32-Cairn123-2026-10-25-update.bin`. A board on Cairn 107 or later updates over Wi-Fi (with the keyboard board attached). A board on the very first SF32 build (6 Oct) needs the [USB installer](../install/sf32.md#if-your-board-has-the-first-sf32-build) once.
+Its files are in every release: the `-install.zip` and the `-update.bin` ([which file](#which-file)). A board on Cairn 107 or later updates over Wi-Fi (with the keyboard board attached). A board on the very first SF32 build (6 Oct) needs the [USB installer](../install/sf32.md#if-your-board-has-the-first-sf32-build) once.
 
 From Cairn 123: no more **"Watchdog (stall)" restarts from a full node list**: with the list at or near its 350-node limit (the 256-message saved queue too), saving it to flash could take long enough that the watchdog (10 s on this board) restarted the device. The save now checks in with the watchdog as it goes. Not yet checked on a device.
 
@@ -28,6 +28,16 @@ From Cairn 121: every Settings page fits on one screen. No setting is gone; some
 From Cairn 120: the offline map (with vector map sets), the online map and map downloads on the device; a Files manager; the L2 Pro's chat features (reply, message details, copy and paste, resend, mute, auto retry, delete a chat or a message); telemetry from your contacts and a setting for sharing yours; Home and Settings laid out as on the other devices; screens about a third faster, and no slowdown with the USB cable in; one battery icon with the level inside; and the side switch turns a docked board off again (press A to start it).
 
 From Cairn 119: posting to a room you just logged in to works (no more "Recipient gone"), and messages waiting for the phone app survive a reset, a flat battery or a reflash.
+
+## Which file
+
+Download from the [latest release](https://github.com/cvhviz/CAIRN/releases/latest) · [every board's files](../downloads.md)
+
+| You want to… | File | How |
+|---|---|---|
+| install Cairn, or update over USB | `MeshCore-TDisplaySF32-CairnN-<date>-install.zip` | unzip, then double-click the installer for your computer ([steps](../install/sf32.md)). This keeps your identity, contacts and settings. |
+| update over Wi-Fi | `MeshCore-TDisplaySF32-CairnN-<date>-update.bin` | the board fetches it itself: Settings › System › Firmware update (Cairn 107 and later), with the keyboard board attached: it carries the Wi-Fi chip |
+| recover a board that won't start | the same `-install.zip` | hold A for 12 s, then run the installer again. Download mode is in ROM, so it always works. |
 
 ## Screens
 
@@ -40,14 +50,6 @@ Captured on the board (the focus ring shows which item the keys are on). Mesh na
 | ![Settings, Theme](../screens/sf32/settings-theme.png)<br>Settings › Theme | ![Settings, Tones](../screens/sf32/settings-tones.png)<br>Settings › Tones | |
 
 A wide cover for sharing: [06_cairn_sf32_wide.jpg](../promo/06_cairn_sf32_wide.jpg).
-
-## Which file
-
-| You want to… | File | How |
-|---|---|---|
-| install Cairn, or update over USB | `MeshCore-TDisplaySF32-CairnN-<date>-install.zip` | unzip, then double-click the installer for your computer ([steps](../install/sf32.md)). This keeps your identity, contacts and settings. |
-| update over Wi-Fi | `MeshCore-TDisplaySF32-CairnN-<date>-update.bin` | the board fetches it itself: Settings › System › Firmware update (Cairn 107 and later), with the keyboard board attached: it carries the Wi-Fi chip |
-| recover a board that won't start | the same `-install.zip` | hold A for 12 s, then run the installer again. Download mode is in ROM, so it always works. |
 
 ## Features
 
@@ -118,11 +120,11 @@ The side buttons can be changed in Settings › Controls. Without the keypad boa
 
 - **No USB-serial companion.** The board's only USB port is the CH343 console, so connect the MeshCore apps over Bluetooth.
 - **Wi-Fi after re-docking.** After the core is taken off the keyboard and docked again, Wi-Fi may not come back by itself. Restart the board (hold A for 3 seconds, Restart) and it reconnects. Wi-Fi updates from GitHub work: 107 to 108 was tested end to end.
-- **The Windows installer hasn't been run on a Windows PC yet.** Please [report](https://github.com/cvhviz/Cairn/issues/new?template=bug_report.yml) how it goes.
+- **The Windows installer hasn't been run on a Windows PC yet.** Please [report](https://github.com/cvhviz/CAIRN/issues/new?template=bug_report.yml) how it goes.
 - **The IR transmitter hasn't been checked against a TV yet.** Its codes follow the public IR databases.
 - **Battery life with the screen off hasn't been measured yet.**
 - **Waking on a received LoRa message hasn't been confirmed on hardware yet.**
 - **Wi-Fi and Bluetooth scanners** (Cairn 113): both ran on the board. Touch scrolling of the lists, a scan with the app connected, and the screen-off and idle stops haven't been tried yet.
 - **Node pages are new in this build.** Please report anything that looks wrong.
 
-Problems? [Report a bug](https://github.com/cvhviz/Cairn/issues/new?template=bug_report.yml). Please include the build number from the splash screen.
+Problems? [Report a bug](https://github.com/cvhviz/CAIRN/issues/new?template=bug_report.yml). Please include the build number from the splash screen.

@@ -1,4 +1,4 @@
-# Heltec WiFi LoRa 32 V4 + Expansion Kit (touch)
+# Heltec WiFi LoRa 32 V4-R8 + Expansion Kit V2 (touch)
 
 ✅ Tested on hardware · ESP32-S3 · [install with esptool or the web flasher](../install/esp32-s3.md) · updates over Wi-Fi
 
@@ -7,6 +7,8 @@ The Heltec V4 with Heltec's Expansion Kit V2: ESP32-S3 (16 MB flash, 8 MB octal 
 **This build needs a V4-R8** (`esptool chip-id` reports *Embedded PSRAM 8MB*) **fitted in the Expansion Kit V2**. The image is built for the R8's 8 MB octal PSRAM (16 MB QIO flash, KCT8103L front end). A standard Heltec V4 reports *2MB* PSRAM (quad SPI) and has a different front end; on it this image's octal PSRAM setup fails and the board boot-loops. A standard V4 in the Expansion Kit V1 has its own untested build from Cairn 121 ([Kit V1 page](heltec-v4-kit-v1.md)); a standard V4 with only the OLED needs the `HeltecV4` [preview build](preview-boards.md); a V4-R8 with only the OLED needs the `HeltecV4R8` preview build. See [troubleshooting](../install/esp32-s3.md#troubleshooting).
 
 ## Which file
+
+Download from the [latest release](https://github.com/cvhviz/CAIRN/releases/latest) · [every board's files](../downloads.md)
 
 | You want to… | File | How |
 |---|---|---|
@@ -69,4 +71,4 @@ From Cairn 113 on this board:
 - Battery figures with the screen off are estimates; they haven't been measured yet.
 - Check each build's release notes for anything new.
 
-Problems? [Report a bug](https://github.com/cvhviz/Cairn/issues/new?template=bug_report.yml).
+Problems? [Report a bug](https://github.com/cvhviz/CAIRN/issues/new?template=bug_report.yml).

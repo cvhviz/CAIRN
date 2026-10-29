@@ -8,15 +8,16 @@
   python3 tools/maptiles.py synth    --center 35.0,-97.0 --radius-mi 5 --zoom 8-15 --out /Volumes/CAIRN
   python3 tools/maptiles.py build    --center 35.0,-97.0 --radius-mi 10 --zoom 8-16 \
                                         --out /Volumes/CAIRN --name okc-topo --title "OKC topo"
-  python3 tools/maptiles.py verify   /Volumes/CAIRN/cairn/maps/okc-topo
+  python3 tools/maptiles.py verify   /Volumes/CAIRN/Maps/okc-topo
   python3 tools/maptiles.py selftest
 
 The card layout and the .l2t / P8RLE formats are specified in
 examples/companion_radio/ui-l2/FRAMEWORK.md (section 16, "Offline map") and summarised in
 tools/MAPTILES.md. In short:
 
-  /cairn/maps/<name>/manifest.txt               key=value, LF, <= 4096 bytes
-  /cairn/maps/<name>/<z>/<bx>_<by>.l2t          16 x 16 tiles per file; bx = tx >> 4, by = ty >> 4
+  /Maps/<name>/manifest.txt                     key=value, LF, <= 4096 bytes
+  (firmware before October 2026 read /cairn/maps; the current firmware moves that folder to /Maps itself)
+  /Maps/<name>/<z>/<bx>_<by>.l2t                16 x 16 tiles per file; bx = tx >> 4, by = ty >> 4
 
   .l2t (little-endian): "L2T1" u8 z, u8 fmt (1 P8RLE, 2 RGB565), u16 hdr_sectors = 5, u32 bx, u32 by,
         256 x {u32 sector, u32 bytes} (slot = ((ty & 15) << 4) | (tx & 15)), zero pad to 2560,
@@ -31,6 +32,7 @@ hosts are refused outright. The card you make is for your own use.
 """
 import argparse
 import datetime
+import gzip
 import hashlib
 import io
 import json
@@ -62,10 +64,11 @@ SECTOR = 512
 HDR_SECTORS = 5
 BLOCK_HDR_BYTES = HDR_SECTORS * SECTOR          # 2560
 BLOCK_INDEX_OFF = 16
-FMT_P8RLE, FMT_RGB565 = 1, 2
-FMT_NAMES = {'p8rle': FMT_P8RLE, 'rgb565': FMT_RGB565}
+FMT_P8RLE, FMT_RGB565, FMT_MVT = 1, 2, 3
+FMT_NAMES = {'p8rle': FMT_P8RLE, 'rgb565': FMT_RGB565, 'mvt': FMT_MVT}
 RGB565_BYTES = 131072
 P8RLE_MAX_BYTES = 69632
+MVT_MAX_BYTES = 655360                          # one vector tile as fetched (gzip); the device's read buffer
 MANIFEST_MAX = 4096
 LINE_MAX = 255
 ZOOM_MAX_CARD = 18                              # manifest maxzoom limit (device overzooms +2)
@@ -292,6 +295,12 @@ def tile_bounds(z, x, y):
 USGS_TERMS = 'https://www.usgs.gov/information-policy-and-services/copyrights-and-credits'
 GEOAPIFY_TERMS = 'https://www.geoapify.com/terms-and-conditions/'
 THUNDERFOREST_TERMS = 'https://www.thunderforest.com/terms/'
+OPENFREEMAP_TERMS = 'https://openfreemap.org/tos/'
+OPENFREEMAP_TILEJSON = 'https://tiles.openfreemap.org/planet'
+# OpenFreeMap's terms: an app may download areas for offline use when each download is at most 3,000
+# tiles or 50 MB, with at most 4 parallel requests and a User-Agent naming the app. Larger: ask them.
+OPENFREEMAP_MAX_TILES = 3000
+OPENFREEMAP_MAX_MB = 50
 USGS_URL = 'https://basemap.nationalmap.gov/arcgis/rest/services/%s/MapServer/tile/{z}/{y}/{x}'
 USGS = {
     'topo':    ('USGSTopo', 'USGS The National Map', 'USGS', 22000, 'USGS topo (US only)'),
@@ -337,13 +346,14 @@ class Source(object):
     def __init__(self, sid, label, kind, template=None, max_zoom=18, rate=1.0, concurrency=1,
                  attribution=None, attribution_short=None, license_url=None, terms=None, hidpi=False,
                  key_env=(), needs_key=False, est_bytes=25000, dark=False, tms=False, daily_quota=False,
-                 preset=None):
+                 preset=None, vector=False):
         self.sid, self.label, self.kind, self.template = sid, label, kind, template
         self.max_zoom, self.rate, self.concurrency = max_zoom, rate, concurrency
         self.attribution, self.attribution_short, self.license_url = attribution, attribution_short, license_url
         self.terms, self.hidpi, self.key_env, self.needs_key = terms, hidpi, key_env, needs_key
         self.est_bytes, self.dark, self.tms, self.daily_quota = est_bytes, dark, tms, daily_quota
         self.preset = preset or sid
+        self.vector = vector            # map data (MVT), stored as fetched and drawn by the device
         self.mb = None                  # sqlite connection for kind == 'mbtiles'
         self.key = None
 
@@ -362,6 +372,7 @@ def preset_table():
     rows.append(('geoapify:<style>', 'Geoapify (free key)', 18, 4.0, True, 'GEOAPIFY_API_KEY', GEOAPIFY_TERMS))
     rows.append(('thunderforest:<style>', 'Thunderforest (paid plan)', 18, 2.0, True,
                  'THUNDERFOREST_API_KEY', THUNDERFOREST_TERMS))
+    rows.append(('openfreemap', 'OpenFreeMap vector (worldwide)', 14, 8.0, False, '-', OPENFREEMAP_TERMS))
     rows.append(('local:<template>', 'your own server on localhost', 18, 50.0, True, '-', '(yours)'))
     return rows
 
@@ -407,8 +418,28 @@ def make_source(a, need_attr=False):
     return src
 
 
+def openfreemap_template():
+    """The current planet build's tile URL, from OpenFreeMap's TileJSON (the build date is in the path)."""
+    req = urllib.request.Request(OPENFREEMAP_TILEJSON, headers={'User-Agent': UA_BASE % ''})
+    try:
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            tj = json.loads(resp.read().decode('utf-8'))
+        tpl = tj['tiles'][0]
+    except Exception as e:
+        raise Fail('could not read OpenFreeMap\'s tile list (%s): %s' % (OPENFREEMAP_TILEJSON, e))
+    if not tpl.startswith('https://tiles.openfreemap.org/') or '{z}' not in tpl:
+        raise Fail('unexpected OpenFreeMap tile URL %r' % tpl)
+    return tpl
+
+
 def preset_source(p, a):
     kind, _, arg = p.partition(':')
+    if kind == 'openfreemap':
+        return Source('openfreemap', 'OpenFreeMap (vector)', 'http', openfreemap_template(), max_zoom=14,
+                      rate=8.0, concurrency=4,
+                      attribution='OpenFreeMap © OpenMapTiles © OpenStreetMap contributors',
+                      attribution_short='© OpenStreetMap', license_url='openstreetmap.org/copyright',
+                      terms=OPENFREEMAP_TERMS, est_bytes=30000, preset='openfreemap', vector=True)
     if kind == 'usgs':
         if arg not in USGS:
             raise Fail('unknown preset %r: usgs:topo, usgs:imagery or usgs:shaded' % p)
@@ -520,6 +551,11 @@ def default_cache_root():
     return os.path.join(os.environ.get('XDG_CACHE_HOME', os.path.expanduser('~/.cache')), 'l2maptiles')
 
 
+def is_vector(data):
+    """A vector tile as fetched: gzip, or a bare protobuf (never an HTML / JSON error page)."""
+    return data[:2] == b'\x1f\x8b' or data.lstrip()[:1] not in (b'<', b'{')
+
+
 def is_image(data):
     return (data[:8] == b'\x89PNG\r\n\x1a\n' or data[:3] == b'\xff\xd8\xff' or data[:4] == b'GIF8'
             or (data[:4] == b'RIFF' and data[8:12] == b'WEBP'))
@@ -598,6 +634,8 @@ class Fetcher(object):
         self.src, self.cache = src, cache
         self.rate = a.rate or src.rate
         self.conc = max(1, a.concurrency or src.concurrency)
+        if src.vector:
+            self.conc = min(self.conc, 4)           # OpenFreeMap: at most 4 parallel requests
         self.timeout = a.timeout
         contact = getattr(a, 'contact', None)
         self.ua = UA_BASE % ('; ' + contact if contact else '')
@@ -650,7 +688,10 @@ class Fetcher(object):
             delay = None
             data = status = None
             try:
-                req = urllib.request.Request(url, headers={'User-Agent': self.ua, 'Accept': 'image/*'})
+                hdrs = {'User-Agent': self.ua, 'Accept': 'image/*'}
+                if self.src.vector:             # kept gzipped: that is how the card stores it
+                    hdrs = {'User-Agent': self.ua, 'Accept': 'application/x-protobuf, */*', 'Accept-Encoding': 'gzip'}
+                req = urllib.request.Request(url, headers=hdrs)
                 with urllib.request.urlopen(req, timeout=self.timeout) as resp:
                     data = resp.read()
                     status = resp.status
@@ -671,7 +712,7 @@ class Fetcher(object):
             if status is not None:
                 if status == 204 or not data:
                     return self.done(z, x, y, None, 'missing')
-                if not is_image(data):
+                if not (is_vector(data) if self.src.vector else is_image(data)):
                     return self.done(z, x, y, None, 'html')
                 return self.done(z, x, y, data, 'fetched')
             if attempt == len(self.RETRY):
@@ -1175,7 +1216,7 @@ def check_manifest(m, errs):
         errs.append('l2map=%s (want 1)' % m.get('l2map'))
     fmt = FMT_NAMES.get(m.get('format', ''))
     if 'format' in m and fmt is None:
-        errs.append('format=%s (want p8rle or rgb565)' % m['format'])
+        errs.append('format=%s (want p8rle, rgb565 or mvt)' % m['format'])
     try:
         zmin, zmax = int(m.get('minzoom', '0')), int(m.get('maxzoom', '0'))
         if not 0 <= zmin <= zmax <= ZOOM_MAX_CARD:
@@ -1226,7 +1267,7 @@ def estimate_rows(src, ranges, a, cache, fmt):
         maxreq = 11000
     sample = getattr(a, 'sample', 0) or 0
     conv = None
-    if sample:
+    if sample and not src.vector:              # vector tiles are stored as fetched: nothing to convert
         conv = Converter(fmt, getattr(a, 'colors', 256), getattr(a, 'filter', 'none'))
     lat = a._centre_lat
     for z, (x0, y0, x1, y1), n in ranges:
@@ -1392,14 +1433,23 @@ def cmd_build(a, synth=False):
         raise Fail('--name must be 1-24 of a-z 0-9 - (it is the folder name and the set\'s identity)')
     if getattr(a, 'title', None) and len(a.title.encode('utf-8')) > 24:
         raise Fail('--title is at most 24 bytes')
-    need_pil()
     src, bounds, (z0, z1), ranges, cache = common_setup(a, need_attr=not synth, synth=synth)
+    vector = src.vector
+    if vector:
+        a.format = 'mvt'
+    else:
+        need_pil()
     total = check_caps(ranges, a)
+    if vector and total > OPENFREEMAP_MAX_TILES:
+        raise Fail('OpenFreeMap allows offline downloads of at most %d tiles (or %d MB) each; this area is %d '
+                   'tiles. Shrink the area or the zoom range (vector tiles stop at z14 and the device draws '
+                   'z15-18 from them), or ask OpenFreeMap first (%s).' % (OPENFREEMAP_MAX_TILES,
+                                                                        OPENFREEMAP_MAX_MB, total, OPENFREEMAP_TERMS))
     out = os.path.abspath(a.out)
     if not os.path.isdir(out):
         raise Fail('--out %s is not a folder (the card root, e.g. /Volumes/CAIRN)' % out)
     is_vol = check_volume(out)
-    l2map = os.path.join(out, 'cairn', 'maps')
+    l2map = os.path.join(out, 'Maps')   # the card's map folder (ui-l2 CardLayout.h)
     final = os.path.join(l2map, a.name)
     if os.path.exists(final) and not a.overwrite:
         raise Fail('%s exists: pick another --name or add --overwrite' % final)
@@ -1416,7 +1466,8 @@ def cmd_build(a, synth=False):
     else:
         comp = hex_to_rgb(a.bg)
     a._bg = DEFAULT_BG if a.bg == 'auto' else a.bg
-    conv = Converter(a.format, a.colors, a.filter, comp)
+    conv = None if vector else Converter(a.format, a.colors, a.filter, comp)
+    fmt = FMT_MVT if vector else conv.fmt
     partial = os.path.join(l2map, '.%s.partial' % a.name)
     if os.path.exists(partial):
         shutil.rmtree(partial)
@@ -1434,6 +1485,18 @@ def cmd_build(a, synth=False):
                     recs = {}
                     for ty in range(max(y0, by << 4), min(y1, (by << 4) + 15) + 1):
                         for tx in range(max(x0, bx << 4), min(x1, (bx << 4) + 15) + 1):
+                            if vector:                  # stored as fetched: the device draws it
+                                data = cache.get(z, tx, ty)
+                                prog.tick()
+                                if not data:
+                                    stats['absent'] += 1
+                                elif len(data) > MVT_MAX_BYTES:
+                                    stats['bad'] += 1
+                                    log('\nwarning: tile %d/%d/%d is %d bytes, over the device limit %d' % (
+                                        z, tx, ty, len(data), MVT_MAX_BYTES))
+                                else:
+                                    recs[blockslot(tx, ty)] = data
+                                continue
                             img = load_tile_image(src, cache, (z, tx, ty), a, parents=parents)
                             prog.tick()
                             if img is None:
@@ -1448,7 +1511,7 @@ def cmd_build(a, synth=False):
                                     log('\nwarning: tile %d/%d/%d not usable: %s' % (z, tx, ty, e))
                     if not recs:
                         continue
-                    data, nrec = build_block(z, conv.fmt, bx, by, recs)
+                    data, nrec = build_block(z, fmt, bx, by, recs)
                     with open(os.path.join(zdir, '%d_%d.l2t' % (bx, by)), 'wb') as f:
                         f.write(data)
                     stats['tiles'] += len(recs)
@@ -1466,8 +1529,11 @@ def cmd_build(a, synth=False):
     if stats['tiles'] == 0:
         shutil.rmtree(partial, ignore_errors=True)
         raise Fail('no tiles available for this area / zoom (nothing written)')
-    bg = conv.auto_bg() if a.bg == 'auto' else a.bg.upper()
-    dark = 1 if (src.dark or a.filter == 'night' or conv.is_dark()) else 0
+    if vector:                                  # the device's style decides the colours
+        bg, dark = '#F2EFE9', 0
+    else:
+        bg = conv.auto_bg() if a.bg == 'auto' else a.bg.upper()
+        dark = 1 if (src.dark or a.filter == 'night' or conv.is_dark()) else 0
     c = a._centre or ((bounds[1] + bounds[3]) / 2.0, (bounds[0] + bounds[2]) / 2.0)
     m = {
         'l2map': '1', 'format': a.format, 'minzoom': z0, 'maxzoom': z1,
@@ -1522,8 +1588,9 @@ def cmd_verify(a):
     if not NAME_RE.match(name):
         errs.append('folder name %r is not [a-z0-9-]{1,24}' % name)
     parent = os.path.dirname(setdir)
-    if os.path.basename(parent) != 'maps' or os.path.basename(os.path.dirname(parent)) != 'cairn':
-        warns.append('the set should sit at <card>/cairn/maps/%s' % name)
+    legacy = os.path.basename(parent) == 'maps' and os.path.basename(os.path.dirname(parent)) == 'cairn'
+    if os.path.basename(parent) != 'Maps' and not legacy:
+        warns.append('the set should sit at <card>/Maps/%s' % name)
     try:
         with open(os.path.join(setdir, 'manifest.txt'), 'rb') as f:
             mdata = f.read()
@@ -1590,7 +1657,8 @@ def cmd_verify(a):
                 if sec < HDR_SECTORS or sec * SECTOR + nb > len(data):
                     errs.append('%s: record outside the file (sector %d, %d bytes)' % (tw, sec, nb))
                     continue
-                if (fmt == FMT_P8RLE and nb > P8RLE_MAX_BYTES) or (fmt == FMT_RGB565 and nb != RGB565_BYTES):
+                if ((fmt == FMT_P8RLE and nb > P8RLE_MAX_BYTES) or (fmt == FMT_RGB565 and nb != RGB565_BYTES)
+                        or (fmt == FMT_MVT and nb > MVT_MAX_BYTES)):
                     errs.append('%s: record size %d invalid for the format' % (tw, nb))
                     continue
                 if c and not (c[0] <= tx <= c[2] and c[1] <= ty <= c[3]):
@@ -1604,6 +1672,12 @@ def cmd_verify(a):
                             decode_p8rle(rec)
                         except ValueError as e:
                             errs.append('%s: corrupt P8RLE: %s' % (tw, e))
+                            ok = False
+                    elif fmt == FMT_MVT and rec[:2] == b'\x1f\x8b':
+                        try:
+                            gzip.decompress(rec)
+                        except Exception as e:
+                            errs.append('%s: corrupt gzip: %s' % (tw, e))
                             ok = False
                     done[(sec, nb)] = ok
                     recs += 1
@@ -1802,7 +1876,7 @@ def build_parser():
     s.add_argument('--overwrite', action='store_true', help='replace an existing set of the same name')
     s.add_argument('--max-tiles', type=int, default=50000, help='refuse bigger jobs (50000)')
     v = sub.add_parser('verify', help='decode every record; check manifest / cov / index')
-    v.add_argument('path', metavar='PATH/cairn/maps/NAME')
+    v.add_argument('path', metavar='PATH/Maps/NAME')
     sub.add_parser('selftest', help='golden vectors G1-G3, R1, Mercator; exit 0/1')
     return p
 

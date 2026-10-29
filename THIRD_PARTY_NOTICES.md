@@ -29,6 +29,13 @@ The SenseCAP MeshPager X2 build (experimental) also includes:
 |---|---|---|---|
 | [BMM350 SensorAPI](https://github.com/boschsensortec/BMM350_SensorAPI) v1.10.0, © 2024 Bosch Sensortec GmbH | The compass (BMM350 magnetometer driver), unmodified | BSD 3-Clause | [BMM350-SensorAPI-LICENSE.txt](licenses/BMM350-SensorAPI-LICENSE.txt) |
 
+The LilyGO T-LoRa Pager build (experimental) also includes:
+
+| Work | Used for | Licence | Text |
+|---|---|---|---|
+| [BHY2 SensorAPI](https://github.com/boschsensortec/BHY2_SensorAPI) v1.6.0, © 2023 Bosch Sensortec GmbH | Lift to wake (the BHI260AP motion sensor's driver), unmodified | BSD 3-Clause | [BHY2-SensorAPI-LICENSE.txt](licenses/BHY2-SensorAPI-LICENSE.txt) |
+| BHI260AP firmware image (`firmware/bhi260ap/BHI260AP.fw`, from the same repository), © Bosch Sensortec GmbH | Uploaded to the motion sensor's RAM at run time, unmodified | BSD 3-Clause (the repository's licence) | [BHY2-SensorAPI-LICENSE.txt](licenses/BHY2-SensorAPI-LICENSE.txt) |
+
 The [Cairn firmware manual](docs/Cairn_Firmware_Manual_Dark) (its web version and PDF) also includes:
 
 | Work | Used for | Licence | Text |

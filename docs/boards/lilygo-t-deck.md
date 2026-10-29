@@ -14,6 +14,22 @@ Cairn runs the same interface as the [Wio Tracker L2 Pro](wio-tracker-l2-pro.md)
 
 **Beta** means it is tested on hardware but new to Cairn. On a T-Deck it has run with the screen, touch, keyboard, trackball, LoRa radio, an offline map from microSD, and an identity and contacts carried over from another firmware. Cairn's full automated on-device test suite hasn't been run on it yet, and some features are untried; see [Known issues](#known-issues).
 
+## Which file
+
+Download from the [latest release](https://github.com/cvhviz/CAIRN/releases/latest) · [every board's files](../downloads.md)
+
+| You want to… | File | How |
+|---|---|---|
+| install Cairn for the first time | `MeshCore-TDeckPlus-CairnN-<date>-full.bin` | write at `0x0` ([steps](../install/esp32-s3.md)). If it runs MeshCore, export your key and contacts in the app first. |
+| update | `MeshCore-TDeckPlus-CairnN-<date>-update.bin` | USB at `0x10000`, or over Wi-Fi: Settings › System › Firmware update fetches it from the latest release (from Cairn 108 on), or a browser upload in Wi-Fi transfer |
+| recover a device that won't boot | `MeshCore-TDeckPlus-CairnN-<date>-full.bin` | write at `0x0` |
+
+The same files run on the T-Deck and the T-Deck Plus. Write the `-full.bin` or the `-update.bin`, never both.
+
+**Download mode.** esptool and the web flasher can usually restart the T-Deck into download mode over USB by themselves. If they can't connect, switch the T-Deck off, hold the trackball in (it is the BOOT button), switch it on, then release it and connect again.
+
+**Coming from another firmware.** Cairn keeps its identity, contacts and settings in the T-Deck's internal flash. Firmwares that keep them on the microSD card (Wadamesh does, in a `meshcomod` folder) don't carry over by themselves: Cairn starts with a new identity. Your files stay on the card. Cairn reads offline maps from the card's `Maps` folder (`cairn/maps` before Cairn 114; it moves by itself); you can download them on the device (from Cairn 119), or make them on a computer with [tools/maptiles.py](../../tools/maptiles.py).
+
 ## Keyboard
 
 - **Keyboard light:** lit while the screen is on, dark when it goes dark or locks. It also goes dark 2 s before the screen times out, and on battery 10 s after the last key or touch; any input relights it (from Cairn 112). Set its level, or Off, in Settings › Hardware › Display (under Brightness) or with the keyboard slider in the quick panel. Alt+B still turns it on or off, until the screen next wakes or goes dark.
@@ -88,24 +104,10 @@ The T-Deck also has the Wi-Fi and Bluetooth scanners and the redesigned Battery 
 
 Home on a T-Deck running Cairn 108, with the trackball's focus ring on the Battery card. The other pages look as on the [L2 Pro](wio-tracker-l2-pro.md) and the [ThinkNode M9](thinknode-m9.md#screens).
 
-## Which file
-
-| You want to… | File | How |
-|---|---|---|
-| install Cairn for the first time | `MeshCore-TDeckPlus-CairnN-<date>-full.bin` | write at `0x0` ([steps](../install/esp32-s3.md)). If it runs MeshCore, export your key and contacts in the app first. |
-| update | `MeshCore-TDeckPlus-CairnN-<date>-update.bin` | USB at `0x10000`, or over Wi-Fi: Settings › System › Firmware update fetches it from the latest release (from Cairn 108 on), or a browser upload in Wi-Fi transfer |
-| recover a device that won't boot | `MeshCore-TDeckPlus-CairnN-<date>-full.bin` | write at `0x0` |
-
-The same files run on the T-Deck and the T-Deck Plus. Write the `-full.bin` or the `-update.bin`, never both.
-
-**Download mode.** esptool and the web flasher can usually restart the T-Deck into download mode over USB by themselves. If they can't connect, switch the T-Deck off, hold the trackball in (it is the BOOT button), switch it on, then release it and connect again.
-
-**Coming from another firmware.** Cairn keeps its identity, contacts and settings in the T-Deck's internal flash. Firmwares that keep them on the microSD card (Wadamesh does, in a `meshcomod` folder) don't carry over by themselves: Cairn starts with a new identity. Your files stay on the card. Cairn reads offline maps from the card's `Maps` folder (`cairn/maps` before Cairn 114; it moves by itself); you can download them on the device (from Cairn 119), or make them on a computer with [tools/maptiles.py](../../tools/maptiles.py).
-
 ## Known issues
 
 - **GPS (T-Deck Plus):** checked on a unit with a u-blox GPS (from Cairn 118); a unit with the Quectel L76K hasn't been tried yet.
 - **Battery percentage** hasn't been calibrated on the T-Deck yet. Screen-off standby has been measured (see Battery saver above); battery life in use hasn't.
 - **Hibernate:** waking with the trackball click hasn't been confirmed.
 - **Audio:** battery draw while playing or recording, hour-long recordings during radio traffic, and a card pulled mid-recording haven't been tried yet.
-- **The full automated on-device test suite** hasn't been run on it yet. Please [report](https://github.com/cvhviz/Cairn/issues/new?template=bug_report.yml) anything that looks wrong.
+- **The full automated on-device test suite** hasn't been run on it yet. Please [report](https://github.com/cvhviz/CAIRN/issues/new?template=bug_report.yml) anything that looks wrong.

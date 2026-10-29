@@ -11,13 +11,13 @@ If you try one, please [report back](#reporting), even if it just works. A board
 | nRF52840 | `MeshCore-<Board>-CairnN-<date>-ble.uf2` (Bluetooth companion) and `-usb.uf2` (USB serial companion) | [UF2](../install/nrf52-uf2.md): double-tap Reset, copy |
 | ESP32 / ESP32-S3 | `MeshCore-<Board>-CairnN-<date>-ble-full.bin` / `-ble-update.bin`, and the same for `-usb` | [esptool or web flasher](../install/esp32-s3.md): first install `-full.bin` at `0x0` after an erase; update `-update.bin` at `0x10000` |
 
-Some boards have only a Bluetooth or only a USB image. The online Wi-Fi updater is only on the L2 Pro and Heltec V4 touch; preview ESP32 boards update over USB.
+Some boards have only a Bluetooth or only a USB image. Preview boards don't update over Wi-Fi (only the L2 Pro, Heltec V4 touch kits, ThinkNode M9, T-Deck and T-Display SF32 do); update them over USB the way they were installed.
 
 **Before a first ESP32 install, export your private key and contacts in the MeshCore app**: the `-full.bin` erases everything.
 
 ## Boards and files
 
-Files in the current preview release, [Cairn 107 preview](https://github.com/cvhviz/Cairn/releases/tag/cairn-v107-preview):
+Files in the current preview release, [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview):
 
 | Board | File | Use |
 |---|---|---|
@@ -138,7 +138,7 @@ ESP32 (original): heltec_v2, lilygo_tbeam_SX1262 (ble only), lilygo_tbeam_SX1276
 
 ## Buttons
 
-Every preview board uses the one-button interface: **short press** for the next page, **hold** for the page's action. On boards with more buttons, the extra ones keep their stock MeshCore roles. Download and bootloader buttons are the board's own: see the [install guides](../install/esp32-s3.md#download-mode).
+Every preview board uses the one-button interface: a **click** for the next page or row, a **hold** to open or do (from Cairn 124 the T096's simpler layout: messages, Nodes, Spectrum, GPS, then the Menu with everything you can do; see [its buttons](heltec-t096.md#buttons)). On boards with more buttons, the extra ones keep their stock MeshCore roles. Download and bootloader buttons are the board's own: see the [install guides](../install/esp32-s3.md#download-mode).
 
 ## Known issues
 
@@ -148,7 +148,7 @@ Every preview board uses the one-button interface: **short press** for the next 
 
 ## Reporting
 
-[Open a bug report](https://github.com/cvhviz/Cairn/issues/new?template=bug_report.yml) with:
+[Open a bug report](https://github.com/cvhviz/CAIRN/issues/new?template=bug_report.yml) with:
 
 - the exact file name you flashed,
 - the build number from the splash,

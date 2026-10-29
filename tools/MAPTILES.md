@@ -2,7 +2,8 @@
 
 > Works for the L2 Pro, Heltec V4 touch, ThinkNode M9 and T-Deck builds: they all read the same card format. Clone or download this repository and run the commands below from its top folder (the script is [`tools/maptiles.py`](maptiles.py)). References to `examples/…` and `FRAMEWORK.md` are to files in the firmware source tree, which isn't part of this repository; this guide covers everything you need to make a card.
 
-`tools/maptiles.py` turns map tiles into the card format Cairn's **GPS → Map** view reads from microSD. The device code lives in `examples/companion_radio/ui-l2/map/`, and the format is
+`tools/maptiles.py` turns map tiles into the card format Cairn's **GPS → Map** view reads from microSD,
+on the L2 Pro, Heltec V4 touch, ThinkNode M9 and T-Deck. The device code lives in `examples/companion_radio/ui-l2/map/`, and the format is
 specified in `examples/companion_radio/ui-l2/FRAMEWORK.md` §16 ("Offline map"). The map works fully
 offline: nothing is ever downloaded on the device.
 
@@ -32,7 +33,7 @@ Fetching (`fetch`, or `build` from a network source) only needs the standard lib
   folder onto the card yourself.
 - When you write to a volume root, the tool runs `dot_clean -m`, deletes `._*` files and touches
   `.metadata_never_index`, so Spotlight and Finder leave the card clean.
-- Several sets can share one card, up to 8, each in `/cairn/maps/<name>/`. The device picks the set that
+- Several sets can share one card, up to 8, each in `/Maps/<name>/`. Firmware before October 2026 used `/cairn/maps/<name>/`; the current firmware moves those sets to `/Maps` by itself (renames only). The device picks the set that
   covers the view with the most detail. "Choose map…" in the Map's long-press menu pins one.
 
 ## 3. Quick start
@@ -43,7 +44,7 @@ the labels won't line up with your position and the node dots.
 
 ```sh
 python3 tools/maptiles.py synth --center 35.0,-97.0 --radius-mi 5 --zoom 8-16 --out /Volumes/CAIRN
-python3 tools/maptiles.py verify /Volumes/CAIRN/cairn/maps/l2-test
+python3 tools/maptiles.py verify /Volumes/CAIRN/Maps/l2-test
 ```
 
 Next, build a real map. USGS topo is public domain and needs no key, but it only covers the US:
@@ -52,12 +53,12 @@ Next, build a real map. USGS topo is public domain and needs no key, but it only
 python3 tools/maptiles.py estimate --center 35.0,-97.0 --radius-mi 10 --zoom 8-16
 python3 tools/maptiles.py build --preset usgs:topo --center 35.0,-97.0 --radius-mi 10 --zoom 8-16 \
     --out /Volumes/CAIRN --name okc-topo --title "OKC topo"
-python3 tools/maptiles.py verify /Volumes/CAIRN/cairn/maps/okc-topo
+python3 tools/maptiles.py verify /Volumes/CAIRN/Maps/okc-topo
 ```
 
 `build` prints the estimate and asks `Proceed? [y/N]`; `--yes` skips the question. It then fetches
 into the cache, converts, and writes the set atomically: everything goes into
-`cairn/maps/.okc-topo.partial/`, which is renamed only at the end. Downloads are resumable. If you hit
+`Maps/.okc-topo.partial/`, which is renamed only at the end. Downloads are resumable. If you hit
 Ctrl-C or the request limit, the tool prints the exact command to resume, and tiles already fetched
 are never requested again.
 
@@ -87,9 +88,9 @@ python3 tools/maptiles.py build --preset "local:http://127.0.0.1:8080/styles/bas
 | `presets` | Lists the sources, their terms URLs, the date the terms were checked (2026-10-01), max zoom, default rate and @2x support, plus the refused hosts. |
 | `estimate AREA --zoom A-B [SOURCE] [--format] [--sample K]` | Prints a per-zoom table: tiles, ft/px, miles across the 320 px screen, requests still needed (tiles not yet cached), MB, time, and quota days for Geoapify. `--sample K` converts K tiles per zoom to measure MB instead of guessing, fetching them if they aren't cached. |
 | `fetch AREA --zoom A-B [SOURCE] [NET]` | Downloads into the cache only. It's resumable. |
-| `build AREA --zoom A-B [SOURCE] [CONVERT] --out PATH --name SLUG` | Fetches what's missing (skip with `--no-fetch`), converts, and writes `PATH/cairn/maps/SLUG/`. `--overwrite` replaces an existing set. `--title` (24 bytes or less) is the name shown on the device. |
+| `build AREA --zoom A-B [SOURCE] [CONVERT] --out PATH --name SLUG` | Fetches what's missing (skip with `--no-fetch`), converts, and writes `PATH/Maps/SLUG/`. `--overwrite` replaces an existing set. `--title` (24 bytes or less) is the name shown on the device. |
 | `synth AREA --zoom A-B --out PATH [--name l2-test]` | Writes the offline test grid (16 colours or fewer, attribution "Synthetic test grid"). |
-| `verify PATH/cairn/maps/NAME` | Checks the manifest, `cov.*`, every block header and index, and decodes every record. It reports coverage per zoom and prints the name hash (the `map_set` pref). It exits 1 on any error. |
+| `verify PATH/Maps/NAME` | Checks the manifest, `cov.*`, every block header and index, and decodes every record. It reports coverage per zoom and prints the name hash (the `map_set` pref). It exits 1 on any error. |
 | `selftest` | Runs the golden vectors G1–G3 and R1, the Mercator goldens, block dedupe and the denylist. It exits 0 or 1. |
 
 **AREA:**
@@ -194,11 +195,11 @@ takes seconds to a few minutes.
 ## 7. Card format (summary; FRAMEWORK.md §16 is authoritative)
 
 ```
-/cairn/maps/<name>/manifest.txt               <name> = [a-z0-9-]{1,24}, the set's identity
-/cairn/maps/<name>/<z>/<bx>_<by>.l2t          16x16 tiles per file: bx = tx >> 4, by = ty >> 4 (XYZ, y down)
+/Maps/<name>/manifest.txt                     <name> = [a-z0-9-]{1,24}, the set's identity
+/Maps/<name>/<z>/<bx>_<by>.l2t                16x16 tiles per file: bx = tx >> 4, by = ty >> 4 (XYZ, y down)
 ```
 
-Entries under `/cairn/maps` whose names start with `.` are ignored. That covers partial builds and
+Entries under `/Maps` whose names start with `.` are ignored. That covers partial builds and
 AppleDouble files.
 
 **`manifest.txt`:**

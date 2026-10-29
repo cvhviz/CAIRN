@@ -2,7 +2,7 @@
 
 Experimental builds are for testing: a new board brought up before it has been on the bench, or a change that needs trying on someone's hardware before it goes into a release. They are published as GitHub **pre-releases** tagged `experimental-<board>-<N>`, separate from the normal `cairn-vN` releases.
 
-**[All experimental builds](https://github.com/cvhviz/Cairn/releases?q=experimental&expanded=true)**
+**[All experimental builds](https://github.com/cvhviz/CAIRN/releases?q=experimental&expanded=true)** · [regular downloads](downloads.md)
 
 ## What "experimental" means
 
@@ -17,11 +17,12 @@ Compared with 🧪 **preview** boards (built from the same tree in every normal 
 
 | Board | Build | Date | What it is for |
 |---|---|---|---|
-| SenseCAP MeshPager X2 (Seeed) | [Cairn 124 test 5](https://github.com/cvhviz/Cairn/releases/tag/experimental-meshpager-x2-124-5) | 26 Oct 2026 | Bring-up, test 5: power off (firmware or board?), Band scan, air pressure, USB drive, charging status, Lift to wake on the motion interrupt. Earlier tests: [all X2 builds](https://github.com/cvhviz/Cairn/releases?q=meshpager-x2) |
+| LilyGO T-LoRa Pager | [Cairn 124 test](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tlora-pager-124) | 29 Oct 2026 | First bring-up, built before the board was on the bench: the 480×222 screen (its turn and colours), every key, the side wheel's direction, battery and charging, radio, GPS, microSD, sound and the recorder, vibration, Lift to wake, NFC contact sharing, Battery saver and power off. Two files: SX1262 (LilyGO's default) or LR1121; the log's `PGBOOT radio` line says which works. |
+| Seeed SenseCAP MeshPager X2 | [Cairn 124 test 5](https://github.com/cvhviz/CAIRN/releases/tag/experimental-meshpager-x2-124-5) | 26 Oct 2026 | Bring-up, test 5: power off (firmware or board?), Band scan, air pressure, USB drive, charging status, Lift to wake on the motion interrupt. Earlier tests: [all X2 builds](https://github.com/cvhviz/CAIRN/releases?q=meshpager-x2) |
 
 ## Sending a log
 
 1. Flash the `-full.bin` at `0x0` ([ESP32-S3 guide](install/esp32-s3.md)).
 2. Open a serial console on the board's USB port at **115200** baud: the [web flasher](https://espressif.github.io/esptool-js/)'s Console, Arduino IDE's Serial Monitor, `screen`, PuTTY.
 3. Unplug and replug the board so the log starts from power-up, then do what the release notes ask.
-4. [Open an issue](https://github.com/cvhviz/Cairn/issues/new/choose) (**Bug report**) with the build's tag, the log, and a photo of the screen. "It works" is a useful report too.
+4. [Open an issue](https://github.com/cvhviz/CAIRN/issues/new/choose) (**Bug report**) with the build's tag, the log, and a photo of the screen. "It works" is a useful report too.

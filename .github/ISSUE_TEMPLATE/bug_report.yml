@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for the report. Please check the [install guides](https://github.com/cvhviz/Cairn#which-file-do-i-need) first: most install problems come from the wrong file or a missing erase.
+        Thanks for the report. Please check the [install guides](https://github.com/cvhviz/CAIRN#which-file-do-i-need) first: most install problems come from the wrong file or a missing erase.
         Problems in the phone app, or that also happen on stock MeshCore, belong with [MeshCore](https://github.com/meshcore-dev/MeshCore/issues).
   - type: dropdown
     id: board
@@ -14,11 +14,15 @@ body:
       options:
         - Seeed Wio Tracker L1 Pro
         - Seeed Wio Tracker L2 Pro
-        - Heltec V4 + Expansion Kit (touch)
-        - Elecrow ThinkNode M9
+        - Heltec V4-R8 + Expansion Kit V2 (touch)
+        - Heltec V4 + Expansion Kit V1 (touch)
         - Heltec Mesh Node T096
+        - Elecrow ThinkNode M9
+        - LilyGO T-Deck / T-Deck Plus
         - LilyGO T-Display SF32
+        - A compact repeater (name the board below)
         - A preview board (name it below)
+        - An experimental build (name it below)
     validations:
       required: true
   - type: input

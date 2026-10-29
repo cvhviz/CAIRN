@@ -6,6 +6,8 @@ nRF52840, SX1262 LoRa, L76K GPS, piezo buzzer, a five-way joystick and a Back bu
 
 ## Which file
 
+Download from the [latest release](https://github.com/cvhviz/CAIRN/releases/latest) · [every board's files](../downloads.md)
+
 | Your L1 has… | File |
 |---|---|
 | the stock SH1106 OLED (most units) | `MeshCore-WioL1Pro-CairnN-<date>.uf2` |
@@ -44,4 +46,4 @@ Install, update and recovery all use the same file: double-tap **Reset** and cop
 - The three-colour e-ink panel isn't supported: every refresh is a ~15 s full flash. Use a black-and-white 2.13" panel.
 - Check the release notes of each build for anything new.
 
-Problems? [Report a bug](https://github.com/cvhviz/Cairn/issues/new?template=bug_report.yml) with the image name and the build number from the splash.
+Problems? [Report a bug](https://github.com/cvhviz/CAIRN/issues/new?template=bug_report.yml) with the image name and the build number from the splash.

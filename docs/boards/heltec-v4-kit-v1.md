@@ -4,11 +4,13 @@
 
 The plain Heltec V4 (ESP32-S3, 16 MB flash, 2 MB quad PSRAM; SX1262 with a GC1109 front end on a V4.2 or a KCT8103L on a V4.3) in Heltec's Expansion Kit V1 case, with a 2.8" 240×320 ST7789 touchscreen and a piezo. From Cairn 121 it runs the same touch interface as the [Expansion Kit V2 build](heltec-v4-touch.md), without the map.
 
-**Nobody here has a V1 kit, so this build has not run on a device yet.** Its pins come from Heltec's datasheet, Meshtastic's and upstream MeshCore's files, none measured on a unit. If you have one, please try it and [report](https://github.com/cvhviz/Cairn/issues/new?template=bug_report.yml) what works and what doesn't, even "it works".
+**Nobody here has a V1 kit, so this build has not run on a device yet.** Its pins come from Heltec's datasheet, Meshtastic's and upstream MeshCore's files, none measured on a unit. If you have one, please try it and [report](https://github.com/cvhviz/CAIRN/issues/new?template=bug_report.yml) what works and what doesn't, even "it works".
 
 **This build is for a standard V4** (`esptool chip-id` reports *Embedded PSRAM 2MB*) **in the Expansion Kit V1**. A V4-R8 (*8MB*) in the Expansion Kit V2 needs the [Heltec V4 touch build](heltec-v4-touch.md). The two images carry different firmware markers and refuse each other over Wi-Fi.
 
 ## Which file
+
+Download from the [latest release](https://github.com/cvhviz/CAIRN/releases/latest) · [every board's files](../downloads.md)
 
 | You want to… | File | How |
 |---|---|---|
@@ -16,7 +18,7 @@ The plain Heltec V4 (ESP32-S3, 16 MB flash, 2 MB quad PSRAM; SX1262 with a GC110
 | update | `MeshCore-HeltecV4KitV1-CairnN-<date>-update.bin` | online (Settings › System › Firmware update), a browser upload in Wi-Fi transfer, or USB at `0x10000` |
 | recover a device that won't boot | `MeshCore-HeltecV4KitV1-CairnN-<date>-full.bin` | full erase, then write at `0x0` |
 
-Its current files are in [Cairn 123](https://github.com/cvhviz/Cairn/releases/tag/cairn-v123): `MeshCore-HeltecV4KitV1-Cairn123-2026-10-25-full.bin` and `MeshCore-HeltecV4KitV1-Cairn123-2026-10-25-update.bin` (the first build was in Cairn 121). Write the `-full.bin` or the `-update.bin`, never both. Download mode: hold **PRG**, tap **RST**, release **PRG**.
+Every release from Cairn 121 on carries both files. Write the `-full.bin` or the `-update.bin`, never both. Download mode: hold **PRG**, tap **RST**, release **PRG**.
 
 ## Buttons
 
@@ -63,4 +65,4 @@ Everything, since no one here has the kit. In particular:
 - PRG's click, double-press and hold; hibernate and waking from it
 - Battery saver, and Wi-Fi with an update check while Bluetooth is up
 
-Problems? [Report a bug](https://github.com/cvhviz/Cairn/issues/new?template=bug_report.yml). Please include the build number from the splash screen and, if you can, a serial log of the first boot.
+Problems? [Report a bug](https://github.com/cvhviz/CAIRN/issues/new?template=bug_report.yml). Please include the build number from the splash screen and, if you can, a serial log of the first boot.

@@ -1,6 +1,6 @@
 # Installing on ESP32-S3 boards (esptool or web flasher)
 
-For the Wio Tracker L2 Pro, the Heltec V4 touch builds (Expansion Kit V2, and the untested Kit V1 preview), the Elecrow ThinkNode M9, the LilyGO T-Deck and the ESP32 [preview boards](../boards/preview-boards.md).
+For the Seeed Wio Tracker L2 Pro, the Heltec V4 touch builds (Expansion Kit V2, and the untested Kit V1 preview), the Elecrow ThinkNode M9, the LilyGO T-Deck, the ESP32 [compact repeaters](../boards/compact-repeater.md) and the ESP32 [preview boards](../boards/preview-boards.md), including the few on the [original ESP32](#original-esp32-boards). Your board's files are on the [downloads page](../downloads.md).
 
 Each ESP32 board has two files in a release:
 
@@ -70,7 +70,9 @@ A few preview boards (Heltec V2, the LilyGO T-Beam with SX1262 or SX1276, T-LoRa
 
 The [compact repeater](../boards/compact-repeater.md) images for the Heltec V2, V3, V4, V4-R8 and Wireless Tracker install the same way: `-repeater-full.bin` at `0x0` for a first install, `-repeater-update.bin` at `0x10000` to update. They don't update over Wi-Fi.
 
-## Over Wi-Fi (L2 Pro, Heltec V4 touch, ThinkNode M9, T-Deck)
+## Over Wi-Fi (L2 Pro, Heltec V4 touch kits, ThinkNode M9, T-Deck)
+
+The T-Display SF32 updates over Wi-Fi too; see [its install guide](sf32.md#updating-later).
 
 - **Online:** Settings › System › Firmware update › **Check for updates**. The device also checks this repository once a day while on Wi-Fi and shows a notice when a newer build is out. It downloads the board's `-update.bin` over HTTPS, checks its size, SHA-256 and board marker, and installs only after you confirm.
 - **Wi-Fi transfer:** tap the **Wi-Fi transfer** tile on the same page (called Updater mode before Cairn 116, and update mode before Cairn 112). The board shows its address and a password. Open that address in a browser, type the password, and upload the `-update.bin`.
@@ -107,4 +109,4 @@ The **Heltec V4 touch build needs a V4-R8** (reports *Embedded PSRAM 8MB*; 16 MB
 
 **The old firmware still runs after an update.** Tap Reset. If it still does, the device was probably on its second app slot: see [If the device last updated over Wi-Fi](#if-the-device-last-updated-over-wi-fi).
 
-**Still stuck?** Erase and write the `-full.bin` (this erases everything), then [report it](https://github.com/cvhviz/Cairn/issues/new?template=bug_report.yml) with the board, the build number and a serial log.
+**Still stuck?** Erase and write the `-full.bin` (this erases everything), then [report it](https://github.com/cvhviz/CAIRN/issues/new?template=bug_report.yml) with the board, the build number and a serial log.
