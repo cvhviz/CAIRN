@@ -23,7 +23,7 @@ MeshCore-<Board>-Cairn<N>-<YYYY-MM-DD>[-<variant>].<ext>
 
 ## For the online updater
 
-The L2 Pro, Heltec V4 touch (Kit V2 and Kit V1), ThinkNode M9, T-Deck and T-Display SF32 builds read `https://api.github.com/repos/cvhviz/Cairn/releases/latest`. For a build to be offered:
+The L2 Pro, Heltec V4 touch (Kit V2 and Kit V1), ThinkNode M9, T-Deck, T-LoRa Pager and T-Display SF32 builds read `https://api.github.com/repos/cvhviz/Cairn/releases/latest`. For a build to be offered:
 
 - Tag it `cairn-vN`, where N is the build number shown on the splash (it must be higher than the device's own). Publish it as a normal release, not a draft or pre-release.
 - [Experimental builds](experimental.md) are the opposite: always a pre-release, never marked latest, so no device is offered one.
@@ -39,6 +39,8 @@ The L2 Pro, Heltec V4 touch (Kit V2 and Kit V1), ThinkNode M9, T-Deck and T-Disp
 | Heltec V4 + Expansion Kit V1 (touch), untested preview | `MeshCore-HeltecV4KitV1-CairnN-YYYY-MM-DD-update.bin` |
 | Elecrow ThinkNode M9 | `MeshCore-ThinkNodeM9-CairnN-YYYY-MM-DD-update.bin` |
 | LilyGO T-Deck / T-Deck Plus | `MeshCore-TDeckPlus-CairnN-YYYY-MM-DD-update.bin` |
+| LilyGO T-LoRa Pager (SX1262) | `MeshCore-TLoraPager-CairnN-YYYY-MM-DD-update.bin` |
+| LilyGO T-LoRa Pager (LR1121) | `MeshCore-TLoraPagerLR1121-CairnN-YYYY-MM-DD-update.bin` |
 | LilyGO T-Display SF32 | `MeshCore-TDisplaySF32-CairnN-YYYY-MM-DD-update.bin` |
 
 Back to the [README](../README.md).

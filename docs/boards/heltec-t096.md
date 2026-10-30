@@ -77,6 +77,13 @@ The companion build with the default Color theme. These were rendered by the fir
 | ![Home in the Color theme](../screens/t096/theme-color.png)<br>Color (default) | ![Home in the Dark theme](../screens/t096/theme-dark.png)<br>Dark | ![Home in the Night theme](../screens/t096/theme-night.png)<br>Night |
 | ![Home in the Soft theme](../screens/t096/theme-soft.png)<br>Soft | ![Home in the Stock theme](../screens/t096/theme-stock.png)<br>Stock | |
 
+## From Cairn 125
+
+Files: `MeshCore-HeltecT096-Cairn125-2026-10-29-ble.uf2` and `-usb.uf2`.
+
+- **"Storage low" only when a contacts save really failed** ([#32](https://github.com/cvhviz/CAIRN/issues/32)). It used to show whenever the contacts volume had no room for a second, safe copy of the list, from about 150 contacts with a third of the space still free, though those saves still went through (in place, as stock MeshCore saves). Not yet checked on a T096.
+- **TX power, app and device** ([#31](https://github.com/cvhviz/CAIRN/issues/31)): the app sets the radio chip, -9 to 16 dBm; the T096's amplifier turns 16 into about 28 dBm at the antenna, the figure the device shows. 16 is full power.
+
 ## Known issues
 
 - The USB build has no Bluetooth and no GPS page by design.

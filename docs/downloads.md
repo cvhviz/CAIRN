@@ -25,6 +25,10 @@ Status: ✅ tested on hardware · ✅ beta: tested, new to Cairn · 🧪 preview
 |---|---|---|---|
 | [T-Deck / T-Deck Plus](boards/lilygo-t-deck.md) | ✅ beta | `MeshCore-TDeckPlus-CairnN-<date>-full.bin` | first install or recovery, at `0x0` (erases everything, and removes an SD-card launcher) |
 | | | `MeshCore-TDeckPlus-CairnN-<date>-update.bin` | update over Wi-Fi, over USB at `0x10000`, or from a launcher's SD card |
+| [T-LoRa Pager](boards/lilygo-t-lora-pager.md) | ✅ beta | `MeshCore-TLoraPager-CairnN-<date>-full.bin` | SX1262 (most units): first install or recovery, at `0x0` (erases everything) |
+| | | `MeshCore-TLoraPager-CairnN-<date>-update.bin` | SX1262: update over Wi-Fi, or over USB at `0x10000` |
+| | | `MeshCore-TLoraPagerLR1121-CairnN-<date>-full.bin` | LR1121: first install or recovery, at `0x0` (erases everything) |
+| | | `MeshCore-TLoraPagerLR1121-CairnN-<date>-update.bin` | LR1121: update over Wi-Fi, or over USB at `0x10000` |
 | [T-Display SF32 + keypad board](boards/lilygo-t-display-sf32.md) | ✅ | `MeshCore-TDisplaySF32-CairnN-<date>-install.zip` | install or update over USB: unzip, double-click the installer |
 | | | `MeshCore-TDisplaySF32-CairnN-<date>-update.bin` (and `.sha256`) | the Wi-Fi update; the board fetches it itself |
 
@@ -41,7 +45,6 @@ Status: ✅ tested on hardware · ✅ beta: tested, new to Cairn · 🧪 preview
 | | | `MeshCore-WioL1Eink-CairnN-<date>.uf2` | companion, 2.13" e-ink |
 | | | `MeshCore-WioL1RoomServer-CairnN-<date>.uf2` | room server (no phone app; SH1106 OLED) |
 
-- **LilyGO T-LoRa Pager:** experimental test builds only, one per radio: `MeshCore-TLoraPager-…-full.bin` (SX1262) or `MeshCore-TLoraPagerLR1121-…-full.bin`; see [Experimental builds](experimental.md).
 - **SenseCAP MeshPager X2:** experimental test builds only, as `MeshCore-MeshPagerX2-…-full.bin`; see [Experimental builds](experimental.md).
 - 🧪 Preview, in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview): XIAO ESP32-S3, and the XIAO ESP32-S3 + Wio-SX1262 kit.
 

@@ -10,22 +10,21 @@
 **[Download the latest release](https://github.com/cvhviz/CAIRN/releases/latest)** · [Files for every board](docs/downloads.md) · [Install guides](#install-and-update) · [Manual (PDF)](docs/Cairn_Firmware_Manual_Dark.pdf) · [Report a problem](#reporting-a-problem)
 
 <!-- Bump this section with each cairn-vN release. Nothing else in this README names the current build. -->
-## Latest release: Cairn 124 (29 Oct 2026)
+## Latest release: Cairn 125 (29 Oct 2026)
 
-- **510 nodes and faster Bluetooth sync** on the L2 Pro, both Heltec V4 touch kits, ThinkNode M9 and T-Deck: the node list holds 510 (up from 350), and frames go to the phone as fast as Bluetooth takes them.
-- **On the device:** remove several nodes at once (Contacts › Show › Select…), back up your contacts to the card (Settings › Storage › Back up), and choose which heard nodes are saved (Settings › LoRa › Contacts).
-- **Heltec T096: click and hold only.** A click acts at once, and the pages are Home, Nodes, Spectrum, GPS and the Menu ([its buttons](docs/boards/heltec-t096.md#buttons)). Checked on a T096.
-- **Fixes**, including a security fix from MeshCore (an empty node slot could be matched as a peer).
-- **Not yet checked on a device:** apart from the T096's buttons, nothing new has run on hardware; every board builds and the automated tests pass. Going back to 123 keeps only the first 350 nodes: back up to the card first.
+- **LilyGO T-LoRa Pager joins the release** (✅ beta), with online updates: a Pager on the Cairn 124 test build finds 125 in Settings › System › Firmware update. Its [page](docs/boards/lilygo-t-lora-pager.md) has the controls and what has been checked.
+- **T-LoRa Pager fixes:** the microSD card mounts and Maps works again ([#34](https://github.com/cvhviz/CAIRN/issues/34)), and the side wheel is calm at a slow turn and fast when spun. Checked on a Pager, apart from the card.
+- **Heltec V4 + Expansion Kit V1:** the same memory fix as the Pager (its PSRAM was left unused at start-up).
+- **Heltec T096: "Storage low" only when a contacts save really failed** ([#32](https://github.com/cvhviz/CAIRN/issues/32)). It used to show from about 150 contacts with a third of the space still free.
 
-[Cairn 124 release notes](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v124) · [all releases](https://github.com/cvhviz/CAIRN/releases)
+[Cairn 125 release notes](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v125) · [all releases](https://github.com/cvhviz/CAIRN/releases)
 
 ## Download
 
 Every board's files are in the **[latest release](https://github.com/cvhviz/CAIRN/releases/latest)**, under **Assets**. GitHub lists them in alphabetical order, so look for your board's name. Every file is named
 
 ```
-MeshCore-<Board>-Cairn<N>-<date>[-<variant>].<ext>     for example MeshCore-WioL2Pro-Cairn124-2026-10-29-update.bin
+MeshCore-<Board>-Cairn<N>-<date>[-<variant>].<ext>     for example MeshCore-WioL2Pro-Cairn125-2026-10-29-update.bin
 ```
 
 The splash screen shows **BUILD N**, so you can match a device to its release. `SHA256SUMS.txt` in each release covers every file: `shasum -a 256 -c SHA256SUMS.txt`. The **[downloads page](docs/downloads.md)** lists every file for every board, including the preview and experimental builds.
@@ -51,6 +50,7 @@ The splash screen shows **BUILD N**, so you can match a device to its release. `
 | Board | Screen and input | Status | Files (`MeshCore-<Board>-…`) |
 | --- | --- | --- | --- |
 | [T-Deck / T-Deck Plus](docs/boards/lilygo-t-deck.md) | 2.8" touchscreen, keyboard, trackball | ✅ beta | `TDeckPlus`: `-full.bin`, `-update.bin` |
+| [T-LoRa Pager](docs/boards/lilygo-t-lora-pager.md) | 2.33" wide screen, keyboard, side wheel | ✅ beta | `TLoraPager` (SX1262), `TLoraPagerLR1121`: `-full.bin`, `-update.bin` |
 | [T-Display SF32 + keypad board](docs/boards/lilygo-t-display-sf32.md) | 480×480 AMOLED touchscreen, keypad | ✅ | `TDisplaySF32`: `-install.zip`, `-update.bin` |
 | [T-Beam, T-Beam Supreme, T-Beam 1W, T3S3, T-LoRa V2.1-1.6, T-Impulse Plus](docs/boards/preview-boards.md) | OLED (optional on some), one button | 🧪 | in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview) |
 
@@ -96,10 +96,10 @@ Want another board? [Ask for it](https://github.com/cvhviz/CAIRN/issues/new?temp
 | Chip | Boards | Install guide |
 | --- | --- | --- |
 | nRF52840 | L1 Pro family, T096, T114 repeater, nRF52840 preview boards | [UF2: double-tap Reset, copy the file](docs/install/nrf52-uf2.md) |
-| ESP32-S3, ESP32 | L2 Pro, Heltec V4 touch kits, ThinkNode M9, T-Deck, ESP32 repeaters and preview boards | [esptool or the web flasher](docs/install/esp32-s3.md) |
+| ESP32-S3, ESP32 | L2 Pro, Heltec V4 touch kits, ThinkNode M9, T-Deck, T-LoRa Pager, ESP32 repeaters and preview boards | [esptool or the web flasher](docs/install/esp32-s3.md) |
 | SiFli SF32 | T-Display SF32 | [one-click installer for Mac, Windows and Linux](docs/install/sf32.md) |
 
-- **Over Wi-Fi:** the L2 Pro, both Heltec V4 touch kits, ThinkNode M9, T-Deck and T-Display SF32 update themselves from the latest release in **Settings › System › Firmware update**, after you confirm. The new build starts on trial and goes back to the old one by itself if it fails to start.
+- **Over Wi-Fi:** the L2 Pro, both Heltec V4 touch kits, ThinkNode M9, T-Deck, T-LoRa Pager and T-Display SF32 update themselves from the latest release in **Settings › System › Firmware update**, after you confirm. The new build starts on trial and goes back to the old one by itself if it fails to start.
 - **Everything else** updates the way it was installed: copy the new `.uf2`, or write the `-update.bin` at `0x10000`. Repeaters and preview boards don't update over Wi-Fi.
 - Updates keep your identity, contacts, channels and settings.
 
@@ -107,7 +107,7 @@ Want another board? [Ask for it](https://github.com/cvhviz/CAIRN/issues/new?temp
 
 Cairn runs one of four interfaces, depending on the board:
 
-- **The Cairn touch interface** on the L2 Pro, Heltec V4 touch kits, ThinkNode M9 (by keys) and T-Deck (by touch or keys): a home dashboard, chats with an on-screen keyboard and colour emoji, nodes, repeater scan and admin, spectrum and band scan, offline and online maps, Wi-Fi and Bluetooth scanners, and online updates. The [L2 Pro page](docs/boards/wio-tracker-l2-pro.md#features) lists it all.
+- **The Cairn touch interface** on the L2 Pro, Heltec V4 touch kits, ThinkNode M9 and T-LoRa Pager (by keys) and T-Deck (by touch or keys): a home dashboard, chats with an on-screen keyboard and colour emoji, nodes, repeater scan and admin, spectrum and band scan, offline and online maps, Wi-Fi and Bluetooth scanners, and online updates. The [L2 Pro page](docs/boards/wio-tracker-l2-pro.md#features) lists it all.
 - **A native square interface** on the T-Display SF32, with most of the same tools plus its sensors, IR remote, music player and voice recorder.
 - **The one-button interface** on the T096 and the preview boards, with themes on colour screens; and the OLED and e-ink interface on the L1 Pro.
 - **The compact repeater:** the standard MeshCore repeater with a minimal Status, Spectrum and Settings screen.
@@ -116,7 +116,7 @@ Cairn runs one of four interfaces, depending on the board:
 
 ## Manual and screens
 
-- [Cairn firmware manual (PDF)](docs/Cairn_Firmware_Manual_Dark.pdf): every board, screen and setting, with the touch, key (M9, T-Deck) and OLED ways to do each task, a shortcuts and gestures cheat sheet, troubleshooting and a glossary. It was written for Cairn 118; the release notes since then ([119](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v119) to [124](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v124)) cover what changed: the GPS tab opening on the map, Settings' LoRa, Network and GNSS names, Settings pages that fit on one screen, the full preset list and the map's locate button. A web version with search is in [docs/Cairn_Firmware_Manual_Dark](docs/Cairn_Firmware_Manual_Dark) (download the folder and open `index.html`).
+- [Cairn firmware manual (PDF)](docs/Cairn_Firmware_Manual_Dark.pdf): every board, screen and setting, with the touch, key (M9, T-Deck) and OLED ways to do each task, a shortcuts and gestures cheat sheet, troubleshooting and a glossary. It was written for Cairn 118; the release notes since then ([119](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v119) to [125](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v125)) cover what changed: the GPS tab opening on the map, Settings' LoRa, Network and GNSS names, Settings pages that fit on one screen, the full preset list and the map's locate button. A web version with search is in [docs/Cairn_Firmware_Manual_Dark](docs/Cairn_Firmware_Manual_Dark) (download the folder and open `index.html`).
 - [Cairn brochure (PDF)](docs/Cairn_Wio_L2_Pro_Brochure.pdf): the firmware, the L2 Pro and its 3D-printed case, in nine pages.
 - [Previous manual (PDF)](docs/Cairn_Wio_L2_Pro_User_Manual.pdf): the October 2026 Wio Tracker L2 Pro edition. The offline-map tool it mentions is [tools/maptiles.py](tools/maptiles.py) ([how to use it](tools/MAPTILES.md)).
 - Promo images, free to share: [docs/promo](docs/promo).
@@ -131,7 +131,7 @@ Every board page has its own screens; all 19 touch-interface screens are on the 
 
 ## Experimental builds
 
-One-off test builds, such as a new board before it has been on the bench, are GitHub pre-releases tagged `experimental-<board>-<N>`. They may not work, and the online updater never offers them. Current: **LilyGO T-LoRa Pager** (Cairn 124 test) and **Seeed SenseCAP MeshPager X2** (Cairn 124 tests). What they are, how to flash one and how to send a log: [Experimental builds](docs/experimental.md) · [all experimental releases](https://github.com/cvhviz/CAIRN/releases?q=experimental&expanded=true).
+One-off test builds, such as a new board before it has been on the bench, are GitHub pre-releases tagged `experimental-<board>-<N>`. They may not work, and the online updater never offers them. Current: **Seeed SenseCAP MeshPager X2** (Cairn 124 tests). The LilyGO T-LoRa Pager started there and is in the releases from Cairn 125. What they are, how to flash one and how to send a log: [Experimental builds](docs/experimental.md) · [all experimental releases](https://github.com/cvhviz/CAIRN/releases?q=experimental&expanded=true).
 
 ## Older builds
 

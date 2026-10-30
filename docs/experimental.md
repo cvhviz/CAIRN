@@ -11,13 +11,12 @@ Experimental builds are for testing: a new board brought up before it has been o
 - **Keep a copy of your current firmware** to go back to, and back up your node's identity first (see [Before a first install](install/esp32-s3.md#before-a-first-install-back-up-your-identity)).
 - Each release's notes say what to test and what to send back. Most ask for a **serial log**: the build prints what it finds as it starts, and every button press, over USB.
 
-Compared with 🧪 **preview** boards (built from the same tree in every normal release, untried on hardware), an experimental build is a one-off made to answer specific questions; once a board works, it moves into the normal releases.
+Compared with 🧪 **preview** boards (built from the same tree in every normal release, untried on hardware), an experimental build is a one-off made to answer specific questions; once a board works, it moves into the normal releases. The LilyGO T-LoRa Pager did that in Cairn 125 ([its page](boards/lilygo-t-lora-pager.md)); its first test build stays in [the experimental releases](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tlora-pager-124).
 
 ## Current
 
 | Board | Build | Date | What it is for |
 |---|---|---|---|
-| LilyGO T-LoRa Pager | [Cairn 124 test](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tlora-pager-124) | 29 Oct 2026 | First bring-up, built before the board was on the bench: the 480×222 screen (its turn and colours), every key, the side wheel's direction, battery and charging, radio, GPS, microSD, sound and the recorder, vibration, Lift to wake, NFC contact sharing, Battery saver and power off. Two files: SX1262 (LilyGO's default) or LR1121; the log's `PGBOOT radio` line says which works. |
 | Seeed SenseCAP MeshPager X2 | [Cairn 124 test 5](https://github.com/cvhviz/CAIRN/releases/tag/experimental-meshpager-x2-124-5) | 26 Oct 2026 | Bring-up, test 5: power off (firmware or board?), Band scan, air pressure, USB drive, charging status, Lift to wake on the motion interrupt. Earlier tests: [all X2 builds](https://github.com/cvhviz/CAIRN/releases?q=meshpager-x2) |
 
 ## Sending a log

@@ -1,6 +1,6 @@
 # Installing on ESP32-S3 boards (esptool or web flasher)
 
-For the Seeed Wio Tracker L2 Pro, the Heltec V4 touch builds (Expansion Kit V2, and the untested Kit V1 preview), the Elecrow ThinkNode M9, the LilyGO T-Deck, the ESP32 [compact repeaters](../boards/compact-repeater.md) and the ESP32 [preview boards](../boards/preview-boards.md), including the few on the [original ESP32](#original-esp32-boards). Your board's files are on the [downloads page](../downloads.md).
+For the Seeed Wio Tracker L2 Pro, the Heltec V4 touch builds (Expansion Kit V2, and the untested Kit V1 preview), the Elecrow ThinkNode M9, the LilyGO T-Deck and T-LoRa Pager, the ESP32 [compact repeaters](../boards/compact-repeater.md) and the ESP32 [preview boards](../boards/preview-boards.md), including the few on the [original ESP32](#original-esp32-boards). Your board's files are on the [downloads page](../downloads.md).
 
 Each ESP32 board has two files in a release:
 
@@ -25,6 +25,7 @@ Most boards enter download mode on their own when esptool or the web flasher con
 |---|---|
 | Elecrow ThinkNode M9 | none: download mode is automatic through its USB-serial chip, and it has no Boot button. If it doesn't connect, unplug and replug the cable and try again. |
 | LilyGO T-Deck / T-Deck Plus | switch it off, hold the **trackball** in (it is BOOT), switch it on, release |
+| LilyGO T-LoRa Pager | hold **BOOT** (top edge), tap **RST**, release **BOOT**. With Battery saver on, a dark Pager may be asleep and miss the automatic reset: press a key to wake it first, or use the buttons |
 | Wio Tracker L2 Pro | hold **Boot**, tap **Reset**, release **Boot** |
 | Heltec V4 (touch or OLED), V3, Wireless Tracker | hold **PRG** (also labelled USER), tap **RST**, release **PRG** |
 | Most other boards | hold **BOOT** (or IO0), tap **RST** / **EN**, release **BOOT** |
@@ -55,7 +56,7 @@ The older form still works: `esptool.py --chip esp32s3 erase_flash`, `esptool.py
 
 ### If the device last updated over Wi-Fi
 
-An L2, Heltec V4, ThinkNode M9 or T-Deck that installed its last update over Wi-Fi may be running from its second app slot, and a USB write to `0x10000` would then be ignored at boot. Clear the boot selector first, then write the update:
+An L2, Heltec V4, ThinkNode M9, T-Deck or T-LoRa Pager that installed its last update over Wi-Fi may be running from its second app slot, and a USB write to `0x10000` would then be ignored at boot. Clear the boot selector first, then write the update:
 
 ```bash
 esptool --chip esp32s3 erase-region 0xe000 0x2000
@@ -70,7 +71,7 @@ A few preview boards (Heltec V2, the LilyGO T-Beam with SX1262 or SX1276, T-LoRa
 
 The [compact repeater](../boards/compact-repeater.md) images for the Heltec V2, V3, V4, V4-R8 and Wireless Tracker install the same way: `-repeater-full.bin` at `0x0` for a first install, `-repeater-update.bin` at `0x10000` to update. They don't update over Wi-Fi.
 
-## Over Wi-Fi (L2 Pro, Heltec V4 touch kits, ThinkNode M9, T-Deck)
+## Over Wi-Fi (L2 Pro, Heltec V4 touch kits, ThinkNode M9, T-Deck, T-LoRa Pager)
 
 The T-Display SF32 updates over Wi-Fi too; see [its install guide](sf32.md#updating-later).
 

@@ -37,6 +37,12 @@ PRG is the only button this build uses. Heltec's datasheet shows a second case b
 - **FEM LNA:** on a V4.3 (KCT8103L) the tile works; on a V4.2 (GC1109, no LNA switch) it reads "Not on this radio". Boosted RX stays on both.
 - The Spectrum page, chats, nodes, repeater admin, Wi-Fi with online updates, the Wi-Fi and Bluetooth scanners, the Battery page, Battery saver and portrait mode (the Quick panel's Rotate) are as on the [Kit V2 build](heltec-v4-touch.md#features).
 
+## From Cairn 125
+
+Files: `MeshCore-HeltecV4KitV1-Cairn125-2026-10-29-full.bin` and `-update.bin`.
+
+- **The 2 MB PSRAM is used from start-up:** the mesh and the interface (about 140 KB) were put in internal memory, because this kit's kind of PSRAM came up only after they were made. They now go into PSRAM, as on the Kit V2, leaving that much more internal memory for Wi-Fi, maps and the card. The same fix was checked on a T-LoRa Pager; not yet on a Kit V1.
+
 ## From Cairn 123
 
 - No more **"Watchdog (stall)" restarts from a full node list**: with the list at or near its 350-node limit, saving it to flash could take long enough that the watchdog restarted the device. The save now checks in with the watchdog as it goes. Not yet checked on a device.
