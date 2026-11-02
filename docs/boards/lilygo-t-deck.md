@@ -41,6 +41,14 @@ The same files run on the T-Deck and the T-Deck Plus. Write the `-full.bin` or t
 - **Enter finishes the text field** (from Cairn 113): Send in a chat, Done, OK or Save elsewhere. The trackball click still selects what is highlighted.
 - **Radios by keys:** 1, 2 and 3 pick the LoRa, Wi-Fi and Bluetooth tabs (from Cairn 114). The LoRa tab lands on Advert (from Cairn 113), and the advert sheet opens with Send focused, so Advert, then a click, sends a zero-hop advert.
 
+## From Cairn 126
+
+Files: `MeshCore-TDeckPlus-Cairn126-2026-11-01-full.bin` and `-update.bin`.
+
+- **The trackball follows a slow roll.** Some balls give only one pulse on a small roll: every pulse is now a move, and the ring stops when the ball does. **Settings › Hardware › Buttons › Trackball** sets Fast, Medium or Slow (1, 2 or 3 pulses a move). Measured on a second T-Deck.
+- **Screen: Inverted** (Settings › Display › PANEL), for a panel that shows every colour as its negative. Some T-Deck batches need it, and there's no way to detect them.
+- **Cyrillic** letters show as text in messages, names and lists. Reading only: there is no Cyrillic keyboard.
+
 ## From Cairn 123
 
 Files: `MeshCore-TDeckPlus-Cairn123-2026-10-25-full.bin` and `-update.bin`.

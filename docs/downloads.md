@@ -45,6 +45,8 @@ Status: ✅ tested on hardware · ✅ beta: tested, new to Cairn · 🧪 preview
 | | | `MeshCore-WioL1Eink-CairnN-<date>.uf2` | companion, 2.13" e-ink |
 | | | `MeshCore-WioL1RoomServer-CairnN-<date>.uf2` | room server (no phone app; SH1106 OLED) |
 
+- **LilyGO T5 E-Paper S3 Pro:** experimental test builds only, as `MeshCore-T5EpaperPro-…-full.bin`; see [Experimental builds](experimental.md).
+- **LilyGO T-Display K230 Kit:** experimental test builds only, as `MeshCore-TDisplayK230-…-cairn-bin`; see [Experimental builds](experimental.md).
 - **SenseCAP MeshPager X2:** experimental test builds only, as `MeshCore-MeshPagerX2-…-full.bin`; see [Experimental builds](experimental.md).
 - 🧪 Preview, in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview): XIAO ESP32-S3, and the XIAO ESP32-S3 + Wio-SX1262 kit.
 

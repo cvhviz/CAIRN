@@ -10,21 +10,21 @@
 **[Download the latest release](https://github.com/cvhviz/CAIRN/releases/latest)** · [Files for every board](docs/downloads.md) · [Install guides](#install-and-update) · [Manual (PDF)](docs/Cairn_Firmware_Manual_Dark.pdf) · [Report a problem](#reporting-a-problem)
 
 <!-- Bump this section with each cairn-vN release. Nothing else in this README names the current build. -->
-## Latest release: Cairn 125 (29 Oct 2026)
+## Latest release: Cairn 126 (1 Nov 2026)
 
-- **LilyGO T-LoRa Pager joins the release** (✅ beta), with online updates: a Pager on the Cairn 124 test build finds 125 in Settings › System › Firmware update. Its [page](docs/boards/lilygo-t-lora-pager.md) has the controls and what has been checked.
-- **T-LoRa Pager fixes:** the microSD card mounts and Maps works again ([#34](https://github.com/cvhviz/CAIRN/issues/34)), and the side wheel is calm at a slow turn and fast when spun. Checked on a Pager, apart from the card.
-- **Heltec V4 + Expansion Kit V1:** the same memory fix as the Pager (its PSRAM was left unused at start-up).
-- **Heltec T096: "Storage low" only when a contacts save really failed** ([#32](https://github.com/cvhviz/CAIRN/issues/32)). It used to show from about 150 contacts with a third of the space still free.
+- **Cyrillic in messages and names** ([#25](https://github.com/cvhviz/CAIRN/issues/25), [#3](https://github.com/cvhviz/CAIRN/issues/3)) on the T-Deck, L2 Pro, Heltec V4 touch, M9 and T-LoRa Pager. Reading only: there is no Cyrillic keyboard.
+- **T-Deck:** the trackball follows a slow roll, with Fast, Medium and Slow settings, and Screen: Inverted for panels that show colours as negatives.
+- **Wio Tracker L1:** the battery percent agrees with the app ([#36](https://github.com/cvhviz/CAIRN/issues/36)), and the e-ink build has Flip screen ([#33](https://github.com/cvhviz/CAIRN/issues/33)).
+- **New to test:** the [LilyGO T5 E-Paper S3 Pro](docs/experimental.md) ([#22](https://github.com/cvhviz/CAIRN/issues/22)) and the [LilyGO T-Display K230](docs/experimental.md), as experimental builds.
 
-[Cairn 125 release notes](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v125) · [all releases](https://github.com/cvhviz/CAIRN/releases)
+[Cairn 126 release notes](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v126) · [all releases](https://github.com/cvhviz/CAIRN/releases)
 
 ## Download
 
 Every board's files are in the **[latest release](https://github.com/cvhviz/CAIRN/releases/latest)**, under **Assets**. GitHub lists them in alphabetical order, so look for your board's name. Every file is named
 
 ```
-MeshCore-<Board>-Cairn<N>-<date>[-<variant>].<ext>     for example MeshCore-WioL2Pro-Cairn125-2026-10-29-update.bin
+MeshCore-<Board>-Cairn<N>-<date>[-<variant>].<ext>     for example MeshCore-WioL2Pro-Cairn126-2026-11-01-update.bin
 ```
 
 The splash screen shows **BUILD N**, so you can match a device to its release. `SHA256SUMS.txt` in each release covers every file: `shasum -a 256 -c SHA256SUMS.txt`. The **[downloads page](docs/downloads.md)** lists every file for every board, including the preview and experimental builds.
@@ -60,6 +60,8 @@ The splash screen shows **BUILD N**, so you can match a device to its release. `
 | --- | --- | --- | --- |
 | [Wio Tracker L2 Pro](docs/boards/wio-tracker-l2-pro.md) | 3.2" touchscreen | ✅ | `WioL2Pro`: `-full.bin`, `-update.bin` |
 | [Wio Tracker L1 Pro](docs/boards/wio-tracker-l1-pro.md) | OLED or e-ink, joystick | ✅ | `WioL1Pro`, `DV1`, `WioL1Eink`, `WioL1RoomServer`: `.uf2` |
+| [LilyGO T5 E-Paper S3 Pro](docs/experimental.md) | 4.7" touch e-paper | experimental | `T5EpaperPro`: in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t5epd-126) |
+| [LilyGO T-Display K230](docs/experimental.md) | AMOLED touchscreen, Linux | experimental | `TDisplayK230`: in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tdisplay-k230-126) |
 | [SenseCAP MeshPager X2](docs/experimental.md) | colour screen, d-pad | experimental | `MeshPagerX2`: in its [experimental releases](https://github.com/cvhviz/CAIRN/releases?q=meshpager-x2&expanded=true) |
 | [XIAO ESP32-S3, XIAO ESP32-S3 + Wio-SX1262](docs/boards/preview-boards.md) | optional OLED, one button | 🧪 | in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview) |
 

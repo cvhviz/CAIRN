@@ -29,12 +29,25 @@ The SenseCAP MeshPager X2 build (experimental) also includes:
 |---|---|---|---|
 | [BMM350 SensorAPI](https://github.com/boschsensortec/BMM350_SensorAPI) v1.10.0, © 2024 Bosch Sensortec GmbH | The compass (BMM350 magnetometer driver), unmodified | BSD 3-Clause | [BMM350-SensorAPI-LICENSE.txt](licenses/BMM350-SensorAPI-LICENSE.txt) |
 
-The LilyGO T-LoRa Pager build (experimental) also includes:
+The LilyGO T-LoRa Pager build also includes:
 
 | Work | Used for | Licence | Text |
 |---|---|---|---|
 | [BHY2 SensorAPI](https://github.com/boschsensortec/BHY2_SensorAPI) v1.6.0, © 2023 Bosch Sensortec GmbH | Lift to wake (the BHI260AP motion sensor's driver), unmodified | BSD 3-Clause | [BHY2-SensorAPI-LICENSE.txt](licenses/BHY2-SensorAPI-LICENSE.txt) |
 | BHI260AP firmware image (`firmware/bhi260ap/BHI260AP.fw`, from the same repository), © Bosch Sensortec GmbH | Uploaded to the motion sensor's RAM at run time, unmodified | BSD 3-Clause (the repository's licence) | [BHY2-SensorAPI-LICENSE.txt](licenses/BHY2-SensorAPI-LICENSE.txt) |
+
+The LilyGO T5 E-Paper S3 Pro build (experimental) also includes:
+
+| Work | Used for | Licence | Text |
+|---|---|---|---|
+| [FastEPD](https://github.com/bitbank2/FastEPD) 2.2.0, © BitBank Software, Inc. | The e-paper panel driver, with Cairn's patches | Apache 2.0 | [FastEPD-LICENSE.txt](licenses/FastEPD-LICENSE.txt) |
+
+The LilyGO T-Display K230 build (experimental) also includes:
+
+| Work | Used for | Licence | Text |
+|---|---|---|---|
+| [musl libc](https://musl.libc.org/), © Rich Felker and contributors | The C library, linked into the program | MIT | [musl-COPYRIGHT.txt](licenses/musl-COPYRIGHT.txt) |
+| [lr2021-sdr](https://github.com/SAMS0N1TE/lr2021-sdr), © 2026 SAMS0N1TE | How to read raw radio samples from the LR2021, for the Spectrum page's Live view | MIT | [lr2021-sdr-LICENSE.txt](licenses/lr2021-sdr-LICENSE.txt) |
 
 The [Cairn firmware manual](docs/Cairn_Firmware_Manual_Dark) (its web version and PDF) also includes:
 
