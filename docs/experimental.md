@@ -19,6 +19,7 @@ Compared with 🧪 **preview** boards (built from the same tree in every normal 
 |---|---|---|---|
 | LilyGO T5 E-Paper S3 Pro (H752-01) | [Cairn 126](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t5epd-126) | 1 Nov 2026 | First build, tested on one board: the 4.7" touch e-paper, GPS, microSD maps ([#22](https://github.com/cvhviz/CAIRN/issues/22)) |
 | LilyGO T-Display K230 Kit (LR2021) | [Cairn 126](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tdisplay-k230-126) | 1 Nov 2026 | First build, tested on one kit: a Linux program, installed from the console. No Bluetooth |
+| Heltec V4 + Expansion Kit V1 | [Cairn 126 test 1](https://github.com/cvhviz/CAIRN/releases/tag/experimental-heltec-kitv1-126) | 2 Nov 2026 | A fix to try for a blank screen on the kit: the kit's power switch held as Meshtastic and MeshCore hold it. Not yet tried on a kit |
 | Seeed SenseCAP MeshPager X2 | [Cairn 126](https://github.com/cvhviz/CAIRN/releases/tag/experimental-meshpager-x2-126) | 1 Nov 2026 | Bring-up continues: Cyrillic, and the power off, Band scan, air pressure, USB drive and Lift to wake checks from test 5. Earlier tests: [all X2 builds](https://github.com/cvhviz/CAIRN/releases?q=meshpager-x2) |
 
 ## Sending a log
