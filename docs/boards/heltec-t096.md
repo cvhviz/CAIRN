@@ -77,6 +77,13 @@ The companion build with the default Color theme. These were rendered by the fir
 | ![Home in the Color theme](../screens/t096/theme-color.png)<br>Color (default) | ![Home in the Dark theme](../screens/t096/theme-dark.png)<br>Dark | ![Home in the Night theme](../screens/t096/theme-night.png)<br>Night |
 | ![Home in the Soft theme](../screens/t096/theme-soft.png)<br>Soft | ![Home in the Stock theme](../screens/t096/theme-stock.png)<br>Stock | |
 
+## From Cairn 127
+
+Files: `MeshCore-HeltecT096-Cairn127-2026-11-03-ble.uf2` and `-usb.uf2`.
+
+- **A page for each node.** On Nodes, hold for a cursor, click to move it through every heard node, and hold to open one: when it was heard, its hops, key and kind, then **Ping**, **Block** (a second hold confirms) and **Back**. A double-tap backs out. Not yet checked on a T096.
+- **Settings › Blocked:** the blocked nodes and how many packets have been dropped; hold twice on one to unblock it.
+
 ## From Cairn 125
 
 Files: `MeshCore-HeltecT096-Cairn125-2026-10-29-ble.uf2` and `-usb.uf2`.

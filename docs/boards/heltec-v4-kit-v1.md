@@ -37,6 +37,10 @@ PRG is the only button this build uses. Heltec's datasheet shows a second case b
 - **FEM LNA:** on a V4.3 (KCT8103L) the tile works; on a V4.2 (GC1109, no LNA switch) it reads "Not on this radio". Boosted RX stays on both.
 - The Spectrum page, chats, nodes, repeater admin, Wi-Fi with online updates, the Wi-Fi and Bluetooth scanners, the Battery page, Battery saver and portrait mode (the Quick panel's Rotate) are as on the [Kit V2 build](heltec-v4-touch.md#features).
 
+## From Cairn 127
+
+The Kit V1 build is an [experimental pre-release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-heltec-kitv1-127) (`MeshCore-HeltecV4KitV1-Cairn127-2026-11-03-full.bin`), out of the normal release until a kit confirms the blank-screen fix: the kit's power switch (GPIO 36) held as Meshtastic and MeshCore hold it. A kit's online update does not offer it; flash it by hand. It has everything else in Cairn 127.
+
 ## From Cairn 125
 
 Files: `MeshCore-HeltecV4KitV1-Cairn125-2026-10-29-full.bin` and `-update.bin`.

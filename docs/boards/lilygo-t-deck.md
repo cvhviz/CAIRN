@@ -41,6 +41,15 @@ The same files run on the T-Deck and the T-Deck Plus. Write the `-full.bin` or t
 - **Enter finishes the text field** (from Cairn 113): Send in a chat, Done, OK or Save elsewhere. The trackball click still selects what is highlighted.
 - **Radios by keys:** 1, 2 and 3 pick the LoRa, Wi-Fi and Bluetooth tabs (from Cairn 114). The LoRa tab lands on Advert (from Cairn 113), and the advert sheet opens with Send focused, so Advert, then a click, sends a zero-hop advert.
 
+## From Cairn 127
+
+Files: `MeshCore-TDeckPlus-Cairn127-2026-11-03-full.bin` and `-update.bin`.
+
+- **The trackball keeps up with a slow roll.** Some balls send few pulses: the driver now counts both edges of each, and a single stray pulse in a new direction waits for a second one, so the cursor doesn't jump back or sideways. Checked on a third T-Deck. If it now feels too quick, set **Settings › Hardware › Buttons › Trackball** to Medium.
+- **Block a node:** long-press it in Nodes, or **Block…** in a node's More sheet or a chat's actions. **Settings › LoRa › Contacts › Blocked** unblocks.
+- **Live page** (Settings › Wi-Fi): the radio live in a browser on the same Wi-Fi. Checked on a T-Deck.
+- **Sharper text:** small text in the Medium weight, dim text in the full text colour.
+
 ## From Cairn 126
 
 Files: `MeshCore-TDeckPlus-Cairn126-2026-11-01-full.bin` and `-update.bin`.

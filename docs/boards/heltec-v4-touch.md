@@ -33,6 +33,8 @@ The full L2 touch interface: home dashboard, chats with an on-screen keyboard an
 
 From Cairn 114: the Radios page with LoRa, Wi-Fi and Bluetooth tabs and a full-screen Traffic log with packet details, the Storage page with Files, and the card's `Maps`, `Music`, `Recordings`, `Sounds` and `Pictures` folders (maps in `cairn/maps` move by themselves). USB drive mode isn't on this board.
 
+From Cairn 127 (files `MeshCore-HeltecV4Touch-Cairn127-2026-11-03-full.bin` and `-update.bin`): **blocking nodes** (long-press in Nodes; Settings › LoRa › Contacts › Blocked), the **live page** (Settings › Wi-Fi), **USB drive mode** (Settings › Storage), and **sharper text** (Medium weight, dim text in the full text colour).
+
 From Cairn 126 (files `MeshCore-HeltecV4Touch-Cairn126-2026-11-01-full.bin` and `-update.bin`): **portrait by default** on a fresh device (a saved orientation is kept), and **Cyrillic** letters show as text in messages, names and lists (reading only).
 
 From Cairn 123 (files `MeshCore-HeltecV4Touch-Cairn123-2026-10-25-full.bin` and `-update.bin`): no more **"Watchdog (stall)" restarts from a full node list**: with the list at or near its 350-node limit, saving it to flash could take long enough that the watchdog restarted the device. The save now checks in with the watchdog as it goes. Not yet checked on a device.

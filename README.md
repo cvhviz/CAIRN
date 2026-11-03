@@ -10,21 +10,22 @@
 **[Download the latest release](https://github.com/cvhviz/CAIRN/releases/latest)** · [Files for every board](docs/downloads.md) · [Install guides](#install-and-update) · [Manual (PDF)](docs/Cairn_Firmware_Manual_Dark.pdf) · [Report a problem](#reporting-a-problem)
 
 <!-- Bump this section with each cairn-vN release. Nothing else in this README names the current build. -->
-## Latest release: Cairn 126 (1 Nov 2026)
+## Latest release: Cairn 127 (3 Nov 2026)
 
-- **Cyrillic in messages and names** ([#25](https://github.com/cvhviz/CAIRN/issues/25), [#3](https://github.com/cvhviz/CAIRN/issues/3)) on the T-Deck, L2 Pro, Heltec V4 touch, M9 and T-LoRa Pager. Reading only: there is no Cyrillic keyboard.
-- **T-Deck:** the trackball follows a slow roll, with Fast, Medium and Slow settings, and Screen: Inverted for panels that show colours as negatives.
-- **Wio Tracker L1:** the battery percent agrees with the app ([#36](https://github.com/cvhviz/CAIRN/issues/36)), and the e-ink build has Flip screen ([#33](https://github.com/cvhviz/CAIRN/issues/33)).
-- **New to test:** the [LilyGO T5 E-Paper S3 Pro](docs/experimental.md) ([#22](https://github.com/cvhviz/CAIRN/issues/22)) and the [LilyGO T-Display K230](docs/experimental.md), as experimental builds.
+- **Block a node on the device:** everything it sends is dropped. On the touch boards, the M9, the T-Deck, the T-Display SF32, the Wio Tracker L1 family and the T096.
+- **Live page:** the radio, packets and nodes heard, live in a browser on the same Wi-Fi (Settings › Wi-Fi › Live page) on the L2 Pro, Heltec V4 touch, M9, T-Deck and T-LoRa Pager.
+- **Sharper text** on the colour screens, and **larger text and music controls on the wheel** on the T-LoRa Pager.
+- **T096:** a page for each node, with Ping and Block. **T-Deck:** the trackball keeps up with a slow roll.
+- **To test, as experimental builds:** the [LilyGO T5 E-Paper S3 Pro](docs/experimental.md) with text at the panel's full resolution, the [SenseCAP MeshPager X2](docs/experimental.md), and the [Heltec V4 + Expansion Kit V1](docs/experimental.md).
 
-[Cairn 126 release notes](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v126) · [all releases](https://github.com/cvhviz/CAIRN/releases)
+[Cairn 127 release notes](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v127) · [all releases](https://github.com/cvhviz/CAIRN/releases)
 
 ## Download
 
 Every board's files are in the **[latest release](https://github.com/cvhviz/CAIRN/releases/latest)**, under **Assets**. GitHub lists them in alphabetical order, so look for your board's name. Every file is named
 
 ```
-MeshCore-<Board>-Cairn<N>-<date>[-<variant>].<ext>     for example MeshCore-WioL2Pro-Cairn126-2026-11-01-update.bin
+MeshCore-<Board>-Cairn<N>-<date>[-<variant>].<ext>     for example MeshCore-WioL2Pro-Cairn127-2026-11-03-update.bin
 ```
 
 The splash screen shows **BUILD N**, so you can match a device to its release. `SHA256SUMS.txt` in each release covers every file: `shasum -a 256 -c SHA256SUMS.txt`. The **[downloads page](docs/downloads.md)** lists every file for every board, including the preview and experimental builds.
@@ -60,7 +61,7 @@ The splash screen shows **BUILD N**, so you can match a device to its release. `
 | --- | --- | --- | --- |
 | [Wio Tracker L2 Pro](docs/boards/wio-tracker-l2-pro.md) | 3.2" touchscreen | ✅ | `WioL2Pro`: `-full.bin`, `-update.bin` |
 | [Wio Tracker L1 Pro](docs/boards/wio-tracker-l1-pro.md) | OLED or e-ink, joystick | ✅ | `WioL1Pro`, `DV1`, `WioL1Eink`, `WioL1RoomServer`: `.uf2` |
-| [LilyGO T5 E-Paper S3 Pro](docs/experimental.md) | 4.7" touch e-paper | experimental | `T5EpaperPro`: in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t5epd-126) |
+| [LilyGO T5 E-Paper S3 Pro](docs/experimental.md) | 4.7" touch e-paper | experimental | `T5EpaperPro`: in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t5epd-127) |
 | [LilyGO T-Display K230](docs/experimental.md) | AMOLED touchscreen, Linux | experimental | `TDisplayK230`: in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tdisplay-k230-126) |
 | [SenseCAP MeshPager X2](docs/experimental.md) | colour screen, d-pad | experimental | `MeshPagerX2`: in its [experimental releases](https://github.com/cvhviz/CAIRN/releases?q=meshpager-x2&expanded=true) |
 | [XIAO ESP32-S3, XIAO ESP32-S3 + Wio-SX1262](docs/boards/preview-boards.md) | optional OLED, one button | 🧪 | in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview) |
@@ -72,7 +73,7 @@ The L1 Pro has three companion builds, one per screen (the stock SH1106 OLED, th
 | Board | Screen and input | Status | Files (`MeshCore-<Board>-…`) |
 | --- | --- | --- | --- |
 | [V4-R8 + Expansion Kit V2 (touch)](docs/boards/heltec-v4-touch.md) | 2.8" touchscreen | ✅ | `HeltecV4Touch`: `-full.bin`, `-update.bin` |
-| [V4 + Expansion Kit V1 (touch)](docs/boards/heltec-v4-kit-v1.md) | 2.8" touchscreen, no map | 🧪 | `HeltecV4KitV1`: `-full.bin`, `-update.bin` |
+| [V4 + Expansion Kit V1 (touch)](docs/boards/heltec-v4-kit-v1.md) | 2.8" touchscreen, no map | experimental | `HeltecV4KitV1`: in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-heltec-kitv1-127) (from Cairn 127) |
 | [Mesh Node T096](docs/boards/heltec-t096.md) | 0.96" colour TFT, one button | ✅ | `HeltecT096`: `-ble.uf2`, `-usb.uf2` |
 | [Mesh Node T096 repeater](docs/boards/compact-repeater.md) | 0.96" colour TFT, one button | ✅ beta | `HeltecT096`: `-repeater.uf2` |
 | [T114, V2, V3, V4, V4-R8, Wireless Tracker V1 and V2 repeaters](docs/boards/compact-repeater.md) | TFT or OLED, one button | 🧪 | `HeltecT114`: `-repeater.uf2`; the ESP32 boards `-repeater-full.bin`, `-repeater-update.bin` |

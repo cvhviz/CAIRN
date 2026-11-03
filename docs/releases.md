@@ -36,7 +36,7 @@ The L2 Pro, Heltec V4 touch (Kit V2 and Kit V1), ThinkNode M9, T-Deck, T-LoRa Pa
 |---|---|
 | Seeed Wio Tracker L2 Pro | `MeshCore-WioL2Pro-CairnN-YYYY-MM-DD-update.bin` |
 | Heltec V4-R8 + Expansion Kit V2 (touch) | `MeshCore-HeltecV4Touch-CairnN-YYYY-MM-DD-update.bin` |
-| Heltec V4 + Expansion Kit V1 (touch), untested preview | `MeshCore-HeltecV4KitV1-CairnN-YYYY-MM-DD-update.bin` |
+| Heltec V4 + Expansion Kit V1 (touch), experimental from Cairn 127 (not in the normal release, so a kit's check finds nothing newer than 126) | `MeshCore-HeltecV4KitV1-CairnN-YYYY-MM-DD-update.bin` |
 | Elecrow ThinkNode M9 | `MeshCore-ThinkNodeM9-CairnN-YYYY-MM-DD-update.bin` |
 | LilyGO T-Deck / T-Deck Plus | `MeshCore-TDeckPlus-CairnN-YYYY-MM-DD-update.bin` |
 | LilyGO T-LoRa Pager (SX1262) | `MeshCore-TLoraPager-CairnN-YYYY-MM-DD-update.bin` |

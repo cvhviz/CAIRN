@@ -57,6 +57,16 @@ Unlock: click the wheel twice, or press BOOT twice. Power off on battery puts th
 - **Battery saver** (Settings › Hardware › Display › Batt. saver, off by default): while the screen is dark the chip sleeps between radio packets. Not yet measured on a Pager.
 - **The clock** keeps time through a power off (the board's real-time clock), set again from GPS or the app.
 
+## From Cairn 127
+
+Files: `MeshCore-TLoraPager-Cairn127-2026-11-03-full.bin` and `-update.bin` (SX1262); `MeshCore-TLoraPagerLR1121-Cairn127-2026-11-03-full.bin` and `-update.bin` (LR1121).
+
+- **Larger, sharper text**, two steps up, with the battery graph and spectrum widened to use the screen.
+- **Music on the wheel:** the controls start hidden; OK shows them, the wheel moves between them, and there is a Stop button. Back hides them first.
+- **Graphs scrub with the wheel:** once a cursor line is up (Battery, Wi-Fi scan, Spectrum), the wheel moves it until Back.
+- **Fast typing:** rolling from Space onto the next key types the space and the letter instead of a digit.
+- **Block a node** and the **Live page**, as on the other touch-interface boards.
+
 ## From Cairn 125
 
 Files: `MeshCore-TLoraPager-Cairn125-2026-10-29-full.bin` and `-update.bin` (SX1262); `MeshCore-TLoraPagerLR1121-Cairn125-2026-10-29-full.bin` and `-update.bin` (LR1121).

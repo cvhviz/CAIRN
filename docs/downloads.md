@@ -56,8 +56,7 @@ Status: ✅ tested on hardware · ✅ beta: tested, new to Cairn · 🧪 preview
 |---|---|---|---|
 | [V4-R8 + Expansion Kit V2 (touch)](boards/heltec-v4-touch.md) | ✅ | `MeshCore-HeltecV4Touch-CairnN-<date>-full.bin` | first install or recovery, at `0x0` (erases everything) |
 | | | `MeshCore-HeltecV4Touch-CairnN-<date>-update.bin` | update over Wi-Fi, or over USB at `0x10000` |
-| [V4 + Expansion Kit V1 (touch)](boards/heltec-v4-kit-v1.md) | 🧪 | `MeshCore-HeltecV4KitV1-CairnN-<date>-full.bin` | first install or recovery, at `0x0` (erases everything) |
-| | | `MeshCore-HeltecV4KitV1-CairnN-<date>-update.bin` | update over Wi-Fi, or over USB at `0x10000` |
+| [V4 + Expansion Kit V1 (touch)](boards/heltec-v4-kit-v1.md) | experimental | `MeshCore-HeltecV4KitV1-CairnN-<date>-full.bin` | from Cairn 127, in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-heltec-kitv1-127), not the normal one |
 | [Mesh Node T096](boards/heltec-t096.md) | ✅ | `MeshCore-HeltecT096-CairnN-<date>-ble.uf2` | companion over Bluetooth (the main build) |
 | | | `MeshCore-HeltecT096-CairnN-<date>-usb.uf2` | companion over USB serial (no Bluetooth, no GPS page) |
 | [Mesh Node T096 repeater](boards/compact-repeater.md) | ✅ beta | `MeshCore-HeltecT096-CairnN-<date>-repeater.uf2` | compact repeater |
