@@ -77,6 +77,16 @@ The companion build with the default Color theme. These were rendered by the fir
 | ![Home in the Color theme](../screens/t096/theme-color.png)<br>Color (default) | ![Home in the Dark theme](../screens/t096/theme-dark.png)<br>Dark | ![Home in the Night theme](../screens/t096/theme-night.png)<br>Night |
 | ![Home in the Soft theme](../screens/t096/theme-soft.png)<br>Soft | ![Home in the Stock theme](../screens/t096/theme-stock.png)<br>Stock | |
 
+## From Cairn 128
+
+Files: `MeshCore-HeltecT096-Cairn128-2026-11-07-ble.uf2` and `-usb.uf2`.
+
+- **The time and the date on Home.** The first Home page shows the clock large, in the device's own time zone, with the date above it ("--:--" until the clock is set). **Queued** moved to the bottom row.
+- **A Messages page** after Home on the click ring: the last messages heard, three to a screen, newest first; a hold shows the next three older and wraps.
+- **The Nodes page's hold pages through the heard list again**, as before 127. 127's per-node page (a cursor, then Ping / Block) is gone: four presses to reach the third node was too many for one button, and the app does both. **Settings › Blocked** stays for unblocking.
+- **One Send advert in the Menu.** Its hold asks Zero hop advert / Flood advert / Cancel; the separate Flood advert row is gone.
+- **Firmware updates from the Cairn app over Bluetooth** no longer hang on an unbonded link: the bootloader advertises openly, and the app finds it.
+
 ## From Cairn 127
 
 Files: `MeshCore-HeltecT096-Cairn127-2026-11-03-ble.uf2` and `-usb.uf2`.
