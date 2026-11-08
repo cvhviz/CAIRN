@@ -10,22 +10,21 @@
 **[Download the latest release](https://github.com/cvhviz/CAIRN/releases/latest)** · [Files for every board](docs/downloads.md) · [Install guides](#install-and-update) · [Manual (PDF)](docs/Cairn_Firmware_Manual_Dark.pdf) · [Report a problem](#reporting-a-problem)
 
 <!-- Bump this section with each cairn-vN release. Nothing else in this README names the current build. -->
-## Latest release: Cairn 128 (7 Nov 2026)
+## Latest release: Cairn 129 (7 Nov 2026)
 
-- **Time zones around the world** (Settings › Clock › Time zone), with their daylight-saving rules, on the L2 Pro, Heltec V4 touch, M9, T-Deck and T-LoRa Pager. **Chats open at the first unread message** on the same boards.
-- **T096:** the local time and the date on Home, and a Messages page. **Wio Tracker L1:** the joystick turns for the case (Settings › Display › Joystick).
-- **T-Deck:** a GPS baud-rate setting, and its colours back after the inversion since 126.
-- **Bluetooth firmware updates from the Cairn app** no longer hang on an nRF52 board on an unbonded link.
-- **To test, as experimental builds** (still on Cairn 127): the [LilyGO T5 E-Paper S3 Pro](docs/experimental.md), the [SenseCAP MeshPager X2](docs/experimental.md), and the [Heltec V4 + Expansion Kit V1](docs/experimental.md).
+- **The time zone shows on the T096 and the Wio Tracker L1 family:** they showed UTC whatever zone the Cairn app set. CairnOS 1.5 now sets it from your phone each time it connects.
+- **T096 and the other one-button boards:** a dashboard Home page (clock, date and zone, link and GPS, nodes and uptime) and **Settings › Time zone**.
+- **T096:** TX power up to 18 again.
+- **To test, as experimental builds:** the [Heltec T114 companion](docs/experimental.md) (new, Cairn 129), and still on Cairn 127 the [LilyGO T5 E-Paper S3 Pro](docs/experimental.md), the [SenseCAP MeshPager X2](docs/experimental.md) and the [Heltec V4 + Expansion Kit V1](docs/experimental.md).
 
-[Cairn 128 release notes](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v128) · [all releases](https://github.com/cvhviz/CAIRN/releases)
+[Cairn 129 release notes](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v129) · [all releases](https://github.com/cvhviz/CAIRN/releases)
 
 ## Download
 
 Every board's files are in the **[latest release](https://github.com/cvhviz/CAIRN/releases/latest)**, under **Assets**. GitHub lists them in alphabetical order, so look for your board's name. Every file is named
 
 ```
-MeshCore-<Board>-Cairn<N>-<date>[-<variant>].<ext>     for example MeshCore-WioL2Pro-Cairn128-2026-11-07-update.bin
+MeshCore-<Board>-Cairn<N>-<date>[-<variant>].<ext>     for example MeshCore-WioL2Pro-Cairn129-2026-11-07-update.bin
 ```
 
 The splash screen shows **BUILD N**, so you can match a device to its release. `SHA256SUMS.txt` in each release covers every file: `shasum -a 256 -c SHA256SUMS.txt`. The **[downloads page](docs/downloads.md)** lists every file for every board, including the preview and experimental builds.

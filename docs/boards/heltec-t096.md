@@ -77,6 +77,15 @@ The companion build with the default Color theme. These were rendered by the fir
 | ![Home in the Color theme](../screens/t096/theme-color.png)<br>Color (default) | ![Home in the Dark theme](../screens/t096/theme-dark.png)<br>Dark | ![Home in the Night theme](../screens/t096/theme-night.png)<br>Night |
 | ![Home in the Soft theme](../screens/t096/theme-soft.png)<br>Soft | ![Home in the Stock theme](../screens/t096/theme-stock.png)<br>Stock | |
 
+## From Cairn 129
+
+Files: `MeshCore-HeltecT096-Cairn129-2026-11-07-ble.uf2` and `-usb.uf2`.
+
+- **The time zone the Cairn app sets now shows.** It used to write a field the screen never read, so Home showed UTC. CairnOS 1.5 sets the zone from your phone each time it connects (Device Info › Clock), daylight saving included; a zone set the old way is picked up at boot.
+- **Settings › Time zone**, for a radio without a phone: a fixed UTC offset ("UTC-5", "UTC+5:30"). A hold steps an hour west and wraps from -12 to +14; Home follows at once.
+- **Home is a dashboard.** The clock large at the top left with the date and the zone beside it; the phone link (Connected, the pairing PIN or Bluetooth off) with the GPS at the right; the nodes heard and the newest advert's age with the uptime; and the bottom row as before (Storage low / hold: read / Queued). Without a set clock it reads "--:--  not synced / app or GPS".
+- **TX power up to 18 again** (16 since 119). Every setting from 15 up gives about 28 dBm at the antenna on the T096, so 17 and 18 add current and heat rather than range; a saved value above 18 is lowered to 18 at boot.
+
 ## From Cairn 128
 
 Files: `MeshCore-HeltecT096-Cairn128-2026-11-07-ble.uf2` and `-usb.uf2`.

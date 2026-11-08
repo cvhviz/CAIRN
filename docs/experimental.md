@@ -17,6 +17,7 @@ Compared with 🧪 **preview** boards (built from the same tree in every normal 
 
 | Board | Build | Date | What it is for |
 |---|---|---|---|
+| Heltec Mesh Node T114 (companion) | [Cairn 129](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t114-129) | 7 Nov 2026 | First companion build ([#44](https://github.com/cvhviz/CAIRN/issues/44)): the T096's one-button screen on the T114's display, white on black. Builds; not yet run on a T114. The T114 repeater stays in the normal releases |
 | LilyGO T5 E-Paper S3 Pro (H752-01) | [Cairn 127](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t5epd-127) | 3 Nov 2026 | Text at the panel's own 960x540 resolution, sharp instead of blocky; USB drive mode and the live page; a recovery for a panel power chip left latched by a crash ([#22](https://github.com/cvhviz/CAIRN/issues/22)) |
 | LilyGO T-Display K230 Kit (LR2021) | [Cairn 126](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tdisplay-k230-126) | 1 Nov 2026 | First build, tested on one kit: a Linux program, installed from the console. No Bluetooth |
 | Heltec V4 + Expansion Kit V1 | [Cairn 127](https://github.com/cvhviz/CAIRN/releases/tag/experimental-heltec-kitv1-127) | 3 Nov 2026 | Cairn 127 with the blank-screen fix to try (the kit's power switch held as Meshtastic and MeshCore hold it). Out of the normal release until a kit confirms it |
