@@ -17,6 +17,8 @@ Compared with 🧪 **preview** boards (built from the same tree in every normal 
 
 | Board | Build | Date | What it is for |
 |---|---|---|---|
+| Heltec Vision Master T190 (companion) | [Cairn 130](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t190-130) | 10 Nov 2026 | First build: the wheel-driven Cairn screen on the T190's 1.9" display, the app over Bluetooth and Wi-Fi. Bluetooth and USB-serial images |
+| Heltec WiFi LoRa 32 V3 (companion) | [Cairn 130](https://github.com/cvhviz/CAIRN/releases/tag/experimental-heltec-v3-130) | 10 Nov 2026 | The T096's one-button screen on the V3's OLED, Bluetooth and USB-serial images. Builds; not run on a V3 since the Cairn 107 preview. The V3 repeater stays in the normal release |
 | Heltec Mesh Node T114 (companion) | [Cairn 129](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t114-129) | 7 Nov 2026 | First companion build ([#44](https://github.com/cvhviz/CAIRN/issues/44)): the T096's one-button screen on the T114's display, white on black. Builds; not yet run on a T114. The T114 repeater stays in the normal releases |
 | LilyGO T5 E-Paper S3 Pro (H752-01) | [Cairn 127](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t5epd-127) | 3 Nov 2026 | Text at the panel's own 960x540 resolution, sharp instead of blocky; USB drive mode and the live page; a recovery for a panel power chip left latched by a crash ([#22](https://github.com/cvhviz/CAIRN/issues/22)) |
 | LilyGO T-Display K230 Kit (LR2021) | [Cairn 126](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tdisplay-k230-126) | 1 Nov 2026 | First build, tested on one kit: a Linux program, installed from the console. No Bluetooth |

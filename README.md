@@ -10,21 +10,21 @@
 **[Download the latest release](https://github.com/cvhviz/CAIRN/releases/latest)** · [Files for every board](docs/downloads.md) · [Install guides](#install-and-update) · [Manual (PDF)](docs/Cairn_Firmware_Manual_Dark.pdf) · [Report a problem](#reporting-a-problem)
 
 <!-- Bump this section with each cairn-vN release. Nothing else in this README names the current build. -->
-## Latest release: Cairn 129 (7 Nov 2026)
+## Latest release: Cairn 130 (10 Nov 2026)
 
-- **The time zone shows on the T096 and the Wio Tracker L1 family:** they showed UTC whatever zone the Cairn app set. CairnOS 1.5 now sets it from your phone each time it connects.
-- **T096 and the other one-button boards:** a dashboard Home page (clock, date and zone, link and GPS, nodes and uptime) and **Settings › Time zone**.
-- **T096:** TX power up to 18 again.
-- **To test, as experimental builds:** the [Heltec T114 companion](docs/experimental.md) (new, Cairn 129), and still on Cairn 127 the [LilyGO T5 E-Paper S3 Pro](docs/experimental.md), the [SenseCAP MeshPager X2](docs/experimental.md) and the [Heltec V4 + Expansion Kit V1](docs/experimental.md).
+- **No more freeze when an advert arrives** on the touch and key boards (Wio L2 Pro, ThinkNode M9, T-Deck, T-LoRa Pager, Heltec V4 touch). With a full contact list, every advert was followed by a rewrite of the whole list that took up to 7.65 seconds and held the screen. A save now writes only the contacts that changed and waits for a pause in your taps and keys.
+- **"Overwrite oldest" no longer costs half a second an advert:** the contacts' stored adverts live in one file.
+- **A reset in the middle of a save** leaves the old list or the new one, never a mix.
+- **To test, as experimental builds:** the [Heltec Vision Master T190 companion](docs/experimental.md) and the [Heltec WiFi LoRa 32 V3 companion](docs/experimental.md) (new, Cairn 130), and still on earlier builds the [Heltec T114 companion](docs/experimental.md) (129), the [LilyGO T5 E-Paper S3 Pro](docs/experimental.md), the [SenseCAP MeshPager X2](docs/experimental.md) and the [Heltec V4 + Expansion Kit V1](docs/experimental.md) (127).
 
-[Cairn 129 release notes](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v129) · [all releases](https://github.com/cvhviz/CAIRN/releases)
+[Cairn 130 release notes](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v130) · [all releases](https://github.com/cvhviz/CAIRN/releases)
 
 ## Download
 
 Every board's files are in the **[latest release](https://github.com/cvhviz/CAIRN/releases/latest)**, under **Assets**. GitHub lists them in alphabetical order, so look for your board's name. Every file is named
 
 ```
-MeshCore-<Board>-Cairn<N>-<date>[-<variant>].<ext>     for example MeshCore-WioL2Pro-Cairn129-2026-11-07-update.bin
+MeshCore-<Board>-Cairn<N>-<date>[-<variant>].<ext>     for example MeshCore-WioL2Pro-Cairn130-2026-11-10-update.bin
 ```
 
 The splash screen shows **BUILD N**, so you can match a device to its release. `SHA256SUMS.txt` in each release covers every file: `shasum -a 256 -c SHA256SUMS.txt`. The **[downloads page](docs/downloads.md)** lists every file for every board, including the preview and experimental builds.
