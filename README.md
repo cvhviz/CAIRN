@@ -73,7 +73,7 @@ The L1 Pro has three companion builds, one per screen (the stock SH1106 OLED, th
 | Board | Screen and input | Status | Files (`MeshCore-<Board>-…`) |
 | --- | --- | --- | --- |
 | [V4-R8 + Expansion Kit V2 (touch)](docs/boards/heltec-v4-touch.md) | 2.8" touchscreen | ✅ | `HeltecV4Touch`: `-full.bin`, `-update.bin` |
-| [V4 + Expansion Kit V1 (touch)](docs/boards/heltec-v4-kit-v1.md) | 2.8" touchscreen, no map | ✅ beta | `HeltecV4KitV1`: `-full.bin`, `-update.bin` (in the normal release from Cairn 130) |
+| [V4 + Expansion Kit V1 (touch)](docs/boards/heltec-v4-kit-v1.md) | 2.8" touchscreen, no map | ✅ | `HeltecV4KitV1`: `-full.bin`, `-update.bin` (in the normal release from Cairn 130) |
 | [Mesh Node T096](docs/boards/heltec-t096.md) | 0.96" colour TFT, one button | ✅ | `HeltecT096`: `-ble.uf2`, `-usb.uf2` |
 | [Mesh Node T096 repeater](docs/boards/compact-repeater.md) | 0.96" colour TFT, one button | ✅ | `HeltecT096`: `-repeater.uf2` |
 | [T114, V2, V3, V4, V4-R8, Wireless Tracker V1 and V2 repeaters](docs/boards/compact-repeater.md) | TFT or OLED, one button | 🧪 | `HeltecT114`: `-repeater.uf2`; the ESP32 boards `-repeater-full.bin`, `-repeater-update.bin` |
