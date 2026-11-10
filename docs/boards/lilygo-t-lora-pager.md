@@ -1,6 +1,6 @@
 # LilyGO T-LoRa Pager
 
-✅ Tested on hardware, beta · ESP32-S3 · [install with esptool or the web flasher](../install/esp32-s3.md) · updates over Wi-Fi (from Cairn 125 on)
+✅ Tested on hardware · ESP32-S3 · [install with esptool or the web flasher](../install/esp32-s3.md) · updates over Wi-Fi (from Cairn 125 on)
 
 The T-LoRa Pager is a handheld with:
 - an ESP32-S3 (16 MB flash, 8 MB PSRAM)
@@ -12,7 +12,7 @@ The T-LoRa Pager is a handheld with:
 
 Cairn runs the same interface as the [Wio Tracker L2 Pro](wio-tracker-l2-pro.md) on it, laid out for the wide screen and run from the keys, as on the [ThinkNode M9](thinknode-m9.md) and the [T-Deck](lilygo-t-deck.md). A ring shows what is selected. Typing goes straight into chats and text fields. The [Cairn manual](../Cairn_Firmware_Manual_Dark.pdf) describes the screens.
 
-**Beta** means it is tested on hardware but new to Cairn. On a Pager (SX1262) it has run with the screen, the keyboard, the side wheel and its click, Back, the quick panel, Lift to wake and the radio; a tester reported the rest of the first test build's checklist working. The one problem found, the microSD card not mounting so Maps said low memory ([#34](https://github.com/cvhviz/CAIRN/issues/34)), is fixed in Cairn 125 but not yet re-checked on a Pager. The LR1121 file has not run on a Pager yet, and Cairn's full automated on-device test suite hasn't been run on it.
+Out of beta from Cairn 130. On a Pager (SX1262) it has run with the screen, the keyboard, the side wheel and its click, Back, the quick panel, Lift to wake and the radio; a tester reported the rest of the first test build's checklist working. The one problem found, the microSD card not mounting so Maps said low memory ([#34](https://github.com/cvhviz/CAIRN/issues/34)), is fixed in Cairn 125 but not yet re-checked on a Pager. The LR1121 file has not run on a Pager yet, and Cairn's full automated on-device test suite hasn't been run on it.
 
 ## Which file
 

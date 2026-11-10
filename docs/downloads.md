@@ -23,9 +23,9 @@ Status: ✅ tested on hardware · ✅ beta: tested, new to Cairn · 🧪 preview
 
 | Board | Status | File | Use |
 |---|---|---|---|
-| [T-Deck / T-Deck Plus](boards/lilygo-t-deck.md) | ✅ beta | `MeshCore-TDeckPlus-CairnN-<date>-full.bin` | first install or recovery, at `0x0` (erases everything, and removes an SD-card launcher) |
+| [T-Deck / T-Deck Plus](boards/lilygo-t-deck.md) | ✅ | `MeshCore-TDeckPlus-CairnN-<date>-full.bin` | first install or recovery, at `0x0` (erases everything, and removes an SD-card launcher) |
 | | | `MeshCore-TDeckPlus-CairnN-<date>-update.bin` | update over Wi-Fi, over USB at `0x10000`, or from a launcher's SD card |
-| [T-LoRa Pager](boards/lilygo-t-lora-pager.md) | ✅ beta | `MeshCore-TLoraPager-CairnN-<date>-full.bin` | SX1262 (most units): first install or recovery, at `0x0` (erases everything) |
+| [T-LoRa Pager](boards/lilygo-t-lora-pager.md) | ✅ | `MeshCore-TLoraPager-CairnN-<date>-full.bin` | SX1262 (most units): first install or recovery, at `0x0` (erases everything) |
 | | | `MeshCore-TLoraPager-CairnN-<date>-update.bin` | SX1262: update over Wi-Fi, or over USB at `0x10000` |
 | | | `MeshCore-TLoraPagerLR1121-CairnN-<date>-full.bin` | LR1121: first install or recovery, at `0x0` (erases everything) |
 | | | `MeshCore-TLoraPagerLR1121-CairnN-<date>-update.bin` | LR1121: update over Wi-Fi, or over USB at `0x10000` |
