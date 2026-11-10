@@ -1,6 +1,6 @@
 # Heltec WiFi LoRa 32 V4 + Expansion Kit V1 (touch)
 
-🧪 Preview: **not yet tested on hardware** · ESP32-S3 · [install with esptool or the web flasher](../install/esp32-s3.md) · updates over Wi-Fi
+✅ Beta · ESP32-S3 · [install with esptool or the web flasher](../install/esp32-s3.md) · updates over Wi-Fi
 
 The plain Heltec V4 (ESP32-S3, 16 MB flash, 2 MB quad PSRAM; SX1262 with a GC1109 front end on a V4.2 or a KCT8103L on a V4.3) in Heltec's Expansion Kit V1 case, with a 2.8" 240×320 ST7789 touchscreen and a piezo. From Cairn 121 it runs the same touch interface as the [Expansion Kit V2 build](heltec-v4-touch.md), without the map.
 
@@ -37,9 +37,13 @@ PRG is the only button this build uses. Heltec's datasheet shows a second case b
 - **FEM LNA:** on a V4.3 (KCT8103L) the tile works; on a V4.2 (GC1109, no LNA switch) it reads "Not on this radio". Boosted RX stays on both.
 - The Spectrum page, chats, nodes, repeater admin, Wi-Fi with online updates, the Wi-Fi and Bluetooth scanners, the Battery page, Battery saver and portrait mode (the Quick panel's Rotate) are as on the [Kit V2 build](heltec-v4-touch.md#features).
 
+## From Cairn 130
+
+The Kit V1 build is in the normal release again (`MeshCore-HeltecV4KitV1-Cairn130-2026-11-10-full.bin` and `-update.bin`), so a kit's online update (Settings › System › Firmware update) finds it. It has everything in Cairn 130: with a full contact list a save writes only the contacts that changed, and no longer holds the screen after an advert.
+
 ## From Cairn 127
 
-The Kit V1 build is an [experimental pre-release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-heltec-kitv1-127) (`MeshCore-HeltecV4KitV1-Cairn127-2026-11-03-full.bin`), out of the normal release until a kit confirms the blank-screen fix: the kit's power switch (GPIO 36) held as Meshtastic and MeshCore hold it. A kit's online update does not offer it; flash it by hand. It has everything else in Cairn 127.
+For Cairn 127 to 129 the Kit V1 build was an [experimental pre-release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-heltec-kitv1-127) (`MeshCore-HeltecV4KitV1-Cairn127-2026-11-03-full.bin`), out of the normal release until a kit confirms the blank-screen fix: the kit's power switch (GPIO 36) held as Meshtastic and MeshCore hold it. A kit's online update does not offer it; flash it by hand. It has everything else in Cairn 127.
 
 ## From Cairn 125
 

@@ -15,7 +15,8 @@
 - **No more freeze when an advert arrives** on the touch and key boards (Wio L2 Pro, ThinkNode M9, T-Deck, T-LoRa Pager, Heltec V4 touch). With a full contact list, every advert was followed by a rewrite of the whole list that took up to 7.65 seconds and held the screen. A save now writes only the contacts that changed and waits for a pause in your taps and keys.
 - **"Overwrite oldest" no longer costs half a second an advert:** the contacts' stored adverts live in one file.
 - **A reset in the middle of a save** leaves the old list or the new one, never a mix.
-- **To test, as experimental builds:** the [Heltec Vision Master T190 companion](docs/experimental.md) and the [Heltec WiFi LoRa 32 V3 companion](docs/experimental.md) (new, Cairn 130), and still on earlier builds the [Heltec T114 companion](docs/experimental.md) (129), the [LilyGO T5 E-Paper S3 Pro](docs/experimental.md), the [SenseCAP MeshPager X2](docs/experimental.md) and the [Heltec V4 + Expansion Kit V1](docs/experimental.md) (127).
+- **The Heltec V4 + Expansion Kit V1** is in the normal release from this build (it was experimental since 127), so a kit's online update finds it again.
+- **To test, as experimental builds:** the [Heltec Vision Master T190 companion](docs/experimental.md) and the [Heltec WiFi LoRa 32 V3 companion](docs/experimental.md) (new, Cairn 130), and still on earlier builds the [Heltec T114 companion](docs/experimental.md) (129), the [LilyGO T5 E-Paper S3 Pro](docs/experimental.md) and the [SenseCAP MeshPager X2](docs/experimental.md) (127).
 
 [Cairn 130 release notes](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v130) · [all releases](https://github.com/cvhviz/CAIRN/releases)
 
@@ -72,9 +73,9 @@ The L1 Pro has three companion builds, one per screen (the stock SH1106 OLED, th
 | Board | Screen and input | Status | Files (`MeshCore-<Board>-…`) |
 | --- | --- | --- | --- |
 | [V4-R8 + Expansion Kit V2 (touch)](docs/boards/heltec-v4-touch.md) | 2.8" touchscreen | ✅ | `HeltecV4Touch`: `-full.bin`, `-update.bin` |
-| [V4 + Expansion Kit V1 (touch)](docs/boards/heltec-v4-kit-v1.md) | 2.8" touchscreen, no map | experimental | `HeltecV4KitV1`: in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-heltec-kitv1-127) (from Cairn 127) |
+| [V4 + Expansion Kit V1 (touch)](docs/boards/heltec-v4-kit-v1.md) | 2.8" touchscreen, no map | ✅ beta | `HeltecV4KitV1`: `-full.bin`, `-update.bin` (in the normal release from Cairn 130) |
 | [Mesh Node T096](docs/boards/heltec-t096.md) | 0.96" colour TFT, one button | ✅ | `HeltecT096`: `-ble.uf2`, `-usb.uf2` |
-| [Mesh Node T096 repeater](docs/boards/compact-repeater.md) | 0.96" colour TFT, one button | ✅ beta | `HeltecT096`: `-repeater.uf2` |
+| [Mesh Node T096 repeater](docs/boards/compact-repeater.md) | 0.96" colour TFT, one button | ✅ | `HeltecT096`: `-repeater.uf2` |
 | [T114, V2, V3, V4, V4-R8, Wireless Tracker V1 and V2 repeaters](docs/boards/compact-repeater.md) | TFT or OLED, one button | 🧪 | `HeltecT114`: `-repeater.uf2`; the ESP32 boards `-repeater-full.bin`, `-repeater-update.bin` |
 | [V2, V3, V4, V4-R8 (OLED), Wireless Tracker V1 and V2, T1 companions](docs/boards/preview-boards.md) | OLED or colour TFT, one button | 🧪 | in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview) |
 

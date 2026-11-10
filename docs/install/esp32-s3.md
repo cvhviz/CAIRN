@@ -1,6 +1,6 @@
 # Installing on ESP32-S3 boards (esptool or web flasher)
 
-For the Seeed Wio Tracker L2 Pro, the Heltec V4 touch builds (Expansion Kit V2, and the untested Kit V1 preview), the Elecrow ThinkNode M9, the LilyGO T-Deck and T-LoRa Pager, the ESP32 [compact repeaters](../boards/compact-repeater.md) and the ESP32 [preview boards](../boards/preview-boards.md), including the few on the [original ESP32](#original-esp32-boards). Your board's files are on the [downloads page](../downloads.md).
+For the Seeed Wio Tracker L2 Pro, the Heltec V4 touch builds (Expansion Kit V2 and Kit V1), the Elecrow ThinkNode M9, the LilyGO T-Deck and T-LoRa Pager, the ESP32 [compact repeaters](../boards/compact-repeater.md) and the ESP32 [preview boards](../boards/preview-boards.md), including the few on the [original ESP32](#original-esp32-boards). Your board's files are on the [downloads page](../downloads.md).
 
 Each ESP32 board has two files in a release:
 
@@ -104,7 +104,7 @@ esptool flash-id       # older esptool: esptool.py flash_id
 
 `flash-id` prints the chip line (type, revision and features such as *Embedded PSRAM 8MB*) and the *Detected flash size*. `esptool chip-id` (older: `chip_id`) prints the chip line without the flash size.
 
-The **Heltec V4 touch build needs a V4-R8** (reports *Embedded PSRAM 8MB*; 16 MB flash, octal PSRAM) **fitted in the Expansion Kit V2** (2.8" touchscreen). A standard V4 reports *2MB* PSRAM: in the Expansion Kit V1 it needs the untested `HeltecV4KitV1` build (from Cairn 121, [Kit V1 page](../boards/heltec-v4-kit-v1.md)), and with only the OLED the `HeltecV4` [preview build](../boards/preview-boards.md); on a standard V4 the Kit V2 touch image's octal PSRAM setup fails and the board boot-loops. A V4-R8 with only the OLED needs the `HeltecV4R8` preview build. The L2 Pro has 16 MB flash and 8 MB PSRAM on its Wio-S3 module.
+The **Heltec V4 touch build needs a V4-R8** (reports *Embedded PSRAM 8MB*; 16 MB flash, octal PSRAM) **fitted in the Expansion Kit V2** (2.8" touchscreen). A standard V4 reports *2MB* PSRAM: in the Expansion Kit V1 it needs the `HeltecV4KitV1` build (from Cairn 121, [Kit V1 page](../boards/heltec-v4-kit-v1.md)), and with only the OLED the `HeltecV4` [preview build](../boards/preview-boards.md); on a standard V4 the Kit V2 touch image's octal PSRAM setup fails and the board boot-loops. A V4-R8 with only the OLED needs the `HeltecV4R8` preview build. The L2 Pro has 16 MB flash and 8 MB PSRAM on its Wio-S3 module.
 
 **esptool can't connect.** Put the board in download mode by hand (see above), try another cable or USB port, and close anything else holding the serial port (the MeshCore web app, a serial monitor, another flasher tab). The ThinkNode M9 has no download-mode buttons: replug it instead, and on Windows install WCH's CH340 driver if no COM port appears.
 

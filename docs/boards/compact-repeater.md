@@ -1,12 +1,12 @@
 # Compact repeater
 
-✅ Beta on the Heltec T096, 🧪 preview on the other boards · nRF52840 and ESP32 · [install](#install) · no Wi-Fi updates
+✅ Tested on the Heltec T096, 🧪 preview on the other boards · nRF52840 and ESP32 · [install](#install) · no Wi-Fi updates
 
 A repeater image for small one-button boards with a screen. It is the standard MeshCore repeater (the same mesh behaviour, CLI and remote admin) with a minimal Cairn screen and a power save that turns the screen and the TX LED off.
 
 | Board | Screen | Status | File |
 |---|---|---|---|
-| Heltec Mesh Node T096 | 0.96" colour TFT | ✅ beta | `MeshCore-HeltecT096-CairnN-<date>-repeater.uf2` |
+| Heltec Mesh Node T096 | 0.96" colour TFT | ✅ | `MeshCore-HeltecT096-CairnN-<date>-repeater.uf2` |
 | Heltec T114 | 1.14" TFT | 🧪 | `MeshCore-HeltecT114-CairnN-<date>-repeater.uf2` |
 | Heltec WiFi LoRa 32 V2 | 0.96" OLED | 🧪 | `MeshCore-HeltecV2-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` |
 | Heltec WiFi LoRa 32 V3 | 0.96" OLED | 🧪 | `MeshCore-HeltecV3-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` |

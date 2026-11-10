@@ -11,7 +11,7 @@ Experimental builds are for testing: a new board brought up before it has been o
 - **Keep a copy of your current firmware** to go back to, and back up your node's identity first (see [Before a first install](install/esp32-s3.md#before-a-first-install-back-up-your-identity)).
 - Each release's notes say what to test and what to send back. Most ask for a **serial log**: the build prints what it finds as it starts, and every button press, over USB.
 
-Compared with 🧪 **preview** boards (built from the same tree in every normal release, untried on hardware), an experimental build is a one-off made to answer specific questions; once a board works, it moves into the normal releases. The LilyGO T-LoRa Pager did that in Cairn 125 ([its page](boards/lilygo-t-lora-pager.md)); its first test build stays in [the experimental releases](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tlora-pager-124).
+Compared with 🧪 **preview** boards (built from the same tree in every normal release, untried on hardware), an experimental build is a one-off made to answer specific questions; once a board works, it moves into the normal releases. The Heltec V4 + Expansion Kit V1 did that in Cairn 130 ([its page](boards/heltec-v4-kit-v1.md)). The LilyGO T-LoRa Pager did that in Cairn 125 ([its page](boards/lilygo-t-lora-pager.md)); its first test build stays in [the experimental releases](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tlora-pager-124).
 
 ## Current
 
@@ -22,7 +22,6 @@ Compared with 🧪 **preview** boards (built from the same tree in every normal 
 | Heltec Mesh Node T114 (companion) | [Cairn 129](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t114-129) | 7 Nov 2026 | First companion build ([#44](https://github.com/cvhviz/CAIRN/issues/44)): the T096's one-button screen on the T114's display, white on black. Builds; not yet run on a T114. The T114 repeater stays in the normal releases |
 | LilyGO T5 E-Paper S3 Pro (H752-01) | [Cairn 127](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t5epd-127) | 3 Nov 2026 | Text at the panel's own 960x540 resolution, sharp instead of blocky; USB drive mode and the live page; a recovery for a panel power chip left latched by a crash ([#22](https://github.com/cvhviz/CAIRN/issues/22)) |
 | LilyGO T-Display K230 Kit (LR2021) | [Cairn 126](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tdisplay-k230-126) | 1 Nov 2026 | First build, tested on one kit: a Linux program, installed from the console. No Bluetooth |
-| Heltec V4 + Expansion Kit V1 | [Cairn 127](https://github.com/cvhviz/CAIRN/releases/tag/experimental-heltec-kitv1-127) | 3 Nov 2026 | Cairn 127 with the blank-screen fix to try (the kit's power switch held as Meshtastic and MeshCore hold it). Out of the normal release until a kit confirms it |
 | Seeed SenseCAP MeshPager X2 | [Cairn 127](https://github.com/cvhviz/CAIRN/releases/tag/experimental-meshpager-x2-127) | 3 Nov 2026 | Cairn 127's changes (blocking, the live page, sharper text). Bring-up continues |
 
 ## Sending a log
