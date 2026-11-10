@@ -1,6 +1,6 @@
 # Elecrow ThinkNode M9
 
-✅ Tested on hardware, beta · ESP32-S3 · [install with esptool or the web flasher](../install/esp32-s3.md) · updates over Wi-Fi (Settings › System › Firmware update)
+✅ Tested on hardware · ESP32-S3 · [install with esptool or the web flasher](../install/esp32-s3.md) · updates over Wi-Fi (Settings › System › Firmware update)
 
 The ThinkNode M9 is a handheld with:
 - an ESP32-S3 (16 MB flash, 8 MB PSRAM)
@@ -13,7 +13,7 @@ The ThinkNode M9 is a handheld with:
 
 Cairn runs the same interface as the [Wio Tracker L2 Pro](wio-tracker-l2-pro.md) on it, driven by the keys: a ring shows what is selected, the d-pad moves it and OK taps it, exactly as a finger would. Typing goes straight into chats. The [Cairn manual](../Cairn_Firmware_Manual_Dark.pdf) describes the screens and the M9's keys.
 
-**Beta** means it is tested on hardware but new to Cairn. It passes Cairn's full on-device test suite (13 of 13): boot, the Home cards, Settings, the quick panel, the lock screen, Radio, Spectrum and Band scan, the GPS map, a walk over every page and sheet by keys, and quick key runs. Some features haven't been tried on the M9 yet; they are listed under [Known issues](#known-issues).
+Out of beta from Cairn 130. It passes Cairn's full on-device test suite (13 of 13): boot, the Home cards, Settings, the quick panel, the lock screen, Radio, Spectrum and Band scan, the GPS map, a walk over every page and sheet by keys, and quick key runs. Some features haven't been tried on the M9 yet; they are listed under [Known issues](#known-issues).
 
 ## Which file
 

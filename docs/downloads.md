@@ -79,7 +79,7 @@ Status: ✅ tested on hardware · ✅ beta: tested, new to Cairn · 🧪 preview
 
 | Board | Status | File | Use |
 |---|---|---|---|
-| [ThinkNode M9](boards/thinknode-m9.md) | ✅ beta | `MeshCore-ThinkNodeM9-CairnN-<date>-full.bin` | first install or recovery, at `0x0` (erases everything); also the way in from Elecrow's firmware, Meshtastic or stock MeshCore |
+| [ThinkNode M9](boards/thinknode-m9.md) | ✅ | `MeshCore-ThinkNodeM9-CairnN-<date>-full.bin` | first install or recovery, at `0x0` (erases everything); also the way in from Elecrow's firmware, Meshtastic or stock MeshCore |
 | | | `MeshCore-ThinkNodeM9-CairnN-<date>-update.bin` | update over Wi-Fi, or over USB at `0x10000` |
 
 🧪 Preview, in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview): ThinkNode M2.
