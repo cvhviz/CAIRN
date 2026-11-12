@@ -57,6 +57,12 @@ Unlock: click the wheel twice, or press BOOT twice. Power off on battery puts th
 - **Battery saver** (Settings › Hardware › Display › Batt. saver, off by default): while the screen is dark the chip sleeps between radio packets. Not yet measured on a Pager.
 - **The clock** keeps time through a power off (the board's real-time clock), set again from GPS or the app.
 
+## From Cairn 131
+
+Files: `MeshCore-TLoraPager-Cairn131-2026-11-11-full.bin` and `-update.bin` (SX1262); `MeshCore-TLoraPagerLR1121-Cairn131-2026-11-11-full.bin` and `-update.bin` (LR1121).
+
+- **Every time zone shows** in Settings › Clock › Time zone: the list stopped after the first four of Europe & Africa ([#50](https://github.com/cvhviz/CAIRN/issues/50), [#38](https://github.com/cvhviz/CAIRN/issues/38)).
+
 ## From Cairn 128
 
 Files: `MeshCore-TLoraPager-Cairn128-2026-11-07-full.bin` and `-update.bin` (SX1262); `MeshCore-TLoraPagerLR1121-Cairn128-2026-11-07-full.bin` and `-update.bin` (LR1121).

@@ -24,7 +24,7 @@ Files in the current preview release, [Cairn 107 preview](https://github.com/cvh
 | **nRF52840 (`.uf2`: double-tap Reset, copy)** | | |
 | 🧪 B&Q Nano G2 Ultra | `MeshCore-NanoG2Ultra-Cairn107-2026-10-05-ble.uf2` | companion over Bluetooth |
 |  | `MeshCore-NanoG2Ultra-Cairn107-2026-10-05-usb.uf2` | companion over USB serial |
-| 🧪 GAT562 30S Mesh Kit | `MeshCore-GAT562MeshKit-Cairn107-2026-10-05-ble.uf2` | companion over Bluetooth |
+| 🧪 GAT562 30S Mesh Kit (from Cairn 131 on the L1 Pro's interface, in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-gat562-131)) | `MeshCore-GAT562MeshKit-Cairn107-2026-10-05-ble.uf2` | companion over Bluetooth |
 |  | `MeshCore-GAT562MeshKit-Cairn107-2026-10-05-usb.uf2` | companion over USB serial |
 | 🧪 GAT562 Mesh Tracker Pro | `MeshCore-GAT562TrackerPro-Cairn107-2026-10-05-ble.uf2` | companion over Bluetooth |
 |  | `MeshCore-GAT562TrackerPro-Cairn107-2026-10-05-usb.uf2` | companion over USB serial |
@@ -59,7 +59,7 @@ Files in the current preview release, [Cairn 107 preview](https://github.com/cvh
 |  | `MeshCore-HeltecV4-Cairn107-2026-10-05-ble-update.bin` | companion over Bluetooth; update: `0x10000` |
 |  | `MeshCore-HeltecV4-Cairn107-2026-10-05-usb-full.bin` | companion over USB serial; first install or recovery: `0x0` after a full erase |
 |  | `MeshCore-HeltecV4-Cairn107-2026-10-05-usb-update.bin` | companion over USB serial; update: `0x10000` |
-| 🧪 Heltec V4-R8, 8 MB PSRAM (OLED, no Expansion Kit) | `MeshCore-HeltecV4R8-Cairn107-2026-10-05-ble-full.bin` | companion over Bluetooth; first install or recovery: `0x0` after a full erase |
+| 🧪 Heltec V4-R8, 8 MB PSRAM (OLED, no Expansion Kit): ✅ in the normal release from Cairn 131, see [its page](heltec-one-button.md) | `MeshCore-HeltecV4R8-Cairn107-2026-10-05-ble-full.bin` | companion over Bluetooth; first install or recovery: `0x0` after a full erase |
 |  | `MeshCore-HeltecV4R8-Cairn107-2026-10-05-ble-update.bin` | companion over Bluetooth; update: `0x10000` |
 |  | `MeshCore-HeltecV4R8-Cairn107-2026-10-05-usb-full.bin` | companion over USB serial; first install or recovery: `0x0` after a full erase |
 |  | `MeshCore-HeltecV4R8-Cairn107-2026-10-05-usb-update.bin` | companion over USB serial; update: `0x10000` |
@@ -67,7 +67,7 @@ Files in the current preview release, [Cairn 107 preview](https://github.com/cvh
 |  | `MeshCore-HeltecTracker-Cairn107-2026-10-05-ble-update.bin` | companion over Bluetooth; update: `0x10000` |
 |  | `MeshCore-HeltecTracker-Cairn107-2026-10-05-usb-full.bin` | companion over USB serial; first install or recovery: `0x0` after a full erase |
 |  | `MeshCore-HeltecTracker-Cairn107-2026-10-05-usb-update.bin` | companion over USB serial; update: `0x10000` |
-| 🧪 Heltec Wireless Tracker V2 (colour TFT) | `MeshCore-HeltecTrackerV2-Cairn107-2026-10-05-ble-full.bin` | companion over Bluetooth; first install or recovery: `0x0` after a full erase |
+| 🧪 Heltec Wireless Tracker V2 (colour TFT): ✅ in the normal release from Cairn 131, see [its page](heltec-one-button.md) | `MeshCore-HeltecTrackerV2-Cairn107-2026-10-05-ble-full.bin` | companion over Bluetooth; first install or recovery: `0x0` after a full erase |
 |  | `MeshCore-HeltecTrackerV2-Cairn107-2026-10-05-ble-update.bin` | companion over Bluetooth; update: `0x10000` |
 |  | `MeshCore-HeltecTrackerV2-Cairn107-2026-10-05-usb-full.bin` | companion over USB serial; first install or recovery: `0x0` after a full erase |
 |  | `MeshCore-HeltecTrackerV2-Cairn107-2026-10-05-usb-update.bin` | companion over USB serial; update: `0x10000` |

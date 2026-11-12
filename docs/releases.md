@@ -43,4 +43,6 @@ The L2 Pro, Heltec V4 touch (Kit V2 and Kit V1), ThinkNode M9, T-Deck, T-LoRa Pa
 | LilyGO T-LoRa Pager (LR1121) | `MeshCore-TLoraPagerLR1121-CairnN-YYYY-MM-DD-update.bin` |
 | LilyGO T-Display SF32 | `MeshCore-TDisplaySF32-CairnN-YYYY-MM-DD-update.bin` |
 
+The one-button ESP32 companions in the release from Cairn 131, the Heltec Wireless Tracker V2 (`MeshCore-HeltecTrackerV2-CairnN-YYYY-MM-DD-ble-update.bin`) and the V4-R8 with its OLED (`MeshCore-HeltecV4R8-CairnN-YYYY-MM-DD-ble-update.bin`), have Wi-Fi for the app but don't update over it: the `-ble` between the date and `-update.bin` keeps them apart from the names above. The experimental ThinkNode M9 USB build (from Cairn 131) carries the M9's update name, so its online update installs the normal (Bluetooth) M9 build.
+
 Back to the [README](../README.md).

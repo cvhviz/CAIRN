@@ -41,6 +41,12 @@ The same files run on the T-Deck and the T-Deck Plus. Write the `-full.bin` or t
 - **Enter finishes the text field** (from Cairn 113): Send in a chat, Done, OK or Save elsewhere. The trackball click still selects what is highlighted.
 - **Radios by keys:** 1, 2 and 3 pick the LoRa, Wi-Fi and Bluetooth tabs (from Cairn 114). The LoRa tab lands on Advert (from Cairn 113), and the advert sheet opens with Send focused, so Advert, then a click, sends a zero-hop advert.
 
+## From Cairn 131
+
+Files: `MeshCore-TDeckPlus-Cairn131-2026-11-11-full.bin` and `-update.bin`.
+
+- **Every time zone shows** in Settings › Clock › Time zone: the list stopped after the first four of Europe & Africa ([#50](https://github.com/cvhviz/CAIRN/issues/50), [#38](https://github.com/cvhviz/CAIRN/issues/38)).
+
 ## From Cairn 128
 
 Files: `MeshCore-TDeckPlus-Cairn128-2026-11-07-full.bin` and `-update.bin`.

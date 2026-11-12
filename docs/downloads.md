@@ -61,19 +61,23 @@ Status: ✅ tested on hardware · ✅ beta: tested, new to Cairn · 🧪 preview
 | [Mesh Node T096](boards/heltec-t096.md) | ✅ | `MeshCore-HeltecT096-CairnN-<date>-ble.uf2` | companion over Bluetooth (the main build) |
 | | | `MeshCore-HeltecT096-CairnN-<date>-usb.uf2` | companion over USB serial (no Bluetooth, no GPS page) |
 | [Mesh Node T096 repeater](boards/compact-repeater.md) | ✅ | `MeshCore-HeltecT096-CairnN-<date>-repeater.uf2` | compact repeater |
-| Mesh Node T114 companion | experimental | `MeshCore-HeltecT114-CairnN-<date>-companion.uf2` | from Cairn 129, in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t114-129), not the normal one ([#44](https://github.com/cvhviz/CAIRN/issues/44)) |
+| Mesh Node T114 companion | experimental | `MeshCore-HeltecT114-CairnN-<date>-companion.uf2` | in colour from Cairn 131, in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t114-131), not the normal one ([#44](https://github.com/cvhviz/CAIRN/issues/44), [#51](https://github.com/cvhviz/CAIRN/issues/51)) |
 | Vision Master T190 companion | experimental | `MeshCore-HeltecT190-CairnN-<date>-ble-full.bin`, `-usb-full.bin` | from Cairn 130, in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t190-130), not the normal one |
 | [T114 repeater](boards/compact-repeater.md) | 🧪 | `MeshCore-HeltecT114-CairnN-<date>-repeater.uf2` | compact repeater |
 | [WiFi LoRa 32 V2 repeater](boards/compact-repeater.md) | 🧪 | `MeshCore-HeltecV2-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` | compact repeater: first install at `0x0` / update at `0x10000` |
 | WiFi LoRa 32 V3 companion | experimental | `MeshCore-HeltecV3-CairnN-<date>-ble-full.bin`, `-usb-full.bin` | from Cairn 130, in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-heltec-v3-130), not the normal one |
 | [WiFi LoRa 32 V3 repeater](boards/compact-repeater.md) | 🧪 | `MeshCore-HeltecV3-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` | compact repeater |
 | [WiFi LoRa 32 V4 repeater](boards/compact-repeater.md) | 🧪 | `MeshCore-HeltecV4-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` | compact repeater |
+| [V4-R8 (OLED) companion](boards/heltec-one-button.md) | ✅ beta | `MeshCore-HeltecV4R8-CairnN-<date>-ble-full.bin` | first install or recovery, at `0x0` (erases everything). From Cairn 131 |
+| | | `MeshCore-HeltecV4R8-CairnN-<date>-ble-update.bin` | update over USB at `0x10000` (no Wi-Fi updates) |
 | [V4-R8 repeater](boards/compact-repeater.md) | 🧪 | `MeshCore-HeltecV4R8-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` | compact repeater |
 | [Wireless Tracker V1 repeater](boards/compact-repeater.md) | 🧪 | `MeshCore-HeltecTracker-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` | compact repeater |
+| [Wireless Tracker V2 companion](boards/heltec-one-button.md) | ✅ beta | `MeshCore-HeltecTrackerV2-CairnN-<date>-ble-full.bin` | first install or recovery, at `0x0` (erases everything). From Cairn 131 |
+| | | `MeshCore-HeltecTrackerV2-CairnN-<date>-ble-update.bin` | update over USB at `0x10000` (no Wi-Fi updates) |
 | [Wireless Tracker V2 repeater](boards/compact-repeater.md) | 🧪 | `MeshCore-HeltecTrackerV2-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` | compact repeater |
 
 - **Which V4?** `esptool chip-id` reports *Embedded PSRAM 8MB* on a V4-R8 and *2MB* on a standard V4. The Kit V2 touch build needs the V4-R8; on a standard V4 it boot-loops ([details](boards/heltec-v4-touch.md)).
-- 🧪 Preview companions, in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview): V2, V3, V4 and V4-R8 with their OLED, Wireless Tracker V1 and V2, and T1. Their files have `-ble` or `-usb` in the name, where the repeaters above have `-repeater`.
+- 🧪 Preview companions, in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview): V2, V3 and V4 with their OLED, Wireless Tracker V1, and T1. Their files have `-ble` or `-usb` in the name, where the repeaters above have `-repeater`. The Wireless Tracker V2 and V4-R8 (OLED) companions are in the normal release from Cairn 131.
 
 ## Elecrow ThinkNode
 
@@ -81,6 +85,7 @@ Status: ✅ tested on hardware · ✅ beta: tested, new to Cairn · 🧪 preview
 |---|---|---|---|
 | [ThinkNode M9](boards/thinknode-m9.md) | ✅ | `MeshCore-ThinkNodeM9-CairnN-<date>-full.bin` | first install or recovery, at `0x0` (erases everything); also the way in from Elecrow's firmware, Meshtastic or stock MeshCore |
 | | | `MeshCore-ThinkNodeM9-CairnN-<date>-update.bin` | update over Wi-Fi, or over USB at `0x10000` |
+| ThinkNode M9 USB companion | experimental | `MeshCore-ThinkNodeM9-CairnN-<date>-usb-full.bin` | the app protocol over the USB cable, from Cairn 131, in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-m9usb-131), not the normal one ([#52](https://github.com/cvhviz/CAIRN/issues/52)) |
 
 🧪 Preview, in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview): ThinkNode M2.
 
@@ -89,6 +94,7 @@ Status: ✅ tested on hardware · ✅ beta: tested, new to Cairn · 🧪 preview
 All in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview), with each file listed on [Preview boards](boards/preview-boards.md#boards-and-files):
 
 - **nRF52840 (`.uf2`):** RAK4631, RAK3401, ProMicro, B&Q Nano G2 Ultra, GAT562 30S Mesh Kit, GAT562 Mesh Tracker Pro, GAT562 Mesh Watch13, Meshtiny, Keepteen LT1.
+- **GAT562 30S Mesh Kit on the L1 Pro's interface** (the whole joystick): from Cairn 131, `MeshCore-GAT562MeshKit-CairnN-<date>-ble.uf2` and `-usb.uf2` in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-gat562-131) ([#45](https://github.com/cvhviz/CAIRN/issues/45)).
 - **ESP32-S3 (`.bin`):** Station G2 and G3 (USB build only), Meshnology W12, Ebyte EoRa-S3.
 - **Original ESP32 (`.bin`):** MeshAdventurer (SX1262, SX1268).
 

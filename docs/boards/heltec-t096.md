@@ -57,7 +57,7 @@ One button, two gestures (from Cairn 124): a **click** moves on, a **hold** open
   - **Fixed:** hop counts read "2 hops", not "(66)"; "Queued: 3" in place of "MSG: 3"; "Bluetooth off" in place of a pairing PIN; the battery icon follows a Li-ion curve and no longer dips with each send.
   - **Not yet checked on a device:** Brightness (needs a meter), GPS Eco, the low-battery power-off and the button wake from Hibernate, Storage low, the battery icon against a meter, and the drain with the screen dark.
 - Cairn splash in your theme's colours, with the build number.
-- Feet and °F, 12-hour clock.
+- Feet and °F; a 12-hour clock, or 24-hour from Cairn 131.
 
 ## Screens
 
@@ -76,6 +76,13 @@ The companion build with the default Color theme. These were rendered by the fir
 |---|---|---|
 | ![Home in the Color theme](../screens/t096/theme-color.png)<br>Color (default) | ![Home in the Dark theme](../screens/t096/theme-dark.png)<br>Dark | ![Home in the Night theme](../screens/t096/theme-night.png)<br>Night |
 | ![Home in the Soft theme](../screens/t096/theme-soft.png)<br>Soft | ![Home in the Stock theme](../screens/t096/theme-stock.png)<br>Stock | |
+
+## From Cairn 131
+
+Files: `MeshCore-HeltecT096-Cairn131-2026-11-11-ble.uf2` and `-usb.uf2`.
+
+- **12h / 24h clock** ([#51](https://github.com/cvhviz/CAIRN/issues/51)): Menu › Settings › Clock, under Time zone. A hold flips it, and Home follows at once ("7:05" with AM/PM small beside it, or "19:05"). It is the same setting as the L1 Pro's Clock, so the default is 12h: a T096 that showed 24h before shows 12h after the update until you switch it back. Checked on a T096.
+- The same one-button interface now runs on the [Heltec Wireless Tracker V2 and V4-R8 (OLED) companions](heltec-one-button.md), in the release from Cairn 131, and on the T114 in colour as an [experimental build](../experimental.md).
 
 ## From Cairn 129
 

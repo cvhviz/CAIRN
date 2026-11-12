@@ -37,6 +37,10 @@ PRG is the only button this build uses. Heltec's datasheet shows a second case b
 - **FEM LNA:** on a V4.3 (KCT8103L) the tile works; on a V4.2 (GC1109, no LNA switch) it reads "Not on this radio". Boosted RX stays on both.
 - The Spectrum page, chats, nodes, repeater admin, Wi-Fi with online updates, the Wi-Fi and Bluetooth scanners, the Battery page, Battery saver and portrait mode (the Quick panel's Rotate) are as on the [Kit V2 build](heltec-v4-touch.md#features).
 
+## From Cairn 131
+
+Files: `MeshCore-HeltecV4KitV1-Cairn131-2026-11-11-full.bin` and `-update.bin`. **Every time zone shows** in Settings › Clock › Time zone: the list stopped after the first four of Europe & Africa ([#50](https://github.com/cvhviz/CAIRN/issues/50), [#38](https://github.com/cvhviz/CAIRN/issues/38)).
+
 ## From Cairn 130
 
 The Kit V1 build is in the normal release again (`MeshCore-HeltecV4KitV1-Cairn130-2026-11-10-full.bin` and `-update.bin`), so a kit's online update (Settings › System › Firmware update) finds it. It has everything in Cairn 130: with a full contact list a save writes only the contacts that changed, and no longer holds the screen after an advert.

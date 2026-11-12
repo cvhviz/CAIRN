@@ -33,6 +33,8 @@ The full L2 touch interface: home dashboard, chats with an on-screen keyboard an
 
 From Cairn 114: the Radios page with LoRa, Wi-Fi and Bluetooth tabs and a full-screen Traffic log with packet details, the Storage page with Files, and the card's `Maps`, `Music`, `Recordings`, `Sounds` and `Pictures` folders (maps in `cairn/maps` move by themselves). USB drive mode isn't on this board.
 
+From Cairn 131 (files `MeshCore-HeltecV4Touch-Cairn131-2026-11-11-full.bin` and `-update.bin`): **every time zone shows** in Settings › Clock › Time zone. The list stopped after the first four of Europe & Africa, so Moscow, East Africa, Asia, Australia & Pacific and Custom were missing ([#50](https://github.com/cvhviz/CAIRN/issues/50), [#38](https://github.com/cvhviz/CAIRN/issues/38)).
+
 From Cairn 128 (files `MeshCore-HeltecV4Touch-Cairn128-2026-11-07-full.bin` and `-update.bin`): **time zones around the world** (Settings › Clock › Time zone: 31 zones by region with their daylight-saving rules, then Custom) and **chats that open at the first unread message**, with a "New messages" rule above it.
 
 From Cairn 127 (files `MeshCore-HeltecV4Touch-Cairn127-2026-11-03-full.bin` and `-update.bin`): **blocking nodes** (long-press in Nodes; Settings › LoRa › Contacts › Blocked), the **live page** (Settings › Wi-Fi), **USB drive mode** (Settings › Storage), and **sharper text** (Medium weight, dim text in the full text colour).
