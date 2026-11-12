@@ -1,6 +1,6 @@
 # Preview boards
 
-🧪 **Preview: these images build from the Cairn tree but haven't been tried on hardware yet.** They take the stock MeshCore companion setup for each board (pins, radio, power) and add Cairn's one-button interface from the [Heltec T096](heltec-t096.md), in colour with the T096's themes on the ST7735 boards (Heltec Wireless Tracker V1/V2, Heltec T1) and in monochrome on OLED boards, plus the Cairn splash and the fork's shared mesh, storage and radio fixes.
+🧪 **Preview: these images build from the Cairn tree but haven't been tried on hardware yet.** They take the stock MeshCore companion setup for each board (pins, radio, power) and add Cairn's one-button interface from the [Heltec T096](heltec-t096.md), in color with the T096's themes on the ST7735 boards (Heltec Wireless Tracker V1/V2, Heltec T1) and in monochrome on OLED boards, plus the Cairn splash and the fork's shared mesh, storage and radio fixes.
 
 If you try one, please [report back](#reporting), even if it just works. A board moves to ✅ once someone has used it on real hardware.
 
@@ -29,7 +29,7 @@ Files in the current preview release, [Cairn 107 preview](https://github.com/cvh
 | 🧪 GAT562 Mesh Tracker Pro | `MeshCore-GAT562TrackerPro-Cairn107-2026-10-05-ble.uf2` | companion over Bluetooth |
 |  | `MeshCore-GAT562TrackerPro-Cairn107-2026-10-05-usb.uf2` | companion over USB serial |
 | 🧪 GAT562 Mesh Watch13 | `MeshCore-GAT562Watch13-Cairn107-2026-10-05-ble.uf2` | companion over Bluetooth |
-| 🧪 Heltec T1 (colour TFT) | `MeshCore-HeltecT1-Cairn107-2026-10-05-ble.uf2` | companion over Bluetooth |
+| 🧪 Heltec T1 (color TFT) | `MeshCore-HeltecT1-Cairn107-2026-10-05-ble.uf2` | companion over Bluetooth |
 |  | `MeshCore-HeltecT1-Cairn107-2026-10-05-usb.uf2` | companion over USB serial |
 | 🧪 Keepteen LT1 | `MeshCore-KeepteenLT1-Cairn107-2026-10-05-ble.uf2` | companion over Bluetooth |
 |  | `MeshCore-KeepteenLT1-Cairn107-2026-10-05-usb.uf2` | companion over USB serial |
@@ -63,11 +63,11 @@ Files in the current preview release, [Cairn 107 preview](https://github.com/cvh
 |  | `MeshCore-HeltecV4R8-Cairn107-2026-10-05-ble-update.bin` | companion over Bluetooth; update: `0x10000` |
 |  | `MeshCore-HeltecV4R8-Cairn107-2026-10-05-usb-full.bin` | companion over USB serial; first install or recovery: `0x0` after a full erase |
 |  | `MeshCore-HeltecV4R8-Cairn107-2026-10-05-usb-update.bin` | companion over USB serial; update: `0x10000` |
-| 🧪 Heltec Wireless Tracker V1 (colour TFT) | `MeshCore-HeltecTracker-Cairn107-2026-10-05-ble-full.bin` | companion over Bluetooth; first install or recovery: `0x0` after a full erase |
+| 🧪 Heltec Wireless Tracker V1 (color TFT) | `MeshCore-HeltecTracker-Cairn107-2026-10-05-ble-full.bin` | companion over Bluetooth; first install or recovery: `0x0` after a full erase |
 |  | `MeshCore-HeltecTracker-Cairn107-2026-10-05-ble-update.bin` | companion over Bluetooth; update: `0x10000` |
 |  | `MeshCore-HeltecTracker-Cairn107-2026-10-05-usb-full.bin` | companion over USB serial; first install or recovery: `0x0` after a full erase |
 |  | `MeshCore-HeltecTracker-Cairn107-2026-10-05-usb-update.bin` | companion over USB serial; update: `0x10000` |
-| 🧪 Heltec Wireless Tracker V2 (colour TFT): ✅ in the normal release from Cairn 131, see [its page](heltec-one-button.md) | `MeshCore-HeltecTrackerV2-Cairn107-2026-10-05-ble-full.bin` | companion over Bluetooth; first install or recovery: `0x0` after a full erase |
+| 🧪 Heltec Wireless Tracker V2 (color TFT): ✅ in the normal release from Cairn 131, see [its page](heltec-one-button.md) | `MeshCore-HeltecTrackerV2-Cairn107-2026-10-05-ble-full.bin` | companion over Bluetooth; first install or recovery: `0x0` after a full erase |
 |  | `MeshCore-HeltecTrackerV2-Cairn107-2026-10-05-ble-update.bin` | companion over Bluetooth; update: `0x10000` |
 |  | `MeshCore-HeltecTrackerV2-Cairn107-2026-10-05-usb-full.bin` | companion over USB serial; first install or recovery: `0x0` after a full erase |
 |  | `MeshCore-HeltecTrackerV2-Cairn107-2026-10-05-usb-update.bin` | companion over USB serial; update: `0x10000` |

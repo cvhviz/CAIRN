@@ -2,7 +2,7 @@
 
 ✅ Tested on hardware · nRF52840 · [install with UF2](../install/nrf52-uf2.md)
 
-nRF52840, SX1262 LoRa, 0.96" 160×80 ST7735 colour TFT, one button and GPS. Cairn runs a themed one-button interface on it ([screens](#screens)). For a repeater on this board, see [Compact repeater](compact-repeater.md).
+nRF52840, SX1262 LoRa, 0.96" 160×80 ST7735 color TFT, one button and GPS. Cairn runs a themed one-button interface on it ([screens](#screens)). For a repeater on this board, see [Compact repeater](compact-repeater.md).
 
 ## Which file
 
@@ -35,7 +35,7 @@ One button, two gestures (from Cairn 124): a **click** moves on, a **hold** open
 - Themes: Dark, Color, Night, Soft and Stock (Settings > Theme).
 - Spectrum page with a scrolling RSSI history and NF / NOW / PK readouts, and the channel (frequency, SF, BW) under it (from Cairn 124; before, a Radio page of its own).
 - GPS page: fix, satellites and HDOP, position, altitude and the Maidenhead grid square (from Cairn 111).
-- Nodes (called Recent before Cairn 124) shows nodes whose clock isn't set yet (a freshly flashed T096 repeater, for example), labelled "unset" (from Cairn 113).
+- Nodes (called Recent before Cairn 124) shows nodes whose clock isn't set yet (a freshly flashed T096 repeater, for example), labeled "unset" (from Cairn 113).
 - TX power is shown at the antenna: the T096 has an amplifier, so a setting of 22 was really about 28 dBm. The setting stops at 16, where the amplifier is already at full output (from Cairn 122; 18 from Cairn 116).
 - Messages waiting for the phone app survive a reset, a flat battery or a reflash (from Cairn 119; before, only a commanded restart or power-off kept them).
 - **From Cairn 124** (files `MeshCore-HeltecT096-Cairn124-2026-10-29-ble.uf2` and `-usb.uf2`):
@@ -56,7 +56,7 @@ One button, two gestures (from Cairn 124): a **click** moves on, a **hold** open
   - **A quicker screen with less drain while dark:** only the changed lines are sent, on the faster SPI bus, and the BLE build advertises once a second after its first 30 s.
   - **Fixed:** hop counts read "2 hops", not "(66)"; "Queued: 3" in place of "MSG: 3"; "Bluetooth off" in place of a pairing PIN; the battery icon follows a Li-ion curve and no longer dips with each send.
   - **Not yet checked on a device:** Brightness (needs a meter), GPS Eco, the low-battery power-off and the button wake from Hibernate, Storage low, the battery icon against a meter, and the drain with the screen dark.
-- Cairn splash in your theme's colours, with the build number.
+- Cairn splash in your theme's colors, with the build number.
 - Feet and °F; a 12-hour clock, or 24-hour from Cairn 131.
 
 ## Screens
@@ -82,7 +82,7 @@ The companion build with the default Color theme. These were rendered by the fir
 Files: `MeshCore-HeltecT096-Cairn131-2026-11-11-ble.uf2` and `-usb.uf2`.
 
 - **12h / 24h clock** ([#51](https://github.com/cvhviz/CAIRN/issues/51)): Menu › Settings › Clock, under Time zone. A hold flips it, and Home follows at once ("7:05" with AM/PM small beside it, or "19:05"). It is the same setting as the L1 Pro's Clock, so the default is 12h: a T096 that showed 24h before shows 12h after the update until you switch it back. Checked on a T096.
-- The same one-button interface now runs on the [Heltec Wireless Tracker V2 and V4-R8 (OLED) companions](heltec-one-button.md), in the release from Cairn 131, and on the T114 in colour as an [experimental build](../experimental.md).
+- The same one-button interface now runs on the [Heltec Wireless Tracker V2 and V4-R8 (OLED) companions](heltec-one-button.md), in the release from Cairn 131, and on the T114 in color as an [experimental build](../experimental.md).
 
 ## From Cairn 129
 

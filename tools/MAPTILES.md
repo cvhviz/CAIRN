@@ -38,8 +38,8 @@ Fetching (`fetch`, or `build` from a network source) only needs the standard lib
 
 ## 3. Quick start
 
-Start with a synthetic test grid. It needs no network and no licence, and every tile shows its own
-`z/x/y`, its NW corner (lat, lon) and a centre crosshair. If the projection maths is wrong anywhere,
+Start with a synthetic test grid. It needs no network and no license, and every tile shows its own
+`z/x/y`, its NW corner (lat, lon) and a center crosshair. If the projection maths is wrong anywhere,
 the labels won't line up with your position and the node dots.
 
 ```sh
@@ -89,7 +89,7 @@ python3 tools/maptiles.py build --preset "local:http://127.0.0.1:8080/styles/bas
 | `estimate AREA --zoom A-B [SOURCE] [--format] [--sample K]` | Prints a per-zoom table: tiles, ft/px, miles across the 320 px screen, requests still needed (tiles not yet cached), MB, time, and quota days for Geoapify. `--sample K` converts K tiles per zoom to measure MB instead of guessing, fetching them if they aren't cached. |
 | `fetch AREA --zoom A-B [SOURCE] [NET]` | Downloads into the cache only. It's resumable. |
 | `build AREA --zoom A-B [SOURCE] [CONVERT] --out PATH --name SLUG` | Fetches what's missing (skip with `--no-fetch`), converts, and writes `PATH/Maps/SLUG/`. `--overwrite` replaces an existing set. `--title` (24 bytes or less) is the name shown on the device. |
-| `synth AREA --zoom A-B --out PATH [--name l2-test]` | Writes the offline test grid (16 colours or fewer, attribution "Synthetic test grid"). |
+| `synth AREA --zoom A-B --out PATH [--name l2-test]` | Writes the offline test grid (16 colors or fewer, attribution "Synthetic test grid"). |
 | `verify PATH/Maps/NAME` | Checks the manifest, `cov.*`, every block header and index, and decodes every record. It reports coverage per zoom and prints the name hash (the `map_set` pref). It exits 1 on any error. |
 | `selftest` | Runs the golden vectors G1–G3 and R1, the Mercator goldens, block dedupe and the denylist. It exits 0 or 1. |
 
@@ -121,7 +121,7 @@ python3 tools/maptiles.py build --preset "local:http://127.0.0.1:8080/styles/bas
 | `--hidpi-split` | Fetches z−1 @2x tiles and cuts each into 4. |
 
 How responses are handled:
-- **Retries** happen after 1, 2, 4, 8 and 16 s (±25%) and honour `Retry-After`.
+- **Retries** happen after 1, 2, 4, 8 and 16 s (±25%) and honor `Retry-After`.
 - **401/403** stops the run: the key is wrong, you're over quota, or the use isn't allowed.
 - **404/204/empty responses, and HTML returned with a 200,** are cached as "not available". Add
   `--retry-missing` to ask for them again.
@@ -131,15 +131,15 @@ How responses are handled:
 
 | Option | What it does |
 |---|---|
-| `--format p8rle` | The default. Up to 256 colours with run-length rows. A typical topo tile is about 15–30 KB; the worst case is 67 KB. |
-| `--format rgb565` | Raw format, 128 KB per tile. It's exact colour, but the card fills 5–8× faster. |
-| `--colors N` | Palette size for p8rle (256 or fewer). Tiles that already have 256 or fewer RGB565 colours keep them exactly. Others are quantized (Pillow fast octree). |
+| `--format p8rle` | The default. Up to 256 colors with run-length rows. A typical topo tile is about 15–30 KB; the worst case is 67 KB. |
+| `--format rgb565` | Raw format, 128 KB per tile. It's exact color, but the card fills 5–8× faster. |
+| `--colors N` | Palette size for p8rle (256 or fewer). Tiles that already have 256 or fewer RGB565 colors keep them exactly. Others are quantized (Pillow fast octree). |
 | `--filter night` | Inverts lightness and keeps hue: a dark map for night use. |
 | `--filter dim:N` | Brightness at N%. |
-| `--filter gray` | Greyscale. |
-| `--bg auto\|#RRGGBB` | The colour under transparent pixels, and the device's fill for missing tiles. `auto` uses the tiles' most common colour. |
+| `--filter gray` | Grayscale. |
+| `--bg auto\|#RRGGBB` | The color under transparent pixels, and the device's fill for missing tiles. `auto` uses the tiles' most common color. |
 
-## 5. Sources and licences (checked 2026-10-01)
+## 5. Sources and licenses (checked 2026-10-01)
 
 **The card you build is for your own personal use.** Don't share or sell it: most tile terms
 forbid redistributing cached tiles, and Thunderforest and the single-customer plans forbid it

@@ -27,7 +27,7 @@ Most boards enter download mode on their own when esptool or the web flasher con
 | LilyGO T-Deck / T-Deck Plus | switch it off, hold the **trackball** in (it is BOOT), switch it on, release |
 | LilyGO T-LoRa Pager | hold **BOOT** (top edge), tap **RST**, release **BOOT**. With Battery saver on, a dark Pager may be asleep and miss the automatic reset: press a key to wake it first, or use the buttons |
 | Wio Tracker L2 Pro | hold **Boot**, tap **Reset**, release **Boot** |
-| Heltec V4 (touch or OLED), V3, Wireless Tracker | hold **PRG** (also labelled USER), tap **RST**, release **PRG** |
+| Heltec V4 (touch or OLED), V3, Wireless Tracker | hold **PRG** (also labeled USER), tap **RST**, release **PRG** |
 | Most other boards | hold **BOOT** (or IO0), tap **RST** / **EN**, release **BOOT** |
 
 After writing, tap Reset once if the screen still shows the old firmware.

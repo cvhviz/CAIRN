@@ -6,7 +6,7 @@ From Cairn 131 these two boards have a Cairn companion in the normal release, ne
 
 | Board | Screen | Notes |
 |---|---|---|
-| Heltec Wireless Tracker V2 | 0.96" 160×80 colour TFT | built-in GPS; the T096's five themes (Menu › Settings › Theme). No PSRAM, so it keeps 200 contacts |
+| Heltec Wireless Tracker V2 | 0.96" 160×80 color TFT | built-in GPS; the T096's five themes (Menu › Settings › Theme). No PSRAM, so it keeps 200 contacts |
 | Heltec WiFi LoRa 32 V4-R8, OLED only (no Expansion Kit) | 0.96" 128×64 OLED, white on black | GPS with the Heltec GPS module fitted; 350 contacts, the mesh kept in the R8's PSRAM |
 
 The V4-R8 with the Expansion Kit V2 touchscreen has its own build: [Heltec V4 touch](heltec-v4-touch.md). A plain V4 (2 MB PSRAM) with only the OLED is still a 🧪 [preview board](preview-boards.md).

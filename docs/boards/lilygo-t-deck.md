@@ -6,7 +6,7 @@ The T-Deck is a handheld with:
 - an ESP32-S3 (16 MB flash, 8 MB PSRAM)
 - a Semtech SX1262 LoRa radio
 - a 2.8" 320×240 ST7789 touchscreen (GT911 touch)
-- a QWERTY keyboard (its own ESP32-C3 controller) and a trackball with a centre click
+- a QWERTY keyboard (its own ESP32-C3 controller) and a trackball with a center click
 - a microSD slot, a speaker (message chimes and tones, with a volume setting, from Cairn 109; music from Cairn 113), a microphone (voice notes from Cairn 113), and on the T-Deck Plus a GPS and a larger battery
 - native USB on its USB-C port (no USB-serial chip)
 
@@ -51,7 +51,7 @@ Files: `MeshCore-TDeckPlus-Cairn131-2026-11-11-full.bin` and `-update.bin`.
 
 Files: `MeshCore-TDeckPlus-Cairn128-2026-11-07-full.bin` and `-update.bin`.
 
-- **Colours back to normal.** Settings › Display › Screen's Standard choice applied the panel's init the wrong way round since 126, so a T-Deck that looked right on 125 came up as a negative on 126 and 127. Standard is the panel as it comes again; Inverted is the other way, for the batches that need it.
+- **Colors back to normal.** Settings › Display › Screen's Standard choice applied the panel's init the wrong way round since 126, so a T-Deck that looked right on 125 came up as a negative on 126 and 127. Standard is the panel as it comes again; Inverted is the other way, for the batches that need it.
 - **Settings › GPS › Baud rate:** Auto (38400, 9600, then 115200), or 9600 / 38400 / 115200 fixed, for a plain T-Deck with a module on its GPS pads. A pick asks the receiver again at once.
 - **Time zones** (Settings › Clock › Time zone) and **chats that open at the first unread message**, as on the other touch-interface boards.
 
@@ -62,14 +62,14 @@ Files: `MeshCore-TDeckPlus-Cairn127-2026-11-03-full.bin` and `-update.bin`.
 - **The trackball keeps up with a slow roll.** Some balls send few pulses: the driver now counts both edges of each, and a single stray pulse in a new direction waits for a second one, so the cursor doesn't jump back or sideways. Checked on a third T-Deck. If it now feels too quick, set **Settings › Hardware › Buttons › Trackball** to Medium.
 - **Block a node:** long-press it in Nodes, or **Block…** in a node's More sheet or a chat's actions. **Settings › LoRa › Contacts › Blocked** unblocks.
 - **Live page** (Settings › Wi-Fi): the radio live in a browser on the same Wi-Fi. Checked on a T-Deck.
-- **Sharper text:** small text in the Medium weight, dim text in the full text colour.
+- **Sharper text:** small text in the Medium weight, dim text in the full text color.
 
 ## From Cairn 126
 
 Files: `MeshCore-TDeckPlus-Cairn126-2026-11-01-full.bin` and `-update.bin`.
 
 - **The trackball follows a slow roll.** Some balls give only one pulse on a small roll: every pulse is now a move, and the ring stops when the ball does. **Settings › Hardware › Buttons › Trackball** sets Fast, Medium or Slow (1, 2 or 3 pulses a move). Measured on a second T-Deck.
-- **Screen: Inverted** (Settings › Display › PANEL), for a panel that shows every colour as its negative. Some T-Deck batches need it, and there's no way to detect them.
+- **Screen: Inverted** (Settings › Display › PANEL), for a panel that shows every color as its negative. Some T-Deck batches need it, and there's no way to detect them.
 - **Cyrillic** letters show as text in messages, names and lists. Reading only: there is no Cyrillic keyboard.
 
 ## From Cairn 123
@@ -82,10 +82,10 @@ Files: `MeshCore-TDeckPlus-Cairn123-2026-10-25-full.bin` and `-update.bin`.
 
 Files: `MeshCore-TDeckPlus-Cairn122-2026-10-25-full.bin` and `-update.bin`.
 
-- **Started from an SD-card launcher:** the online update no longer crashes the T-Deck ([#28](https://github.com/cvhviz/CAIRN/issues/28)). Under a launcher, Settings › System › Firmware update says "Started by a launcher: update from its SD card" and greys out Install; browser and Cairn Updater uploads are refused the same way, with no restart. About and the Firmware update page name the launcher's slot ("app1 · launcher"). **A T-Deck on Cairn 121 or earlier under a launcher still runs the old updater: don't use its online update.** Copy `MeshCore-TDeckPlus-Cairn122-2026-10-25-update.bin` to the card and install it from the launcher once. To get Wi-Fi updates instead, flash the `-full.bin` at `0x0` over USB once ([steps](../install/esp32-s3.md#t-deck-started-from-an-sd-card-launcher)); this removes the launcher.
+- **Started from an SD-card launcher:** the online update no longer crashes the T-Deck ([#28](https://github.com/cvhviz/CAIRN/issues/28)). Under a launcher, Settings › System › Firmware update says "Started by a launcher: update from its SD card" and grays out Install; browser and Cairn Updater uploads are refused the same way, with no restart. About and the Firmware update page name the launcher's slot ("app1 · launcher"). **A T-Deck on Cairn 121 or earlier under a launcher still runs the old updater: don't use its online update.** Copy `MeshCore-TDeckPlus-Cairn122-2026-10-25-update.bin` to the card and install it from the launcher once. To get Wi-Fi updates instead, flash the `-full.bin` at `0x0` over USB once ([steps](../install/esp32-s3.md#t-deck-started-from-an-sd-card-launcher)); this removes the launcher.
 - **RX sync and queue sync** (with CairnOS build 18 or later): the app catches up on what the radio heard during a dropped link, as far back as its journal reaches, and a message stays queued on the radio until the app has stored it; anything the radio had to drop is counted in the app. The official MeshCore apps get the same frames as before. Going back to Cairn 121 loses the messages waiting on the radio.
 - **Every radio preset the app offers** on the Radio page's preset picker: all 28, with their frequency and area, grouped by region with the one the device is in first; a preset with a path hash sets it too, and the device remembers which preset you picked. The Radio page's summary card shows the path hash next to the TX power.
-- **A locate button on the map:** a crosshair under the zoom and fit buttons centres the map on your position and follows it ("No position yet" when there is none); a second tap on the GPS tab does the same.
+- **A locate button on the map:** a crosshair under the zoom and fit buttons centers the map on your position and follows it ("No position yet" when there is none); a second tap on the GPS tab does the same.
 - **The position set from the app shows on the device:** with the GPS off, the map, distances and bearings, GPS data and Home's GPS card use it (GPS data labels it "(SAVED)" or "(LAST)").
 - **Radio settings over Wi-Fi:** a phone on the Trusted devices list ("Always allow") can apply a preset, a radio change or Repeat Mode over Wi-Fi, live; a phone allowed once is still refused. Command-line text over Wi-Fi is now limited like the other commands, so the app's Reboot, Power off, Set PIN and Wi-Fi commands work over Bluetooth only.
 - Also: a radio change no longer leaves the node deaf until it next sends, and a failed online install says why ("Update failed · <why>", shown again after the restart).

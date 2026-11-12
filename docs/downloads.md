@@ -61,7 +61,7 @@ Status: ✅ tested on hardware · ✅ beta: tested, new to Cairn · 🧪 preview
 | [Mesh Node T096](boards/heltec-t096.md) | ✅ | `MeshCore-HeltecT096-CairnN-<date>-ble.uf2` | companion over Bluetooth (the main build) |
 | | | `MeshCore-HeltecT096-CairnN-<date>-usb.uf2` | companion over USB serial (no Bluetooth, no GPS page) |
 | [Mesh Node T096 repeater](boards/compact-repeater.md) | ✅ | `MeshCore-HeltecT096-CairnN-<date>-repeater.uf2` | compact repeater |
-| Mesh Node T114 companion | experimental | `MeshCore-HeltecT114-CairnN-<date>-companion.uf2` | in colour from Cairn 131, in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t114-131), not the normal one ([#44](https://github.com/cvhviz/CAIRN/issues/44), [#51](https://github.com/cvhviz/CAIRN/issues/51)) |
+| Mesh Node T114 companion | experimental | `MeshCore-HeltecT114-CairnN-<date>-companion.uf2` | in color from Cairn 131, in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t114-131), not the normal one ([#44](https://github.com/cvhviz/CAIRN/issues/44), [#51](https://github.com/cvhviz/CAIRN/issues/51)) |
 | Vision Master T190 companion | experimental | `MeshCore-HeltecT190-CairnN-<date>-ble-full.bin`, `-usb-full.bin` | from Cairn 130, in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t190-130), not the normal one |
 | [T114 repeater](boards/compact-repeater.md) | 🧪 | `MeshCore-HeltecT114-CairnN-<date>-repeater.uf2` | compact repeater |
 | [WiFi LoRa 32 V2 repeater](boards/compact-repeater.md) | 🧪 | `MeshCore-HeltecV2-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` | compact repeater: first install at `0x0` / update at `0x10000` |

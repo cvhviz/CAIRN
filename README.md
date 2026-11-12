@@ -15,7 +15,7 @@
 - **Every time zone shows again** in Settings › Clock › Time zone on the touch and key boards (Wio L2 Pro, ThinkNode M9, T-Deck, T-LoRa Pager, both Heltec V4 touch kits): the list stopped after the first few of Europe & Africa ([#50](https://github.com/cvhviz/CAIRN/issues/50), [#38](https://github.com/cvhviz/CAIRN/issues/38)).
 - **A 12h / 24h clock on the T096** (Menu › Settings › Clock), and on the T114 ([#51](https://github.com/cvhviz/CAIRN/issues/51)).
 - **New in the release: companions for the Heltec Wireless Tracker V2 and the WiFi LoRa 32 V4-R8 (OLED)**, on the T096's one-button interface, with the app over Bluetooth or Wi-Fi. Both were run on the bench.
-- **To test, as experimental builds** (new, Cairn 131): the [Heltec T114 companion in colour](docs/experimental.md), the [GAT562 30S Mesh Kit on the L1 Pro's interface](docs/experimental.md) ([#45](https://github.com/cvhviz/CAIRN/issues/45)) and a [ThinkNode M9 USB companion](docs/experimental.md) ([#52](https://github.com/cvhviz/CAIRN/issues/52)); still on earlier builds the [Heltec Vision Master T190](docs/experimental.md) and [WiFi LoRa 32 V3](docs/experimental.md) companions (130), the [LilyGO T5 E-Paper S3 Pro](docs/experimental.md) and the [SenseCAP MeshPager X2](docs/experimental.md) (127).
+- **To test, as experimental builds** (new, Cairn 131): the [Heltec T114 companion in color](docs/experimental.md), the [GAT562 30S Mesh Kit on the L1 Pro's interface](docs/experimental.md) ([#45](https://github.com/cvhviz/CAIRN/issues/45)) and a [ThinkNode M9 USB companion](docs/experimental.md) ([#52](https://github.com/cvhviz/CAIRN/issues/52)); still on earlier builds the [Heltec Vision Master T190](docs/experimental.md) and [WiFi LoRa 32 V3](docs/experimental.md) companions (130), the [LilyGO T5 E-Paper S3 Pro](docs/experimental.md) and the [SenseCAP MeshPager X2](docs/experimental.md) (127).
 
 [Cairn 131 release notes](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v131) · [all releases](https://github.com/cvhviz/CAIRN/releases)
 
@@ -62,7 +62,7 @@ The splash screen shows **BUILD N**, so you can match a device to its release. `
 | [Wio Tracker L1 Pro](docs/boards/wio-tracker-l1-pro.md) | OLED or e-ink, joystick | ✅ | `WioL1Pro`, `DV1`, `WioL1Eink`, `WioL1RoomServer`: `.uf2` |
 | [LilyGO T5 E-Paper S3 Pro](docs/experimental.md) | 4.7" touch e-paper | experimental | `T5EpaperPro`: in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t5epd-127) |
 | [LilyGO T-Display K230](docs/experimental.md) | AMOLED touchscreen, Linux | experimental | `TDisplayK230`: in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tdisplay-k230-126) |
-| [SenseCAP MeshPager X2](docs/experimental.md) | colour screen, d-pad | experimental | `MeshPagerX2`: in its [experimental releases](https://github.com/cvhviz/CAIRN/releases?q=meshpager-x2&expanded=true) |
+| [SenseCAP MeshPager X2](docs/experimental.md) | color screen, d-pad | experimental | `MeshPagerX2`: in its [experimental releases](https://github.com/cvhviz/CAIRN/releases?q=meshpager-x2&expanded=true) |
 | [XIAO ESP32-S3, XIAO ESP32-S3 + Wio-SX1262](docs/boards/preview-boards.md) | optional OLED, one button | 🧪 | in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview) |
 
 The L1 Pro has three companion builds, one per screen (the stock SH1106 OLED, the 2.42" SSD1309 "DV1" OLED and the 2.13" e-ink), and a room server.
@@ -73,12 +73,12 @@ The L1 Pro has three companion builds, one per screen (the stock SH1106 OLED, th
 | --- | --- | --- | --- |
 | [V4-R8 + Expansion Kit V2 (touch)](docs/boards/heltec-v4-touch.md) | 2.8" touchscreen | ✅ | `HeltecV4Touch`: `-full.bin`, `-update.bin` |
 | [V4 + Expansion Kit V1 (touch)](docs/boards/heltec-v4-kit-v1.md) | 2.8" touchscreen, no map | ✅ | `HeltecV4KitV1`: `-full.bin`, `-update.bin` (in the normal release from Cairn 130) |
-| [Wireless Tracker V2](docs/boards/heltec-one-button.md) | 0.96" colour TFT, one button, GPS, Wi-Fi | ✅ beta | `HeltecTrackerV2`: `-ble-full.bin`, `-ble-update.bin` (from Cairn 131) |
+| [Wireless Tracker V2](docs/boards/heltec-one-button.md) | 0.96" color TFT, one button, GPS, Wi-Fi | ✅ beta | `HeltecTrackerV2`: `-ble-full.bin`, `-ble-update.bin` (from Cairn 131) |
 | [V4-R8 (OLED)](docs/boards/heltec-one-button.md) | 0.96" OLED, one button, Wi-Fi | ✅ beta | `HeltecV4R8`: `-ble-full.bin`, `-ble-update.bin` (from Cairn 131) |
-| [Mesh Node T096](docs/boards/heltec-t096.md) | 0.96" colour TFT, one button | ✅ | `HeltecT096`: `-ble.uf2`, `-usb.uf2` |
-| [Mesh Node T096 repeater](docs/boards/compact-repeater.md) | 0.96" colour TFT, one button | ✅ | `HeltecT096`: `-repeater.uf2` |
+| [Mesh Node T096](docs/boards/heltec-t096.md) | 0.96" color TFT, one button | ✅ | `HeltecT096`: `-ble.uf2`, `-usb.uf2` |
+| [Mesh Node T096 repeater](docs/boards/compact-repeater.md) | 0.96" color TFT, one button | ✅ | `HeltecT096`: `-repeater.uf2` |
 | [T114, V2, V3, V4, V4-R8, Wireless Tracker V1 and V2 repeaters](docs/boards/compact-repeater.md) | TFT or OLED, one button | 🧪 | `HeltecT114`: `-repeater.uf2`; the ESP32 boards `-repeater-full.bin`, `-repeater-update.bin` |
-| [V2, V3, V4 (OLED), Wireless Tracker V1, T1 companions](docs/boards/preview-boards.md) | OLED or colour TFT, one button | 🧪 | in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview) |
+| [V2, V3, V4 (OLED), Wireless Tracker V1, T1 companions](docs/boards/preview-boards.md) | OLED or color TFT, one button | 🧪 | in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview) |
 
 Check which Heltec V4 you have before installing: the touch build for the Expansion Kit V2 needs a **V4-R8** (8 MB PSRAM), and a standard V4 (2 MB PSRAM) in the Kit V1 needs the Kit V1 build. The [V4 touch page](docs/boards/heltec-v4-touch.md) says how to tell.
 
@@ -111,9 +111,9 @@ Want another board? [Ask for it](https://github.com/cvhviz/CAIRN/issues/new?temp
 
 Cairn runs one of four interfaces, depending on the board:
 
-- **The Cairn touch interface** on the L2 Pro, Heltec V4 touch kits, ThinkNode M9 and T-LoRa Pager (by keys) and T-Deck (by touch or keys): a home dashboard, chats with an on-screen keyboard and colour emoji, nodes, repeater scan and admin, spectrum and band scan, offline and online maps, Wi-Fi and Bluetooth scanners, and online updates. The [L2 Pro page](docs/boards/wio-tracker-l2-pro.md#features) lists it all.
+- **The Cairn touch interface** on the L2 Pro, Heltec V4 touch kits, ThinkNode M9 and T-LoRa Pager (by keys) and T-Deck (by touch or keys): a home dashboard, chats with an on-screen keyboard and color emoji, nodes, repeater scan and admin, spectrum and band scan, offline and online maps, Wi-Fi and Bluetooth scanners, and online updates. The [L2 Pro page](docs/boards/wio-tracker-l2-pro.md#features) lists it all.
 - **A native square interface** on the T-Display SF32, with most of the same tools plus its sensors, IR remote, music player and voice recorder.
-- **The one-button interface** on the T096, the Heltec Wireless Tracker V2 and V4-R8 (OLED) and the preview boards, with themes on colour screens; and the OLED and e-ink interface on the L1 Pro.
+- **The one-button interface** on the T096, the Heltec Wireless Tracker V2 and V4-R8 (OLED) and the preview boards, with themes on color screens; and the OLED and e-ink interface on the L1 Pro.
 - **The compact repeater:** the standard MeshCore repeater with a minimal Status, Spectrum and Settings screen.
 
 [Feature comparison by board](docs/features.md)
@@ -148,10 +148,10 @@ One-off test builds, such as a new board before it has been on the bench, are Gi
 
 ## Relationship to upstream
 
-This is a personal build, not a general-purpose distribution. All core mesh and radio behaviour comes from [MeshCore](https://github.com/meshcore-dev/MeshCore); see that project for protocol documentation, the official flasher, its own list of supported hardware and the client apps. Cairn tracks MeshCore releases, and each release's notes say which version it is based on. Credit to the MeshCore developers and community for the foundation.
+This is a personal build, not a general-purpose distribution. All core mesh and radio behavior comes from [MeshCore](https://github.com/meshcore-dev/MeshCore); see that project for protocol documentation, the official flasher, its own list of supported hardware and the client apps. Cairn tracks MeshCore releases, and each release's notes say which version it is based on. Credit to the MeshCore developers and community for the foundation.
 
 How releases are tagged and named for the online updater: [Release format](docs/releases.md).
 
 ## License
 
-MIT, same as upstream MeshCore. The firmware embeds third-party fonts, emoji and libraries under their own licences; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [licenses/](licenses/).
+MIT, same as upstream MeshCore. The firmware embeds third-party fonts, emoji and libraries under their own licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [licenses/](licenses/).

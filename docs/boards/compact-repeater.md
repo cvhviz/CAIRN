@@ -2,18 +2,18 @@
 
 ✅ Tested on the Heltec T096, 🧪 preview on the other boards · nRF52840 and ESP32 · [install](#install) · no Wi-Fi updates
 
-A repeater image for small one-button boards with a screen. It is the standard MeshCore repeater (the same mesh behaviour, CLI and remote admin) with a minimal Cairn screen and a power save that turns the screen and the TX LED off.
+A repeater image for small one-button boards with a screen. It is the standard MeshCore repeater (the same mesh behavior, CLI and remote admin) with a minimal Cairn screen and a power save that turns the screen and the TX LED off.
 
 | Board | Screen | Status | File |
 |---|---|---|---|
-| Heltec Mesh Node T096 | 0.96" colour TFT | ✅ | `MeshCore-HeltecT096-CairnN-<date>-repeater.uf2` |
+| Heltec Mesh Node T096 | 0.96" color TFT | ✅ | `MeshCore-HeltecT096-CairnN-<date>-repeater.uf2` |
 | Heltec T114 | 1.14" TFT | 🧪 | `MeshCore-HeltecT114-CairnN-<date>-repeater.uf2` |
 | Heltec WiFi LoRa 32 V2 | 0.96" OLED | 🧪 | `MeshCore-HeltecV2-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` |
 | Heltec WiFi LoRa 32 V3 | 0.96" OLED | 🧪 | `MeshCore-HeltecV3-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` |
 | Heltec WiFi LoRa 32 V4 | 0.96" OLED | 🧪 | `MeshCore-HeltecV4-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` |
 | Heltec V4-R8 | 0.96" OLED | 🧪 | `MeshCore-HeltecV4R8-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` |
-| Heltec Wireless Tracker | 0.96" colour TFT | 🧪 | `MeshCore-HeltecTracker-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` |
-| Heltec Wireless Tracker V2 | 0.96" colour TFT | 🧪 | `MeshCore-HeltecTrackerV2-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` |
+| Heltec Wireless Tracker | 0.96" color TFT | 🧪 | `MeshCore-HeltecTracker-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` |
+| Heltec Wireless Tracker V2 | 0.96" color TFT | 🧪 | `MeshCore-HeltecTrackerV2-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` |
 
 ✅ beta: run on hardware. 🧪: built from the same code, not yet tried on that board. Reports are welcome.
 
@@ -21,11 +21,11 @@ Download from the [latest release](https://github.com/cvhviz/CAIRN/releases/late
 
 ## Screens
 
-Rendered by the firmware's own drawing code in a desktop simulator, exactly as the T096 panel draws them (shown at 3×), with fictional sample data. The other colour TFT boards look the same; the OLED boards draw it in white on black.
+Rendered by the firmware's own drawing code in a desktop simulator, exactly as the T096 panel draws them (shown at 3×), with fictional sample data. The other color TFT boards look the same; the OLED boards draw it in white on black.
 
 | | | |
 |---|---|---|
-| ![Status: repeating, channel, packets, neighbours, noise floor, uptime](../screens/repeater/t096-status.png)<br>Status | ![Spectrum: channel signal history](../screens/repeater/t096-spectrum.png)<br>Spectrum | ![Settings rows](../screens/repeater/t096-settings.png)<br>Settings |
+| ![Status: repeating, channel, packets, neighbors, noise floor, uptime](../screens/repeater/t096-status.png)<br>Status | ![Spectrum: channel signal history](../screens/repeater/t096-spectrum.png)<br>Spectrum | ![Settings rows](../screens/repeater/t096-settings.png)<br>Settings |
 | ![Status with repeating turned off](../screens/repeater/t096-repeat-off.png)<br>Repeat off | ![Power save notice](../screens/repeater/t096-powersave.png)<br>Power save notice | ![Reboot waiting for a second hold](../screens/repeater/t096-reboot.png)<br>Reboot confirm |
 
 ## Pages
@@ -34,7 +34,7 @@ One button. **Click** moves to the next page; **hold** acts.
 
 | Page | Shows | Hold |
 |---|---|---|
-| **Status** | repeat on/off, the channel, packets sent and heard, neighbours, noise floor, uptime, battery | turn off (keep holding, see [Turning off](#turning-off)) |
+| **Status** | repeat on/off, the channel, packets sent and heard, neighbors, noise floor, uptime, battery | turn off (keep holding, see [Turning off](#turning-off)) |
 | **Spectrum** | the channel's signal over the last ~16 seconds, with the noise floor, the latest and the peak level | send an advert |
 | **Settings** | Repeat (on/off), TX power, Send advert, Power save, Reboot | change or run the selected row |
 
@@ -46,7 +46,7 @@ The screen turns off after 30 seconds (2 minutes on Spectrum); the first press o
 
 Files: `MeshCore-HeltecT096-Cairn122-2026-10-25-repeater.uf2`, `MeshCore-HeltecT114-Cairn122-2026-10-25-repeater.uf2`, and `MeshCore-<Board>-Cairn122-2026-10-25-repeater-full.bin` / `-repeater-update.bin` for the ESP32 boards.
 
-- **Scan replies are spaced out:** a repeater answers a "Scan repeaters" after a random wait that grows with the neighbours it heard in the last 30 minutes, up to 14 s, so fewer replies should collide in a busy area. Cairn devices listen at least 15 s; the Cairn app listens 6 to 15 s depending on the preset, and keeps listening (up to 15 s) while replies are still arriving. Its reply budget is a burst of 4, then one every 30 s, and a scan for other node types no longer uses it up. A scanner that stops sooner, including the app's on a fast preset after a lull, may miss late replies.
+- **Scan replies are spaced out:** a repeater answers a "Scan repeaters" after a random wait that grows with the neighbors it heard in the last 30 minutes, up to 14 s, so fewer replies should collide in a busy area. Cairn devices listen at least 15 s; the Cairn app listens 6 to 15 s depending on the preset, and keeps listening (up to 15 s) while replies are still arriving. Its reply budget is a burst of 4, then one every 30 s, and a scan for other node types no longer uses it up. A scanner that stops sooner, including the app's on a fast preset after a lull, may miss late replies.
 - **TX power:** caps where the amplifier saturates (T096 16, was 18; Heltec V4, V4-R8 and Tracker V2 18, were 22). A saved setting above the cap is lowered at boot, which leaves the output where it was. `set tx` answers `Error: range -9..N` outside its range instead of saving it, and `get cairn.cfg` reports the limits (`txm=`, `txa=`).
 - **A radio change no longer leaves the repeater deaf** (`tempradio`, or a change from remote admin) until it next sends.
 - **Not yet checked on a device:** nothing new in 122 has run on hardware yet; it builds and passes the firmware's automated tests.
@@ -83,4 +83,4 @@ reboot
 - `set radio` is frequency (MHz), bandwidth (kHz), spreading factor and coding rate: `910.525,62.5,7,5` is the common US/Canada MeshCore channel. Use whatever your local mesh uses; every node must match.
 - `set tx` is the radio chip's output in dBm (on the T096 and Heltec V4, ~13 dB of amplifier gain comes on top). Keep the result within your local limits.
 - `reboot` applies the radio change. After it, `advert` (or **Send advert** on the screen) announces the repeater to the mesh.
-- Optional: `set flood.advert.interval 12` announces it across the whole mesh every 12 hours (3–168), `set advert.interval 240` to its direct neighbours every 4 hours (minutes, up to 240), and `set repeat off` makes it listen without relaying.
+- Optional: `set flood.advert.interval 12` announces it across the whole mesh every 12 hours (3–168), `set advert.interval 240` to its direct neighbors every 4 hours (minutes, up to 240), and `set repeat off` makes it listen without relaying.

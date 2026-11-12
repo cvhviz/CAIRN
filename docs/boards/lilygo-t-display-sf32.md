@@ -54,17 +54,17 @@ A wide cover for sharing: [06_cairn_sf32_wide.jpg](../promo/06_cairn_sf32_wide.j
 ## Features
 
 - **Home dashboard of cards:**
-  - a header with a big clock and either a **mini spectrum** (one full-height graph of your channel that zooms to what the band is doing and colours each level by how often the channel sat there, from Cairn 113; tap it to open Spectrum) or **Date & info**. Switch in Settings › Home, or long-press the header;
+  - a header with a big clock and either a **mini spectrum** (one full-height graph of your channel that zooms to what the band is doing and colors each level by how often the channel sat there, from Cairn 113; tap it to open Spectrum) or **Date & info**. Switch in Settings › Home, or long-press the header;
   - from Cairn 120 the header stays put and only the cards scroll under it, two rows at a time; under the clock, today's sunrise and sunset;
   - BATTERY, CHATS, NODES, GPS, LORA and NETWORK, in the same order and capital titles as the other devices (from Cairn 120);
   - board cards: Audio (Player and Recorder), Sensors (temperature, humidity and pressure with today's steps) and IR remote, then **Files** (the card's free space) beside Tools (from Cairn 120).
   - Scroll down for more cards.
-- **Sidebar tabs:** Home, Chats, Nodes, Radios, GPS and Settings, with coloured icons. The GPS icon is green while the GPS is on and red while it is off, paused for Wi-Fi, or the keyboard is unpowered (from Cairn 113).
+- **Sidebar tabs:** Home, Chats, Nodes, Radios, GPS and Settings, with colored icons. The GPS icon is green while the GPS is on and red while it is off, paused for Wi-Fi, or the keyboard is unpowered (from Cairn 113).
 - **Settings as cards:** Settings and every sub-page use dashboard-style cards (icon badge, title, big value, detail line), including System and Firmware update.
-- **Themes:** the nine colour themes from the L2 Pro, plus red and Night modes. Text is a size larger throughout, and chats show colour emoji.
+- **Themes:** the nine color themes from the L2 Pro, plus red and Night modes. Text is a size larger throughout, and chats show color emoji.
 - **Chats:** channels and direct messages, typed on the keypad (multi-tap) or on the touchscreen. Messages sent from a phone app appear in the board's chats, and messages sent on the board appear in CairnOS (with the next CairnOS update).
 - **Nodes:** list and cards views, ping, repeater scan and remote admin.
-- **Node pages:** selecting a companion, repeater, room server or sensor opens a page of cards for it: signal, route, battery, last ping and, once logged in, its status, neighbours, readings and clock. The bar at the bottom follows the session: Message or Log in, Ping, then More, Admin or Refresh. The full admin console is one step further.
+- **Node pages:** selecting a companion, repeater, room server or sensor opens a page of cards for it: signal, route, battery, last ping and, once logged in, its status, neighbors, readings and clock. The bar at the bottom follows the session: Message or Log in, Ping, then More, Admin or Refresh. The full admin console is one step further.
 - **Radios** (tabs from Cairn 114): **1 LoRa**, **2 Wi-Fi** and **3 BLE**, by touch or keys 1, 2 and 3. LoRa has a live spectrum strip, a full-screen spectrum and band scan, and **Traffic**: the last hour's packets with a stats strip, each opening its details as tiles.
 - **Map** (the GPS tab, from Cairn 120): map sets from the microSD card (made on a computer, downloaded by an L2 Pro, or downloaded on this board over Wi-Fi: Map › [...] › Download), vector maps in Light, Dark or red Night, the **online map** with Wi-Fi, your nodes, and traffic lines. The compass button opens the GPS data grid.
 - **Files** (Settings › Storage › Files, or Home's Files card, from Cairn 120): browse the microSD card, play a song or recording, see a file's details, or delete it (folders delete in the background).

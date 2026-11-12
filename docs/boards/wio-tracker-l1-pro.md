@@ -47,7 +47,7 @@ Install, update and recovery all use the same file: double-tap **Reset** and cop
 
 ## Known issues
 
-- The three-colour e-ink panel isn't supported: every refresh is a ~15 s full flash. Use a black-and-white 2.13" panel.
+- The three-color e-ink panel isn't supported: every refresh is a ~15 s full flash. Use a black-and-white 2.13" panel.
 - Check the release notes of each build for anything new.
 
 Problems? [Report a bug](https://github.com/cvhviz/CAIRN/issues/new?template=bug_report.yml) with the image name and the build number from the splash.

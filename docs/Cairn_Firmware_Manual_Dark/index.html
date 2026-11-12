@@ -291,7 +291,7 @@ dl.gloss dt:last-of-type,dl.gloss dd:last-of-type{border-bottom:0}
      flatten each one into a 300 dpi JPEG) */
   *{box-shadow:none!important;text-shadow:none!important;filter:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
   .bezel img{border-radius:0!important}
-  /* gradients (frames, cards, callouts, the hero glow and grid) print as flat theme colours: Chrome
+  /* gradients (frames, cards, callouts, the hero glow and grid) print as flat theme colors: Chrome
      rasterises them at 300 dpi otherwise */
   *{background-image:none!important}
   .bezel{background-color:var(--surface-2)!important}
@@ -414,7 +414,7 @@ dl.gloss dt:last-of-type,dl.gloss dd:last-of-type{border-bottom:0}
     <div><span class="lbl">Interfaces</span><b>4</b></div>
     <div><span class="lbl">Companion builds</span><b>9</b></div>
     <div><span class="lbl">Base</span><b>MeshCore 1.17.1</b></div>
-    <div><span class="lbl">Licence</span><b>MIT</b></div>
+    <div><span class="lbl">License</span><b>MIT</b></div>
   </div>
 </section>
 
@@ -432,7 +432,7 @@ dl.gloss dt:last-of-type,dl.gloss dd:last-of-type{border-bottom:0}
   <div class="cards cats">
     <div class="card"><div class="top"><span class="ic" style="--c:var(--accent)"><svg><use href="#i-home"/></svg></span><b>Cairn touch and key interface</b></div><p>Sidebar, Home dashboard, chats, nodes, radios, GPS with offline maps, settings as cards. Driven by touch, by keys, or both.</p><span class="where">L2 Pro · Heltec V4 kit · ThinkNode M9 · T-Deck</span></div>
     <div class="card"><div class="top"><span class="ic" style="--c:var(--blue)"><svg><use href="#i-pin"/></svg></span><b>T-Display SF32 interface</b></div><p>A native card interface for the 480×480 AMOLED, run from a 20-key phone keypad or touch.</p><span class="where">LilyGO T-Display SF32</span></div>
-    <div class="card"><div class="top"><span class="ic" style="--c:var(--violet)"><svg><use href="#i-display"/></svg></span><b>Compact interface</b></div><p>Page by page on small OLED, e-ink and colour TFT screens, run from a joystick or one button.</p><span class="where">Wio L1 Pro · DV1 · L1 e-ink · T096</span></div>
+    <div class="card"><div class="top"><span class="ic" style="--c:var(--violet)"><svg><use href="#i-display"/></svg></span><b>Compact interface</b></div><p>Page by page on small OLED, e-ink and color TFT screens, run from a joystick or one button.</p><span class="where">Wio L1 Pro · DV1 · L1 e-ink · T096</span></div>
     <div class="card"><div class="top"><span class="ic" style="--c:var(--warn)"><svg><use href="#i-repeat"/></svg></span><b>Compact repeater</b></div><p>The standard MeshCore repeater with a minimal status, spectrum and settings screen.</p><span class="where">T096 · T114 · Heltec V2–V4 · Trackers</span></div>
   </div>
 
@@ -446,7 +446,7 @@ dl.gloss dt:last-of-type,dl.gloss dd:last-of-type{border-bottom:0}
       <tr><td>LilyGO T-Deck / T-Deck Plus</td><td>2.8" touchscreen, keyboard, trackball</td><td>Cairn touch and keys</td><td><span class="tag beta">Beta</span></td></tr>
       <tr><td>LilyGO T-Display SF32 + keypad</td><td>480×480 AMOLED touch, 20-key keypad</td><td>SF32</td><td><span class="tag ok">Tested</span></td></tr>
       <tr><td>Seeed Wio Tracker L1 Pro (OLED, DV1, e-ink)</td><td>SH1106 OLED, 2.42" SSD1309 OLED or 2.13" e-ink; joystick</td><td>Compact</td><td><span class="tag ok">Tested</span></td></tr>
-      <tr><td>Heltec Mesh Node T096</td><td>0.96" colour TFT, one button</td><td>Compact</td><td><span class="tag ok">Tested</span></td></tr>
+      <tr><td>Heltec Mesh Node T096</td><td>0.96" color TFT, one button</td><td>Compact</td><td><span class="tag ok">Tested</span></td></tr>
       <tr><td>Compact repeaters</td><td>T096, T114, Heltec V2, V3, V4, V4-R8, Wireless Tracker V1/V2</td><td>Repeater</td><td><span class="tag beta">T096 beta</span> <span class="tag prev">Others untried</span></td></tr>
     </tbody>
   </table></div>
@@ -621,16 +621,16 @@ esptool --chip esp32s3 -b 921600 write-flash 0x10000 MeshCore-&lt;Board&gt;-Cair
   </div>
 
   <h3 id="rail">The rail</h3>
-  <p>Six tabs, top to bottom. The open tab gets a tinted pill in its colour, and every page title is drawn in its tab's colour.</p>
+  <p>Six tabs, top to bottom. The open tab gets a tinted pill in its color, and every page title is drawn in its tab's color.</p>
   <div class="tw"><table>
-    <thead><tr><th>Tab</th><th>Colour</th><th>Marker</th></tr></thead>
+    <thead><tr><th>Tab</th><th>Color</th><th>Marker</th></tr></thead>
     <tbody>
       <tr><td>Home</td><td>teal</td><td>none</td></tr>
       <tr><td>Chats</td><td>blue</td><td>red pill: unread messages, <span class="ui">1</span> to <span class="ui">99+</span></td></tr>
       <tr><td>Nodes</td><td>violet</td><td>magenta pill: new adverts since you last looked, <span class="ui">+1</span> to <span class="ui">+99</span></td></tr>
       <tr><td>Radios</td><td>amber</td><td>amber up-arrow when a packet is sent; teal dot when one is received; amber dot until the noise floor is calibrated; red <span class="ui">PAUSED</span> while a band scan holds the radio</td></tr>
       <tr><td>GPS</td><td>green</td><td>satellite count (green with a fix, dim while searching); a moon while Eco sleeps; the icon turns red while GPS is off</td></tr>
-      <tr><td>Settings</td><td>grey</td><td>amber dot while Wi-Fi transfer runs; teal dot while the card is busy with a background delete</td></tr>
+      <tr><td>Settings</td><td>gray</td><td>amber dot while Wi-Fi transfer runs; teal dot while the card is busy with a background delete</td></tr>
     </tbody>
   </table></div>
   <div class="how">
@@ -640,9 +640,9 @@ esptool --chip esp32s3 -b 921600 write-flash 0x10000 MeshCore-&lt;Board&gt;-Cair
   </div>
 
   <h3 id="statusbar">The status bar</h3>
-  <p>The page title sits on the left, in its tab's colour. The clock is always centred; it reads <span class="ui">--:--</span> until the time is set. On the right, from the outside in: the battery (percent inside the outline, a bolt while charging, a plug on USB), then Wi-Fi bars, Bluetooth, mute and the padlock. The Bluetooth icon turns teal when the app is linked over Bluetooth; Wi-Fi turns teal when the app is linked over Wi-Fi and amber during Wi-Fi transfer. On the L2 Pro and T-Deck a <span class="ui">MIC</span> or <span class="ui">REC</span> pill shows whenever the microphone is live.</p>
+  <p>The page title sits on the left, in its tab's color. The clock is always centerd; it reads <span class="ui">--:--</span> until the time is set. On the right, from the outside in: the battery (percent inside the outline, a bolt while charging, a plug on USB), then Wi-Fi bars, Bluetooth, mute and the padlock. The Bluetooth icon turns teal when the app is linked over Bluetooth; Wi-Fi turns teal when the app is linked over Wi-Fi and amber during Wi-Fi transfer. On the L2 Pro and T-Deck a <span class="ui">MIC</span> or <span class="ui">REC</span> pill shows whenever the microphone is live.</p>
   <p>The bar's bottom edge flashes amber for a moment when the radio sends and teal when it receives.</p>
-  <p><b>Notices.</b> Short messages take over the status bar for a moment, led by a coloured mark (red for errors), then the bar comes back. A notice with a chevron, such as <span class="ui">New message from Bob</span>, opens what it is about when you tap it.</p>
+  <p><b>Notices.</b> Short messages take over the status bar for a moment, led by a colored mark (red for errors), then the bar comes back. A notice with a chevron, such as <span class="ui">New message from Bob</span>, opens what it is about when you tap it.</p>
   <aside class="call tip"><span class="lbl">Tip</span><p>Tap the clock, or anything to its right, to open the quick panel from any page. On a tab's root page the title opens it too.</p></aside>
 
   <h3 id="back">Going back</h3>
@@ -736,7 +736,7 @@ esptool --chip esp32s3 -b 921600 write-flash 0x10000 MeshCore-&lt;Board&gt;-Cair
     <p class="ch-lead">The same action, three ways. Touch covers the L2 Pro, the Heltec kit and the T-Deck's screen. Keys cover the ThinkNode M9 and the T-Deck's keyboard and trackball. OLED covers the Wio L1 family's joystick and the T096's one button.</p>
   </div>
   <div class="legend">
-    <span><kbd>OK</kbd> M9 d-pad centre · T-Deck trackball click</span>
+    <span><kbd>OK</kbd> M9 d-pad center · T-Deck trackball click</span>
     <span><kbd>Hold OK</kbd> long press of what is selected</span>
     <span><kbd>User</kbd> L2 Pro · <kbd>PRG</kbd> Heltec</span>
     <span><kbd>WAKE</kbd> L2 Pro · <kbd>IO</kbd> Heltec</span>
@@ -789,9 +789,9 @@ esptool --chip esp32s3 -b 921600 write-flash 0x10000 MeshCore-&lt;Board&gt;-Cair
       <tr><td>Node menu</td><td><span class="g">Hold</span> a node</td><td><kbd>Hold OK</kbd></td><td>—</td></tr>
       <tr><td>GPS on / off</td><td>Quick panel GPS tile; the GPS page's switch</td><td>M9: hold <kbd>ADV</kbd></td><td>L1: Settings › Location</td></tr>
       <tr><td>Open the map</td><td>GPS tab › <span class="ui">Map</span></td><td>M9 <kbd>MAP</kbd></td><td>—</td></tr>
-      <tr><td>Pan the map</td><td><span class="g">Drag</span></td><td>M9 <kbd>MAP</kbd> again: pan mode, arrows pan, <kbd>OK</kbd> taps the centre</td><td>—</td></tr>
+      <tr><td>Pan the map</td><td><span class="g">Drag</span></td><td>M9 <kbd>MAP</kbd> again: pan mode, arrows pan, <kbd>OK</kbd> taps the center</td><td>—</td></tr>
       <tr><td>Zoom the map</td><td><span class="g">Pinch</span>, double tap, or + / −</td><td><kbd>+</kbd> / <kbd>−</kbd> keys</td><td>—</td></tr>
-      <tr><td>Recentre on you</td><td>Tap the GPS tab again, or Follow</td><td>Follow button</td><td>—</td></tr>
+      <tr><td>Recenter on you</td><td>Tap the GPS tab again, or Follow</td><td>Follow button</td><td>—</td></tr>
       <tr><td>Map menu</td><td><span class="g">Hold</span> an empty part of the map</td><td>—</td><td>—</td></tr>
       <tr><td>Pick a Radios tab</td><td>Tap LoRa / Wi-Fi / Bluetooth</td><td>T-Deck <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd></td><td>—</td></tr>
       <tr><td>Scanner Plot / List</td><td>Tap the switch</td><td><kbd>#</kbd></td><td>—</td></tr>
@@ -847,7 +847,7 @@ esptool --chip esp32s3 -b 921600 write-flash 0x10000 MeshCore-&lt;Board&gt;-Cair
   <p>The clock in your 12h, 24h or analog style, with the time zone; the date and the uptime on the right. Until the time is set it reads <span class="ui">--:--</span> and <span class="ui">time not synced</span>. The thin strip under it holds up to three readouts:</p>
   <ul>
     <li><b>Sunrise and sunset</b> for today, from your GPS fix or your advert position. Hidden without a set clock and a position.</li>
-    <li><b>Temperature</b> from an environment sensor, or the chip's own sensor labelled <span class="ui">Chip</span>. The chip runs 30 to 40 °F above the room.</li>
+    <li><b>Temperature</b> from an environment sensor, or the chip's own sensor labeled <span class="ui">Chip</span>. The chip runs 30 to 40 °F above the room.</li>
     <li><b>Channel busy</b>, <span class="ui">Ch 12%</span>: the share of the last minute the channel sat at least 6 dB above the noise floor. Amber above 30 %, red above 60 %.</li>
   </ul>
   <aside class="call tip"><span class="lbl">Tip</span><p>Tap the big clock for the quick panel (L2 Pro, Heltec kit, T-Deck). Hold the header or strip for the Clock editor: style, time zone and daylight saving.</p></aside>
@@ -876,10 +876,10 @@ esptool --chip esp32s3 -b 921600 write-flash 0x10000 MeshCore-&lt;Board&gt;-Cair
   <h3 id="chat-list">The chat list</h3>
   <div class="split">
     <div>
-      <p>The title reads <span class="ui">Chats</span>, or <span class="ui">Chats · N unread</span>. <span class="ui">+ New message</span> sits at the top, then conversations, newest first. Each row has a coloured avatar, the name (in the accent colour while unread), the age of the newest message, a one-line preview (<span class="ui">You: …</span> for yours; channel posts start with the sender's name) and an unread pill.</p>
+      <p>The title reads <span class="ui">Chats</span>, or <span class="ui">Chats · N unread</span>. <span class="ui">+ New message</span> sits at the top, then conversations, newest first. Each row has a colored avatar, the name (in the accent color while unread), the age of the newest message, a one-line preview (<span class="ui">You: …</span> for yours; channel posts start with the sender's name) and an unread pill.</p>
       <ul>
         <li><span class="g">Tap</span> a row to open the thread.</li>
-        <li><span class="g">Hold</span> a row for the chat's card page: <span class="ui">Open</span>, <span class="ui">Mark read</span>, <span class="ui">Contact</span> (route, favourite, share) or <span class="ui">Channel</span> (key and slot, leave), <span class="ui">All read…</span> and <span class="ui">Delete chat…</span>.</li>
+        <li><span class="g">Hold</span> a row for the chat's card page: <span class="ui">Open</span>, <span class="ui">Mark read</span>, <span class="ui">Contact</span> (route, favorite, share) or <span class="ui">Channel</span> (key and slot, leave), <span class="ui">All read…</span> and <span class="ui">Delete chat…</span>.</li>
       </ul>
       <p class="small muted">The list doesn't re-sort while your finger is on it. Channel names always start with <span class="ui">#</span>; rooms show as <span class="ui">@Name</span>.</p>
     </div>
@@ -903,7 +903,7 @@ esptool --chip esp32s3 -b 921600 write-flash 0x10000 MeshCore-&lt;Board&gt;-Cair
     <li><span class="g">Hold</span> a bubble for the message's card page (below).</li>
     <li>Tap <span class="ui">⋯</span> at the top right for the chat's card page.</li>
   </ul>
-  <p>Mentions show as <span class="ui">@Name</span>; your own name is highlighted. Replies show the quoted line in grey with a bar in the margin.</p>
+  <p>Mentions show as <span class="ui">@Name</span>; your own name is highlighted. Replies show the quoted line in gray with a bar in the margin.</p>
 
   <h3 id="composing">Typing a message</h3>
   <p>A direct message holds up to <b>160 bytes</b>. A channel post holds 160 bytes less your node name and two (it is sent as <span class="ui">Name: text</span>). Emoji and accented letters use more than one byte. A counter shows the bytes left once 20 or fewer remain, amber then red when over.</p>
@@ -1072,22 +1072,22 @@ esptool --chip esp32s3 -b 921600 write-flash 0x10000 MeshCore-&lt;Board&gt;-Cair
     <li>Sort: <span class="ui">Heard</span>, <span class="ui">Name</span>, <span class="ui">Distance</span>, <span class="ui">Favorites first</span>.</li>
     <li><span class="ui">Cards</span> / <span class="ui">List</span> switches the view.</li>
   </ul>
-  <p>The title counts them: <span class="ui">Nodes · 9</span>, or <span class="ui">Nodes · 4 of 9</span> when filtered. Companions show a walkie-talkie, repeaters a mast, rooms a group. Favourites get an amber tint (list) or star (cards). List rows show <span class="ui">HOPS</span> (<span class="ui">D</span> for direct), <span class="ui">HEARD</span> and <span class="ui">DIST</span> with a bearing; distance needs your own GPS fix and the node's shared position.</p>
+  <p>The title counts them: <span class="ui">Nodes · 9</span>, or <span class="ui">Nodes · 4 of 9</span> when filtered. Companions show a walkie-talkie, repeaters a mast, rooms a group. Favorites get an amber tint (list) or star (cards). List rows show <span class="ui">HOPS</span> (<span class="ui">D</span> for direct), <span class="ui">HEARD</span> and <span class="ui">DIST</span> with a bearing; distance needs your own GPS fix and the node's shared position.</p>
   <div class="how two">
     <div class="how-col t"><h4><i></i>Touch</h4><ul><li><span class="g">Tap</span> a node for its detail page.</li><li><span class="g">Hold</span> it for its actions: Ping, Message, Details, Contact (or Admin on a repeater).</li><li><span class="g">Pull down</span> at the top of the list until <span class="ui">Release to scan</span>: a repeater scan.</li></ul></div>
     <div class="how-col k"><h4><i></i>Keys</h4><ul><li><kbd>OK</kbd> opens, <kbd>Hold OK</kbd> for actions.</li><li><kbd>↑</kbd> past the top of the list scans for repeaters.</li><li>In Cards view the ring takes one card at a time; <kbd>←</kbd><kbd>→</kbd> move between the two in a row.</li></ul></div>
   </div>
 
-<aside class="call tip"><span class="lbl">Tip</span><p>When the title warns the contact table is nearly full or full, tap the title: a notice says what that means for new nodes. Favourites are never overwritten.</p></aside>
+<aside class="call tip"><span class="lbl">Tip</span><p>When the title warns the contact table is nearly full or full, tap the title: a notice says what that means for new nodes. Favorites are never overwritten.</p></aside>
 
   <h3 id="node-detail">Node detail</h3>
   <div class="split">
     <div>
-      <p>The name, then a row with the type, the favourite star and the short key (<span class="ui">4b44fe…d0317a ›</span>). Cells show <span class="ui">HEARD</span>, <span class="ui">DISTANCE</span>, <span class="ui">BEARING</span>, <span class="ui">PATH</span> (<span class="ui">direct</span>, <span class="ui">1 hop via 4e</span>, <span class="ui">unknown · flood</span>), <span class="ui">POSITION</span> and <span class="ui">LAST PING</span>. A heard time marked <span class="ui">clock fast</span> means the node's own clock is ahead of yours.</p>
+      <p>The name, then a row with the type, the favorite star and the short key (<span class="ui">4b44fe…d0317a ›</span>). Cells show <span class="ui">HEARD</span>, <span class="ui">DISTANCE</span>, <span class="ui">BEARING</span>, <span class="ui">PATH</span> (<span class="ui">direct</span>, <span class="ui">1 hop via 4e</span>, <span class="ui">unknown · flood</span>), <span class="ui">POSITION</span> and <span class="ui">LAST PING</span>. A heard time marked <span class="ui">clock fast</span> means the node's own clock is ahead of yours.</p>
       <p>Buttons: <span class="ui">Ping</span>, <span class="ui">Chat</span> (or <span class="ui">Admin</span> on a repeater), <span class="ui">Map</span> and <span class="ui">⋯</span>.</p>
       <ul>
         <li><b>Ping</b> checks the node can hear you: <span class="ui">RTT 123ms SNR 7.5dB</span>, or <span class="ui">Ping timeout</span>. One at a time.</li>
-        <li><b>Map</b> opens the GPS map centred on the node, with you both in view.</li>
+        <li><b>Map</b> opens the GPS map centerd on the node, with you both in view.</li>
         <li><b>The short key</b> opens a QR code the MeshCore apps can scan to add the contact, with the full key under it.</li>
       </ul>
     </div>
@@ -1181,7 +1181,7 @@ esptool --chip esp32s3 -b 921600 write-flash 0x10000 MeshCore-&lt;Board&gt;-Cair
   <p><span class="ui">Active</span> asks for names (probe requests); <span class="ui">Passive</span> only listens. A scan starts only when you tap <span class="ui">Start</span>, and stops when you leave the page, the screen goes dark or after 3 minutes without a touch. Nothing is sent on the mesh and LoRa keeps working. The status bar shows <span class="ui">Scanning</span> and the count.</p>
 
   <h3 id="bt-scan">Bluetooth scan, radar and Find</h3>
-  <p>Shows the Bluetooth LE devices in range as bars over a half radar with -60, -80 and -100 dBm rings; MeshCore nodes are named in the accent colour. Tap the radar for a full-screen view: it shows distance only, never direction. Pick a device and <span class="ui">Find</span> shows its signal in big figures, one word for the last 10 s (<span class="ui">Closer</span>, <span class="ui">Farther</span>, <span class="ui">Steady</span> or <span class="ui">Lost</span>) and the last minute as a line; the optional <span class="ui">Tone</span> ticks faster as the signal climbs. BT scan works with Bluetooth off and while the app is connected.</p>
+  <p>Shows the Bluetooth LE devices in range as bars over a half radar with -60, -80 and -100 dBm rings; MeshCore nodes are named in the accent color. Tap the radar for a full-screen view: it shows distance only, never direction. Pick a device and <span class="ui">Find</span> shows its signal in big figures, one word for the last 10 s (<span class="ui">Closer</span>, <span class="ui">Farther</span>, <span class="ui">Steady</span> or <span class="ui">Lost</span>) and the last minute as a line; the optional <span class="ui">Tone</span> ticks faster as the signal climbs. BT scan works with Bluetooth off and while the app is connected.</p>
   <aside class="call tip"><span class="lbl">Tip</span><p>On the full-screen radar the d-pad or trackball jumps to the nearest dot in the direction you press. On the T-Deck, keys <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> pick the LoRa, Wi-Fi and Bluetooth tabs, and <kbd>#</kbd> switches Plot and List.</p></aside>
 </section>
 
@@ -1216,15 +1216,15 @@ esptool --chip esp32s3 -b 921600 write-flash 0x10000 MeshCore-&lt;Board&gt;-Cair
     <figure class="shot"><div class="bezel"><img src="img/gps-map-sample.png" alt="Map in radar view with range rings, your position and nodes Dave, Bob, RPT-Hill and Field-WX, and cluster bubbles" width="640" height="480" loading="lazy"></div><figcaption><span class="dev">L2 Pro · earlier build</span>Radar view with nodes, sample data.</figcaption></figure>
     <figure class="shot"><div class="bezel"><img src="img/gps-map-chips-m9.png" alt="Map with chips No GPS fix – relative view and No maps on card, zoom buttons, follow and list" width="320" height="240" loading="lazy"></div><figcaption><span class="dev">M9</span>Status chips explain what you see.</figcaption></figure>
   </div>
-  <p>North is up. Where a map set covers the view you see tiles; elsewhere a radar view with range rings around you. Nodes are coloured dots by type; nearby ones merge into a bubble with a count. Your position is a filled dot during a live fix, an arrowhead while you move, a hollow ring for the last known fix. The map remembers your last fix across restarts.</p>
+  <p>North is up. Where a map set covers the view you see tiles; elsewhere a radar view with range rings around you. Nodes are colored dots by type; nearby ones merge into a bubble with a count. Your position is a filled dot during a live fix, an arrowhead while you move, a hollow ring for the last known fix. The map remembers your last fix across restarts.</p>
   <div class="how">
-    <div class="how-col t"><h4><i></i>Touch</h4><ul><li><span class="g">Drag</span> pans; <span class="g">Pinch</span> or double tap zooms.</li><li>Tap a node: its card and its route, drawn through each repeater with a position. Tap the card for its page.</li><li>Tap a bubble to zoom in on it.</li><li><span class="g">Hold</span> empty map: <span class="ui">Map card info</span>, <span class="ui">Choose map…</span>, <span class="ui">Reload card</span>.</li><li>Tap the GPS tab again to recentre.</li></ul></div>
-    <div class="how-col k"><h4><i></i>Keys</h4><ul><li><kbd>+</kbd> / <kbd>−</kbd> zoom.</li><li>M9 <kbd>MAP</kbd> opens the map; on the map, <kbd>MAP</kbd> again is pan mode: arrows pan, <kbd>OK</kbd> taps the centre.</li><li>The buttons on the right (zoom, follow, list) take the ring.</li></ul></div>
-    <div class="how-col o"><h4><i></i>Buttons on the right</h4><ul><li><span class="ui">+</span> / <span class="ui">−</span></li><li><b>Follow</b>: recentre on you and follow.</li><li><b>List</b>: Nodes sorted by distance, for that visit.</li></ul></div>
+    <div class="how-col t"><h4><i></i>Touch</h4><ul><li><span class="g">Drag</span> pans; <span class="g">Pinch</span> or double tap zooms.</li><li>Tap a node: its card and its route, drawn through each repeater with a position. Tap the card for its page.</li><li>Tap a bubble to zoom in on it.</li><li><span class="g">Hold</span> empty map: <span class="ui">Map card info</span>, <span class="ui">Choose map…</span>, <span class="ui">Reload card</span>.</li><li>Tap the GPS tab again to recenter.</li></ul></div>
+    <div class="how-col k"><h4><i></i>Keys</h4><ul><li><kbd>+</kbd> / <kbd>−</kbd> zoom.</li><li>M9 <kbd>MAP</kbd> opens the map; on the map, <kbd>MAP</kbd> again is pan mode: arrows pan, <kbd>OK</kbd> taps the center.</li><li>The buttons on the right (zoom, follow, list) take the ring.</li></ul></div>
+    <div class="how-col o"><h4><i></i>Buttons on the right</h4><ul><li><span class="ui">+</span> / <span class="ui">−</span></li><li><b>Follow</b>: recenter on you and follow.</li><li><b>List</b>: Nodes sorted by distance, for that visit.</li></ul></div>
   </div>
-  <p>Chips at the top explain the view: <span class="ui">No GPS fix – relative view</span>, <span class="ui">No map card</span>, <span class="ui">No maps on card</span>, <span class="ui">Zoom in for map</span>, <span class="ui">No map for this area</span>, <span class="ui">Card isn't FAT32</span>. Tap a card chip to retry. The attribution in the corner opens the map's licence.</p>
+  <p>Chips at the top explain the view: <span class="ui">No GPS fix – relative view</span>, <span class="ui">No map card</span>, <span class="ui">No maps on card</span>, <span class="ui">Zoom in for map</span>, <span class="ui">No map for this area</span>, <span class="ui">Card isn't FAT32</span>. Tap a card chip to retry. The attribution in the corner opens the map's license.</p>
 
-<aside class="call tip"><span class="lbl">Tip</span><p>A node page's <span class="ui">Map</span> button centres the map on that node and fits you both in view. Tap the GPS tab again to come back to your own position.</p></aside>
+<aside class="call tip"><span class="lbl">Tip</span><p>A node page's <span class="ui">Map</span> button centers the map on that node and fits you both in view. Tap the GPS tab again to come back to your own position.</p></aside>
 
   <h3 id="map-sets">Choosing a map set</h3>
   <p><span class="path"><b>Settings › Location › Map</b></span> lists <span class="ui">Automatic</span> and each set on the card with its zoom range (<span class="ui">okc-topo · z8–16</span>). <span class="ui">Automatic</span> uses the most detailed set that covers the view. A set you pick is used wherever it covers the view, and Automatic elsewhere. The choice saves at once.</p>
@@ -1351,7 +1351,7 @@ python3 tools/maptiles.py verify /Volumes/CAIRN/Maps/okc-topo</code></pre></li>
   <div class="ch-head">
     <div class="ch-num">15 / Settings reference</div>
     <h2>Every card, briefly.</h2>
-    <p class="ch-lead">Settings opens on six category cards. Each opens a page of cards, two across, each with its name and current value. A card that is on is washed in its colour and wears an <span class="ui">ON</span> pill.</p>
+    <p class="ch-lead">Settings opens on six category cards. Each opens a page of cards, two across, each with its name and current value. A card that is on is washed in its color and wears an <span class="ui">ON</span> pill.</p>
   </div>
 
   <div class="split">
@@ -1426,7 +1426,7 @@ python3 tools/maptiles.py verify /Volumes/CAIRN/Maps/okc-topo</code></pre></li>
 
   <h3 id="set-appearance">Appearance</h3>
   <div class="cards">
-    <div class="card"><div class="top"><span class="ic" style="--c:var(--violet)"><svg><use href="#i-palette"/></svg></span><b>Theme</b></div><p>Nine themes, each card drawn in its own colours. Previews live.</p></div>
+    <div class="card"><div class="top"><span class="ic" style="--c:var(--violet)"><svg><use href="#i-palette"/></svg></span><b>Theme</b></div><p>Nine themes, each card drawn in its own colors. Previews live.</p></div>
     <div class="card"><div class="top"><span class="ic"><svg><use href="#i-moon"/></svg></span><b>Screensaver</b></div><p>Style, brightness, what messages show, when it starts, and whether it runs on battery. <span class="ui">Preview</span> shows it now.</p></div>
   </div>
 
@@ -1463,7 +1463,7 @@ python3 tools/maptiles.py verify /Volumes/CAIRN/Maps/okc-topo</code></pre></li>
     <thead><tr><th>Does</th><th>ThinkNode M9</th><th>T-Deck</th></tr></thead>
     <tbody>
       <tr><td>Move the ring</td><td>d-pad <kbd>←</kbd><kbd>→</kbd><kbd>↑</kbd><kbd>↓</kbd></td><td>roll the trackball</td></tr>
-      <tr><td>Tap what is selected</td><td><kbd>OK</kbd> (d-pad centre)</td><td>click the trackball</td></tr>
+      <tr><td>Tap what is selected</td><td><kbd>OK</kbd> (d-pad center)</td><td>click the trackball</td></tr>
       <tr><td>Long press what is selected</td><td>hold <kbd>OK</kbd></td><td>hold the trackball in</td></tr>
       <tr><td>Back</td><td><kbd>BACK</kbd></td><td><kbd>⌫</kbd> outside a text field; hold the trackball with nothing selected</td></tr>
       <tr><td>Home</td><td><kbd>HOME</kbd></td><td>the rail, or touch</td></tr>
@@ -1523,7 +1523,7 @@ python3 tools/maptiles.py verify /Volumes/CAIRN/Maps/okc-topo</code></pre></li>
     <li><b>Settings</b> opens on six categories: Radio, Connect, Location, Display, Sound and System. Inside a category, <kbd>↑</kbd><kbd>↓</kbd> pick a row and press (or <kbd>→</kbd>) edits it; in an editor <kbd>←</kbd><kbd>→</kbd> change the value. <kbd>←</kbd> or Back returns to the categories. System › About shows the build, MeshCore version and key prefix. Path hash and Units are here too.</li>
     <li>A thin line under the title flashes when the radio sends (dashed) or receives (solid). Not on e-ink.</li>
   </ul>
-  <aside class="call note"><span class="lbl">Images</span><p>Pick the image for your screen: <code>WioL1Pro</code> (SH1106 OLED, most units), <code>DV1</code> (2.42" SSD1309 on the Grove port) or <code>WioL1Eink</code> (2.13" black-and-white e-ink; three-colour panels aren't supported). <code>WioL1RoomServer</code> turns the L1 into a room server.</p></aside>
+  <aside class="call note"><span class="lbl">Images</span><p>Pick the image for your screen: <code>WioL1Pro</code> (SH1106 OLED, most units), <code>DV1</code> (2.42" SSD1309 on the Grove port) or <code>WioL1Eink</code> (2.13" black-and-white e-ink; three-color panels aren't supported). <code>WioL1RoomServer</code> turns the L1 into a room server.</p></aside>
 
   <h3 id="t096">Heltec Mesh Node T096</h3>
   <div class="shots">
@@ -1566,7 +1566,7 @@ python3 tools/maptiles.py verify /Volumes/CAIRN/Maps/okc-topo</code></pre></li>
   <div class="ch-head">
     <div class="ch-num">19 / Repeaters</div>
     <h2>A repeater you can read at a glance.</h2>
-    <p class="ch-lead">The compact repeater is the standard MeshCore repeater (same mesh behaviour, CLI and remote admin) with a minimal Cairn screen on one button.</p>
+    <p class="ch-lead">The compact repeater is the standard MeshCore repeater (same mesh behavior, CLI and remote admin) with a minimal Cairn screen on one button.</p>
   </div>
   <div class="shots">
     <figure class="shot wide"><div class="bezel"><img src="img/repeater-status.png" alt="Repeater status: Repeating, 910.525 SF7 BW62.5, Tx 1284 Rx 5310 Nb 7, NF -116, Up 3d 7h" width="480" height="240" loading="lazy"></div><figcaption><span class="dev">T096 · simulated</span>Status.</figcaption></figure>
@@ -1576,7 +1576,7 @@ python3 tools/maptiles.py verify /Volumes/CAIRN/Maps/okc-topo</code></pre></li>
   <div class="tw"><table>
     <thead><tr><th>Page</th><th>Shows</th><th>Hold</th></tr></thead>
     <tbody>
-      <tr><td>Status</td><td>repeat on/off, the channel, packets sent and heard, neighbours, noise floor, uptime, battery</td><td>turn off: keep holding about 3 s until <span class="ui">Release to turn off</span></td></tr>
+      <tr><td>Status</td><td>repeat on/off, the channel, packets sent and heard, neighbors, noise floor, uptime, battery</td><td>turn off: keep holding about 3 s until <span class="ui">Release to turn off</span></td></tr>
       <tr><td>Spectrum</td><td>the channel over the last ~16 s, with floor, latest and peak</td><td>send an advert</td></tr>
       <tr><td>Settings</td><td>Repeat, TX power, Send advert, Power save, Reboot</td><td>change or run the selected row; Reboot asks for a second hold within 5 s</td></tr>
     </tbody>
@@ -1630,7 +1630,7 @@ reboot</code></pre>
       <tr><td>Messages typed on the device stop at the first repeater, phone messages go through</td><td>Your mesh uses regions. Set <span class="path"><b>Settings › Radio › Scope</b></span> to the same region the app uses, or set a channel's own Scope.</td></tr>
       <tr><td>A direct message says <span class="ui">not delivered</span></td><td>Hold it › <span class="ui">Resend</span>. If it keeps failing, <span class="ui">⋯</span> › <span class="ui">Reset path</span> (or <span class="ui">Find path</span>) and send again. Consider Auto retry.</td></tr>
       <tr><td>The clock reads <span class="ui">--:--</span></td><td>Normal after a power cut. Get a GPS fix, connect the app, or join Wi-Fi with Net time on.</td></tr>
-      <tr><td>Repeater login is greyed out</td><td><span class="ui">Clock not set · logins will be ignored</span>: set the clock first.</td></tr>
+      <tr><td>Repeater login is grayed out</td><td><span class="ui">Clock not set · logins will be ignored</span>: set the clock first.</td></tr>
       <tr><td>The phone can't pair</td><td>Read the current PIN on Home's Network card; it changes each boot unless fixed. Check Bluetooth is on and Wi-Fi transfer is not running.</td></tr>
       <tr><td>The app over Wi-Fi is refused</td><td>Answer <span class="ui">Allow app over Wi-Fi?</span> on the device. A refused address is blocked for 2 minutes.</td></tr>
       <tr><td>Map shows <span class="ui">Card isn't FAT32</span> or <span class="ui">No maps on card</span></td><td>Format the card FAT32 (on the device or with the computer) and build sets into <code>/Maps</code> with <code>tools/maptiles.py</code>.</td></tr>
@@ -1752,7 +1752,7 @@ reboot</code></pre>
       <tr><td>File manager</td><td class="c yes">✓</td><td class="c yes">✓</td><td class="c yes">✓</td><td class="c yes">✓</td><td class="c no">–</td><td class="c no">–</td><td class="c no">–</td></tr>
       <tr><td>USB drive</td><td class="c yes">✓</td><td class="c no">–</td><td class="c no">–</td><td class="c yes">✓</td><td class="c no">–</td><td class="c no">–</td><td class="c no">–</td></tr>
       <tr><td>Contact QR code</td><td class="c yes">✓</td><td class="c yes">✓</td><td class="c yes">✓</td><td class="c yes">✓</td><td class="c no">–</td><td class="c no">–</td><td class="c no">–</td></tr>
-      <tr><td>Colour themes</td><td class="c yes">9</td><td class="c yes">9</td><td class="c yes">9</td><td class="c yes">9</td><td class="c yes">9</td><td class="c no">–</td><td class="c yes">5</td></tr>
+      <tr><td>Color themes</td><td class="c yes">9</td><td class="c yes">9</td><td class="c yes">9</td><td class="c yes">9</td><td class="c yes">9</td><td class="c no">–</td><td class="c yes">5</td></tr>
     </tbody>
   </table></div>
 </section>
@@ -1764,7 +1764,7 @@ reboot</code></pre>
     <h2>Who made this.</h2>
   </div>
   <p>Cairn firmware, its interfaces and this manual: Christopher Van Hoose, CVH Visuals (<a href="https://www.cvhvisuals.com">cvhvisuals.com</a>). Releases and source: <a href="https://github.com/cvhviz/Cairn">github.com/cvhviz/Cairn</a>.</p>
-  <p>Cairn is a fork of <a href="https://github.com/meshcore-dev/MeshCore">MeshCore</a>, released under the MIT licence, Copyright (c) 2025 Scott Powell / rippleradios.com. Montserrat is used under the SIL Open Font Licence 1.1; the colour emoji are Noto Emoji. Map data belongs to its sources: USGS The National Map (public domain) and, where you build them, your chosen provider.</p>
+  <p>Cairn is a fork of <a href="https://github.com/meshcore-dev/MeshCore">MeshCore</a>, released under the MIT license, Copyright (c) 2025 Scott Powell / rippleradios.com. Montserrat is used under the SIL Open Font License 1.1; the color emoji are Noto Emoji. Map data belongs to its sources: USGS The National Map (public domain) and, where you build them, your chosen provider.</p>
   <p class="small muted">Cairn is an independent project and is not affiliated with Seeed Studio, Heltec, Elecrow, LilyGO or SiFli. Board names are their makers' trademarks. Screens in this manual were captured on devices and in the firmware's simulator; some show test data or fictional sample data, and some come from earlier builds where noted.</p>
   <div class="foot">
     <div class="gradline"></div>
