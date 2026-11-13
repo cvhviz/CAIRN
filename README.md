@@ -12,7 +12,7 @@
 <!-- Bump this section with each cairn-vN release. Nothing else in this README names the current build. -->
 ## Latest release: Cairn 133 (13 Nov 2026)
 
-- **Sharper text** on the color screens, and **chat text one size larger**.
+- **Sharper text** on the color screens, **chat text one size larger** (conversations and the chat list), and a group icon for channels instead of "#P".
 - **Wallpaper** (Settings › Appearance › Wallpaper): a photo from the card, four built-in pictures (one of them a cairn), gradients or solid colors, behind Home, the lock screen and the Ambient screensaver, with frosted cards over it.
 - **Wi-Fi scan:** a color per network, the real 802.11 channel shape, and a tap on a network picks it out with its details.
 - **Walkie**, a new push-to-talk alert tone.

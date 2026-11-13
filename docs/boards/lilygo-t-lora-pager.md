@@ -61,7 +61,7 @@ Unlock: click the wheel twice, or press BOOT twice. Power off on battery puts th
 
 Files: `MeshCore-TLoraPager-Cairn133-2026-11-13-full.bin` and `-update.bin` (SX1262); `MeshCore-TLoraPagerLR1121-Cairn133-2026-11-13-full.bin` and `-update.bin` (LR1121).
 
-- **Sharper text:** the upright strokes of letters like m, n, l, 1 and H now land on whole pixels instead of smearing across two. **Chat text is one size larger** (14 px, or 12 px with Display › Text size Small).
+- **Sharper text:** the upright strokes of letters like m, n, l, 1 and H now land on whole pixels instead of smearing across two. **Chat text is one size larger** (14 px, or 12 px with Display › Text size Small), and so is the chat list; channels show a group icon instead of "#P" or "#T".
 - **Wallpaper** (Settings › Appearance › Wallpaper): a photo from the card's `/Photos`, one of four built-in pictures (Cairn, Alpine, Aurora, Mesh), one of eight gradients or one of eight colors, behind Home (under the status bar and the side rail too), the lock screen and the Ambient screensaver. The cards over it turn to frosted glass. Only a photo needs the card. A picture opened from Files has a **Set as wallpaper** button.
 - **Wi-Fi scan:** each network has its own color, and networks that overlap never share one. Each is drawn in the real 802.11 channel shape, so a strong network's spill into its neighbors shows. **Tap a network** to pick it out: the others dim, and the readout shows its name, signal, channel, security, width and BSSID; tap the readout for its Details. Each list row has a stripe in its plot color.
 - **Walkie**, a new alert tone: a push-to-talk chirp, in every tone picker.
