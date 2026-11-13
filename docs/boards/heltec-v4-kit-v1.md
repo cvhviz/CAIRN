@@ -37,6 +37,18 @@ PRG is the only button this build uses. Heltec's datasheet shows a second case b
 - **FEM LNA:** on a V4.3 (KCT8103L) the tile works; on a V4.2 (GC1109, no LNA switch) it reads "Not on this radio". Boosted RX stays on both.
 - The Spectrum page, chats, nodes, repeater admin, Wi-Fi with online updates, the Wi-Fi and Bluetooth scanners, the Battery page, Battery saver and portrait mode (the Quick panel's Rotate) are as on the [Kit V2 build](heltec-v4-touch.md#features).
 
+## From Cairn 132
+
+Files: `MeshCore-HeltecV4KitV1-Cairn132-2026-11-12-full.bin` and `-update.bin`.
+
+- **Wi-Fi scan:** each network is drawn flat across the channels it covers and drops straight to the floor at the channel edge, and a 40 MHz network's name is followed by "40 MHz".
+- **Spectrum › Channel draws like the Band scan:** a filled trace colored by level (teal, amber, red) with the average as a white line, and a heat map in the Band waterfall's colors.
+- **Emoji taps land** on the keyboard's emoji panel even when the finger drifts a little while pressing.
+- **No hint text** in an empty message field.
+- **Less lag when adverts and messages arrive:** saves to flash (chat history, the offline queue, contacts, stored adverts) wait for the screen to go dark, for at most 3 minutes.
+
+Not yet checked on a device.
+
 ## From Cairn 131
 
 Files: `MeshCore-HeltecV4KitV1-Cairn131-2026-11-11-full.bin` and `-update.bin`. **Every time zone shows** in Settings › Clock › Time zone: the list stopped after the first four of Europe & Africa ([#50](https://github.com/cvhviz/CAIRN/issues/50), [#38](https://github.com/cvhviz/CAIRN/issues/38)).

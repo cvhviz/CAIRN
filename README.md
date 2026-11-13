@@ -10,21 +10,23 @@
 **[Download the latest release](https://github.com/cvhviz/CAIRN/releases/latest)** · [Files for every board](docs/downloads.md) · [Install guides](#install-and-update) · [Manual (PDF)](docs/Cairn_Firmware_Manual_Dark.pdf) · [Report a problem](#reporting-a-problem)
 
 <!-- Bump this section with each cairn-vN release. Nothing else in this README names the current build. -->
-## Latest release: Cairn 131 (11 Nov 2026)
+## Latest release: Cairn 132 (12 Nov 2026)
 
-- **Every time zone shows again** in Settings › Clock › Time zone on the touch and key boards (Wio L2 Pro, ThinkNode M9, T-Deck, T-LoRa Pager, both Heltec V4 touch kits): the list stopped after the first few of Europe & Africa ([#50](https://github.com/cvhviz/CAIRN/issues/50), [#38](https://github.com/cvhviz/CAIRN/issues/38)).
-- **A 12h / 24h clock on the T096** (Menu › Settings › Clock), and on the T114 ([#51](https://github.com/cvhviz/CAIRN/issues/51)).
-- **New in the release: companions for the Heltec Wireless Tracker V2 and the WiFi LoRa 32 V4-R8 (OLED)**, on the T096's one-button interface, with the app over Bluetooth or Wi-Fi. Both were run on the bench.
-- **To test, as experimental builds** (new, Cairn 131): the [Heltec T114 companion in color](docs/experimental.md), the [GAT562 30S Mesh Kit on the L1 Pro's interface](docs/experimental.md) ([#45](https://github.com/cvhviz/CAIRN/issues/45)) and a [ThinkNode M9 USB companion](docs/experimental.md) ([#52](https://github.com/cvhviz/CAIRN/issues/52)); still on earlier builds the [Heltec Vision Master T190](docs/experimental.md) and [WiFi LoRa 32 V3](docs/experimental.md) companions (130), the [LilyGO T5 E-Paper S3 Pro](docs/experimental.md) and the [SenseCAP MeshPager X2](docs/experimental.md) (127).
+- **Wi-Fi scan redrawn** on the touch and key boards and the T-Display SF32: each network is flat across the channels it covers and drops straight to the floor at the channel edge, and a 40 MHz network's name is followed by "40 MHz".
+- **Spectrum › Channel draws like the Band scan** (L2 Pro, Heltec V4 touch kits, ThinkNode M9, T-Deck, T-LoRa Pager): a filled trace colored by strength, the average as a white line, and a heat map in the Band waterfall's colors.
+- **Emoji taps land** on the touch keyboard's emoji panel even when the finger drifts a little, and an empty message field no longer shows hint text.
+- **Less lag when adverts and messages arrive** on the touch and key boards: saves to flash wait for the screen to go dark.
+- **Heltec V4-R8 (OLED) and Wireless Tracker V2:** no more boot loop on the V4-R8, and no more power-off on USB with a low battery (both already in the replaced Cairn 131 files).
+- **Experimental builds** are unchanged: the [Heltec T114 companion in color](docs/experimental.md), the [GAT562 30S Mesh Kit](docs/experimental.md) and the [ThinkNode M9 USB companion](docs/experimental.md) (131), the [Heltec Vision Master T190](docs/experimental.md) and [WiFi LoRa 32 V3](docs/experimental.md) companions (130), the [LilyGO T5 E-Paper S3 Pro](docs/experimental.md) and the [SenseCAP MeshPager X2](docs/experimental.md) (127).
 
-[Cairn 131 release notes](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v131) · [all releases](https://github.com/cvhviz/CAIRN/releases)
+[Cairn 132 release notes](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v132) · [all releases](https://github.com/cvhviz/CAIRN/releases)
 
 ## Download
 
 Every board's files are in the **[latest release](https://github.com/cvhviz/CAIRN/releases/latest)**, under **Assets**. GitHub lists them in alphabetical order, so look for your board's name. Every file is named
 
 ```
-MeshCore-<Board>-Cairn<N>-<date>[-<variant>].<ext>     for example MeshCore-WioL2Pro-Cairn131-2026-11-11-update.bin
+MeshCore-<Board>-Cairn<N>-<date>[-<variant>].<ext>     for example MeshCore-WioL2Pro-Cairn132-2026-11-12-update.bin
 ```
 
 The splash screen shows **BUILD N**, so you can match a device to its release. `SHA256SUMS.txt` in each release covers every file: `shasum -a 256 -c SHA256SUMS.txt`. The **[downloads page](docs/downloads.md)** lists every file for every board, including the preview and experimental builds.

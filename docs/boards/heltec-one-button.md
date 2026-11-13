@@ -37,6 +37,14 @@ The app connects over Bluetooth or over Wi-Fi (TCP port 5000), whichever it find
 - **Home's bottom line** shows the radio's address once it has joined.
 - From the app's command line: `set wifi.ssid` and `set wifi.pwd`.
 
+## From Cairn 132
+
+Files: `MeshCore-HeltecTrackerV2-Cairn132-2026-11-12-ble-full.bin` and `-ble-update.bin`; `MeshCore-HeltecV4R8-Cairn132-2026-11-12-ble-full.bin` and `-ble-update.bin`.
+
+- **V4-R8: no more boot loop.** After a soft reset the interface could read leftover memory and crash on every start.
+- **No more power-off on USB with a low battery** (both boards). The board now knows when it is plugged in, and powers off only when the cell is low and not rising for 5 minutes.
+- Both fixes were already in the Cairn 131 files, which were replaced on 12 Nov 2026 (run on the bench).
+
 ## From Cairn 131
 
 Files: `MeshCore-HeltecTrackerV2-Cairn131-2026-11-11-ble-full.bin` and `-ble-update.bin`; `MeshCore-HeltecV4R8-Cairn131-2026-11-11-ble-full.bin` and `-ble-update.bin`.

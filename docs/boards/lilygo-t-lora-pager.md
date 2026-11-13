@@ -57,6 +57,17 @@ Unlock: click the wheel twice, or press BOOT twice. Power off on battery puts th
 - **Battery saver** (Settings › Hardware › Display › Batt. saver, off by default): while the screen is dark the chip sleeps between radio packets. Not yet measured on a Pager.
 - **The clock** keeps time through a power off (the board's real-time clock), set again from GPS or the app.
 
+## From Cairn 132
+
+Files: `MeshCore-TLoraPager-Cairn132-2026-11-12-full.bin` and `-update.bin` (SX1262); `MeshCore-TLoraPagerLR1121-Cairn132-2026-11-12-full.bin` and `-update.bin` (LR1121).
+
+- **Wi-Fi scan:** each network is drawn flat across the channels it covers and drops straight to the floor at the channel edge, and a 40 MHz network's name is followed by "40 MHz".
+- **Spectrum › Channel draws like the Band scan:** a filled trace colored by level (teal, amber, red) with the average as a white line, and a heat map in the Band waterfall's colors.
+- **No hint text** in an empty message field.
+- **Less lag when adverts and messages arrive:** saves to flash (chat history, the offline queue, contacts, stored adverts) wait for the screen to go dark, for at most 3 minutes.
+
+Not yet checked on a device.
+
 ## From Cairn 131
 
 Files: `MeshCore-TLoraPager-Cairn131-2026-11-11-full.bin` and `-update.bin` (SX1262); `MeshCore-TLoraPagerLR1121-Cairn131-2026-11-11-full.bin` and `-update.bin` (LR1121).

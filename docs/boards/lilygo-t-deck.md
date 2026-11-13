@@ -41,6 +41,18 @@ The same files run on the T-Deck and the T-Deck Plus. Write the `-full.bin` or t
 - **Enter finishes the text field** (from Cairn 113): Send in a chat, Done, OK or Save elsewhere. The trackball click still selects what is highlighted.
 - **Radios by keys:** 1, 2 and 3 pick the LoRa, Wi-Fi and Bluetooth tabs (from Cairn 114). The LoRa tab lands on Advert (from Cairn 113), and the advert sheet opens with Send focused, so Advert, then a click, sends a zero-hop advert.
 
+## From Cairn 132
+
+Files: `MeshCore-TDeckPlus-Cairn132-2026-11-12-full.bin` and `-update.bin`.
+
+- **Wi-Fi scan:** each network is drawn flat across the channels it covers and drops straight to the floor at the channel edge, and a 40 MHz network's name is followed by "40 MHz".
+- **Spectrum › Channel draws like the Band scan:** a filled trace colored by level (teal, amber, red) with the average as a white line, and a heat map in the Band waterfall's colors.
+- **Emoji taps land** on the keyboard's emoji panel even when the finger drifts a little while pressing.
+- **No hint text** in an empty message field.
+- **Less lag when adverts and messages arrive:** saves to flash (chat history, the offline queue, contacts, stored adverts) wait for the screen to go dark, for at most 3 minutes.
+
+Not yet checked on a device.
+
 ## From Cairn 131
 
 Files: `MeshCore-TDeckPlus-Cairn131-2026-11-11-full.bin` and `-update.bin`.
