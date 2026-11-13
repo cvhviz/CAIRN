@@ -41,6 +41,15 @@ The same files run on the T-Deck and the T-Deck Plus. Write the `-full.bin` or t
 - **Enter finishes the text field** (from Cairn 113): Send in a chat, Done, OK or Save elsewhere. The trackball click still selects what is highlighted.
 - **Radios by keys:** 1, 2 and 3 pick the LoRa, Wi-Fi and Bluetooth tabs (from Cairn 114). The LoRa tab lands on Advert (from Cairn 113), and the advert sheet opens with Send focused, so Advert, then a click, sends a zero-hop advert.
 
+## From Cairn 133
+
+Files: `MeshCore-TDeckPlus-Cairn133-2026-11-13-full.bin` and `-update.bin`.
+
+- **Sharper text:** the upright strokes of letters like m, n, l, 1 and H now land on whole pixels instead of smearing across two. **Chat text is one size larger** (14 px, or 12 px with Display › Text size Small).
+- **Wallpaper** (Settings › Appearance › Wallpaper): a photo from the card's `/Photos`, one of four built-in pictures (Cairn, Alpine, Aurora, Mesh), one of eight gradients or one of eight colors, behind Home (under the status bar and the side rail too), the lock screen and the Ambient screensaver. The cards over it turn to frosted glass. Only a photo needs the card. A picture opened from Files has a **Set as wallpaper** button.
+- **Wi-Fi scan:** each network has its own color, and networks that overlap never share one. Each is drawn in the real 802.11 channel shape, so a strong network's spill into its neighbors shows. **Tap a network** to pick it out: the others dim, and the readout shows its name, signal, channel, security, width and BSSID; tap the readout for its Details. Each list row has a stripe in its plot color.
+- **Walkie**, a new alert tone: a push-to-talk chirp, in every tone picker.
+
 ## From Cairn 132
 
 Files: `MeshCore-TDeckPlus-Cairn132-2026-11-12-full.bin` and `-update.bin`.

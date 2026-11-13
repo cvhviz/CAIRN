@@ -1,10 +1,10 @@
 # Installing on nRF52840 boards (UF2)
 
-For the Seeed Wio Tracker L1 Pro, the Heltec Mesh Node T096, the Heltec T096 and T114 [compact repeaters](../boards/compact-repeater.md) and the nRF52840 [preview boards](../boards/preview-boards.md). Installing, updating and recovering are the same steps: copy the board's `.uf2` onto it. Your identity, contacts, channels and settings are kept.
+For the Seeed Wio Tracker L1 Pro, the Heltec Mesh Node T096 and T114 companions, the Heltec T096 and T114 [compact repeaters](../boards/compact-repeater.md) and the nRF52840 [preview boards](../boards/preview-boards.md). Installing, updating and recovering are the same steps: copy the board's `.uf2` onto it. Your identity, contacts, channels and settings are kept.
 
 ## Steps
 
-1. Download your board's `.uf2` from the [latest release](https://github.com/cvhviz/CAIRN/releases/latest), which carries the L1 Pro images, the T096 companion and the T096 and T114 [compact repeater](../boards/compact-repeater.md) images; the nRF52840 preview boards are in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview). The [downloads page](../downloads.md) and your board page say which file.
+1. Download your board's `.uf2` from the [latest release](https://github.com/cvhviz/CAIRN/releases/latest), which carries the L1 Pro images, the T096 and T114 companions and the T096 and T114 [compact repeater](../boards/compact-repeater.md) images; the nRF52840 preview boards are in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview). The [downloads page](../downloads.md) and your board page say which file.
 2. Connect the board over USB with a data cable (charge-only cables are common).
 3. **Double-tap Reset** (on the T096 the button is marked `RST`). A USB drive appears, named after the board's bootloader.
 4. Copy the `.uf2` onto the drive. The board reboots by itself when the copy finishes, and the drive disappears. That's normal.

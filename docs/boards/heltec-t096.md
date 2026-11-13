@@ -77,6 +77,11 @@ The companion build with the default Color theme. These were rendered by the fir
 | ![Home in the Color theme](../screens/t096/theme-color.png)<br>Color (default) | ![Home in the Dark theme](../screens/t096/theme-dark.png)<br>Dark | ![Home in the Night theme](../screens/t096/theme-night.png)<br>Night |
 | ![Home in the Soft theme](../screens/t096/theme-soft.png)<br>Soft | ![Home in the Stock theme](../screens/t096/theme-stock.png)<br>Stock | |
 
+## From Cairn 133
+
+- **The Heltec Mesh Node T114 joins the release** with this interface in color: `MeshCore-HeltecT114-Cairn133-2026-11-13-ble.uf2` (✅ beta). It was the experimental build `experimental-t114-131` ([#44](https://github.com/cvhviz/CAIRN/issues/44), [#51](https://github.com/cvhviz/CAIRN/issues/51)): the T096's five themes, a dimmable backlight and the 12h / 24h clock on the T114's 1.14" screen. Install it like the T096: double-tap Reset and copy the `.uf2` ([UF2 guide](../install/nrf52-uf2.md)). Run on a T114 on the bench; reports from more T114s are welcome.
+- The T096 itself gets only the new build number: `MeshCore-HeltecT096-Cairn133-2026-11-13-ble.uf2` and `-usb.uf2`.
+
 ## From Cairn 131
 
 Files: `MeshCore-HeltecT096-Cairn131-2026-11-11-ble.uf2` and `-usb.uf2`.

@@ -37,6 +37,15 @@ PRG is the only button this build uses. Heltec's datasheet shows a second case b
 - **FEM LNA:** on a V4.3 (KCT8103L) the tile works; on a V4.2 (GC1109, no LNA switch) it reads "Not on this radio". Boosted RX stays on both.
 - The Spectrum page, chats, nodes, repeater admin, Wi-Fi with online updates, the Wi-Fi and Bluetooth scanners, the Battery page, Battery saver and portrait mode (the Quick panel's Rotate) are as on the [Kit V2 build](heltec-v4-touch.md#features).
 
+## From Cairn 133
+
+Files: `MeshCore-HeltecV4KitV1-Cairn133-2026-11-13-full.bin` and `-update.bin`.
+
+- **Sharper text:** the upright strokes of letters like m, n, l, 1 and H now land on whole pixels instead of smearing across two. **Chat text is one size larger** (14 px, or 12 px with Display › Text size Small).
+- **Wallpaper** (Settings › Appearance › Wallpaper): a photo from the card's `/Photos`, one of four built-in pictures (Cairn, Alpine, Aurora, Mesh), one of eight gradients or one of eight colors, behind Home (under the status bar and the side rail too), the lock screen and the Ambient screensaver. The cards over it turn to frosted glass. Only a photo needs the card. A picture opened from Files has a **Set as wallpaper** button.
+- **Wi-Fi scan:** each network has its own color, and networks that overlap never share one. Each is drawn in the real 802.11 channel shape, so a strong network's spill into its neighbors shows. **Tap a network** to pick it out: the others dim, and the readout shows its name, signal, channel, security, width and BSSID; tap the readout for its Details. Each list row has a stripe in its plot color.
+- **Walkie**, a new alert tone: a push-to-talk chirp, in every tone picker.
+
 ## From Cairn 132
 
 Files: `MeshCore-HeltecV4KitV1-Cairn132-2026-11-12-full.bin` and `-update.bin`.
