@@ -57,6 +57,12 @@ Unlock: click the wheel twice, or press BOOT twice. Power off on battery puts th
 - **Battery saver** (Settings › Hardware › Display › Batt. saver, off by default): while the screen is dark the chip sleeps between radio packets. Not yet measured on a Pager.
 - **The clock** keeps time through a power off (the board's real-time clock), set again from GPS or the app.
 
+## From Cairn 135
+
+Files: `MeshCore-TLoraPager-Cairn135-2026-11-15-full.bin` and `-update.bin` (SX1262); `MeshCore-TLoraPagerLR1121-Cairn135-2026-11-15-full.bin` and `-update.bin` (LR1121).
+
+**Emoji reactions** from the phone apps show as a chip under the message they're for ("👍", "👍 2"), not as a message of its own with a code; Chats, Home and the lock screen read "Alice reacted 👍". A **↓ button** jumps to the newest message when you've scrolled up a conversation. Replies on Home, the lock screen and the screen saver read as they do in Chats ("@Bob Morning al.."), not in their raw form.
+
 ## From Cairn 134
 
 Files: `MeshCore-TLoraPager-Cairn134-2026-11-14-full.bin` and `-update.bin` (SX1262); `MeshCore-TLoraPagerLR1121-Cairn134-2026-11-14-full.bin` and `-update.bin` (LR1121).

@@ -39,6 +39,10 @@ After writing, tap Reset once if the screen still shows the old firmware.
 3. **Update:** set the address to `0x10000`, choose the `-update.bin`, and click **Program**. Don't erase.
 4. Click **Disconnect**, then tap Reset on the board.
 
+If you write your own browser flasher with esptool-js: its built-in `hard_reset` only releases RTS and never pulses the
+chip's enable line, so the board stays in the flasher after writing. Do what esptool.py does instead: DTR off, RTS high
+for 100 ms, then RTS low. The board then starts the new firmware by itself.
+
 ## Option 2: esptool (command line)
 
 esptool v5 is shown here. `pip install esptool` (or `pipx install esptool`) installs it.

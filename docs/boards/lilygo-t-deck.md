@@ -41,6 +41,12 @@ The same files run on the T-Deck and the T-Deck Plus. Write the `-full.bin` or t
 - **Enter finishes the text field** (from Cairn 113): Send in a chat, Done, OK or Save elsewhere. The trackball click still selects what is highlighted.
 - **Radios by keys:** 1, 2 and 3 pick the LoRa, Wi-Fi and Bluetooth tabs (from Cairn 114). The LoRa tab lands on Advert (from Cairn 113), and the advert sheet opens with Send focused, so Advert, then a click, sends a zero-hop advert.
 
+## From Cairn 135
+
+Files: `MeshCore-TDeckPlus-Cairn135-2026-11-15-full.bin` and `-update.bin`.
+
+**Emoji reactions** from the phone apps show as a chip under the message they're for ("👍", "👍 2"), not as a message of its own with a code; Chats, Home and the lock screen read "Alice reacted 👍". A **↓ button** jumps to the newest message when you've scrolled up a conversation. Replies on Home, the lock screen and the screen saver read as they do in Chats ("@Bob Morning al.."), not in their raw form.
+
 ## From Cairn 134
 
 Files: `MeshCore-TDeckPlus-Cairn134-2026-11-14-full.bin` and `-update.bin`.

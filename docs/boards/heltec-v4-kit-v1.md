@@ -37,6 +37,12 @@ PRG is the only button this build uses. Heltec's datasheet shows a second case b
 - **FEM LNA:** on a V4.3 (KCT8103L) the tile works; on a V4.2 (GC1109, no LNA switch) it reads "Not on this radio". Boosted RX stays on both.
 - The Spectrum page, chats, nodes, repeater admin, Wi-Fi with online updates, the Wi-Fi and Bluetooth scanners, the Battery page, Battery saver and portrait mode (the Quick panel's Rotate) are as on the [Kit V2 build](heltec-v4-touch.md#features).
 
+## From Cairn 135
+
+Files: `MeshCore-HeltecV4KitV1-Cairn135-2026-11-15-full.bin` and `-update.bin`.
+
+**Emoji reactions** from the phone apps show as a chip under the message they're for ("👍", "👍 2"), not as a message of its own with a code; Chats, Home and the lock screen read "Alice reacted 👍". A **↓ button** jumps to the newest message when you've scrolled up a conversation. Replies on Home, the lock screen and the screen saver read as they do in Chats ("@Bob Morning al.."), not in their raw form.
+
 ## From Cairn 134
 
 Files: `MeshCore-HeltecV4KitV1-Cairn134-2026-11-14-full.bin` and `-update.bin`.

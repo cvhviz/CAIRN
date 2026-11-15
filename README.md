@@ -10,23 +10,21 @@
 **[Download the latest release](https://github.com/cvhviz/CAIRN/releases/latest)** · [Files for every board](docs/downloads.md) · [Install guides](#install-and-update) · [Manual (PDF)](docs/Cairn_Firmware_Manual_Dark.pdf) · [Report a problem](#reporting-a-problem)
 
 <!-- Bump this section with each cairn-vN release. Nothing else in this README names the current build. -->
-## Latest release: Cairn 134 (14 Nov 2026)
+## Latest release: Cairn 135 (15 Nov 2026)
 
-- **Wallpaper on every page:** Chats, conversations, Nodes and Settings show your wallpaper too, with frosted cards over it. The picker has one **Gradient** and one **Color** card, each opening eight.
-- **+ Channel** next to New message on the Chats page: join a hashtag or private channel without digging through Settings.
-- **Wi-Fi transfer page** in tabs (Music, Photos, Files, Firmware), with progress that says when the device is saving or checking. With Bluetooth off, ending Wi-Fi transfer **no longer restarts** the device.
-- **Chat names colored by kind** (people, rooms, channels, #Public), and the **map groups nodes only from 8**.
-- **Bluetooth off is remembered** across restarts on the one-button boards, the L1 family and the T-Display SF32.
-- **Experimental:** the [plain Heltec V4 (OLED) companion](docs/experimental.md), now with Wi-Fi like the V4-R8 (134, [#53](https://github.com/cvhviz/CAIRN/issues/53)). The others are unchanged: the GAT562 30S Mesh Kit and the ThinkNode M9 USB companion (131), the Heltec Vision Master T190 and WiFi LoRa 32 V3 companions (130), the LilyGO T5 E-Paper S3 Pro and the SenseCAP MeshPager X2 (127).
+- **Emoji reactions** from the phone apps show as reactions on the touch boards: a chip under the message they're for ("👍 2"), not a message of their own with a code. Chats and Home read "Alice reacted 👍".
+- **Jump to the newest message:** scroll up a conversation and a ↓ button takes you straight back down.
+- **Replies read cleanly** on Home, the lock screen and the screen saver, as they do in Chats.
+- **Experimental builds** are unchanged: the [plain Heltec V4 (OLED) companion](docs/experimental.md) (134), the GAT562 30S Mesh Kit and the ThinkNode M9 USB companion (131), the Heltec Vision Master T190 and WiFi LoRa 32 V3 companions (130), the LilyGO T5 E-Paper S3 Pro and the SenseCAP MeshPager X2 (127).
 
-[Cairn 134 release notes](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v134) · [all releases](https://github.com/cvhviz/CAIRN/releases)
+[Cairn 135 release notes](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v135) · [all releases](https://github.com/cvhviz/CAIRN/releases)
 
 ## Download
 
 Every board's files are in the **[latest release](https://github.com/cvhviz/CAIRN/releases/latest)**, under **Assets**. GitHub lists them in alphabetical order, so look for your board's name. Every file is named
 
 ```
-MeshCore-<Board>-Cairn<N>-<date>[-<variant>].<ext>     for example MeshCore-WioL2Pro-Cairn134-2026-11-14-update.bin
+MeshCore-<Board>-Cairn<N>-<date>[-<variant>].<ext>     for example MeshCore-WioL2Pro-Cairn135-2026-11-15-update.bin
 ```
 
 The splash screen shows **BUILD N**, so you can match a device to its release. `SHA256SUMS.txt` in each release covers every file: `shasum -a 256 -c SHA256SUMS.txt`. The **[downloads page](docs/downloads.md)** lists every file for every board, including the preview and experimental builds.
