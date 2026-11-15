@@ -10,23 +10,23 @@
 **[Download the latest release](https://github.com/cvhviz/CAIRN/releases/latest)** · [Files for every board](docs/downloads.md) · [Install guides](#install-and-update) · [Manual (PDF)](docs/Cairn_Firmware_Manual_Dark.pdf) · [Report a problem](#reporting-a-problem)
 
 <!-- Bump this section with each cairn-vN release. Nothing else in this README names the current build. -->
-## Latest release: Cairn 133 (13 Nov 2026)
+## Latest release: Cairn 134 (14 Nov 2026)
 
-- **Sharper text** on the color screens, **chat text one size larger** (conversations and the chat list), and a group icon for channels instead of "#P".
-- **Wallpaper** (Settings › Appearance › Wallpaper): a photo from the card, four built-in pictures (one of them a cairn), gradients or solid colors, behind Home, the lock screen and the Ambient screensaver, with frosted cards over it.
-- **Wi-Fi scan:** a color per network, the real 802.11 channel shape, and a tap on a network picks it out with its details.
-- **Walkie**, a new push-to-talk alert tone.
-- **Heltec Mesh Node T114 companion** joins the release (✅ beta): the T096's interface in color, `MeshCore-HeltecT114-…-ble.uf2`. It was an experimental build until now.
-- **Experimental builds** are unchanged: the [GAT562 30S Mesh Kit](docs/experimental.md) and the [ThinkNode M9 USB companion](docs/experimental.md) (131), the [Heltec Vision Master T190](docs/experimental.md) and [WiFi LoRa 32 V3](docs/experimental.md) companions (130), the [LilyGO T5 E-Paper S3 Pro](docs/experimental.md) and the [SenseCAP MeshPager X2](docs/experimental.md) (127).
+- **Wallpaper on every page:** Chats, conversations, Nodes and Settings show your wallpaper too, with frosted cards over it. The picker has one **Gradient** and one **Color** card, each opening eight.
+- **+ Channel** next to New message on the Chats page: join a hashtag or private channel without digging through Settings.
+- **Wi-Fi transfer page** in tabs (Music, Photos, Files, Firmware), with progress that says when the device is saving or checking. With Bluetooth off, ending Wi-Fi transfer **no longer restarts** the device.
+- **Chat names colored by kind** (people, rooms, channels, #Public), and the **map groups nodes only from 8**.
+- **Bluetooth off is remembered** across restarts on the one-button boards, the L1 family and the T-Display SF32.
+- **Experimental:** the [plain Heltec V4 (OLED) companion](docs/experimental.md), now with Wi-Fi like the V4-R8 (134, [#53](https://github.com/cvhviz/CAIRN/issues/53)). The others are unchanged: the GAT562 30S Mesh Kit and the ThinkNode M9 USB companion (131), the Heltec Vision Master T190 and WiFi LoRa 32 V3 companions (130), the LilyGO T5 E-Paper S3 Pro and the SenseCAP MeshPager X2 (127).
 
-[Cairn 133 release notes](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v133) · [all releases](https://github.com/cvhviz/CAIRN/releases)
+[Cairn 134 release notes](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v134) · [all releases](https://github.com/cvhviz/CAIRN/releases)
 
 ## Download
 
 Every board's files are in the **[latest release](https://github.com/cvhviz/CAIRN/releases/latest)**, under **Assets**. GitHub lists them in alphabetical order, so look for your board's name. Every file is named
 
 ```
-MeshCore-<Board>-Cairn<N>-<date>[-<variant>].<ext>     for example MeshCore-WioL2Pro-Cairn133-2026-11-13-update.bin
+MeshCore-<Board>-Cairn<N>-<date>[-<variant>].<ext>     for example MeshCore-WioL2Pro-Cairn134-2026-11-14-update.bin
 ```
 
 The splash screen shows **BUILD N**, so you can match a device to its release. `SHA256SUMS.txt` in each release covers every file: `shasum -a 256 -c SHA256SUMS.txt`. The **[downloads page](docs/downloads.md)** lists every file for every board, including the preview and experimental builds.
@@ -77,11 +77,12 @@ The L1 Pro has three companion builds, one per screen (the stock SH1106 OLED, th
 | [V4 + Expansion Kit V1 (touch)](docs/boards/heltec-v4-kit-v1.md) | 2.8" touchscreen, no map | ✅ | `HeltecV4KitV1`: `-full.bin`, `-update.bin` (in the normal release from Cairn 130) |
 | [Wireless Tracker V2](docs/boards/heltec-one-button.md) | 0.96" color TFT, one button, GPS, Wi-Fi | ✅ beta | `HeltecTrackerV2`: `-ble-full.bin`, `-ble-update.bin` (from Cairn 131) |
 | [V4-R8 (OLED)](docs/boards/heltec-one-button.md) | 0.96" OLED, one button, Wi-Fi | ✅ beta | `HeltecV4R8`: `-ble-full.bin`, `-ble-update.bin` (from Cairn 131) |
+| [V4 (OLED), the plain V4](docs/experimental.md) | 0.96" OLED, one button, Wi-Fi | 🧪 experimental | `HeltecV4`: `-ble-full.bin` in [experimental-heltec-v4-134](https://github.com/cvhviz/CAIRN/releases/tag/experimental-heltec-v4-134) |
 | [Mesh Node T096](docs/boards/heltec-t096.md) | 0.96" color TFT, one button | ✅ | `HeltecT096`: `-ble.uf2`, `-usb.uf2` |
 | [Mesh Node T114](docs/boards/heltec-t096.md#from-cairn-133) | 1.14" color TFT, one button | ✅ beta | `HeltecT114`: `-ble.uf2` (from Cairn 133) |
 | [Mesh Node T096 repeater](docs/boards/compact-repeater.md) | 0.96" color TFT, one button | ✅ | `HeltecT096`: `-repeater.uf2` |
 | [T114, V2, V3, V4, V4-R8, Wireless Tracker V1 and V2 repeaters](docs/boards/compact-repeater.md) | TFT or OLED, one button | 🧪 | `HeltecT114`: `-repeater.uf2`; the ESP32 boards `-repeater-full.bin`, `-repeater-update.bin` |
-| [V2, V3, V4 (OLED), Wireless Tracker V1, T1 companions](docs/boards/preview-boards.md) | OLED or color TFT, one button | 🧪 | in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview) |
+| [V2, V3, Wireless Tracker V1, T1 companions](docs/boards/preview-boards.md) | OLED or color TFT, one button | 🧪 | in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview) |
 
 Check which Heltec V4 you have before installing: the touch build for the Expansion Kit V2 needs a **V4-R8** (8 MB PSRAM), and a standard V4 (2 MB PSRAM) in the Kit V1 needs the Kit V1 build. The [V4 touch page](docs/boards/heltec-v4-touch.md) says how to tell.
 

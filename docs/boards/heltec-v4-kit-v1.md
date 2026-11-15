@@ -37,6 +37,12 @@ PRG is the only button this build uses. Heltec's datasheet shows a second case b
 - **FEM LNA:** on a V4.3 (KCT8103L) the tile works; on a V4.2 (GC1109, no LNA switch) it reads "Not on this radio". Boosted RX stays on both.
 - The Spectrum page, chats, nodes, repeater admin, Wi-Fi with online updates, the Wi-Fi and Bluetooth scanners, the Battery page, Battery saver and portrait mode (the Quick panel's Rotate) are as on the [Kit V2 build](heltec-v4-touch.md#features).
 
+## From Cairn 134
+
+Files: `MeshCore-HeltecV4KitV1-Cairn134-2026-11-14-full.bin` and `-update.bin`.
+
+The **wallpaper** shows behind every list and settings page too (Chats, conversations, Nodes, Settings), with frosted cards over it; the picker has one **Gradient** and one **Color** card, each opening eight. **+ Channel**, next to New message on the Chats page, joins a channel (by hashtag, or private by name and key). The **Wi-Fi transfer page** is organized into Music, Photos, Files and Firmware tabs, and its progress says when the device is saving or checking. With Bluetooth off, ending Wi-Fi transfer no longer restarts the device; turning Bluetooth on later asks first. Chat names are colored by kind (people, rooms, channels, #Public), and the map groups nodes only when 8 or more crowd together.
+
 ## From Cairn 133
 
 Files: `MeshCore-HeltecV4KitV1-Cairn133-2026-11-13-full.bin` and `-update.bin`.

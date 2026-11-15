@@ -57,6 +57,12 @@ Unlock: click the wheel twice, or press BOOT twice. Power off on battery puts th
 - **Battery saver** (Settings › Hardware › Display › Batt. saver, off by default): while the screen is dark the chip sleeps between radio packets. Not yet measured on a Pager.
 - **The clock** keeps time through a power off (the board's real-time clock), set again from GPS or the app.
 
+## From Cairn 134
+
+Files: `MeshCore-TLoraPager-Cairn134-2026-11-14-full.bin` and `-update.bin` (SX1262); `MeshCore-TLoraPagerLR1121-Cairn134-2026-11-14-full.bin` and `-update.bin` (LR1121).
+
+The **wallpaper** shows behind every list and settings page too (Chats, conversations, Nodes, Settings), with frosted cards over it; the picker has one **Gradient** and one **Color** card, each opening eight. **+ Channel**, next to New message on the Chats page, joins a channel (by hashtag, or private by name and key). The **Wi-Fi transfer page** is organized into Music, Photos, Files and Firmware tabs, and its progress says when the device is saving or checking. With Bluetooth off, ending Wi-Fi transfer no longer restarts the device; turning Bluetooth on later asks first. Chat names are colored by kind (people, rooms, channels, #Public), and the map groups nodes only when 8 or more crowd together.
+
 ## From Cairn 133
 
 Files: `MeshCore-TLoraPager-Cairn133-2026-11-13-full.bin` and `-update.bin` (SX1262); `MeshCore-TLoraPagerLR1121-Cairn133-2026-11-13-full.bin` and `-update.bin` (LR1121).
