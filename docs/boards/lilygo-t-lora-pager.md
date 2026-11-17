@@ -57,6 +57,12 @@ Unlock: click the wheel twice, or press BOOT twice. Power off on battery puts th
 - **Battery saver** (Settings › Hardware › Display › Batt. saver, off by default): while the screen is dark the chip sleeps between radio packets. Not yet measured on a Pager.
 - **The clock** keeps time through a power off (the board's real-time clock), set again from GPS or the app.
 
+## From Cairn 136
+
+Files: `MeshCore-TLoraPager-Cairn136-2026-11-16-full.bin` (SX1262) or `MeshCore-TLoraPagerLR1121-Cairn136-2026-11-16-full.bin`, and their `-update.bin`.
+
+The **cursor stays at the end of your text** in the message field: typing narrow letters like "f" or "j" pushed it a little further right with each one, so after "ffffffffff" it sat well past the text, and long lines wrapped early ([#55](https://github.com/cvhviz/CAIRN/issues/55)).
+
 ## From Cairn 135
 
 Files: `MeshCore-TLoraPager-Cairn135-2026-11-15-full.bin` and `-update.bin` (SX1262); `MeshCore-TLoraPagerLR1121-Cairn135-2026-11-15-full.bin` and `-update.bin` (LR1121).

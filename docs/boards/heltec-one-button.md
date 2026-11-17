@@ -37,6 +37,13 @@ The app connects over Bluetooth or over Wi-Fi (TCP port 5000), whichever it find
 - **Home's bottom line** shows the radio's address once it has joined.
 - From the app's command line: `set wifi.ssid` and `set wifi.pwd`.
 
+## From Cairn 136
+
+Files: `MeshCore-HeltecTrackerV2-Cairn136-2026-11-16-ble-full.bin` and `-ble-update.bin`; `MeshCore-HeltecV4R8-Cairn136-2026-11-16-ble-full.bin` and `-ble-update.bin`.
+
+- **AM/PM no longer runs into the date** on Home: with a two-digit hour ("10:59 AM") it overlapped the date ("Sun Nov 15"); it now sits under the date, next to the time zone ([#53](https://github.com/cvhviz/CAIRN/issues/53)).
+- The **plain WiFi LoRa 32 V4** and the **V4 in the non-touch Expansion Kit** (sensors and buzzer) have experimental companions on the same interface: see [experimental builds](../experimental.md).
+
 ## From Cairn 132
 
 Files: `MeshCore-HeltecTrackerV2-Cairn132-2026-11-12-ble-full.bin` and `-ble-update.bin`; `MeshCore-HeltecV4R8-Cairn132-2026-11-12-ble-full.bin` and `-ble-update.bin`.

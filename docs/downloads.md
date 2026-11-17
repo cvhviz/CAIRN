@@ -85,7 +85,7 @@ Status: ✅ tested on hardware · ✅ beta: tested, new to Cairn · 🧪 preview
 |---|---|---|---|
 | [ThinkNode M9](boards/thinknode-m9.md) | ✅ | `MeshCore-ThinkNodeM9-CairnN-<date>-full.bin` | first install or recovery, at `0x0` (erases everything); also the way in from Elecrow's firmware, Meshtastic or stock MeshCore |
 | | | `MeshCore-ThinkNodeM9-CairnN-<date>-update.bin` | update over Wi-Fi, or over USB at `0x10000` |
-| ThinkNode M9 USB companion | experimental | `MeshCore-ThinkNodeM9-CairnN-<date>-usb-full.bin` | the app protocol over the USB cable, from Cairn 131, in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-m9usb-131), not the normal one ([#52](https://github.com/cvhviz/CAIRN/issues/52)) |
+| ThinkNode M9 USB companion | ✅ | `MeshCore-ThinkNodeM9-CairnN-<date>-usb-full.bin` / `-usb-update.bin` | the app protocol over the USB cable as well as Bluetooth ([#52](https://github.com/cvhviz/CAIRN/issues/52)), in the normal release from Cairn 136 (before: an [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-m9usb-131)). The `-usb-full.bin` at `0x0`, the `-usb-update.bin` at `0x10000`; online update installs the Bluetooth build |
 
 🧪 Preview, in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview): ThinkNode M2.
 
