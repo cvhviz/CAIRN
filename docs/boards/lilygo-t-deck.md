@@ -41,6 +41,12 @@ The same files run on the T-Deck and the T-Deck Plus. Write the `-full.bin` or t
 - **Enter finishes the text field** (from Cairn 113): Send in a chat, Done, OK or Save elsewhere. The trackball click still selects what is highlighted.
 - **Radios by keys:** 1, 2 and 3 pick the LoRa, Wi-Fi and Bluetooth tabs (from Cairn 114). The LoRa tab lands on Advert (from Cairn 113), and the advert sheet opens with Send focused, so Advert, then a click, sends a zero-hop advert.
 
+## From Cairn 137
+
+Files: `MeshCore-TDeckPlus-Cairn137-2026-11-18-full.bin` and `-update.bin`.
+
+You can **move the cursor inside your message**: Left / Right move one letter, Up / Down one line at the same spot, and Down from the last line goes to the Send row (Up comes back). Typing, Del, holding Del and Paste work at the cursor. Over a **wallpaper**, list rows (Chats, Nodes, the pickers) are frosted like Home's cards, and Home's date, uptime, sunrise / sunset, temperature and channel each sit on a small frosted chip, so they stay readable. With a contact selected on the map, **Back clears it** first; a second Back leaves the map ([#58](https://github.com/cvhviz/CAIRN/issues/58)).
+
 ## From Cairn 136
 
 Files: `MeshCore-TDeckPlus-Cairn136-2026-11-16-full.bin` and `-update.bin`.

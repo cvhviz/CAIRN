@@ -37,6 +37,12 @@ PRG is the only button this build uses. Heltec's datasheet shows a second case b
 - **FEM LNA:** on a V4.3 (KCT8103L) the tile works; on a V4.2 (GC1109, no LNA switch) it reads "Not on this radio". Boosted RX stays on both.
 - The Spectrum page, chats, nodes, repeater admin, Wi-Fi with online updates, the Wi-Fi and Bluetooth scanners, the Battery page, Battery saver and portrait mode (the Quick panel's Rotate) are as on the [Kit V2 build](heltec-v4-touch.md#features).
 
+## From Cairn 137
+
+Files: `MeshCore-HeltecV4KitV1-Cairn137-2026-11-18-full.bin` and `-update.bin`.
+
+You can **move the cursor inside your message**: tap in the text to put it there, or tap a "…" to jump to that end. Typing, Del and Paste work at the cursor. Over a **wallpaper**, list rows (Chats, Nodes, the pickers) are frosted like Home's cards, and Home's date, uptime, sunrise / sunset, temperature and channel each sit on a small frosted chip, so they stay readable. Tapping an empty spot on the map clears a selected contact, and now Back does too.
+
 ## From Cairn 135
 
 Files: `MeshCore-HeltecV4KitV1-Cairn135-2026-11-15-full.bin` and `-update.bin`.

@@ -57,6 +57,12 @@ Unlock: click the wheel twice, or press BOOT twice. Power off on battery puts th
 - **Battery saver** (Settings › Hardware › Display › Batt. saver, off by default): while the screen is dark the chip sleeps between radio packets. Not yet measured on a Pager.
 - **The clock** keeps time through a power off (the board's real-time clock), set again from GPS or the app.
 
+## From Cairn 137
+
+Files: `MeshCore-TLoraPager-Cairn137-2026-11-18-full.bin` (SX1262) or `MeshCore-TLoraPagerLR1121-Cairn137-2026-11-18-full.bin`, and their `-update.bin`.
+
+You can **move the cursor inside your message**: Left / Right move one letter, Up / Down one line at the same spot, and Down from the last line goes to the Send row (Up comes back). Typing, Del, holding Del and Paste work at the cursor. Over a **wallpaper**, list rows (Chats, Nodes, the pickers) are frosted like Home's cards, and Home's date, uptime, sunrise / sunset, temperature and channel each sit on a small frosted chip, so they stay readable. With a contact selected on the map, **Back clears it** first; a second Back leaves the map ([#58](https://github.com/cvhviz/CAIRN/issues/58)).
+
 ## From Cairn 136
 
 Files: `MeshCore-TLoraPager-Cairn136-2026-11-16-full.bin` (SX1262) or `MeshCore-TLoraPagerLR1121-Cairn136-2026-11-16-full.bin`, and their `-update.bin`.

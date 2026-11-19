@@ -10,21 +10,21 @@
 **[Download the latest release](https://github.com/cvhviz/CAIRN/releases/latest)** · [Files for every board](docs/downloads.md) · [Install guides](#install-and-update) · [Manual (PDF)](docs/Cairn_Firmware_Manual_Dark.pdf) · [Report a problem](#reporting-a-problem)
 
 <!-- Bump this section with each cairn-vN release. Nothing else in this README names the current build. -->
-## Latest release: Cairn 136 (16 Nov 2026)
+## Latest release: Cairn 137 (18 Nov 2026)
 
-- **ThinkNode M9:** the @ key types "@" while you write a message.
-- **The cursor stays at the end of your text** on the T-Deck, T-LoRa Pager and ThinkNode M9, even after narrow letters like "ffff" or "jjjj" (it used to drift right and wrap lines early).
-- **AM/PM no longer runs into the date** on the one-button OLED boards' Home screen: with a two-digit hour it moves under the date, next to the time zone.
-- **Experimental:** the [Heltec WiFi LoRa 32 V4 (OLED) companion](docs/experimental.md) moves to 136, now with a build for the **V4 in the non-touch Expansion Kit** (its sensors and buzzer) and an `-update.bin` beside each `-full.bin`. The **ThinkNode M9 USB companion** moves from experimental into the release. The other experimental builds are unchanged: the GAT562 30S Mesh Kit (131), the Heltec Vision Master T190 and WiFi LoRa 32 V3 companions (130), the LilyGO T5 E-Paper S3 Pro and the SenseCAP MeshPager X2 (127).
+- **Move the cursor inside your message:** tap in the text on the L2 Pro and Heltec V4 touch, or use the arrow keys on the T-Deck, T-LoRa Pager and ThinkNode M9. Typing, Del and Paste work where the cursor is.
+- **Easier to read over a wallpaper:** list rows are frosted like Home's cards, and Home's date, sunrise / sunset, temperature and channel sit on small frosted chips.
+- **ThinkNode M9:** Shift + a letter pressed together no longer clears the message; Wi-Fi transfer gains **Photos** and **Files** (pictures for the wallpaper and the Photos screensaver); the Trip page's buttons can be selected ([#57](https://github.com/cvhviz/CAIRN/issues/57)), and Back clears a contact selected on the map ([#58](https://github.com/cvhviz/CAIRN/issues/58)).
+- **Experimental:** the [Heltec WiFi LoRa 32 V4 (OLED) companion and its Expansion Kit build](docs/experimental.md) move to 137 with no other change. The other experimental builds are unchanged: the GAT562 30S Mesh Kit (131), the Heltec Vision Master T190 and WiFi LoRa 32 V3 companions (130), the LilyGO T5 E-Paper S3 Pro and the SenseCAP MeshPager X2 (127).
 
-[Cairn 136 release notes](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v136) · [all releases](https://github.com/cvhviz/CAIRN/releases)
+[Cairn 137 release notes](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v137) · [all releases](https://github.com/cvhviz/CAIRN/releases)
 
 ## Download
 
 Every board's files are in the **[latest release](https://github.com/cvhviz/CAIRN/releases/latest)**, under **Assets**. GitHub lists them in alphabetical order, so look for your board's name. Every file is named
 
 ```
-MeshCore-<Board>-Cairn<N>-<date>[-<variant>].<ext>     for example MeshCore-WioL2Pro-Cairn136-2026-11-16-update.bin
+MeshCore-<Board>-Cairn<N>-<date>[-<variant>].<ext>     for example MeshCore-WioL2Pro-Cairn137-2026-11-18-update.bin
 ```
 
 The splash screen shows **BUILD N**, so you can match a device to its release. `SHA256SUMS.txt` in each release covers every file: `shasum -a 256 -c SHA256SUMS.txt`. The **[downloads page](docs/downloads.md)** lists every file for every board, including the preview and experimental builds.
