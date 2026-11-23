@@ -88,7 +88,7 @@ Check which Heltec V4 you have before installing: the touch build for the Expans
 
 | Board | Screen and input | Status | Files (`MeshCore-<Board>-…`) |
 | --- | --- | --- | --- |
-| [ThinkNode M9](docs/boards/thinknode-m9.md) | 2.4" screen, keyboard, d-pad | ✅ | `ThinkNodeM9`: `-full.bin`, `-update.bin` |
+| [ThinkNode M9](docs/boards/thinknode-m9.md) | 2.4" screen, keyboard, d-pad | ✅ | `ThinkNodeM9`: `-full.bin`, `-update.bin`; the USB companion `ThinkNodeM9USB`: `-full.bin`, `-update.bin` |
 | [ThinkNode M2](docs/boards/preview-boards.md) | OLED, one button | 🧪 | in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview) |
 
 #### Other boards (🧪 preview)
@@ -156,4 +156,4 @@ How releases are tagged and named for the online updater: [Release format](docs/
 
 ## License
 
-MIT, same as upstream MeshCore. The firmware embeds third-party fonts, emoji and libraries under their own licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [licenses/](licenses/).
+The firmware embeds third-party fonts, emoji and libraries under their own licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [licenses/](licenses/).

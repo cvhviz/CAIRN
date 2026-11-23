@@ -1,0 +1,231 @@
+Licence notices of libraries that state their licence only in their source headers or README
+(Adafruit BMP280, BMP085, BME680 with Bosch BME68x, VL53L0X with the ST API, and the Tom Thumb font).
+Copied verbatim from the library sources as built into Cairn.
+
+========================================================================
+Adafruit BMP280 Library (Adafruit_BMP280.cpp header)
+========================================================================
+
+/*!
+ *  @file Adafruit_BMP280.cpp
+ *
+ *  This is a library for the BMP280 orientation sensor
+ *
+ *  Designed specifically to work with the Adafruit BMP280 Sensor.
+ *
+ *  Pick one up today in the adafruit shop!
+ *  ------> https://www.adafruit.com/product/2651
+ *
+ *  These sensors use I2C to communicate, 2 pins are required to interface.
+ *
+ *  Adafruit invests time and resources providing this open source code,
+ *  please support Adafruit andopen-source hardware by purchasing products
+ *  from Adafruit!
+ *
+ *  K.Townsend (Adafruit Industries)
+ *
+ *  BSD license, all text above must be included in any redistribution
+ */
+
+========================================================================
+Adafruit BMP085 Library (Adafruit_BMP085.cpp header)
+========================================================================
+
+/*!
+ * @file Adafruit_BMP085.cpp
+ *
+ * @mainpage Adafruit BMP085 Library
+ *
+ * @section intro_sec Introduction
+ *
+ * This is a library for the Adafruit BMP085/BMP180 Barometric Pressure + Temp
+ * sensor
+ *
+ * Designed specifically to work with the Adafruit BMP085 or BMP180 Breakout
+ * ----> http://www.adafruit.com/products/391
+ * ----> http://www.adafruit.com/products/1603
+ *
+ * These displays use I2C to communicate, 2 pins are required to
+ * interface
+ * Adafruit invests time and resources providing this open source code,
+ * please support Adafruit and open-source hardware by purchasing
+ * products from Adafruit!
+ *
+ * @section author Author
+ *
+ * Written by Limor Fried/Ladyada for Adafruit Industries.
+ * Updated by Samy Kamkar for cross-platform support.
+ *
+ * @section license License
+ *
+ * BSD license, all text above must be included in any redistribution
+ */
+
+========================================================================
+Adafruit BME680 Library (Adafruit_BME680.cpp header)
+========================================================================
+
+/*!
+ * @file Adafruit_BME680.cpp
+ *
+ * @mainpage Adafruit BME680 temperature, humidity, barometric pressure and gas
+ * sensor driver
+ *
+ * @section intro_sec Introduction
+ *
+ * This is the documentation for Adafruit's BME680 driver for the
+ * Arduino platform.  It is designed specifically to work with the
+ * Adafruit BME680 breakout: https://www.adafruit.com/products/3660
+ *
+ * These sensors use I2C to communicate, 2 pins (SCL+SDA) are required
+ * to interface with the breakout.
+ *
+ * Adafruit invests time and resources providing this open source code,
+ * please support Adafruit and open-source hardware by purchasing
+ * products from Adafruit!
+ *
+ * @section author Author
+ *
+ * Written by Ladyada for Adafruit Industries.
+ *
+ * @section license License
+ *
+ * BSD license, all text here must be included in any redistribution.
+ *
+ */
+
+========================================================================
+Bosch Sensortec BME68x API, bundled in the Adafruit BME680 Library (bme68x.c header)
+========================================================================
+
+/**
+ * Copyright (c) 2021 Bosch Sensortec GmbH. All rights reserved.
+ *
+ * BSD-3-Clause
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * 3. Neither the name of the copyright holder nor the names of its
+ *    contributors may be used to endorse or promote products derived from
+ *    this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ * FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ * COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ * STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+ * IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ *
+ * @file       bme68x.c
+ * @date       2021-05-24
+ * @version    v4.4.6
+ *
+ */
+
+========================================================================
+Adafruit_VL53L0X (README)
+========================================================================
+
+Written by Limor Fried/Ladyada for Adafruit Industries.
+MIT license, all text above must be included in any redistribution
+
+========================================================================
+STMicroelectronics VL53L0X API, bundled in Adafruit_VL53L0X (src/core/src/vl53l0x_api.cpp header)
+========================================================================
+
+/*******************************************************************************
+ Copyright 2016, STMicroelectronics International N.V.
+ All rights reserved.
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ * Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright
+ notice, this list of conditions and the following disclaimer in the
+ documentation and/or other materials provided with the distribution.
+ * Neither the name of STMicroelectronics nor the
+ names of its contributors may be used to endorse or promote products
+ derived from this software without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+ NON-INFRINGEMENT OF INTELLECTUAL PROPERTY RIGHTS ARE DISCLAIMED.
+ IN NO EVENT SHALL STMICROELECTRONICS INTERNATIONAL N.V. BE LIABLE FOR ANY
+ DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ ******************************************************************************/
+
+========================================================================
+Tom Thumb font, bundled in the Adafruit GFX Library (Fonts/TomThumb.h header)
+========================================================================
+
+/**
+** The original 3x5 font is licensed under the 3-clause BSD license:
+**
+** Copyright 1999 Brian J. Swetland
+** Copyright 1999 Vassilii Khachaturov
+** Portions (of vt100.c/vt100.h) copyright Dan Marks
+**
+** All rights reserved.
+**
+** Redistribution and use in source and binary forms, with or without
+** modification, are permitted provided that the following conditions
+** are met:
+** 1. Redistributions of source code must retain the above copyright
+**    notice, this list of conditions, and the following disclaimer.
+** 2. Redistributions in binary form must reproduce the above copyright
+**    notice, this list of conditions, and the following disclaimer in the
+**    documentation and/or other materials provided with the distribution.
+** 3. The name of the authors may not be used to endorse or promote products
+**    derived from this software without specific prior written permission.
+**
+** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**
+** Modifications to Tom Thumb for improved readability are from Robey Pointer,
+** see:
+** http://robey.lag.net/2010/01/23/tiny-monospace-font.html
+**
+** The original author does not have any objection to relicensing of Robey
+** Pointer's modifications (in this file) in a more permissive license.  See
+** the discussion at the above blog, and also here:
+** http://opengameart.org/forumtopic/how-to-submit-art-using-the-3-clause-bsd-license
+**
+** Feb 21, 2016: Conversion from Linux BDF --> Adafruit GFX font,
+** with the help of this Python script:
+** https://gist.github.com/skelliam/322d421f028545f16f6d
+** William Skellenger (williamj@skellenger.net)
+** Twitter: @skelliam
+**
+** Jan 09, 2020: Bitmaps now compressed, to fix the bounding box problem,
+** because non-compressed the calculated text width were wrong.
+** Andreas Merkle (web@blue-andi.de)
+*/

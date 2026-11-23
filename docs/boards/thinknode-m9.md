@@ -24,6 +24,7 @@ Download from the [latest release](https://github.com/cvhviz/CAIRN/releases/late
 | install Cairn for the first time | `MeshCore-ThinkNodeM9-CairnN-<date>-full.bin` | full erase, then write at `0x0` ([steps](../install/esp32-s3.md)). **Erases everything**: if it runs MeshCore, export your key and contacts in the app first. |
 | update | `MeshCore-ThinkNodeM9-CairnN-<date>-update.bin` | USB at `0x10000`, or over Wi-Fi: Settings › System › Firmware update (from Cairn 107) fetches it from the latest release, or a browser upload in Wi-Fi transfer (from Cairn 112). |
 | recover a device that won't boot | `MeshCore-ThinkNodeM9-CairnN-<date>-full.bin` | full erase, then write at `0x0` |
+| the USB companion (the app protocol over the USB cable too, [#52](https://github.com/cvhviz/CAIRN/issues/52)) | `MeshCore-ThinkNodeM9USB-CairnN-<date>-full.bin` / `-update.bin` | as above. Its online update fetches its own `ThinkNodeM9USB` `-update.bin`; in the CairnOS app set Firmware Update › Build to USB cable, since the radio can't tell the app which build it runs. Before this name it was the `MeshCore-ThinkNodeM9-…-usb-full.bin` / `-usb-update.bin` pair, whose online update installed the Bluetooth build: write the `ThinkNodeM9USB` `-update.bin` once by hand to move over. |
 
 Write the `-full.bin` or the `-update.bin`, never both. Coming from Elecrow's firmware, Meshtastic or stock MeshCore, use the `-full.bin`.
 

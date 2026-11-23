@@ -1,6 +1,6 @@
 # Experimental builds
 
-Experimental builds are for testing: a new board brought up before it has been on the bench, or a change that needs trying on someone's hardware before it goes into a release. They are published as GitHub **pre-releases** tagged `experimental-<board>-<N>`, separate from the normal `cairn-vN` releases.
+Experimental builds are for testing: a new board brought up before it has been on the bench, or a change that needs trying on someone's hardware before it goes into a release. They are published as GitHub **pre-releases** tagged `experimental-<board>-<N>` (a group of boards shares one, as `experimental-eink-139`), separate from the normal `cairn-vN` releases.
 
 **[All experimental builds](https://github.com/cvhviz/CAIRN/releases?q=experimental&expanded=true)** · [regular downloads](downloads.md)
 
@@ -17,6 +17,7 @@ Compared with 🧪 **preview** boards (built from the same tree in every normal 
 
 | Board | Build | Date | What it is for |
 |---|---|---|---|
+| E-ink boards (companion), five in one pre-release: Heltec MeshPocket, Elecrow ThinkNode M1 and M8, LilyGO T-Echo and T-Echo Lite | [Cairn 139](https://github.com/cvhviz/CAIRN/releases/tag/experimental-eink-139) | 22 Nov 2026 | Cairn's own e-paper driver (from Cairn 139) and the Wio Tracker L1 E-ink's screen, stretched to each board's glass; one `-ble.uf2` per board. MeshPocket: 2.13" 122x250 SSD1680 glass, one button, 350 contacts. ThinkNode M1: 1.54" 200x200 SSD1681 glass with front light, 510 contacts. ThinkNode M8: 1.54" 200x200 glass (SSD1681 assumed: the M8's controller isn't documented), rotary knob, 510 contacts. T-Echo: 1.54" 200x200 SSD1681 glass, 510 contacts. T-Echo Lite: 1.22" 192x176 SSD1681 glass, 350 contacts. Builds; never run on any of these boards |
 | Heltec WiFi LoRa 32 V4, OLED (companion; the plain V4, not the V4-R8), and the V4 in the non-touch Expansion Kit | [Cairn 137](https://github.com/cvhviz/CAIRN/releases/tag/experimental-heltec-v4-137) | 18 Nov 2026 | The V4-R8 OLED companion's one-button screen and Wi-Fi on the plain V4's 2 MB PSRAM ([#53](https://github.com/cvhviz/CAIRN/issues/53)): `HeltecV4` for the V4 on its own (runs on one V4 updated over 107; another stops on "Loading..." after a fresh install, open in #53), `HeltecV4ExpKit` for the V4 in the glass-front Expansion Kit, with its BME280 and GXHTC3 sensors (telemetry to the app) and its buzzer (not yet run on a kit). Each has a `-ble-full.bin` (at `0x0`) and a `-ble-update.bin` (at `0x10000`). The V4 repeater stays in the normal release |
 | GAT562 30S Mesh Kit (companion) | [Cairn 131](https://github.com/cvhviz/CAIRN/releases/tag/experimental-gat562-131) | 11 Nov 2026 | The L1 Pro's interface with the whole joystick, so up and down work in every list ([#45](https://github.com/cvhviz/CAIRN/issues/45)). Bluetooth and USB-serial images. Builds; not yet run on a kit |
 | Heltec Vision Master T190 (companion) | [Cairn 130](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t190-130) | 10 Nov 2026 | First build: the wheel-driven Cairn screen on the T190's 1.9" display, the app over Bluetooth and Wi-Fi. Bluetooth and USB-serial images |
