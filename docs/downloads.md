@@ -32,6 +32,10 @@ Status: ✅ tested on hardware · ✅ beta: tested, new to Cairn · 🧪 preview
 | [T-Display SF32 + keypad board](boards/lilygo-t-display-sf32.md) | ✅ | `MeshCore-TDisplaySF32-CairnN-<date>-install.zip` | install or update over USB: unzip, double-click the installer |
 | | | `MeshCore-TDisplaySF32-CairnN-<date>-update.bin` (and `.sha256`) | the Wi-Fi update; the board fetches it itself |
 
+- **T-Display K230 Kit:** a beta release of its own from Cairn 140 (`MeshCore-TDisplayK230-…-cairn-bin` and its boot files); see [its page](boards/lilygo-t-display-k230.md).
+- **T5 E-Paper S3 Pro:** experimental test builds only, as `MeshCore-T5EpaperPro-…-full.bin`; see [Experimental builds](experimental.md).
+- **T-Echo, T-Echo Lite:** experimental, in the [e-ink boards release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-eink-139) (`MeshCore-TEcho-…-ble.uf2`, `MeshCore-TEchoLite-…-ble.uf2`); see [Experimental builds](experimental.md).
+
 🧪 Preview, in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview): T-Beam (SX1262, SX1276), T-Beam Supreme, T-Beam 1W, T3S3 (SX1262, SX1276), T-LoRa V2.1-1.6 and T-Impulse Plus. Their files are listed on [Preview boards](boards/preview-boards.md#boards-and-files).
 
 ## Seeed
@@ -45,8 +49,6 @@ Status: ✅ tested on hardware · ✅ beta: tested, new to Cairn · 🧪 preview
 | | | `MeshCore-WioL1Eink-CairnN-<date>.uf2` | companion, 2.13" e-ink |
 | | | `MeshCore-WioL1RoomServer-CairnN-<date>.uf2` | room server (no phone app; SH1106 OLED) |
 
-- **LilyGO T5 E-Paper S3 Pro:** experimental test builds only, as `MeshCore-T5EpaperPro-…-full.bin`; see [Experimental builds](experimental.md).
-- **LilyGO T-Display K230 Kit:** a beta release of its own from Cairn 140 (`MeshCore-TDisplayK230-…-cairn-bin` and its boot files); see [its page](boards/lilygo-t-display-k230.md).
 - **SenseCAP MeshPager X2:** experimental test builds only, as `MeshCore-MeshPagerX2-…-full.bin`; see [Experimental builds](experimental.md).
 - 🧪 Preview, in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview): XIAO ESP32-S3, and the XIAO ESP32-S3 + Wio-SX1262 kit.
 
@@ -76,6 +78,8 @@ Status: ✅ tested on hardware · ✅ beta: tested, new to Cairn · 🧪 preview
 | | | `MeshCore-HeltecTrackerV2-CairnN-<date>-ble-update.bin` | update over USB at `0x10000` (no Wi-Fi updates) |
 | [Wireless Tracker V2 repeater](boards/compact-repeater.md) | 🧪 | `MeshCore-HeltecTrackerV2-CairnN-<date>-repeater-full.bin` / `-repeater-update.bin` | compact repeater |
 
+- **V4 (OLED), the plain V4, and the V4 in the non-touch Expansion Kit:** experimental, in [experimental-heltec-v4-137](https://github.com/cvhviz/CAIRN/releases/tag/experimental-heltec-v4-137) (`MeshCore-HeltecV4-…-ble-full.bin` / `-ble-update.bin`, `MeshCore-HeltecV4ExpKit-…`); see [Experimental builds](experimental.md).
+- **MeshPocket:** experimental, in the [e-ink boards release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-eink-139) (`MeshCore-HeltecMeshPocket-…-ble.uf2`).
 - **Which V4?** `esptool chip-id` reports *Embedded PSRAM 8MB* on a V4-R8 and *2MB* on a standard V4. The Kit V2 touch build needs the V4-R8; on a standard V4 it boot-loops ([details](boards/heltec-v4-touch.md)).
 - 🧪 Preview companions, in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview): V2, V3 and V4 with their OLED, Wireless Tracker V1, and T1. Their files have `-ble` or `-usb` in the name, where the repeaters above have `-repeater`. The Wireless Tracker V2 and V4-R8 (OLED) companions are in the normal release from Cairn 131.
 
@@ -86,6 +90,8 @@ Status: ✅ tested on hardware · ✅ beta: tested, new to Cairn · 🧪 preview
 | [ThinkNode M9](boards/thinknode-m9.md) | ✅ | `MeshCore-ThinkNodeM9-CairnN-<date>-full.bin` | first install or recovery, at `0x0` (erases everything); also the way in from Elecrow's firmware, Meshtastic or stock MeshCore |
 | | | `MeshCore-ThinkNodeM9-CairnN-<date>-update.bin` | update over Wi-Fi, or over USB at `0x10000` |
 | ThinkNode M9 USB companion | ✅ | `MeshCore-ThinkNodeM9USB-CairnN-<date>-full.bin` / `-update.bin` | the app protocol over the USB cable as well as Bluetooth ([#52](https://github.com/cvhviz/CAIRN/issues/52)). The `-full.bin` at `0x0`, the `-update.bin` at `0x10000`. A board name of its own, so online update keeps it on the USB build; in the CairnOS app set Firmware Update › Build to USB cable (the radio can't say which build it runs). This name is from Cairn 139. Releases 136 to 138 (and the [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-m9usb-131) before) named it `MeshCore-ThinkNodeM9-CairnN-<date>-usb-full.bin` / `-usb-update.bin`: those builds' online update installs the Bluetooth build, so move one over by writing the `ThinkNodeM9USB` `-update.bin` once by hand |
+
+- **ThinkNode M1, M8:** experimental, in the [e-ink boards release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-eink-139) (`MeshCore-ThinkNodeM1-…-ble.uf2`, `MeshCore-ThinkNodeM8-…-ble.uf2`); see [Experimental builds](experimental.md).
 
 🧪 Preview, in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview): ThinkNode M2.
 

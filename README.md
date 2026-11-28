@@ -52,6 +52,9 @@ The splash screen shows **BUILD N**, so you can match a device to its release. `
 | [T-Deck / T-Deck Plus](docs/boards/lilygo-t-deck.md) | 2.8" touchscreen, keyboard, trackball | ✅ | `TDeckPlus`: `-full.bin`, `-update.bin` |
 | [T-LoRa Pager](docs/boards/lilygo-t-lora-pager.md) | 2.33" wide screen, keyboard, side wheel | ✅ | `TLoraPager` (SX1262), `TLoraPagerLR1121`: `-full.bin`, `-update.bin` |
 | [T-Display SF32 + keypad board](docs/boards/lilygo-t-display-sf32.md) | 480×480 AMOLED touchscreen, keypad | ✅ | `TDisplaySF32`: `-install.zip`, `-update.bin` |
+| [T-Display K230](docs/boards/lilygo-t-display-k230.md) | AMOLED touchscreen, keyboard base, Linux | ✅ beta | `TDisplayK230`: in its [beta release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tdisplay-k230-140) (from Cairn 140) |
+| [T5 E-Paper S3 Pro](docs/experimental.md) | 4.7" touch e-paper | experimental | `T5EpaperPro`: in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t5epd-127) |
+| [T-Echo, T-Echo Lite](docs/experimental.md) | e-paper, buttons | experimental | `TEcho`, `TEchoLite`: `-ble.uf2` in the [e-ink boards release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-eink-139) |
 | [T-Beam, T-Beam Supreme, T-Beam 1W, T3S3, T-LoRa V2.1-1.6, T-Impulse Plus](docs/boards/preview-boards.md) | OLED (optional on some), one button | 🧪 | in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview) |
 
 #### Seeed
@@ -60,8 +63,6 @@ The splash screen shows **BUILD N**, so you can match a device to its release. `
 | --- | --- | --- | --- |
 | [Wio Tracker L2 Pro](docs/boards/wio-tracker-l2-pro.md) | 3.2" touchscreen | ✅ | `WioL2Pro`: `-full.bin`, `-update.bin` |
 | [Wio Tracker L1 Pro](docs/boards/wio-tracker-l1-pro.md) | OLED or e-ink, joystick | ✅ | `WioL1Pro`, `DV1`, `WioL1Eink`, `WioL1RoomServer`: `.uf2` |
-| [LilyGO T5 E-Paper S3 Pro](docs/experimental.md) | 4.7" touch e-paper | experimental | `T5EpaperPro`: in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t5epd-127) |
-| [LilyGO T-Display K230](docs/boards/lilygo-t-display-k230.md) | AMOLED touchscreen, keyboard base, Linux | ✅ beta | `TDisplayK230`: in its [beta release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tdisplay-k230-140) (from Cairn 140) |
 | [SenseCAP MeshPager X2](docs/experimental.md) | color screen, d-pad | experimental | `MeshPagerX2`: in its [experimental releases](https://github.com/cvhviz/CAIRN/releases?q=meshpager-x2&expanded=true) |
 | [XIAO ESP32-S3, XIAO ESP32-S3 + Wio-SX1262](docs/boards/preview-boards.md) | optional OLED, one button | 🧪 | in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview) |
 
@@ -75,7 +76,9 @@ The L1 Pro has three companion builds, one per screen (the stock SH1106 OLED, th
 | [V4 + Expansion Kit V1 (touch)](docs/boards/heltec-v4-kit-v1.md) | 2.8" touchscreen, no map | ✅ | `HeltecV4KitV1`: `-full.bin`, `-update.bin` (in the normal release from Cairn 130) |
 | [Wireless Tracker V2](docs/boards/heltec-one-button.md) | 0.96" color TFT, one button, GPS, Wi-Fi | ✅ beta | `HeltecTrackerV2`: `-ble-full.bin`, `-ble-update.bin` (from Cairn 131) |
 | [V4-R8 (OLED)](docs/boards/heltec-one-button.md) | 0.96" OLED, one button, Wi-Fi | ✅ beta | `HeltecV4R8`: `-ble-full.bin`, `-ble-update.bin` (from Cairn 131) |
-| [V4 (OLED), the plain V4](docs/experimental.md) | 0.96" OLED, one button, Wi-Fi | 🧪 experimental | `HeltecV4`: `-ble-full.bin` in [experimental-heltec-v4-134](https://github.com/cvhviz/CAIRN/releases/tag/experimental-heltec-v4-134) |
+| [V4 (OLED), the plain V4](docs/experimental.md) | 0.96" OLED, one button, Wi-Fi | 🧪 experimental | `HeltecV4`: `-ble-full.bin` in [experimental-heltec-v4-137](https://github.com/cvhviz/CAIRN/releases/tag/experimental-heltec-v4-137) |
+| [Vision Master T190](docs/experimental.md) | 1.9" color TFT, wheel | experimental | `HeltecT190`: `-ble-full.bin`, `-usb-full.bin` in [experimental-t190-130](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t190-130) |
+| [MeshPocket](docs/experimental.md) | e-paper, one button | experimental | `HeltecMeshPocket`: `-ble.uf2` in the [e-ink boards release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-eink-139) |
 | [Mesh Node T096](docs/boards/heltec-t096.md) | 0.96" color TFT, one button | ✅ | `HeltecT096`: `-ble.uf2`, `-usb.uf2` |
 | [Mesh Node T114](docs/boards/heltec-t096.md#from-cairn-133) | 1.14" color TFT, one button | ✅ beta | `HeltecT114`: `-ble.uf2` (from Cairn 133) |
 | [Mesh Node T096 repeater](docs/boards/compact-repeater.md) | 0.96" color TFT, one button | ✅ | `HeltecT096`: `-repeater.uf2` |
@@ -89,6 +92,7 @@ Check which Heltec V4 you have before installing: the touch build for the Expans
 | Board | Screen and input | Status | Files (`MeshCore-<Board>-…`) |
 | --- | --- | --- | --- |
 | [ThinkNode M9](docs/boards/thinknode-m9.md) | 2.4" screen, keyboard, d-pad | ✅ | `ThinkNodeM9`: `-full.bin`, `-update.bin`; the USB companion `ThinkNodeM9USB`: `-full.bin`, `-update.bin` |
+| [ThinkNode M1, M8](docs/experimental.md) | e-paper, buttons | experimental | `ThinkNodeM1`, `ThinkNodeM8`: `-ble.uf2` in the [e-ink boards release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-eink-139) |
 | [ThinkNode M2](docs/boards/preview-boards.md) | OLED, one button | 🧪 | in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview) |
 
 #### Other boards (🧪 preview)
@@ -137,7 +141,7 @@ Every board page has its own screens; all 19 touch-interface screens are on the 
 
 ## Experimental builds
 
-One-off test builds, such as a new board before it has been on the bench, are GitHub pre-releases tagged `experimental-<board>-<N>`. They may not work, and the online updater never offers them. Current: **Seeed SenseCAP MeshPager X2** (Cairn 124 tests). The LilyGO T-LoRa Pager started there and is in the releases from Cairn 125. What they are, how to flash one and how to send a log: [Experimental builds](docs/experimental.md) · [all experimental releases](https://github.com/cvhviz/CAIRN/releases?q=experimental&expanded=true).
+One-off test builds, such as a new board before it has been on the bench, are GitHub pre-releases tagged `experimental-<board>-<N>`. They may not work, and the online updater never offers them. Current: the **LilyGO T-Display K230** (beta, Cairn 140), the **e-ink boards** (Heltec MeshPocket, ThinkNode M1 and M8, LilyGO T-Echo and T-Echo Lite; Cairn 139), the **plain Heltec V4** with its OLED or non-touch Expansion Kit (137), the **GAT562 30S Mesh Kit** (131), the **Heltec Vision Master T190** and **V3** (130), and the **LilyGO T5 E-Paper S3 Pro** and **SenseCAP MeshPager X2** (127). Earlier ones grew into the release: the T-LoRa Pager (125), the Heltec T114 (133), the ThinkNode M9 USB companion (136) and the V4 + Expansion Kit V1 (130). What they are, how to flash one and how to send a log: [Experimental builds](docs/experimental.md) · [all experimental releases](https://github.com/cvhviz/CAIRN/releases?q=experimental&expanded=true).
 
 ## Older builds
 
