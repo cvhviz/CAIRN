@@ -10,21 +10,21 @@
 **[Download the latest release](https://github.com/cvhviz/CAIRN/releases/latest)** · [Files for every board](docs/downloads.md) · [Install guides](#install-and-update) · [Manual (PDF)](docs/Cairn_Firmware_Manual_Dark.pdf) · [Report a problem](#reporting-a-problem)
 
 <!-- Bump this section with each cairn-vN release. Nothing else in this README names the current build. -->
-## Latest release: Cairn 137 (18 Nov 2026)
+## Latest release: Cairn 140 (27 Nov 2026)
 
-- **Move the cursor inside your message:** tap in the text on the L2 Pro and Heltec V4 touch, or use the arrow keys on the T-Deck, T-LoRa Pager and ThinkNode M9. Typing, Del and Paste work where the cursor is.
-- **Easier to read over a wallpaper:** list rows are frosted like Home's cards, and Home's date, sunrise / sunset, temperature and channel sit on small frosted chips.
-- **ThinkNode M9:** Shift + a letter pressed together no longer clears the message; Wi-Fi transfer gains **Photos** and **Files** (pictures for the wallpaper and the Photos screensaver); the Trip page's buttons can be selected ([#57](https://github.com/cvhviz/CAIRN/issues/57)), and Back clears a contact selected on the map ([#58](https://github.com/cvhviz/CAIRN/issues/58)).
-- **Experimental:** the [Heltec WiFi LoRa 32 V4 (OLED) companion and its Expansion Kit build](docs/experimental.md) move to 137 with no other change. The other experimental builds are unchanged: the GAT562 30S Mesh Kit (131), the Heltec Vision Master T190 and WiFi LoRa 32 V3 companions (130), the LilyGO T5 E-Paper S3 Pro and the SenseCAP MeshPager X2 (127).
+- **LilyGO T-Display K230, beta:** Cairn on the K230 with its keyboard base: typing and F keys, key light and LEDs, the base's batteries with a full Battery page, speaker and mic, GNSS, a Bluetooth scanner, online maps, and layouts made for its wide screen. It has [its own release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tdisplay-k230-140) ([board page](docs/boards/lilygo-t-display-k230.md)).
+- **Side rail and quick panel:** the selected icon grows and the rail slides like a carousel on every touch and key board; the quick panel slides down with your finger.
+- **Station G3:** TX power at the antenna, BOOT is Back, a supply monitor and a repeater build. **LR2021** radios listen on extra spreading factors. **OLED boards:** long lines no longer spill onto the next one.
+- **From Cairn 137** this also brings the 138 and 139 betas: 510 contacts on the L1 family and V4-R8 OLED, Cairn's own audio, e-paper, GPS and pressure sensor drivers, the V4 touch keyboard fix after sleep. **Firmware updates and SD transfers over a Wi-Fi link need Cairn app 1.6 (4).**
 
-[Cairn 137 release notes](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v137) · [all releases](https://github.com/cvhviz/CAIRN/releases)
+[Cairn 140 release notes](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v140) · [all releases](https://github.com/cvhviz/CAIRN/releases)
 
 ## Download
 
 Every board's files are in the **[latest release](https://github.com/cvhviz/CAIRN/releases/latest)**, under **Assets**. GitHub lists them in alphabetical order, so look for your board's name. Every file is named
 
 ```
-MeshCore-<Board>-Cairn<N>-<date>[-<variant>].<ext>     for example MeshCore-WioL2Pro-Cairn137-2026-11-18-update.bin
+MeshCore-<Board>-Cairn<N>-<date>[-<variant>].<ext>     for example MeshCore-WioL2Pro-Cairn140-2026-11-27-update.bin
 ```
 
 The splash screen shows **BUILD N**, so you can match a device to its release. `SHA256SUMS.txt` in each release covers every file: `shasum -a 256 -c SHA256SUMS.txt`. The **[downloads page](docs/downloads.md)** lists every file for every board, including the preview and experimental builds.
@@ -61,7 +61,7 @@ The splash screen shows **BUILD N**, so you can match a device to its release. `
 | [Wio Tracker L2 Pro](docs/boards/wio-tracker-l2-pro.md) | 3.2" touchscreen | ✅ | `WioL2Pro`: `-full.bin`, `-update.bin` |
 | [Wio Tracker L1 Pro](docs/boards/wio-tracker-l1-pro.md) | OLED or e-ink, joystick | ✅ | `WioL1Pro`, `DV1`, `WioL1Eink`, `WioL1RoomServer`: `.uf2` |
 | [LilyGO T5 E-Paper S3 Pro](docs/experimental.md) | 4.7" touch e-paper | experimental | `T5EpaperPro`: in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t5epd-127) |
-| [LilyGO T-Display K230](docs/experimental.md) | AMOLED touchscreen, Linux | experimental | `TDisplayK230`: in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tdisplay-k230-126) |
+| [LilyGO T-Display K230](docs/boards/lilygo-t-display-k230.md) | AMOLED touchscreen, keyboard base, Linux | ✅ beta | `TDisplayK230`: in its [beta release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tdisplay-k230-140) (from Cairn 140) |
 | [SenseCAP MeshPager X2](docs/experimental.md) | color screen, d-pad | experimental | `MeshPagerX2`: in its [experimental releases](https://github.com/cvhviz/CAIRN/releases?q=meshpager-x2&expanded=true) |
 | [XIAO ESP32-S3, XIAO ESP32-S3 + Wio-SX1262](docs/boards/preview-boards.md) | optional OLED, one button | 🧪 | in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview) |
 
