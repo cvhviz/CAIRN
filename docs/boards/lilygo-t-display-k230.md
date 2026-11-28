@@ -10,16 +10,16 @@ Cairn's own interface and MeshCore run as one Linux program on the K230 kit's 12
 | Radio | LR2021 LoRa: send and receive, the Spectrum page, extra spreading factors (`set extra.sf`) |
 | Keyboard base | typing; F1–F6 pick the side tabs; the Mic key opens the Recorder; the LilyGO key goes Home (hold it for LilyGO's launcher); the key light (dark 10 s after the last key); three LEDs: Caps Lock, unread messages, LoRa activity |
 | Batteries | the base's two cells: percent, charging, and a Battery page with current, power, temperature, capacity, health, cycles and the USB input |
-| Sound | alerts and the music player through the base's speaker; the Recorder on the board's mic |
-| GNSS | the base's nRF9151 (reception was weak in the one outdoor test so far) |
+| Sound | alerts and the music player through the base's speaker or the headphone jack (Settings › Sound › Output: the board can't detect a plug); the Recorder on the board's mic |
+| GNSS | the base's nRF9151: connect the kit's antennas (with them it saw 12 satellites; without them almost none). A fix every 10 s, held steady between updates |
 | Bluetooth | a scanner (Radios › Bluetooth) through the base's nRF52840 |
-| Wi-Fi | joining, the app over Wi-Fi, online maps (OpenFreeMap) |
+| Wi-Fi | joining, the app over Wi-Fi, online maps (OpenFreeMap); if the system's Wi-Fi service dies, Cairn starts it again by itself (beta 2) |
 
 **Not yet tried or not in this build:** the Bluetooth phone link (a bridge firmware for the nRF52840 is attached to the release, untested: see its notes), online updates, the camera, the data USB port.
 
 ## Which file
 
-Download from the [K230 beta release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tdisplay-k230-140): it isn't in the main release and no online update offers it.
+Download from the [K230 beta 2 release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tdisplay-k230-140-2): it isn't in the main release and no online update offers it.
 
 | File | Use |
 |---|---|

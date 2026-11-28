@@ -12,7 +12,7 @@
 <!-- Bump this section with each cairn-vN release. Nothing else in this README names the current build. -->
 ## Latest release: Cairn 140 (27 Nov 2026)
 
-- **LilyGO T-Display K230, beta:** Cairn on the K230 with its keyboard base: typing and F keys, key light and LEDs, the base's batteries with a full Battery page, speaker and mic, GNSS, a Bluetooth scanner, online maps, and layouts made for its wide screen. It has [its own release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tdisplay-k230-140) ([board page](docs/boards/lilygo-t-display-k230.md)).
+- **LilyGO T-Display K230, beta:** Cairn on the K230 with its keyboard base: typing and F keys, key light and LEDs, the base's batteries with a full Battery page, speaker and mic, GNSS, a Bluetooth scanner, online maps, and layouts made for its wide screen. It has [its own release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tdisplay-k230-140-2) ([board page](docs/boards/lilygo-t-display-k230.md)).
 - **Side rail and quick panel:** the selected icon grows and the rail slides like a carousel on every touch and key board; the quick panel slides down with your finger.
 - **Station G3:** TX power at the antenna, BOOT is Back, a supply monitor and a repeater build. **LR2021** radios listen on extra spreading factors. **OLED boards:** long lines no longer spill onto the next one.
 - **From Cairn 137** this also brings the 138 and 139 betas: 510 contacts on the L1 family and V4-R8 OLED, Cairn's own audio, e-paper, GPS and pressure sensor drivers, the V4 touch keyboard fix after sleep. **Firmware updates and SD transfers over a Wi-Fi link need Cairn app 1.6 (4).**
@@ -52,7 +52,7 @@ The splash screen shows **BUILD N**, so you can match a device to its release. `
 | [T-Deck / T-Deck Plus](docs/boards/lilygo-t-deck.md) | 2.8" touchscreen, keyboard, trackball | ✅ | `TDeckPlus`: `-full.bin`, `-update.bin` |
 | [T-LoRa Pager](docs/boards/lilygo-t-lora-pager.md) | 2.33" wide screen, keyboard, side wheel | ✅ | `TLoraPager` (SX1262), `TLoraPagerLR1121`: `-full.bin`, `-update.bin` |
 | [T-Display SF32 + keypad board](docs/boards/lilygo-t-display-sf32.md) | 480×480 AMOLED touchscreen, keypad | ✅ | `TDisplaySF32`: `-install.zip`, `-update.bin` |
-| [T-Display K230](docs/boards/lilygo-t-display-k230.md) | AMOLED touchscreen, keyboard base, Linux | ✅ beta | `TDisplayK230`: in its [beta release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tdisplay-k230-140) (from Cairn 140) |
+| [T-Display K230](docs/boards/lilygo-t-display-k230.md) | AMOLED touchscreen, keyboard base, Linux | ✅ beta | `TDisplayK230`: in its [beta 2 release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-tdisplay-k230-140-2) (from Cairn 140) |
 | [T5 E-Paper S3 Pro](docs/experimental.md) | 4.7" touch e-paper | experimental | `T5EpaperPro`: in its [experimental release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-t5epd-127) |
 | [T-Echo, T-Echo Lite](docs/experimental.md) | e-paper, buttons | experimental | `TEcho`, `TEchoLite`: `-ble.uf2` in the [e-ink boards release](https://github.com/cvhviz/CAIRN/releases/tag/experimental-eink-139) |
 | [T-Beam, T-Beam Supreme, T-Beam 1W, T3S3, T-LoRa V2.1-1.6, T-Impulse Plus](docs/boards/preview-boards.md) | OLED (optional on some), one button | 🧪 | in [Cairn 107 preview](https://github.com/cvhviz/CAIRN/releases/tag/cairn-v107-preview) |
